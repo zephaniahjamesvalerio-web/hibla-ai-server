@@ -1,0 +1,13 @@
+{
+  "name": "hibla-ai-server",
+  "version": "1.0.0",
+  "description": "Hibla AI Local Learning Assistant",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
