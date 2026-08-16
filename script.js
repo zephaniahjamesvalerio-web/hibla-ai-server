@@ -131,56 +131,204 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
 
-        3: {
-            title:
-                'Week 3: “Filipino Time”',
+3: {
+    title:
+        'Week 3: “Filipino Time”',
 
-            description: `
-                Ang <strong>“Filipino Time”</strong> ay isang akdang
-                tumatalakay sa karaniwang kaugalian ng pagiging huli
-                ng mga Pilipino. Ipinapakita nito ang negatibong epekto
-                ng ganitong gawain at hinihikayat ang pagbabago tungo
-                sa pagiging disiplinado at responsable sa oras.
-            `,
+    description: `
+        Ang <strong>“Filipino Time”</strong> ay isang akdang
+        tumatalakay sa karaniwang kaugalian ng pagiging huli
+        ng mga Pilipino. Ipinapakita nito ang negatibong epekto
+        ng ganitong gawain at hinihikayat ang pagbabago tungo
+        sa pagiging disiplinado at responsable sa oras.
+    `,
 
-            author:
-                "Felipe Padilla de Leon",
+    author:
+        "Felipe Padilla de Leon",
 
-            authorImage:
-                "images/authors/felipe-padilla-de-leon.webp",
+    authorImage:
+        "images/authors/felipe-padilla-de-leon.webp",
 
-            biography: `
-                Si <strong>Felipe Padilla de Leon</strong> ay isang
-                kilalang Pilipinong kompositor, manunulat, at guro.
-                Naging mahalaga ang kaniyang ambag sa pagpapaunlad
-                at pagpapahalaga sa kulturang Pilipino.
+    biography: `
+        Si <strong>Felipe Padilla de Leon</strong> ay isang
+        kilalang Pilipinong kompositor, manunulat, at guro.
+        Naging mahalaga ang kaniyang ambag sa pagpapaunlad
+        at pagpapahalaga sa kulturang Pilipino.
 
-                <br><br>
+        <br><br>
 
-                Sa kaniyang mga akda at gawain, naipakita ang
-                kahalagahan ng pagkakakilanlan, kultura, at
-                disiplina sa lipunang Pilipino.
-            `,
+        Sa kaniyang mga akda at gawain, naipakita ang
+        kahalagahan ng pagkakakilanlan, kultura, at
+        disiplina sa lipunang Pilipino.
+    `,
 
-            theme:
-                "Ugali • Disiplina • Pananagutan",
+    theme:
+        "Ugali • Disiplina • Pananagutan",
 
-            objective:
-                "Himukin ang pagbabago at pagiging disiplinado sa oras.",
+    objective:
+        "Himukin ang pagbabago at pagiging disiplinado sa oras.",
 
-            material:
-                "Digital Poster",
+    material:
+        "Suring-Sanaysay: Filipino Time",
 
-            materialType:
-                "image",
+    materialType:
+        "text",
 
-            youtube:
-                "",
+    youtube:
+        "",
 
-            materialImage:
-                "images/materials/week3-digital-poster.jpg"
+    materialImage:
+        "",
+
+
+    /* =====================================================
+       SURING-SANAYSAY
+    ===================================================== */
+
+    analysisTitle:
+        "Suring-Sanaysay",
+
+    analysisInstructions:
+        "Basahin ang akdang “Filipino Time” ni Felipe Padilla de Leon. Tukuyin ng mga mag-aaral ang paksa, layon at ideya ng sanaysay. Punan ng sagot ang talahanayan.",
+
+    analysisTitleText:
+        "FILIPINO TIME",
+
+    analysisAuthor:
+        "ni Felipe Padilla de Leon",
+
+    analysisContent: `
+        <p>
+            Isa sa napakapangit na kinagawian nating mga Pilipino
+            ay ang pagiging lagi nang huli sa takdang oras na
+            pinagkasunduan. Karaniwan nang ang isang palatuntunan
+            ay hindi nasisimulan sa oras na dapat ipangsimula dahil
+            sa wala pa ang panauhing pandangal o kaya'y ang punong
+            abala ng palatuntunan.
+        </p>
+
+        <p>
+            Gayon din, kulang pa rin ang mga tauhang magsisiganap,
+            o kung hindi naman kaya'y wala pa rin ang madlang siyang
+            dapat sumaksi sa palatuntunan kung kaya't naaantala
+            tuloy ang lahat.
+        </p>
+
+        <p>
+            Sa mga tanghalang pangmusika, tulad ng opera, konsiyerto,
+            resital at iba pang kauri ng mga ito, ay isang karaniwan
+            nang pangyayari ang pagiging lagi nang huli ng madlang
+            manonood.
+        </p>
+
+        <p>
+            Gayon din sa papupulong ng iba't ibang samahan,
+            kapatiran o kapisanan, kahit na nga ang mga ito'y binubuo
+            pa ng mga taong may pinag-aralan, ay napangawitan na ng
+            marami sa atin ang dumating nang huli sa pinag-usapang oras.
+        </p>
+
+        <p>
+            Ito ang sanhi kung bakit naging palasak na ang bukambibig
+            na <strong>“Filipino Time”</strong>, o Oras Filipino,
+            na ang ibig sabihin ay sira, walang katiyakan pagka't
+            lagi nang atrasado.
+        </p>
+
+        <p>
+            Ipinakikita ng sanaysay na ang pagiging palaging huli
+            ay hindi lamang simpleng pagkakamali sa oras. Maaari
+            itong makaapekto sa ibang tao, sa mga gawain, at maging
+            sa pagtingin sa mga Pilipino bilang responsable at
+            mapagkakatiwalaang mamamayan.
+        </p>
+
+        <p>
+            Sa ganitong pangyayari, mahalagang matutuhan ang
+            pagpapahalaga sa oras, pagiging maagap, disiplina,
+            at pananagutan sa mga napagkasunduang gawain.
+        </p>
+    `,
+
+    analysisGuide: {
+
+        topic:
+            "Ang kaugalian ng pagiging palaging huli ng ilang Pilipino at ang epekto nito sa mga gawain at lipunan.",
+
+        purpose:
+            "Ipakita ang negatibong epekto ng pagiging huli at hikayatin ang mga Pilipino na maging maagap, responsable, at marunong tumupad sa oras.",
+
+        idea:
+            "Ang pagiging palaging huli o “Filipino Time” ay isang kaugaliang maaaring magdulot ng pagkaantala, kawalan ng tiwala, at kakulangan sa disiplina."
+    },
+
+
+    /* =====================================================
+       PAGPROSESO NG PAG-UNAWA
+    ===================================================== */
+
+    processingTitle:
+        "Pagproseso ng Pag-unawa",
+
+    processingInstructions:
+        "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
+
+    processingQuestions: [
+
+        {
+            number: 1,
+            question:
+                "Ano ang tinutukoy na “Filipino Time”?"
         },
 
+        {
+            number: 2,
+            question:
+                "Ano ang mga dahilan kung bakit nagkakaroon ng kaugalian ng pagiging huli?"
+        },
+
+        {
+            number: 3,
+            question:
+                "Ano ang mga negatibong epekto ng pagiging palaging huli?"
+        },
+
+        {
+            number: 4,
+            question:
+                "Bakit mahalaga ang pagpapahalaga sa oras?"
+        },
+
+        {
+            number: 5,
+            question:
+                "Paano mo maipapakita ang pagiging responsable sa oras?"
+        }
+
+    ],
+
+    processingAnswers: [
+        "Ang “Filipino Time” ay tumutukoy sa nakasanayang pagiging huli sa itinakdang oras o gawain.",
+        "Maaaring dulot ito ng kakulangan sa disiplina, maling pagpapahalaga sa oras, o kawalan ng maayos na pagpaplano.",
+        "Maaari itong magdulot ng pagkaantala sa mga gawain, abala sa ibang tao, at pagkawala ng tiwala.",
+        "Mahalaga ang oras dahil hindi na ito maibabalik at may epekto ito sa ating mga gawain at responsibilidad.",
+        "Maipapakita ito sa pamamagitan ng pagiging maagap, pagpaplano ng oras, at pagsunod sa itinakdang iskedyul."
+    ],
+
+
+    /* =====================================================
+       KEY WORDS
+    ===================================================== */
+
+    keywords: [
+        "Filipino Time",
+        "Oras",
+        "Disiplina",
+        "Pananagutan",
+        "Pagiging Maagap",
+        "Responsibilidad"
+    ]
+},
 
         4: {
             title:
@@ -239,10 +387,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             description: `
                 Ang <strong>“Wikang Pambansa”</strong> ay isang
-                talumpati na nagpapahalaga sa pagkakaroon ng pambansang
-                wika bilang simbolo ng pagkakaisa at pagkakakilanlan
-                ng mga Pilipino. Hinihikayat nito ang paggamit at
-                pagpapayaman ng sariling wika.
+                talumpati ni <strong>Manuel L. Quezon</strong> na
+                nagbibigay-diin sa kahalagahan ng pagkakaroon ng
+                sariling wikang pambansa bilang mahalagang bahagi
+                ng pambansang kamalayan, pagkakaisa, at
+                pagkakakilanlan ng mga Pilipino.
+
+                <br><br>
+
+                Ipinahayag ni Quezon ang pangangailangan ng isang
+                wikang maaaring gamitin ng lahat ng Pilipino upang
+                mapalakas ang pagkakaisa at magkaroon ng tunay na
+                pambansang kamalayan.
             `,
 
             author:
@@ -253,23 +409,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             biography: `
                 Si <strong>Manuel L. Quezon</strong> ay ang unang
-                Pangulo ng Komonwelt ng Pilipinas. Isa sa mahahalagang
-                usapin na isinulong niya ay ang pagkakaroon ng
-                pambansang wika.
+                Pangulo ng Komonwelt ng Pilipinas. Malaki ang
+                naging papel niya sa pagsusulong ng pagkakaroon
+                ng wikang pambansa.
 
                 <br><br>
 
-                Malaki ang naging papel niya sa pagpapaunlad ng
-                paggamit at pagkilala sa isang wikang magsisilbing
-                mahalagang bahagi ng pambansang pagkakaisa at
-                pagkakakilanlan.
+                Sa kaniyang talumpati tungkol sa
+                <strong>Wikang Pambansa</strong>, binigyang-diin
+                niya na mahalaga ang sariling wika sa pagkakaroon
+                ng pambansang kamalayan at pagkakaisa ng mga
+                Pilipino.
             `,
 
             theme:
-                "Pagkakaisa • Pagpapahalaga sa Wika",
+                "Wikang Pambansa • Pagkakaisa • Pambansang Kamalayan • Pagkakakilanlan",
 
             objective:
-                "Himukin ang paggamit at pagpapayaman ng sariling wika.",
+                "Maunawaan ang kahalagahan ng pagkakaroon ng wikang pambansa bilang instrumento ng pagkakaisa at pambansang kamalayan.",
 
             material:
                 "Audio-Visual/Interactive Presentation",
@@ -281,9 +438,85 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
 
             materialImage:
-                ""
-        },
+                "",
 
+
+            /* =====================================================
+               PAGPROSESO NG PAG-UNAWA
+            ===================================================== */
+
+            processingTitle:
+                "Pagproseso ng Pag-unawa",
+
+            processingInstructions:
+                "Basahin at unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
+
+            processingQuestions: [
+
+                {
+                    number: 1,
+                    question:
+                        "Bakit nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa ang Pilipinas?"
+                },
+
+                {
+                    number: 2,
+                    question:
+                        "Ano ang kaugnayan ng wikang pambansa sa pagkakaroon ng pambansang kamalayan?"
+                },
+
+                {
+                    number: 3,
+                    question:
+                        "Bakit nahirapan si Quezon na makipag-usap sa kaniyang mga kababayan sa iba't ibang lalawigan?"
+                },
+
+                {
+                    number: 4,
+                    question:
+                        "Ano ang ipinakita ni Quezon tungkol sa kaniyang pagiging bukas sa paggamit ng ibang katutubong wika?"
+                },
+
+                {
+                    number: 5,
+                    question:
+                        "Paano nakatutulong ang isang wikang ginagamit ng lahat sa pagkakaisa ng mga Pilipino?"
+                }
+
+            ],
+
+            processingAnswers: [
+
+                "Nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa upang magkaroon ng wikang maaaring gamitin ng mga Pilipino at upang mapalakas ang pambansang kamalayan.",
+
+                "Mahalaga ang wikang pambansa sa pambansang kamalayan dahil nagiging daan ito upang magkaroon ng pagkakaunawaan at pagkakaisa ang mga mamamayan.",
+
+                "Kinailangan ni Quezon ng tagapagsalin dahil iba-iba ang wikang ginagamit ng mga Pilipino sa iba't ibang lalawigan.",
+
+                "Ipinakita niya ang kaniyang pagiging bukas dahil handa siyang tangkilikin at pag-aralan ang ibang katutubong wika kung iyon ang makatutulong upang magkaroon ng wikang ginagamit ng lahat.",
+
+                "Nakatutulong ito sa pagkakaisa dahil nagkakaroon ang mga mamamayan ng isang wikang maaaring gamitin sa pakikipag-ugnayan at pagpapahayag ng kanilang pambansang pagkakakilanlan."
+            ],
+
+
+            /* =====================================================
+               KEY WORDS
+            ===================================================== */
+
+            keywords: [
+                "Wikang Pambansa",
+                "Pambansang Kamalayan",
+                "Pagkakaisa",
+                "Sariling Wika",
+                "Katutubong Wika",
+                "Pagkakakilanlan",
+                "Manuel L. Quezon",
+                "1937",
+                "Tagalog",
+                "Ilokano",
+                "Bisaya"
+            ]
+        },
 
         6: {
             title:
@@ -978,7 +1211,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+/* =====================================================
+   PAGPROSESO NG PAG-UNAWA
+===================================================== */
 
+else if (type === "processing") {
+
+    let questionsHTML = "";
+
+    if (
+        lesson.processingQuestions &&
+        lesson.processingQuestions.length > 0
+    ) {
+
+        lesson.processingQuestions.forEach(function (item) {
+
+            questionsHTML += `
+
+                <div class="detail-box">
+
+                    <strong>
+                        ${item.number}.
+                    </strong>
+
+                    <span class="modal-text">
+                        ${item.question}
+                    </span>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+    html = `
+
+        <span class="modal-eyebrow">
+            PAGPROSESO NG PAG-UNAWA
+        </span>
+
+        <h2>
+            ${lesson.processingTitle}
+        </h2>
+
+        <p class="modal-text">
+            ${lesson.processingInstructions}
+        </p>
+
+        <div style="margin-top: 25px;">
+            ${questionsHTML}
+        </div>
+
+    `;
+
+}
         /* =====================================================
            MULTIMODAL MATERIAL
         ===================================================== */
