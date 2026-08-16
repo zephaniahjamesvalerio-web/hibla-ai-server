@@ -1663,7 +1663,8 @@ const additionalMaterials = {
                 number: 10,
                 question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
                 answer: "Katotohanan"
-        }
+            }
+        ]
     },
 
 
