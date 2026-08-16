@@ -2583,12 +2583,12 @@ function addAdditionalMaterialButton(
     if (hasProcessing) {
 
         button.innerHTML =
-            "📚 Pagproseso ng Pag-unawa";
+            "Pagproseso ng Pag-unawa";
 
     } else {
 
         button.innerHTML =
-            "📚 " + material.title;
+            "" + material.title;
 
     }
 
