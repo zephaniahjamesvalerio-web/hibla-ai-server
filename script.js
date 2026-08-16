@@ -2540,12 +2540,32 @@ function addAdditionalMaterialButton(
         return;
     }
 
-    if (!additionalMaterials[weekNumber]) {
+    const material = additionalMaterials[weekNumber];
+    const lesson = lessons[weekNumber];
+
+    /* =====================================================
+       CHECK IF PROCESSING BUTTON SHOULD EXIST
+    ===================================================== */
+
+    const hasAdditionalMaterial =
+        !!material;
+
+    const hasProcessing =
+        lesson &&
+        lesson.processingQuestions &&
+        lesson.processingQuestions.length > 0;
+
+    if (
+        !hasAdditionalMaterial &&
+        !hasProcessing
+    ) {
         return;
     }
 
-    const material =
-        additionalMaterials[weekNumber];
+
+    /* =====================================================
+       CREATE BUTTON
+    ===================================================== */
 
     const button =
         document.createElement("button");
@@ -2555,12 +2575,54 @@ function addAdditionalMaterialButton(
     button.className =
         "additional-material-button";
 
-    button.innerHTML =
-        "📚" + material.title;
+
+    /* =====================================================
+       BUTTON TITLE
+    ===================================================== */
+
+    if (hasProcessing) {
+
+        button.innerHTML =
+            "📚 Pagproseso ng Pag-unawa";
+
+    } else {
+
+        button.innerHTML =
+            "📚 " + material.title;
+
+    }
+
+
+    /* =====================================================
+       BUTTON CLICK
+    ===================================================== */
 
     button.addEventListener(
         "click",
         function () {
+
+            /*
+               Week 3 and Week 5
+               use the existing processing
+               inside lessons.
+            */
+
+            if (hasProcessing) {
+
+                openInfoModal(
+                    "processing",
+                    lesson
+                );
+
+                return;
+            }
+
+
+            /*
+               Week 1, 2, 4, and 6
+               continue using their
+               existing additional materials.
+            */
 
             openAdditionalMaterial(
                 weekNumber
@@ -2569,22 +2631,9 @@ function addAdditionalMaterialButton(
         }
     );
 
+
     container.appendChild(button);
 }
-    function getWeekNumber(lesson) {
-
-        for (const week in lessons) {
-
-            if (lessons[week] === lesson) {
-                return week;
-            }
-
-        }
-
-        return "";
-
-    }
-
 
     /* =========================================================
        CLOSE MODAL
