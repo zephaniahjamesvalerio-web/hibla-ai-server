@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "ni Felipe Padilla de Leon",
 
     analysisContent: `
-        <p>
+        <p style="text-align: justify;">
             Isa sa napakapangit na kinagawian nating mga Pilipino
             ay ang pagiging lagi nang huli sa takdang oras na
             pinagkasunduan. Karaniwan nang ang isang palatuntunan
@@ -207,35 +207,35 @@ document.addEventListener("DOMContentLoaded", function () {
             abala ng palatuntunan.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Gayon din, kulang pa rin ang mga tauhang magsisiganap,
             o kung hindi naman kaya'y wala pa rin ang madlang siyang
             dapat sumaksi sa palatuntunan kung kaya't naaantala
             tuloy ang lahat.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Sa mga tanghalang pangmusika, tulad ng opera, konsiyerto,
             resital at iba pang kauri ng mga ito, ay isang karaniwan
             nang pangyayari ang pagiging lagi nang huli ng madlang
             manonood.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Gayon din sa papupulong ng iba't ibang samahan,
             kapatiran o kapisanan, kahit na nga ang mga ito'y binubuo
             pa ng mga taong may pinag-aralan, ay napangawitan na ng
             marami sa atin ang dumating nang huli sa pinag-usapang oras.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Ito ang sanhi kung bakit naging palasak na ang bukambibig
             na <strong>“Filipino Time”</strong>, o Oras Filipino,
             na ang ibig sabihin ay sira, walang katiyakan pagka't
             lagi nang atrasado.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Ipinakikita ng sanaysay na ang pagiging palaging huli
             ay hindi lamang simpleng pagkakamali sa oras. Maaari
             itong makaapekto sa ibang tao, sa mga gawain, at maging
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mapagkakatiwalaang mamamayan.
         </p>
 
-        <p>
+        <p style="text-align: justify;">
             Sa ganitong pangyayari, mahalagang matutuhan ang
             pagpapahalaga sa oras, pagiging maagap, disiplina,
             at pananagutan sa mga napagkasunduang gawain.
@@ -1616,63 +1616,53 @@ const additionalMaterials = {
         questions: [
             {
                 number: 1,
-                question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang Espanya.",
+                question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>.",
                 answer: "Amerika"
             },
             {
                 number: 2,
-                question: "Si Prinsipe Dolar ang mabuting anak ni Haring Samuel.",
+                question: "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel.",
                 answer: "Duke Democrito"
             },
             {
                 number: 3,
-                question: "Si Dakila ay kasintahan ni Prinsesa Mandawa.",
+                question: "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa.",
                 answer: "Katotohanan"
             },
             {
                 number: 4,
-                question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong 1928.",
+                question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>.",
                 answer: "Katotohanan"
             },
             {
                 number: 5,
-                question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng Amerika.",
+                question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>.",
                 answer: "Pilipinas"
             },
             {
                 number: 6,
-                question: "Si Duke Demorito ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
+                question: "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
                 answer: "Katotohanan"
             },
             {
                 number: 7,
-                question: "Sa akda, binanggit na ang ginto na bilog ay nakabubulag.",
+                question: "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag.",
                 answer: "Pilak"
             },
             {
                 number: 8,
-                question: "Ang matulis na kuko ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
+                question: "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
                 answer: "Katotohanan"
             },
             {
                 number: 9,
-                question: "Ang palasyo ay kulong ng malaking lambat.",
+                question: "Ang <u>palasyo</u> ay kulong ng malaking lambat.",
                 answer: "Gubat"
             },
             {
                 number: 10,
-                question: "Ang dayuhang utak ay simbolismo ng kaisipang kolonyal.",
+                question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
                 answer: "Katotohanan"
-            }
-        ],
-
-        secondPart: {
-            title: "B. Pagsagot sa Makabuluhang Tanong",
-            content: `
-                Sagutin nang malinaw at makabuluhan ang mga
-                tanong na may kaugnayan sa akdang
-                <strong>“Sa Dakong Silangan.”</strong>
-            `
         }
     },
 
@@ -1684,7 +1674,7 @@ const additionalMaterials = {
         type: "reading",
 
         content: `
-            <p>
+            <p style="text-align: justify;">
                 Maituturing na rehiyonal na dula ang
                 <strong>“Kahapon, Ngayon at Bukas”</strong>
                 ni Aurelio V. Tolentino na may pamagat na
@@ -1692,24 +1682,24 @@ const additionalMaterials = {
                 sa Kapampangan.
             </p>
 
-            <p>
+            <p style="text-align: justify;">
                 Ang mga rehiyonal na dula na nasusulat sa mga
                 rehiyonal na wika sa Pilipinas ay kapantay rin
                 ng mga dulang nasusulat sa Tagalog.
             </p>
 
-            <p>
+            <p style="text-align: justify;">
                 <strong>“Elena”</strong> naman ang pamagat ng
                 dulang Cebuano ni Vicente Sotto noong 1902.
             </p>
 
-            <p>
+            <p style="text-align: justify;">
                 <strong>“Ang Ayat Iti Ili ken Dadduma Pay a Drama”</strong>
                 (Pag-ibig sa Bayan at Iba pang Drama) ni
                 Jose Garvida Flores ay halimbawa ng dulang Ilocano.
             </p>
 
-            <p>
+            <p style="text-align: justify;">
                 Ang mga dulang rehiyonal sa iba't ibang lugar
                 sa Pilipinas ay may ambag ding malaki sa
                 pag-unlad ng dula o teatro sa bansa sa panahon
