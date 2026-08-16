@@ -2849,7 +2849,22 @@ weekContent.innerHTML = `
             </span>
 
         </article>
+<article
+    class="feature-card clickable-lesson-card"
+    data-info="processing"
+    tabindex="0"
+    role="button"
+>
 
+    <strong>
+        Pagproseso ng Pag-unawa
+    </strong>
+
+    <span class="card-detail">
+        Sagutin ang mga tanong batay sa akda.
+    </span>
+
+</article>
     </div>
 
 `;
