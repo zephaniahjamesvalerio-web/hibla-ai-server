@@ -2555,7 +2555,7 @@ function addAdditionalMaterialButton(
         "additional-material-button";
 
     button.innerHTML =
-        "📚 " + material.title;
+        "" + material.title;
 
     button.addEventListener(
         "click",
