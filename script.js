@@ -1307,7 +1307,991 @@ document.addEventListener("DOMContentLoaded", function () {
     /* =========================================================
        GET WEEK NUMBER
     ========================================================= */
+/* =========================================================
+   ADDITIONAL LEARNING MATERIALS
+========================================================= */
 
+const additionalMaterials = {
+
+    1: {
+        title: "Pagproseso ng Pag-unawa",
+        subtitle: "A. Pagkilala sa Katotohanan at Kasinungalingan",
+
+        type: "truefalse",
+
+        instructions: `
+            Isulat sa patlang kung ang nakasaad ay
+            <strong>Katotohanan</strong>. Kung hindi, palitan
+            ang salita o mga salitang may salungguhit ng wastong sagot.
+        `,
+
+        questions: [
+            {
+                number: 1,
+                question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang Espanya.",
+                answer: "Amerika"
+            },
+            {
+                number: 2,
+                question: "Si Prinsipe Dolar ang mabuting anak ni Haring Samuel.",
+                answer: "Duke Democrito"
+            },
+            {
+                number: 3,
+                question: "Si Dakila ay kasintahan ni Prinsesa Mandawa.",
+                answer: "Katotohanan"
+            },
+            {
+                number: 4,
+                question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong 1928.",
+                answer: "Katotohanan"
+            },
+            {
+                number: 5,
+                question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng Amerika.",
+                answer: "Pilipinas"
+            },
+            {
+                number: 6,
+                question: "Si Duke Demorito ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
+                answer: "Katotohanan"
+            },
+            {
+                number: 7,
+                question: "Sa akda, binanggit na ang ginto na bilog ay nakabubulag.",
+                answer: "Pilak"
+            },
+            {
+                number: 8,
+                question: "Ang matulis na kuko ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
+                answer: "Katotohanan"
+            },
+            {
+                number: 9,
+                question: "Ang palasyo ay kulong ng malaking lambat.",
+                answer: "Gubat"
+            },
+            {
+                number: 10,
+                question: "Ang dayuhang utak ay simbolismo ng kaisipang kolonyal.",
+                answer: "Katotohanan"
+            }
+        ],
+
+        secondPart: {
+            title: "B. Pagsagot sa Makabuluhang Tanong",
+            content: `
+                Sagutin nang malinaw at makabuluhan ang mga
+                tanong na may kaugnayan sa akdang
+                <strong>“Sa Dakong Silangan.”</strong>
+            `
+        }
+    },
+
+
+    2: {
+        title: "Mga Rehiyonal na Dula",
+        subtitle: "Karagdagang Babasahin",
+
+        type: "reading",
+
+        content: `
+            <p>
+                Maituturing na rehiyonal na dula ang
+                <strong>“Kahapon, Ngayon at Bukas”</strong>
+                ni Aurelio V. Tolentino na may pamagat na
+                <strong>“Napon, Ngeni at Bukas”</strong>
+                sa Kapampangan.
+            </p>
+
+            <p>
+                Ang mga rehiyonal na dula na nasusulat sa mga
+                rehiyonal na wika sa Pilipinas ay kapantay rin
+                ng mga dulang nasusulat sa Tagalog.
+            </p>
+
+            <p>
+                <strong>“Elena”</strong> naman ang pamagat ng
+                dulang Cebuano ni Vicente Sotto noong 1902.
+            </p>
+
+            <p>
+                <strong>“Ang Ayat Iti Ili ken Dadduma Pay a Drama”</strong>
+                (Pag-ibig sa Bayan at Iba pang Drama) ni
+                Jose Garvida Flores ay halimbawa ng dulang Ilocano.
+            </p>
+
+            <p>
+                Ang mga dulang rehiyonal sa iba't ibang lugar
+                sa Pilipinas ay may ambag ding malaki sa
+                pag-unlad ng dula o teatro sa bansa sa panahon
+                ng pananakop ng mga Kastila at Amerikano
+                hanggang sa kasalukuyan.
+            </p>
+        `,
+
+        keywords: [
+            "Rehiyonal na Dula",
+            "Kapampangan",
+            "Cebuano",
+            "Ilocano",
+            "Kahapon, Ngayon at Bukas",
+            "Napon, Ngeni at Bukas",
+            "Elena",
+            "Ang Ayat Iti Ili ken Dadduma Pay a Drama",
+            "Vicente Sotto",
+            "Jose Garvida Flores",
+            "Aurelio V. Tolentino",
+            "Kastila",
+            "Amerikano",
+            "Teatro"
+        ]
+    },
+
+
+    4: {
+        title: "Ang Tunay na Sampung Utos",
+        subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
+
+        type: "commandments",
+
+        introduction: `
+            Mayo ng 1898 nang sinulat ni
+            <strong>Apolinario Mabini</strong> ang
+            <strong>El Verdadero Decalogo</strong> —
+            o <strong>Ang Tunay na Sampung Utos</strong>.
+            Ito ang kanyang habilin sa ating bayan.
+        `,
+
+        commandments: [
+            {
+                number: "Una",
+                text: `
+                    Ibigin mo ang Diyos at ang iyong puri ng lalo
+                    sa lahat ng bagay. Ang paghahangad ng puri ang
+                    siya lamang makapipigil sa iyo sa pagbubulaan
+                    at makapipigil na huwag kang suminsay sa daan
+                    ng katuwiran at laging magtaglay ng kasipagan.
+                `,
+                keywords: [
+                    "Diyos",
+                    "Puri",
+                    "Katuwiran",
+                    "Kasipagan"
+                ]
+            },
+
+            {
+                number: "Ikalawa",
+                text: `
+                    Sambahin mo ang Dios sa kaparaang lalong
+                    minamarapat ng iyong bait at kalooban o
+                    konsyensya.
+                `,
+                keywords: [
+                    "Pagsamba sa Diyos",
+                    "Bait",
+                    "Kalooban",
+                    "Konsensya"
+                ]
+            },
+
+            {
+                number: "Ikatlo",
+                text: `
+                    Dagdagan mong pilit ang talos ng isip at
+                    katutubong alam na ipinagkaloob ng Diyos sa iyo
+                    sa pamamagitan ng pag-aaral, at magsumakit ka
+                    ng ubos lakas sa gawang kinahihiligan ng iyong
+                    loob upang matipon sa iyo ang lalong maraming
+                    kagalingan at sa ganitong paraan ay makatulong
+                    ka sa ikasusulong ng lahat.
+                `,
+                keywords: [
+                    "Pag-aaral",
+                    "Kaalaman",
+                    "Kagalingan",
+                    "Pagsisikap",
+                    "Pagtulong"
+                ]
+            },
+
+            {
+                number: "Ikaapat",
+                text: `
+                    Ibigin mo ang iyong Inang Bayan ikalawa sa
+                    Dios at sa iyong puri at higit sa iyong sarili,
+                    sapagkat siya ang nakaisa-isang Paraisong
+                    pinaglagyan sa iyo ng Diyos sa buhay na ito.
+                `,
+                keywords: [
+                    "Inang Bayan",
+                    "Pagmamahal sa Bayan",
+                    "Puri",
+                    "Diyos"
+                ]
+            },
+
+            {
+                number: "Ikalima",
+                text: `
+                    Pagpilitan mo ang kalayaan ng iyong bayan
+                    bago ang iyong sarili, sapagkat kung malaya
+                    siya at lalaya rin ikaw at ang iyong kamag-anakan.
+                `,
+                keywords: [
+                    "Kalayaan",
+                    "Bayan",
+                    "Sarili",
+                    "Kamag-anakan"
+                ]
+            },
+
+            {
+                number: "Ikaanim",
+                text: `
+                    Pagpilitan mo ang kasarinlan ng iyong bayan,
+                    sapagkat ikaw lamang ang tunay na makapagmamasakit
+                    sa kanyang ikasusulong at ikatatanghal.
+                `,
+                keywords: [
+                    "Kasarinlan",
+                    "Bayan",
+                    "Pagsulong",
+                    "Pagtatanghal"
+                ]
+            },
+
+            {
+                number: "Ikapito",
+                text: `
+                    Huwag mong kilalanin sa loob ng iyong bayan ang
+                    kapangyarihan ng sino mang tao na hindi inilagay
+                    ninyong magkakababayan. Ang taong ituro at ihalal
+                    ng mga konsyensya ng sangkabayanan ang siya lamang
+                    makapagtataglay ng tunay na kapangyarihan.
+                `,
+                keywords: [
+                    "Halalan",
+                    "Konsensya",
+                    "Mamamayan",
+                    "Tunay na Kapangyarihan"
+                ]
+            },
+
+            {
+                number: "Ikawalo",
+                text: `
+                    Ihanap mong pilit ang iyong bayan ng Republica,
+                    yaon baga ang lahat na namamahala ay palagay ng
+                    bayan, at huwag isipin kailan man ang Monarkiya,
+                    ang pagkakaroon baga ng hari.
+                `,
+                keywords: [
+                    "Republika",
+                    "Bayan",
+                    "Pamamahala",
+                    "Monarkiya"
+                ]
+            },
+
+            {
+                number: "Ikasiyam",
+                text: `
+                    Ibigin mo ang kapwa mo tao kaparis ng pag-ibig
+                    mo sa iyong sarili, sapagkat siya’y binigyan ng
+                    Diyos, at ikaw ay ganoon din naman, ng katungkulang
+                    tulungan ka at huwag niyang gawin sa iyo ang di
+                    niya ibig na gawin mo sa kaniya.
+                `,
+                keywords: [
+                    "Kapwa",
+                    "Pagmamahal",
+                    "Pagtutulungan",
+                    "Diyos"
+                ]
+            },
+
+            {
+                number: "Ikasampu",
+                text: `
+                    Palalaluin nang kaunti sa loob mo ang iyong
+                    kababayan sa iyong kapwa tao; aariin mong palagi
+                    siya na parang isang katoto, kapatid kaya o kasama
+                    man lamang, palibhasa’y iisa ang inyong kapalaran,
+                    iisa din ang inyong tuwa at kapighatian.
+                `,
+                keywords: [
+                    "Kababayan",
+                    "Pagkakaisa",
+                    "Kapatid",
+                    "Magkakasama",
+                    "Iisang Kapalaran"
+                ]
+            }
+        ]
+    },
+
+
+    6: {
+        title: "Pagtukoy: Mga Ibong Mandaragit",
+        subtitle: "Rebyu ng Nobela",
+
+        type: "identification",
+
+        instructions: `
+            Ang sumusunod ay mula sa Rebyu ng nobelang
+            <strong>“Mga Ibong Mandaragit.”</strong>
+            Isulat sa patlang ang tinutukoy sa bawat bilang.
+        `,
+
+        questions: [
+            {
+                number: 1,
+                question: "Ito ang taon nang maisulat ang nobelang Mga Ibong Mandaragit.",
+                answer: "1969"
+            },
+            {
+                number: 2,
+                question: "Siya ang awtor ng English na bersyon ng nobela na lumabas noong 2022.",
+                answer: "Danton Remoto"
+            },
+            {
+                number: 3,
+                question: "Siya ang pangunahing tauhan sa nobela.",
+                answer: "Mando Plaridel"
+            },
+            {
+                number: 4,
+                question: "Kung sa Noli Me Tangere ay may Pilosopo Tasyo, siya naman ang katumbas niya sa nobela.",
+                answer: "Tata Matyas"
+            },
+            {
+                number: 5,
+                question: "Ito ang pamagat ng tulang nasulat ni Amado V. Hernandez sa kulungan na nagpapakita ng kanyang kalagayan doon.",
+                answer: "Isang Dipang Langit"
+            },
+            {
+                number: 6,
+                question: "Ano ang pamagat ng tula ni Amado V. Hernandez na binubuo ng 5,000 taludtod?",
+                answer: "Bayang Malaya"
+            },
+            {
+                number: 7,
+                question: "Sa nobela, ito ang taon nang pagsisimula ng naratibo.",
+                answer: "1944"
+            },
+            {
+                number: 8,
+                question: "Ito ang kabuuang bilang ng kabanata ng nobela.",
+                answer: "59"
+            },
+            {
+                number: 9,
+                question: "Sa nobela, ito ang tawag sa patagong pinagbebentahan ng mga gamit sa panahon ng Hapon.",
+                answer: "Black market"
+            },
+            {
+                number: 10,
+                question: "Ito ang pamagat ng pahayagan.",
+                answer: "Kampilan"
+            }
+        ]
+    }
+
+};
+
+
+/* =========================================================
+   ADDITIONAL MATERIAL MODAL CSS
+========================================================= */
+
+function createAdditionalMaterialStyles() {
+
+    if (document.getElementById("additional-material-style")) {
+        return;
+    }
+
+    const style = document.createElement("style");
+
+    style.id = "additional-material-style";
+
+    style.textContent = `
+
+        .additional-material-button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px 20px;
+            border: 2px solid #7d0b12;
+            border-radius: 14px;
+            background: #fff;
+            color: #7d0b12;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all .25s ease;
+            text-align: center;
+        }
+
+        .additional-material-button:hover {
+            background: #7d0b12;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(125,11,18,.18);
+        }
+
+        .additional-material-button:focus {
+            outline: 3px solid rgba(125,11,18,.2);
+            outline-offset: 3px;
+        }
+
+        .additional-material-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .additional-question {
+            background: #faf7f7;
+            border-left: 4px solid #7d0b12;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .additional-question-number {
+            color: #7d0b12;
+            font-weight: 900;
+            margin-bottom: 7px;
+        }
+
+        .additional-question-text {
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .answer-box {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: #f1e6e7;
+            color: #7d0b12;
+            font-weight: 800;
+        }
+
+        .material-reading {
+            color: #444;
+            line-height: 1.85;
+            font-size: 16px;
+        }
+
+        .material-reading p {
+            margin-bottom: 18px;
+        }
+
+        .keyword-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .keyword-tag {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 20px;
+            background: #7d0b12;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .commandment-card {
+            background: #faf7f7;
+            border: 1px solid rgba(125,11,18,.12);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .commandment-number {
+            color: #7d0b12;
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .commandment-text {
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .commandment-keywords {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .commandment-keyword {
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: #7d0b12;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .answer-section {
+            margin-top: 28px;
+            padding: 20px;
+            background: #faf7f7;
+            border-left: 4px solid #7d0b12;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 650px) {
+
+            .additional-material-button {
+                font-size: 14px;
+                padding: 13px 15px;
+            }
+
+            .additional-question {
+                padding: 15px;
+            }
+
+            .commandment-card {
+                padding: 16px;
+            }
+
+        }
+
+    `;
+
+    document.head.appendChild(style);
+}
+
+
+/* =========================================================
+   ADDITIONAL MATERIAL MODAL
+========================================================= */
+
+function createAdditionalMaterialModal() {
+
+    if (document.getElementById("additionalMaterialModal")) {
+        return;
+    }
+
+    const modal = document.createElement("div");
+
+    modal.id = "additionalMaterialModal";
+
+    modal.innerHTML = `
+        <div class="lesson-modal-overlay">
+
+            <div class="lesson-modal">
+
+                <button
+                    type="button"
+                    class="lesson-modal-close"
+                    id="additionalMaterialClose"
+                    aria-label="Isara"
+                >
+                    ×
+                </button>
+
+                <div id="additionalMaterialBody"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+
+        #additionalMaterialModal {
+            position: fixed;
+            inset: 0;
+            z-index: 99998;
+            display: none;
+        }
+
+        #additionalMaterialModal.show {
+            display: block;
+        }
+
+    `;
+
+    document.head.appendChild(style);
+
+    document
+        .getElementById("additionalMaterialClose")
+        .addEventListener(
+            "click",
+            closeAdditionalMaterial
+        );
+
+    modal
+        .querySelector(".lesson-modal-overlay")
+        .addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target.classList.contains(
+                        "lesson-modal-overlay"
+                    )
+                ) {
+                    closeAdditionalMaterial();
+                }
+
+            }
+        );
+}
+
+
+/* =========================================================
+   OPEN ADDITIONAL MATERIAL
+========================================================= */
+
+function openAdditionalMaterial(weekNumber) {
+
+    const material =
+        additionalMaterials[weekNumber];
+
+    if (!material) {
+        return;
+    }
+
+    createAdditionalMaterialModal();
+
+    const modal =
+        document.getElementById(
+            "additionalMaterialModal"
+        );
+
+    const body =
+        document.getElementById(
+            "additionalMaterialBody"
+        );
+
+    let html = `
+
+        <span class="modal-eyebrow">
+            KARAGDAGANG MATERYAL
+        </span>
+
+        <h2>
+            ${material.title}
+        </h2>
+
+    `;
+
+
+    /* =====================================================
+       TRUE OR FALSE / IDENTIFICATION
+    ===================================================== */
+
+    if (
+        material.type === "truefalse" ||
+        material.type === "identification"
+    ) {
+
+        if (material.instructions) {
+
+            html += `
+                <div class="detail-box">
+                    <p class="modal-text">
+                        ${material.instructions}
+                    </p>
+                </div>
+            `;
+
+        }
+
+        html += `
+            <div class="additional-material-list">
+        `;
+
+        material.questions.forEach(function (item) {
+
+            html += `
+
+                <div class="additional-question">
+
+                    <div class="additional-question-number">
+                        ${item.number}.
+                    </div>
+
+                    <div class="additional-question-text">
+                        ${item.question}
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+        html += `
+            </div>
+        `;
+
+
+        /* ANSWER KEY */
+
+        html += `
+
+            <div class="answer-section">
+
+                <h3>
+                    Susi sa Katanungan
+                </h3>
+
+                <div class="additional-material-list">
+        `;
+
+        material.questions.forEach(function (item) {
+
+            html += `
+
+                <div>
+                    <strong>${item.number}.</strong>
+                    ${item.answer}
+                </div>
+
+            `;
+
+        });
+
+        html += `
+                </div>
+            </div>
+        `;
+
+
+        /* SECOND PART */
+
+        if (material.secondPart) {
+
+            html += `
+
+                <div class="answer-section">
+
+                    <h3>
+                        ${material.secondPart.title}
+                    </h3>
+
+                    <p class="modal-text">
+                        ${material.secondPart.content}
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       READING
+    ===================================================== */
+
+    else if (material.type === "reading") {
+
+        html += `
+
+            <div class="material-reading">
+
+                ${material.content}
+
+            </div>
+
+        `;
+
+
+        if (
+            material.keywords &&
+            material.keywords.length > 0
+        ) {
+
+            html += `
+
+                <div class="detail-box">
+
+                    <h3>
+                        Mahahalagang Keywords
+                    </h3>
+
+                    <div class="keyword-container">
+            `;
+
+            material.keywords.forEach(function (keyword) {
+
+                html += `
+                    <span class="keyword-tag">
+                        ${keyword}
+                    </span>
+                `;
+
+            });
+
+            html += `
+                    </div>
+
+                </div>
+            `;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       COMMANDMENTS
+    ===================================================== */
+
+    else if (material.type === "commandments") {
+
+        html += `
+
+            <div class="detail-box">
+
+                <p class="modal-text">
+                    ${material.introduction}
+                </p>
+
+            </div>
+
+            <div style="margin-top:25px;">
+        `;
+
+
+        material.commandments.forEach(function (item) {
+
+            html += `
+
+                <div class="commandment-card">
+
+                    <div class="commandment-number">
+                        ${item.number}
+                    </div>
+
+                    <div class="commandment-text">
+                        ${item.text}
+                    </div>
+
+                    <div class="commandment-keywords">
+
+            `;
+
+            item.keywords.forEach(function (keyword) {
+
+                html += `
+                    <span class="commandment-keyword">
+                        ${keyword}
+                    </span>
+                `;
+
+            });
+
+            html += `
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+
+        html += `
+            </div>
+        `;
+
+    }
+
+
+    body.innerHTML = html;
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* =========================================================
+   CLOSE ADDITIONAL MATERIAL
+========================================================= */
+
+function closeAdditionalMaterial() {
+
+    const modal =
+        document.getElementById(
+            "additionalMaterialModal"
+        );
+
+    if (modal) {
+        modal.classList.remove("show");
+    }
+
+    document.body.style.overflow = "";
+}
+
+
+/* =========================================================
+   ADD BUTTON TO LESSON
+========================================================= */
+
+function addAdditionalMaterialButton(
+    weekNumber,
+    container
+) {
+
+    if (!container) {
+        return;
+    }
+
+    if (!additionalMaterials[weekNumber]) {
+        return;
+    }
+
+    const material =
+        additionalMaterials[weekNumber];
+
+    const button =
+        document.createElement("button");
+
+    button.type = "button";
+
+    button.className =
+        "additional-material-button";
+
+    button.innerHTML =
+        "📚 " + material.title;
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            openAdditionalMaterial(
+                weekNumber
+            );
+
+        }
+    );
+
+    container.appendChild(button);
+}
     function getWeekNumber(lesson) {
 
         for (const week in lessons) {
@@ -1504,93 +2488,100 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(function () {
 
-            weekContent.innerHTML = `
+weekContent.innerHTML = `
 
-                <h3 class="week-title">
-                    ${lesson.title}
-                </h3>
+    <h3 class="week-title">
+        ${lesson.title}
+    </h3>
 
-                <p class="week-description">
-                    ${lesson.description}
-                </p>
+    <p class="week-description">
+        ${lesson.description}
+    </p>
 
-                <div class="lesson-grid">
+    <div class="lesson-grid">
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="author"
-                        tabindex="0"
-                        role="button"
-                    >
+        <article
+            class="feature-card clickable-lesson-card"
+            data-info="author"
+            tabindex="0"
+            role="button"
+        >
 
-                        <strong>
-                            May-akda
-                        </strong>
+            <strong>
+                May-akda
+            </strong>
 
-                        <span class="card-detail">
-                            ${lesson.author}
-                        </span>
+            <span class="card-detail">
+                ${lesson.author}
+            </span>
 
-                    </article>
-
-
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="theme"
-                        tabindex="0"
-                        role="button"
-                    >
-
-                        <strong>
-                            Tema
-                        </strong>
-
-                        <span class="card-detail">
-                            ${lesson.theme}
-                        </span>
-
-                    </article>
+        </article>
 
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="objective"
-                        tabindex="0"
-                        role="button"
-                    >
+        <article
+            class="feature-card clickable-lesson-card"
+            data-info="theme"
+            tabindex="0"
+            role="button"
+        >
 
-                        <strong>
-                            Layunin
-                        </strong>
+            <strong>
+                Tema
+            </strong>
 
-                        <span class="card-detail">
-                            ${lesson.objective}
-                        </span>
+            <span class="card-detail">
+                ${lesson.theme}
+            </span>
 
-                    </article>
+        </article>
 
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="material"
-                        tabindex="0"
-                        role="button"
-                    >
+        <article
+            class="feature-card clickable-lesson-card"
+            data-info="objective"
+            tabindex="0"
+            role="button"
+        >
 
-                        <strong>
-                            Multimodal Material
-                        </strong>
+            <strong>
+                Layunin
+            </strong>
 
-                        <span class="card-detail">
-                            ${lesson.material}
-                        </span>
+            <span class="card-detail">
+                ${lesson.objective}
+            </span>
 
-                    </article>
+        </article>
 
-                </div>
 
-            `;
+        <article
+            class="feature-card clickable-lesson-card"
+            data-info="material"
+            tabindex="0"
+            role="button"
+        >
 
+            <strong>
+                Multimodal Material
+            </strong>
+
+            <span class="card-detail">
+                ${lesson.material}
+            </span>
+
+        </article>
+
+    </div>
+
+`;
+/* =================================================
+   ADDITIONAL LEARNING MATERIAL BUTTON
+================================================= */
+
+addAdditionalMaterialButton(
+    weekNumber,
+    weekContent
+);
 
             /* =================================================
                CLICKABLE CARDS
@@ -1983,7 +2974,8 @@ document.addEventListener("DOMContentLoaded", function () {
             closeContactModal();
 
             closeInfoModal();
-
+            
+            closeAdditionalMaterial();
 
             const zoom =
                 document.getElementById(
@@ -2065,13 +3057,17 @@ document.addEventListener("DOMContentLoaded", function () {
        INITIALIZE
     ========================================================= */
 
-    createInfoModal();
+createInfoModal();
+
+createAdditionalMaterialStyles();
+
+createAdditionalMaterialModal();
 
 
-    const firstWeekButton =
-        document.querySelector(
-            '.week-btn[data-week="1"]'
-        );
+const firstWeekButton =
+    document.querySelector(
+        '.week-btn[data-week="1"]'
+    );
 
 
     displayLesson(
