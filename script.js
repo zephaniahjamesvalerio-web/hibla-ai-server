@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Himukin ang pagbabago at pagiging disiplinado sa oras.",
 
     material:
-        "Suring-Sanaysay: Filipino Time",
+        "Digital Poster",
 
     materialType:
         "text",
