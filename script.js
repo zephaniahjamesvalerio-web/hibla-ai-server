@@ -1,6 +1,4 @@
-from pathlib import Path
-
-js = r'''document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     "use strict";
 
     /* =========================================================
@@ -2374,10 +2372,6 @@ js = r'''document.addEventListener("DOMContentLoaded", () => {
         "Hibla-Panitikan script loaded successfully."
     );
 });
-'''
-
-path = Path("/mnt/data/script.js")
-path.write_text(js, encoding="utf-8")
 
 print(f"Created: {path}")
 print(f"Lines: {len(js.splitlines())}")
