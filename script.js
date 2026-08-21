@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         2: {
-            title: "Alam mo ba?",
+            title: "Alamin Natin!",
             type: "reading",
 
             content: `
@@ -618,7 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         4: {
-            title: "Tandaan mo!",
+            title: "Tandaan Mo!",
             subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
             type: "commandments",
 
@@ -791,7 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         6: {
-            title: "Sagutan natin!",
+            title: "Sagutan Natin!",
             type: "identification",
 
             instructions: `
@@ -1818,13 +1818,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             html = `
                 <span class="modal-eyebrow">
-                    PAGPROSESO NG PAG-UNAWA
+                    
                 </span>
 
                 <h2>
                     ${
                         lesson.processingTitle ||
-                        "Pagproseso ng Pag-unawa"
+                        ""
                     }
                 </h2>
 
