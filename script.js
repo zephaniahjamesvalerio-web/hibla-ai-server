@@ -5,18 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
        DOM ELEMENTS
     ========================================================= */
 
-    const sections = document.querySelectorAll(
-        ".hero, .content-section, #researchersPage"
-    );
+    const navbar = document.getElementById("navbar");
+    const weekContent = document.getElementById("weekContent");
+    const researchersPage = document.getElementById("researchersPage");
+    const contactModal = document.getElementById("contactModal");
 
     const navButtons = document.querySelectorAll(".nav-btn");
     const sectionButtons = document.querySelectorAll("[data-section]");
     const weekButtons = document.querySelectorAll(".week-btn");
-
-    const weekContent = document.getElementById("weekContent");
-    const navbar = document.getElementById("navbar");
-    const researchersPage = document.getElementById("researchersPage");
-    const contactModal = document.getElementById("contactModal");
 
     /* =========================================================
        LESSON DATA
@@ -29,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 Ang <strong>“Sa Dakong Silangan”</strong> ay isang tulang
                 nagpapahayag ng pag-asa, kalayaan, at muling pagbangon
                 ng bayan. Inihahalintulad ang Pilipinas sa pagsikat
-                ng araw sa Silangan—isang simbolo ng bagong simula at
-                pag-unlad matapos ang mga pagsubok at paghihirap.
+                ng araw sa Silangan—isang simbolo ng bagong simula,
+                pag-unlad, at pag-asa matapos ang mga pagsubok.
             `,
             author: "Jose Corazon de Jesus (Huseng Batute)",
             authorImage: "images/authors/jose-corazon-de-jesus.jpeg",
@@ -49,8 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 kaisipang makabayan.
             `,
             theme: "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
-            objective: "Magbigay inspirasyon at gisingin ang damdaming makabayan.",
-            material: "Audio-visual/Interactive Presentation",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
+                mga mag-aaral ang mahahalagang kaisipan, simbolismo, at
+                mensaheng makabayan na nakapaloob sa “Sa Dakong Silangan.”
+                Inaasahang matutukoy nila kung paano ginamit ang
+                pagsikat ng araw sa Silangan bilang simbolo ng pag-asa,
+                kalayaan, at muling pagbangon ng bayan. Higit sa lahat,
+                mahihikayat silang pahalagahan ang pagmamahal sa bayan,
+                pag-asa sa kabila ng mga pagsubok, at paninindigan para
+                sa isang mas malaya at maunlad na lipunan.
+            `,
+            material: "Audio-Visual/Interactive Presentation",
             materialType: "video",
             youtube: "https://www.youtube.com/watch?v=FdZsEKgfN_c",
             materialImage: ""
@@ -81,7 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 may malakas na mensaheng makabayan at panlipunan.
             `,
             theme: "Kolonyalismo • Pakikibaka • Kalayaan",
-            objective: "Ipakita ang kasaysayan at aral ng pakikibaka ng Pilipino.",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang matutukoy at
+                maipaliliwanag ng mga mag-aaral ang mahahalagang
+                pangyayari, tauhan, simbolismo, at mensahe sa unang tagpo
+                ng “Kahapon, Ngayon at Bukas.” Mauunawaan nila kung paano
+                inilalarawan ng dula ang karanasan ng mga Pilipino sa
+                ilalim ng kolonyalismo at kung paano ipinakikita ang
+                pagnanais para sa kalayaan. Inaasahan ding maiuugnay nila
+                ang mga kaisipan ng akda sa kahalagahan ng pagmamahal sa
+                bayan, pagkakaisa, at paninindigan para sa kalayaan.
+            `,
             material: "Audio-Visual/Interactive Presentation",
             materialType: "video",
             youtube: "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
@@ -112,16 +128,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 disiplina sa lipunang Pilipino.
             `,
             theme: "Ugali • Disiplina • Pananagutan",
-            objective: "Himukin ang pagbabago at pagiging disiplinado sa oras.",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
+                mga mag-aaral ang konsepto ng “Filipino Time” at ang mga
+                dahilan kung bakit nagkakaroon ng ganitong kaugalian.
+                Matutukoy nila ang mga epekto ng pagiging palaging huli
+                sa sarili, sa ibang tao, at sa mga gawain ng isang
+                komunidad. Hinihikayat din silang suriin ang kanilang
+                pagpapahalaga sa oras at makabuo ng mga praktikal na
+                paraan upang maging mas maagap, responsable, at
+                disiplinado sa pang-araw-araw na buhay.
+            `,
             material: "Digital Poster",
             materialType: "text",
             youtube: "",
             materialImage: "",
-
             processingTitle: "Pagproseso ng Pag-unawa",
             processingInstructions:
                 "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
-
             processingQuestions: [
                 {
                     number: 1,
@@ -143,23 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     number: 5,
                     question: "Paano mo maipapakita ang pagiging responsable sa oras?"
                 }
-            ],
-
-            processingAnswers: [
-                "Ang “Filipino Time” ay tumutukoy sa nakasanayang pagiging huli sa itinakdang oras o gawain.",
-                "Maaaring dulot ito ng kakulangan sa disiplina, maling pagpapahalaga sa oras, o kawalan ng maayos na pagpaplano.",
-                "Maaari itong magdulot ng pagkaantala sa mga gawain, abala sa ibang tao, at pagkawala ng tiwala.",
-                "Mahalaga ang oras dahil hindi na ito maibabalik at may epekto ito sa ating mga gawain at responsibilidad.",
-                "Maipapakita ito sa pamamagitan ng pagiging maagap, pagpaplano ng oras, at pagsunod sa itinakdang iskedyul."
-            ],
-
-            keywords: [
-                "Filipino Time",
-                "Oras",
-                "Disiplina",
-                "Pananagutan",
-                "Pagiging Maagap",
-                "Responsibilidad"
             ]
         },
 
@@ -170,24 +177,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 naglalaman ng mga prinsipyo at gabay na dapat sundin
                 ng mga mamamayan upang magkaroon ng maayos at
                 makatarungang lipunan. Binibigyang-diin nito ang
-                pagmamahal sa bayan at tamang asal.
+                pagmamahal sa bayan, tamang asal, pananagutan, at
+                paglilingkod sa kapwa.
             `,
             author: "Michael Charleston Chua (Ayon kay Apolinario Mabini)",
             authorImage: "images/authors/apolinario-mabini.jpg",
             biography: `
                 Si <strong>Apolinario Mabini</strong> ay isang
-                Pilipinong rebolusyonaryo, manunulat, at
-                tagapayo sa pamahalaan noong panahon ng
-                Himagsikan at Unang Republika ng Pilipinas.
+                Pilipinong rebolusyonaryo, manunulat, at tagapayo sa
+                pamahalaan noong panahon ng Himagsikan at Unang
+                Republika ng Pilipinas.
 
                 <br><br>
 
-                Kilala siya sa kaniyang mga akdang naglalaman
-                ng mga kaisipan tungkol sa pamamahala, moralidad,
+                Kilala siya sa kaniyang mga akdang naglalaman ng
+                mga kaisipan tungkol sa pamamahala, moralidad,
                 responsibilidad, at pagmamahal sa bayan.
             `,
             theme: "Gabay • Disiplina • Pagmamahal sa Bayan",
-            objective: "Ipakita ang kahalagahan ng tamang asal at responsableng mamamayan.",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
+                mga mag-aaral ang mga pangunahing prinsipyo na
+                nakapaloob sa “Ang Tunay na Sampung Utos” ni Apolinario
+                Mabini. Matutukoy at maipaliliwanag nila ang kahalagahan
+                ng pagmamahal sa Diyos, bayan, kapwa, kalayaan,
+                kasarinlan, mabuting pamamahala, at pananagutan bilang
+                mamamayan. Inaasahan ding maiuugnay nila ang mga
+                prinsipyong ito sa kanilang sariling pag-uugali at
+                responsibilidad bilang bahagi ng paaralan, pamilya, at
+                lipunan.
+            `,
             material: "Digital Sequence Chart",
             materialType: "image",
             youtube: "",
@@ -228,17 +247,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 Pilipino.
             `,
             theme: "Wikang Pambansa • Pagkakaisa • Pambansang Kamalayan • Pagkakakilanlan",
-            objective:
-                "Maunawaan ang kahalagahan ng pagkakaroon ng wikang pambansa bilang instrumento ng pagkakaisa at pambansang kamalayan.",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang maipaliliwanag
+                ng mga mag-aaral ang kahalagahan ng pagkakaroon ng
+                wikang pambansa sa pagbuo ng pambansang kamalayan,
+                pagkakaisa, at pagkakakilanlan. Mauunawaan nila ang
+                pananaw ni Manuel L. Quezon tungkol sa pangangailangan
+                ng isang wikang maaaring gamitin ng mga Pilipino sa
+                pakikipag-ugnayan. Inaasahan ding mapahahalagahan nila
+                ang sariling wika at ang iba't ibang katutubong wika
+                bilang mahahalagang bahagi ng kultura at pagkakakilanlan
+                ng bansa.
+            `,
             material: "Audio-Visual/Interactive Presentation",
             materialType: "video",
             youtube: "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
             materialImage: "",
-
             processingTitle: "Pagproseso ng Pag-unawa",
             processingInstructions:
                 "Basahin at unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
-
             processingQuestions: [
                 {
                     number: 1,
@@ -260,28 +287,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     number: 5,
                     question: "Paano nakatutulong ang isang wikang ginagamit ng lahat sa pagkakaisa ng mga Pilipino?"
                 }
-            ],
-
-            processingAnswers: [
-                "Nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa upang magkaroon ng wikang maaaring gamitin ng mga Pilipino at upang mapalakas ang pambansang kamalayan.",
-                "Mahalaga ang wikang pambansa sa pambansang kamalayan dahil nagiging daan ito upang magkaroon ng pagkakaunawaan at pagkakaisa ang mga mamamayan.",
-                "Kinailangan ni Quezon ng tagapagsalin dahil iba-iba ang wikang ginagamit ng mga Pilipino sa iba't ibang lalawigan.",
-                "Ipinakita niya ang kaniyang pagiging bukas dahil handa siyang tangkilikin at pag-aralan ang ibang katutubong wika kung iyon ang makatutulong upang magkaroon ng wikang ginagamit ng lahat.",
-                "Nakatutulong ito sa pagkakaisa dahil nagkakaroon ang mga mamamayan ng isang wikang maaaring gamitin sa pakikipag-ugnayan at pagpapahayag ng kanilang pambansang pagkakakilanlan."
-            ],
-
-            keywords: [
-                "Wikang Pambansa",
-                "Pambansang Kamalayan",
-                "Pagkakaisa",
-                "Sariling Wika",
-                "Katutubong Wika",
-                "Pagkakakilanlan",
-                "Manuel L. Quezon",
-                "1937",
-                "Tagalog",
-                "Ilokano",
-                "Bisaya"
             ]
         },
 
@@ -289,10 +294,11 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 6: “Mga Ibong Mandaragit”',
             description: `
                 Ang <strong>“Mga Ibong Mandaragit”</strong> ay isang
-                nobela na tumatalakay sa katiwalian, kasakiman, at
-                pakikibaka para sa katarungan sa lipunan. Ipinapakita
-                nito ang realidad ng buhay at ang kahalagahan ng
-                paninindigan para sa tama.
+                nobela na tumatalakay sa katiwalian, kasakiman,
+                pakikibaka, at paghahanap ng katarungan sa lipunan.
+                Ipinapakita nito ang mga suliraning kinakaharap ng
+                mga Pilipino at ang kahalagahan ng paninindigan
+                para sa tama at makatarungan.
             `,
             author: "Amado V. Hernandez",
             authorImage: "images/authors/amado-hernandez.jpg",
@@ -311,17 +317,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 mga suliranin at realidad ng lipunang Pilipino.
             `,
             theme: "Katiwalian • Pakikibaka • Katarungan",
-            objective: "Ipakita ang kahalagahan ng paninindigan at tamang asal sa lipunan.",
-            material: "Infographics",
-            materialType: "image",
-            youtube: "",
+            objective: `
+                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
+                mga mag-aaral ang mahahalagang tema, tauhan, pangyayari,
+                at suliraning panlipunan na inilalarawan sa “Mga Ibong
+                Mandaragit.” Matutukoy nila kung paano inilalantad ng
+                nobela ang mga isyu ng katiwalian, kasakiman,
+                pagsasamantala, at kawalan ng katarungan. Inaasahan ding
+                masusuri nila ang kahalagahan ng paninindigan,
+                pananagutan, at pakikilahok ng mamamayan sa pagtataguyod
+                ng isang makatarungan at makabuluhang lipunan.
+            `,
+            material: "Audio-Visual/Interactive Presentation",
+            materialType: "video",
+            youtube: "https://www.youtube.com/watch?v=JPG8naYuQ3Y",
             materialImage: ""
         }
     };
 
     /* =========================================================
        ADDITIONAL LEARNING MATERIALS
-       NOTE: ANSWER KEYS ARE NOT DISPLAYED.
+       ANSWER KEYS ARE NOT DISPLAYED.
     ========================================================= */
 
     const additionalMaterials = {
@@ -610,13 +626,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     /* =========================================================
-       DYNAMIC MODAL STYLES
+       DYNAMIC STYLES
     ========================================================= */
 
     function injectStyles() {
-        if (document.getElementById("hibla-dynamic-styles")) {
-            return;
-        }
+        if (document.getElementById("hibla-dynamic-styles")) return;
 
         const style = document.createElement("style");
         style.id = "hibla-dynamic-styles";
@@ -629,13 +643,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 display: none;
             }
 
-            #lessonInfoModal {
-                z-index: 99999;
-            }
-
-            #additionalMaterialModal {
-                z-index: 99998;
-            }
+            #lessonInfoModal { z-index: 99999; }
+            #additionalMaterialModal { z-index: 99998; }
 
             #lessonInfoModal.show,
             #additionalMaterialModal.show {
@@ -645,7 +654,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .lesson-modal-overlay {
                 position: fixed;
                 inset: 0;
-                background: rgba(20, 5, 8, 0.78);
+                background: rgba(20,5,8,.78);
                 backdrop-filter: blur(8px);
                 display: flex;
                 align-items: center;
@@ -656,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             .lesson-modal {
                 position: relative;
-                width: min(850px, 100%);
+                width: min(850px,100%);
                 max-height: 90vh;
                 overflow-y: auto;
                 background: #fff;
@@ -711,7 +720,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .lesson-modal h2 {
                 margin: 0 50px 25px 0;
                 color: #7d0b12;
-                font-size: clamp(25px, 4vw, 38px);
+                font-size: clamp(25px,4vw,38px);
                 line-height: 1.2;
             }
 
@@ -730,18 +739,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             .author-photo {
                 width: 100%;
-                aspect-ratio: 1 / 1;
+                aspect-ratio: 1/1;
                 border-radius: 18px;
                 overflow: hidden;
-                background: linear-gradient(135deg, #7d0b12, #c7353d);
+                background: linear-gradient(135deg,#7d0b12,#c7353d);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative;
             }
 
             .author-photo img {
-                display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -752,7 +759,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 color: #fff;
                 font-size: 16px;
                 font-weight: 800;
-                letter-spacing: 1px;
             }
 
             .detail-box {
@@ -780,13 +786,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             .material-image-wrapper img {
-                display: block;
                 width: 100%;
                 max-height: 560px;
                 object-fit: contain;
             }
 
-            .material-placeholder {
+            .material-placeholder,
+            .youtube-placeholder {
                 min-height: 280px;
                 width: 100%;
                 border: 2px dashed #b98a8e;
@@ -801,20 +807,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 background: #fffafa;
             }
 
-            .material-placeholder strong {
+            .material-placeholder strong,
+            .youtube-content strong {
                 font-size: 20px;
                 margin-bottom: 8px;
             }
 
             .youtube-thumbnail-wrapper {
                 position: relative;
+                display: block;
                 width: 100%;
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 16/9;
                 border-radius: 16px;
                 overflow: hidden;
                 background: #111;
                 cursor: pointer;
-                display: block;
                 text-decoration: none;
                 box-shadow: 0 12px 30px rgba(0,0,0,.18);
             }
@@ -822,9 +829,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .youtube-thumbnail-wrapper img {
                 width: 100%;
                 height: 100%;
-                display: block;
                 object-fit: cover;
-                transition: transform .35s ease, filter .35s ease;
+                transition: .35s ease;
             }
 
             .youtube-thumbnail-wrapper:hover img {
@@ -836,7 +842,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%,-50%);
                 width: 76px;
                 height: 54px;
                 border-radius: 16px;
@@ -845,7 +851,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 8px 25px rgba(0,0,0,.35);
-                transition: transform .25s ease, background .25s ease;
+                transition: .25s ease;
             }
 
             .youtube-play-button::after {
@@ -859,7 +865,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             .youtube-thumbnail-wrapper:hover .youtube-play-button {
-                transform: translate(-50%, -50%) scale(1.1);
+                transform: translate(-50%,-50%) scale(1.1);
                 background: #cc0000;
             }
 
@@ -875,31 +881,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 font-weight: 700;
             }
 
-            .youtube-placeholder {
-                width: 100%;
-                aspect-ratio: 16 / 9;
-                background: #f3eeee;
-                border: 2px dashed #b98a8e;
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 30px;
-            }
-
-            .youtube-content strong {
-                display: block;
-                font-size: 20px;
-                color: #7d0b12;
-                margin-bottom: 8px;
-            }
-
-            .youtube-content p {
-                color: #666;
-                margin: 0;
-            }
-
             .zoom-modal {
                 position: fixed;
                 inset: 0;
@@ -912,9 +893,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cursor: zoom-out;
             }
 
-            .zoom-modal.show {
-                display: flex;
-            }
+            .zoom-modal.show { display: flex; }
 
             .zoom-modal img {
                 max-width: 95vw;
@@ -925,7 +904,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             .clickable-lesson-card {
                 cursor: pointer;
-                transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+                transition: transform .2s ease,box-shadow .2s ease,border-color .2s ease;
             }
 
             .clickable-lesson-card:hover {
@@ -951,7 +930,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 font-size: 15px;
                 font-weight: 800;
                 cursor: pointer;
-                transition: all .25s ease;
+                transition: .25s ease;
                 text-align: center;
             }
 
@@ -960,11 +939,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 color: #fff;
                 transform: translateY(-2px);
                 box-shadow: 0 10px 25px rgba(125,11,18,.18);
-            }
-
-            .additional-material-button:focus {
-                outline: 3px solid rgba(125,11,18,.2);
-                outline-offset: 3px;
             }
 
             .additional-material-list {
@@ -998,11 +972,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 font-size: 16px;
             }
 
-            .material-reading p {
-                margin-bottom: 18px;
-            }
+            .material-reading p { margin-bottom: 18px; }
 
-            .keyword-container {
+            .keyword-container,
+            .commandment-keywords {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 8px;
@@ -1040,14 +1013,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 line-height: 1.8;
             }
 
-            .commandment-keywords {
-                margin-top: 14px;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 7px;
-            }
-
-            @media (max-width: 650px) {
+            @media (max-width:650px) {
                 .lesson-modal {
                     padding: 28px 20px;
                     border-radius: 18px;
@@ -1079,13 +1045,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       MODAL HELPERS
+       MODAL CREATION
     ========================================================= */
 
     function createLessonInfoModal() {
-        if (document.getElementById("lessonInfoModal")) {
-            return;
-        }
+        if (document.getElementById("lessonInfoModal")) return;
 
         const modal = document.createElement("div");
         modal.id = "lessonInfoModal";
@@ -1093,13 +1057,10 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.innerHTML = `
             <div class="lesson-modal-overlay">
                 <div class="lesson-modal">
-                    <button
-                        type="button"
-                        class="lesson-modal-close"
-                        id="lessonModalClose"
-                        aria-label="Isara"
-                    >×</button>
-
+                    <button type="button"
+                            class="lesson-modal-close"
+                            id="lessonModalClose"
+                            aria-label="Isara">×</button>
                     <div id="lessonModalBody"></div>
                 </div>
             </div>
@@ -1107,25 +1068,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.body.appendChild(modal);
 
-        const closeButton = document.getElementById("lessonModalClose");
-        if (closeButton) {
-            closeButton.addEventListener("click", closeInfoModal);
-        }
+        modal.querySelector("#lessonModalClose")
+            ?.addEventListener("click", closeInfoModal);
 
-        const overlay = modal.querySelector(".lesson-modal-overlay");
-        if (overlay) {
-            overlay.addEventListener("click", event => {
-                if (event.target === overlay) {
+        modal.querySelector(".lesson-modal-overlay")
+            ?.addEventListener("click", event => {
+                if (event.target === event.currentTarget) {
                     closeInfoModal();
                 }
             });
-        }
     }
 
     function createAdditionalMaterialModal() {
-        if (document.getElementById("additionalMaterialModal")) {
-            return;
-        }
+        if (document.getElementById("additionalMaterialModal")) return;
 
         const modal = document.createElement("div");
         modal.id = "additionalMaterialModal";
@@ -1133,13 +1088,10 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.innerHTML = `
             <div class="lesson-modal-overlay">
                 <div class="lesson-modal">
-                    <button
-                        type="button"
-                        class="lesson-modal-close"
-                        id="additionalMaterialClose"
-                        aria-label="Isara"
-                    >×</button>
-
+                    <button type="button"
+                            class="lesson-modal-close"
+                            id="additionalMaterialClose"
+                            aria-label="Isara">×</button>
                     <div id="additionalMaterialBody"></div>
                 </div>
             </div>
@@ -1147,53 +1099,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.body.appendChild(modal);
 
-        const closeButton = document.getElementById("additionalMaterialClose");
-        if (closeButton) {
-            closeButton.addEventListener("click", closeAdditionalMaterial);
-        }
+        modal.querySelector("#additionalMaterialClose")
+            ?.addEventListener("click", closeAdditionalMaterial);
 
-        const overlay = modal.querySelector(".lesson-modal-overlay");
-        if (overlay) {
-            overlay.addEventListener("click", event => {
-                if (event.target === overlay) {
+        modal.querySelector(".lesson-modal-overlay")
+            ?.addEventListener("click", event => {
+                if (event.target === event.currentTarget) {
                     closeAdditionalMaterial();
                 }
             });
-        }
     }
 
     function closeInfoModal() {
-        const modal = document.getElementById("lessonInfoModal");
-
-        if (modal) {
-            modal.classList.remove("show");
-        }
-
+        document.getElementById("lessonInfoModal")
+            ?.classList.remove("show");
         restoreBodyScrollIfNoModal();
     }
 
     function closeAdditionalMaterial() {
-        const modal = document.getElementById("additionalMaterialModal");
-
-        if (modal) {
-            modal.classList.remove("show");
-        }
-
+        document.getElementById("additionalMaterialModal")
+            ?.classList.remove("show");
         restoreBodyScrollIfNoModal();
     }
 
     function restoreBodyScrollIfNoModal() {
-        const lessonModal = document.getElementById("lessonInfoModal");
-        const additionalModal = document.getElementById("additionalMaterialModal");
-        const zoomModal = document.getElementById("imageZoomModal");
+        const lesson = document.getElementById("lessonInfoModal");
+        const additional = document.getElementById("additionalMaterialModal");
+        const zoom = document.getElementById("imageZoomModal");
 
-        const anyOpen =
-            lessonModal?.classList.contains("show") ||
-            additionalModal?.classList.contains("show") ||
-            zoomModal?.classList.contains("show") ||
+        const open =
+            lesson?.classList.contains("show") ||
+            additional?.classList.contains("show") ||
+            zoom?.classList.contains("show") ||
             contactModal?.classList.contains("show");
 
-        if (!anyOpen) {
+        if (!open) {
             document.body.style.overflow = "";
         }
     }
@@ -1203,25 +1143,20 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function getYouTubeVideoId(url) {
-        if (!url) {
-            return "";
-        }
+        if (!url) return "";
 
         const value = String(url).trim();
 
         const patterns = [
-            /youtube\.com\/watch\?v=([^&]+)/i,
-            /youtube\.com\/embed\/([^?&]+)/i,
-            /youtube\.com\/shorts\/([^?&]+)/i,
-            /youtu\.be\/([^?&]+)/i
+            /youtube\\.com\\/watch\\?v=([^&]+)/i,
+            /youtube\\.com\\/embed\\/([^?&]+)/i,
+            /youtube\\.com\\/shorts\\/([^?&]+)/i,
+            /youtu\\.be\\/([^?&]+)/i
         ];
 
         for (const pattern of patterns) {
             const match = value.match(pattern);
-
-            if (match?.[1]) {
-                return match[1];
-            }
+            if (match?.[1]) return match[1];
         }
 
         return "";
@@ -1232,9 +1167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function openImageZoom(imageSrc) {
-        if (!imageSrc) {
-            return;
-        }
+        if (!imageSrc) return;
 
         let zoom = document.getElementById("imageZoomModal");
 
@@ -1244,11 +1177,9 @@ document.addEventListener("DOMContentLoaded", () => {
             zoom.className = "zoom-modal";
 
             zoom.innerHTML = `
-                <img
-                    id="zoomedMaterialImage"
-                    src=""
-                    alt="Zoomed material"
-                >
+                <img id="zoomedMaterialImage"
+                     src=""
+                     alt="Zoomed material">
             `;
 
             document.body.appendChild(zoom);
@@ -1260,69 +1191,50 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const image = document.getElementById("zoomedMaterialImage");
-
-        if (image) {
-            image.src = imageSrc;
-        }
+        if (image) image.src = imageSrc;
 
         zoom.classList.add("show");
         document.body.style.overflow = "hidden";
     }
 
     /* =========================================================
-       OPEN LESSON INFO MODAL
+       LESSON INFO MODAL
     ========================================================= */
 
     function openInfoModal(type, lesson) {
-        if (!lesson) {
-            return;
-        }
+        if (!lesson) return;
 
         createLessonInfoModal();
 
         const modal = document.getElementById("lessonInfoModal");
         const body = document.getElementById("lessonModalBody");
 
-        if (!modal || !body) {
-            return;
-        }
+        if (!modal || !body) return;
 
         let html = "";
 
         if (type === "author") {
-            const authorImage =
+            const image =
                 typeof lesson.authorImage === "string"
                     ? lesson.authorImage.trim()
                     : "";
 
-            const hasAuthorImage = authorImage.length > 0;
-
             html = `
                 <span class="modal-eyebrow">MAY-AKDA</span>
-
                 <h2>${lesson.author}</h2>
 
                 <div class="author-profile">
-                    <div
-                        class="author-photo ${hasAuthorImage ? "" : "no-image"}"
-                        id="authorPhotoContainer"
-                    >
-                        ${
-                            hasAuthorImage
-                                ? `
-                                    <img
-                                        id="authorPhotoImage"
-                                        src="${authorImage}"
-                                        alt="${lesson.author}"
-                                    >
-                                `
-                                : ""
-                        }
+                    <div class="author-photo ${image ? "" : "no-image"}"
+                         id="authorPhotoContainer">
+                        ${image ? `
+                            <img id="authorPhotoImage"
+                                 src="${image}"
+                                 alt="${lesson.author}">
+                        ` : ""}
                     </div>
 
                     <div>
                         <h3>Talambuhay</h3>
-
                         <div class="modal-text">
                             ${lesson.biography || "Walang talambuhay na nailagay."}
                         </div>
@@ -1332,21 +1244,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         else if (type === "theme") {
-            const themeExplanation =
-                lesson.theme ||
-                "Walang tema na nailagay para sa araling ito.";
-
             html = `
                 <span class="modal-eyebrow">TEMA</span>
-
-                <h2>${themeExplanation}</h2>
+                <h2>${lesson.theme}</h2>
 
                 <div class="detail-box">
-                    <p class="modal-text" style="text-align: justify;">
-                        Ang tema ng akda ay nagpapakita ng mahahalagang
-                        kaisipan at pagpapahalagang nais ipabatid sa
-                        mga mambabasa. Sa pamamagitan nito, mas
-                        mauunawaan ang mensahe at pananaw na nakapaloob
+                    <p class="modal-text" style="text-align:justify;">
+                        Ang tema ng akda ay tumutukoy sa pangunahing
+                        kaisipan o mensaheng nais ipabatid ng may-akda.
+                        Sa pamamagitan nito, mas mauunawaan ang mga
+                        pagpapahalaga, pananaw, at suliraning nakapaloob
                         sa aralin.
                     </p>
                 </div>
@@ -1356,11 +1263,10 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (type === "objective") {
             html = `
                 <span class="modal-eyebrow">LAYUNIN</span>
-
                 <h2>Layunin ng Aralin</h2>
 
                 <div class="detail-box">
-                    <p class="modal-text" style="text-align: justify;">
+                    <p class="modal-text" style="text-align:justify;">
                         ${lesson.objective || "Walang layunin na nailagay."}
                     </p>
                 </div>
@@ -1370,10 +1276,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (type === "processing") {
             let questionsHTML = "";
 
-            if (
-                Array.isArray(lesson.processingQuestions) &&
-                lesson.processingQuestions.length
-            ) {
+            if (Array.isArray(lesson.processingQuestions)) {
                 lesson.processingQuestions.forEach(item => {
                     questionsHTML += `
                         <div class="detail-box">
@@ -1387,9 +1290,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             html = `
-                <span class="modal-eyebrow">
-                    PAGPROSESO NG PAG-UNAWA
-                </span>
+                <span class="modal-eyebrow">PAGPROSESO NG PAG-UNAWA</span>
 
                 <h2>
                     ${lesson.processingTitle || "Pagproseso ng Pag-unawa"}
@@ -1419,40 +1320,28 @@ document.addEventListener("DOMContentLoaded", () => {
                         `https://www.youtube.com/watch?v=${videoId}`;
 
                     preview = `
-                        <a
-                            class="youtube-thumbnail-wrapper"
-                            href="${youtubeUrl}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Panoorin sa YouTube: ${lesson.material}"
-                        >
-                            <img
-                                src="${thumbnail}"
-                                alt="${lesson.material} YouTube preview"
-                                loading="eager"
-                            >
+                        <a class="youtube-thumbnail-wrapper"
+                           href="${youtubeUrl}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Panoorin sa YouTube">
+                            <img src="${thumbnail}"
+                                 alt="${lesson.material} YouTube preview">
 
-                            <span
-                                class="youtube-play-button"
-                                aria-hidden="true"
-                            ></span>
+                            <span class="youtube-play-button"
+                                  aria-hidden="true"></span>
 
                             <span class="youtube-label">
                                 ▶ Panoorin sa YouTube
                             </span>
                         </a>
                     `;
-                }
-
-                else {
+                } else {
                     preview = `
                         <div class="youtube-placeholder">
                             <div class="youtube-content">
                                 <strong>YouTube Preview</strong>
-                                <p>
-                                    Wala pang valid na YouTube video para
-                                    sa materyal na ito.
-                                </p>
+                                <p>Wala pang valid na YouTube video para sa materyal na ito.</p>
                             </div>
                         </div>
                     `;
@@ -1466,14 +1355,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imageSrc = String(lesson.materialImage).trim();
 
                 preview = `
-                    <div
-                        class="material-image-wrapper"
-                        data-zoom-image="${imageSrc}"
-                    >
-                        <img
-                            src="${imageSrc}"
-                            alt="${lesson.material || "Multimodal material"}"
-                        >
+                    <div class="material-image-wrapper"
+                         data-zoom-image="${imageSrc}">
+                        <img src="${imageSrc}"
+                             alt="${lesson.material || "Multimodal material"}">
                     </div>
                 `;
             }
@@ -1491,10 +1376,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             html = `
-                <span class="modal-eyebrow">
-                    MULTIMODAL MATERIAL
-                </span>
-
+                <span class="modal-eyebrow">MULTIMODAL MATERIAL</span>
                 <h2>${lesson.material || "Multimodal Material"}</h2>
 
                 <div class="material-preview">
@@ -1516,45 +1398,44 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add("show");
         document.body.style.overflow = "hidden";
 
-        const authorPhoto = body.querySelector("#authorPhotoImage");
-        const authorPhotoContainer =
-            body.querySelector("#authorPhotoContainer");
+        const authorImage = body.querySelector("#authorPhotoImage");
+        const authorContainer = body.querySelector("#authorPhotoContainer");
 
-        if (authorPhoto && authorPhotoContainer) {
-            authorPhoto.addEventListener("error", function () {
+        if (authorImage && authorContainer) {
+            authorImage.addEventListener("error", function () {
                 console.error("Hindi makita ang author image:", this.src);
                 this.remove();
-                authorPhotoContainer.classList.add("no-image");
+                authorContainer.classList.add("no-image");
             });
         }
 
-        const youtubeThumbnail =
-            body.querySelector(".youtube-thumbnail-wrapper img");
+        const thumbnail = body.querySelector(
+            ".youtube-thumbnail-wrapper img"
+        );
 
-        if (youtubeThumbnail) {
-            youtubeThumbnail.addEventListener("error", function () {
-                const wrapper =
-                    this.closest(".youtube-thumbnail-wrapper");
+        if (thumbnail) {
+            thumbnail.addEventListener("error", function () {
+                const wrapper = this.closest(
+                    ".youtube-thumbnail-wrapper"
+                );
 
-                if (!wrapper) {
-                    return;
-                }
-
-                wrapper.outerHTML = `
-                    <div class="youtube-placeholder">
-                        <div class="youtube-content">
-                            <strong>Hindi ma-load ang YouTube preview</strong>
-                            <p>
-                                Gamitin ang link ng video upang panoorin ito sa YouTube.
-                            </p>
+                if (wrapper) {
+                    wrapper.outerHTML = `
+                        <div class="youtube-placeholder">
+                            <div class="youtube-content">
+                                <strong>Hindi ma-load ang YouTube preview</strong>
+                                <p>
+                                    Gamitin ang link ng video upang panoorin
+                                    ito sa YouTube.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                `;
+                    `;
+                }
             });
         }
 
-        const zoomImage =
-            body.querySelector("[data-zoom-image]");
+        const zoomImage = body.querySelector("[data-zoom-image]");
 
         if (zoomImage) {
             zoomImage.addEventListener("click", () => {
@@ -1564,25 +1445,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       OPEN ADDITIONAL MATERIAL
+       ADDITIONAL MATERIAL MODAL
+       FIXED: html is now properly declared.
     ========================================================= */
 
     function openAdditionalMaterial(weekNumber) {
         const material = additionalMaterials[weekNumber];
 
         if (!material) {
+            console.warn("Additional material not found:", weekNumber);
             return;
         }
 
         createAdditionalMaterialModal();
 
-        const modal = document.getElementById("additionalMaterialModal");
-        const body = document.getElementById("additionalMaterialBody");
+        const modal =
+            document.getElementById("additionalMaterialModal");
+
+        const body =
+            document.getElementById("additionalMaterialBody");
 
         if (!modal || !body) {
+            console.error("Additional material modal not found.");
             return;
         }
-        
+
+        let html = "";
+
+        html += `
+            <span class="modal-eyebrow">
+                KARAGDAGANG MATERYAL
+            </span>
+
+            <h2>
+                ${material.title || "Karagdagang Materyal"}
+            </h2>
+        `;
+
         if (material.subtitle) {
             html += `
                 <p class="modal-text">
@@ -1609,19 +1508,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="additional-material-list">
             `;
 
-            material.questions.forEach(item => {
-                html += `
-                    <div class="additional-question">
-                        <div class="additional-question-number">
-                            ${item.number}.
-                        </div>
+            if (
+                Array.isArray(material.questions) &&
+                material.questions.length
+            ) {
+                material.questions.forEach(item => {
+                    html += `
+                        <div class="additional-question">
+                            <div class="additional-question-number">
+                                ${item.number}.
+                            </div>
 
-                        <div class="additional-question-text">
-                            ${item.question}
+                            <div class="additional-question-text">
+                                ${item.question}
+                            </div>
                         </div>
+                    `;
+                });
+            } else {
+                html += `
+                    <div class="detail-box">
+                        <p class="modal-text">
+                            Walang available na tanong.
+                        </p>
                     </div>
                 `;
-            });
+            }
 
             html += `</div>`;
         }
@@ -1629,7 +1541,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (material.type === "reading") {
             html += `
                 <div class="material-reading">
-                    ${material.content}
+                    ${material.content || ""}
                 </div>
             `;
 
@@ -1642,13 +1554,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h3>Mga Mahahalagang Salita</h3>
 
                         <div class="keyword-container">
-                            ${material.keywords
-                                .map(keyword => `
-                                    <span class="keyword-tag">
-                                        ${keyword}
-                                    </span>
-                                `)
-                                .join("")}
+                            ${material.keywords.map(keyword => `
+                                <span class="keyword-tag">
+                                    ${keyword}
+                                </span>
+                            `).join("")}
                         </div>
                     </div>
                 `;
@@ -1659,38 +1569,53 @@ document.addEventListener("DOMContentLoaded", () => {
             html += `
                 <div class="detail-box">
                     <p class="modal-text">
-                        ${material.introduction}
+                        ${material.introduction || ""}
                     </p>
                 </div>
 
                 <div style="margin-top:25px;">
             `;
 
-            material.commandments.forEach(item => {
-                html += `
-                    <div class="commandment-card">
-                        <div class="commandment-number">
-                            ${item.number}
-                        </div>
+            if (
+                Array.isArray(material.commandments) &&
+                material.commandments.length
+            ) {
+                material.commandments.forEach(item => {
+                    html += `
+                        <div class="commandment-card">
 
-                        <div class="commandment-text">
-                            ${item.text}
-                        </div>
+                            <div class="commandment-number">
+                                ${item.number}
+                            </div>
 
-                        <div class="commandment-keywords">
-                            ${item.keywords
-                                .map(keyword => `
+                            <div class="commandment-text">
+                                ${item.text}
+                            </div>
+
+                            <div class="commandment-keywords">
+                                ${(item.keywords || []).map(keyword => `
                                     <span class="commandment-keyword">
                                         ${keyword}
                                     </span>
-                                `)
-                                .join("")}
+                                `).join("")}
+                            </div>
+
                         </div>
-                    </div>
-                `;
-            });
+                    `;
+                });
+            }
 
             html += `</div>`;
+        }
+
+        else {
+            html += `
+                <div class="detail-box">
+                    <p class="modal-text">
+                        Walang available na content para sa materyal na ito.
+                    </p>
+                </div>
+            `;
         }
 
         body.innerHTML = html;
@@ -1703,9 +1628,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function addAdditionalMaterialButton(weekNumber, container) {
-        if (!container) {
-            return;
-        }
+        if (!container) return;
 
         const material = additionalMaterials[weekNumber];
         const lesson = lessons[weekNumber];
@@ -1719,16 +1642,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 lesson.processingQuestions.length
             );
 
-        if (!hasAdditionalMaterial && !hasProcessing) {
-            return;
-        }
+        if (!hasAdditionalMaterial && !hasProcessing) return;
 
-        const oldButton =
-            container.querySelector(".additional-material-button");
-
-        if (oldButton) {
-            oldButton.remove();
-        }
+        container
+            .querySelector(".additional-material-button")
+            ?.remove();
 
         const button = document.createElement("button");
 
@@ -1755,11 +1673,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       DISPLAY SECTION
+       SECTION HANDLING
     ========================================================= */
 
+    function getAllPageSections() {
+        return document.querySelectorAll(
+            ".hero, .content-section, #researchersPage, " +
+            "#headerSection, #homeContent, #lessonContent"
+        );
+    }
+
     function showSection(sectionName) {
-        sections.forEach(section => {
+        getAllPageSections().forEach(section => {
             section.classList.remove("active");
         });
 
@@ -1770,15 +1695,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let target = null;
 
         if (sectionName === "home") {
-            target = document.getElementById("homeContent");
+            target =
+                document.getElementById("homeContent") ||
+                document.getElementById("headerSection");
         }
 
         else if (sectionName === "lesson") {
-            target = document.getElementById("lessonContent");
+            target =
+                document.getElementById("lessonContent");
         }
 
         else {
-            target = document.getElementById("headerSection");
+            target =
+                document.getElementById("headerSection");
         }
 
         if (target) {
@@ -1832,52 +1761,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="lesson-grid">
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="author"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang may-akda"
-                    >
+                    <article class="feature-card clickable-lesson-card"
+                             data-info="author"
+                             tabindex="0"
+                             role="button"
+                             aria-label="Tingnan ang may-akda">
                         <strong>May-akda</strong>
                         <span class="card-detail">
                             ${lesson.author}
                         </span>
                     </article>
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="theme"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang tema"
-                    >
+                    <article class="feature-card clickable-lesson-card"
+                             data-info="theme"
+                             tabindex="0"
+                             role="button"
+                             aria-label="Tingnan ang tema">
                         <strong>Tema</strong>
                         <span class="card-detail">
                             ${lesson.theme}
                         </span>
                     </article>
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="objective"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang layunin"
-                    >
+                    <article class="feature-card clickable-lesson-card"
+                             data-info="objective"
+                             tabindex="0"
+                             role="button"
+                             aria-label="Tingnan ang layunin">
                         <strong>Layunin</strong>
                         <span class="card-detail">
                             ${lesson.objective}
                         </span>
                     </article>
 
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="material"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang multimodal material"
-                    >
+                    <article class="feature-card clickable-lesson-card"
+                             data-info="material"
+                             tabindex="0"
+                             role="button"
+                             aria-label="Tingnan ang multimodal material">
                         <strong>Multimodal Material</strong>
                         <span class="card-detail">
                             ${lesson.material}
@@ -1892,31 +1813,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 weekContent
             );
 
-            const cards =
-                weekContent.querySelectorAll(
-                    ".clickable-lesson-card"
-                );
+            weekContent
+                .querySelectorAll(".clickable-lesson-card")
+                .forEach(card => {
 
-            cards.forEach(card => {
-                card.addEventListener("click", event => {
-                    event.preventDefault();
-
-                    const type = card.dataset.info;
-                    openInfoModal(type, lesson);
-                });
-
-                card.addEventListener("keydown", event => {
-                    if (
-                        event.key === "Enter" ||
-                        event.key === " "
-                    ) {
+                    const openCard = event => {
                         event.preventDefault();
 
                         const type = card.dataset.info;
                         openInfoModal(type, lesson);
-                    }
+                    };
+
+                    card.addEventListener("click", openCard);
+
+                    card.addEventListener("keydown", event => {
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+                            openCard(event);
+                        }
+                    });
                 });
-            });
 
             weekContent.style.opacity = "1";
             weekContent.style.transform = "translateY(0)";
@@ -1924,7 +1842,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       SECTION BUTTONS
+       NAVIGATION BUTTONS
     ========================================================= */
 
     sectionButtons.forEach(button => {
@@ -1946,11 +1864,17 @@ document.addEventListener("DOMContentLoaded", () => {
     weekButtons.forEach(button => {
         button.addEventListener("click", event => {
             event.preventDefault();
+            event.stopPropagation();
 
             const week = Number(button.dataset.week);
 
-            if (!Number.isNaN(week)) {
+            if (Number.isInteger(week) && lessons[week]) {
                 displayLesson(week, button);
+            } else {
+                console.warn(
+                    "Invalid or missing data-week:",
+                    button.dataset.week
+                );
             }
         });
     });
@@ -1959,13 +1883,14 @@ document.addEventListener("DOMContentLoaded", () => {
        LOGO
     ========================================================= */
 
-    const logoToggle = document.getElementById("logoToggle");
+    const logoToggle =
+        document.getElementById("logoToggle");
 
     if (logoToggle) {
         logoToggle.addEventListener("click", event => {
             event.preventDefault();
 
-            sections.forEach(section => {
+            getAllPageSections().forEach(section => {
                 section.classList.remove("active");
             });
 
@@ -2001,7 +1926,7 @@ document.addEventListener("DOMContentLoaded", () => {
         researcherButton.addEventListener("click", event => {
             event.preventDefault();
 
-            sections.forEach(section => {
+            getAllPageSections().forEach(section => {
                 section.classList.remove("active");
             });
 
@@ -2009,9 +1934,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.classList.remove("active");
             });
 
-            if (researchersPage) {
-                researchersPage.classList.add("active");
-            }
+            researchersPage?.classList.add("active");
 
             window.scrollTo({
                 top: 0,
@@ -2024,9 +1947,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backResearchers.addEventListener("click", event => {
             event.preventDefault();
 
-            if (researchersPage) {
-                researchersPage.classList.remove("active");
-            }
+            researchersPage?.classList.remove("active");
 
             const headerSection =
                 document.getElementById("headerSection");
@@ -2035,14 +1956,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 headerSection.classList.add("active");
             }
 
-            const homeButton =
-                document.querySelector(
-                    '.nav-btn[data-section="home"]'
-                );
-
-            if (homeButton) {
-                homeButton.classList.add("active");
-            }
+            document
+                .querySelector('.nav-btn[data-section="home"]')
+                ?.classList.add("active");
 
             window.scrollTo({
                 top: 0,
@@ -2062,10 +1978,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("closeContact");
 
     function closeContactModal() {
-        if (contactModal) {
-            contactModal.classList.remove("show");
-        }
-
+        contactModal?.classList.remove("show");
         restoreBodyScrollIfNoModal();
     }
 
@@ -2100,9 +2013,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     document.addEventListener("keydown", event => {
-        if (event.key !== "Escape") {
-            return;
-        }
+        if (event.key !== "Escape") return;
 
         closeContactModal();
         closeInfoModal();
@@ -2115,15 +2026,6 @@ document.addEventListener("DOMContentLoaded", () => {
             zoom.classList.remove("show");
         }
 
-        if (
-            researchersPage &&
-            researchersPage.classList.contains("active")
-        ) {
-            if (backResearchers) {
-                backResearchers.click();
-            }
-        }
-
         restoreBodyScrollIfNoModal();
     });
 
@@ -2134,31 +2036,45 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastScroll = 0;
 
     if (navbar) {
-        window.addEventListener("scroll", () => {
-            const currentScroll = window.scrollY;
+        window.addEventListener(
+            "scroll",
+            () => {
+                const currentScroll = window.scrollY;
 
-            if (
-                currentScroll > lastScroll &&
-                currentScroll > 140
-            ) {
-                navbar.classList.add("hidden");
-            } else {
-                navbar.classList.remove("hidden");
-            }
+                if (
+                    currentScroll > lastScroll &&
+                    currentScroll > 140
+                ) {
+                    navbar.classList.add("hidden");
+                } else {
+                    navbar.classList.remove("hidden");
+                }
 
-            lastScroll = currentScroll;
-        }, { passive: true });
+                lastScroll = currentScroll;
+            },
+            { passive: true }
+        );
     }
 
     /* =========================================================
        CHATBOT
     ========================================================= */
 
-    const chatbot = document.getElementById("chatbot");
-    const chatbotToggle = document.getElementById("chatbotToggle");
-    const chatbotClose = document.getElementById("chatbotClose");
-    const chatbotInput = document.getElementById("chatbotInput");
-    const chatbotSend = document.getElementById("chatbotSend");
+    const chatbot =
+        document.getElementById("chatbot");
+
+    const chatbotToggle =
+        document.getElementById("chatbotToggle");
+
+    const chatbotClose =
+        document.getElementById("chatbotClose");
+
+    const chatbotInput =
+        document.getElementById("chatbotInput");
+
+    const chatbotSend =
+        document.getElementById("chatbotSend");
+
     const chatbotMessages =
         document.getElementById("chatbotMessages");
 
@@ -2171,11 +2087,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             chatbot.classList.add("open");
 
-            if (chatbotInput) {
-                window.setTimeout(() => {
-                    chatbotInput.focus();
-                }, 100);
-            }
+            window.setTimeout(() => {
+                chatbotInput?.focus();
+            }, 100);
         });
     }
 
@@ -2187,12 +2101,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function addChatMessage(text, type) {
-        if (!chatbotMessages) {
-            return null;
-        }
+        if (!chatbotMessages) return null;
 
-        const message = document.createElement("div");
-        message.className = `chatbot-message ${type}`;
+        const message =
+            document.createElement("div");
+
+        message.className =
+            `chatbot-message ${type}`;
 
         if (type === "bot") {
             message.innerHTML = text;
@@ -2201,6 +2116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         chatbotMessages.appendChild(message);
+
         chatbotMessages.scrollTop =
             chatbotMessages.scrollHeight;
 
@@ -2208,15 +2124,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function sendMessage() {
-        if (!chatbotInput || !chatbotMessages) {
-            return;
-        }
+        if (!chatbotInput || !chatbotMessages) return;
 
-        const text = chatbotInput.value.trim();
+        const text =
+            chatbotInput.value.trim();
 
-        if (!text || chatbotInput.disabled) {
-            return;
-        }
+        if (!text || chatbotInput.disabled) return;
 
         addChatMessage(text, "user");
 
@@ -2231,18 +2144,19 @@ document.addEventListener("DOMContentLoaded", () => {
             addChatMessage("Nag-iisip...", "bot");
 
         try {
-            const response = await fetch(
-                CHAT_API_URL,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        message: text
-                    })
-                }
-            );
+            const response =
+                await fetch(
+                    CHAT_API_URL,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            message: text
+                        })
+                    }
+                );
 
             if (!response.ok) {
                 let errorMessage =
@@ -2253,7 +2167,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         await response.json();
 
                     if (errorData?.error) {
-                        errorMessage = errorData.error;
+                        errorMessage =
+                            errorData.error;
                     }
                 } catch (error) {
                     console.error(
@@ -2267,7 +2182,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
 
-            const data = await response.json();
+            const data =
+                await response.json();
 
             if (
                 !data ||
@@ -2328,18 +2244,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (chatbotInput) {
-        chatbotInput.addEventListener("keydown", event => {
-            if (
-                event.key === "Enter" &&
-                !event.shiftKey
-            ) {
-                event.preventDefault();
+        chatbotInput.addEventListener(
+            "keydown",
+            event => {
+                if (
+                    event.key === "Enter" &&
+                    !event.shiftKey
+                ) {
+                    event.preventDefault();
 
-                if (!chatbotInput.disabled) {
-                    sendMessage();
+                    if (!chatbotInput.disabled) {
+                        sendMessage();
+                    }
                 }
             }
-        });
+        );
     }
 
     /* =========================================================
