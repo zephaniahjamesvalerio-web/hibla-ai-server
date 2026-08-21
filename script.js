@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Ilapat natin!",
 
             processingInstructions:
-                "Basahin at unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
+                "Unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
 
             processingQuestions: [
                 {
