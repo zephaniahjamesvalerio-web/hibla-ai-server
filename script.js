@@ -1597,7 +1597,7 @@ else if (type === "processing") {
 const additionalMaterials = {
 
     1: {
-        title: "Pagproseso ng Pag-unawa",
+        title: "Suriin Mo!",
         subtitle: "A. Pagkilala sa Katotohanan at Kasinungalingan",
 
         type: "truefalse",
@@ -1612,59 +1612,49 @@ const additionalMaterials = {
             {
                 number: 1,
                 question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>.",
-                answer: "Amerika"
             },
             {
                 number: 2,
                 question: "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel.",
-                answer: "Duke Democrito"
             },
             {
                 number: 3,
                 question: "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa.",
-                answer: "Katotohanan"
             },
             {
                 number: 4,
                 question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>.",
-                answer: "Katotohanan"
             },
             {
                 number: 5,
                 question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>.",
-                answer: "Pilipinas"
             },
             {
                 number: 6,
                 question: "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
-                answer: "Katotohanan"
             },
             {
                 number: 7,
                 question: "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag.",
-                answer: "Pilak"
             },
             {
                 number: 8,
                 question: "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
-                answer: "Katotohanan"
             },
             {
                 number: 9,
                 question: "Ang <u>palasyo</u> ay kulong ng malaking lambat.",
-                answer: "Gubat"
             },
             {
                 number: 10,
                 question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
-                answer: "Katotohanan"
             }
         ]
     },
 
 
     2: {
-        title: "Mga Rehiyonal na Dula",
+        title: "Alam mo ba?",
         subtitle: "Karagdagang Babasahin",
 
         type: "reading",
