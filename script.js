@@ -1,7 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+from pathlib import Path
+
+js = r'''document.addEventListener("DOMContentLoaded", () => {
+    "use strict";
 
     /* =========================================================
-       ELEMENTS
+       DOM ELEMENTS
     ========================================================= */
 
     const sections = document.querySelectorAll(
@@ -14,23 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const weekContent = document.getElementById("weekContent");
     const navbar = document.getElementById("navbar");
-
-    const researchersPage =
-        document.getElementById("researchersPage");
-
-    const contactModal =
-        document.getElementById("contactModal");
-
+    const researchersPage = document.getElementById("researchersPage");
+    const contactModal = document.getElementById("contactModal");
 
     /* =========================================================
        LESSON DATA
     ========================================================= */
 
     const lessons = {
-
         1: {
             title: 'Week 1: “Sa Dakong Silangan” ni Jose Corazon de Jesus',
-
             description: `
                 Ang <strong>“Sa Dakong Silangan”</strong> ay isang tulang
                 nagpapahayag ng pag-asa, kalayaan, at muling pagbangon
@@ -38,12 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 ng araw sa Silangan—isang simbolo ng bagong simula at
                 pag-unlad matapos ang mga pagsubok at paghihirap.
             `,
-
             author: "Jose Corazon de Jesus (Huseng Batute)",
-
-            authorImage:
-                "images/authors/jose-corazon-de-jesus.jpeg",
-
+            authorImage: "images/authors/jose-corazon-de-jesus.jpeg",
             biography: `
                 Si <strong>Jose Corazon de Jesus</strong>, na higit na
                 kilala sa sagisag-panulat na <strong>Huseng Batute</strong>,
@@ -58,31 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 ng tula bilang paraan ng pagpapahayag ng damdamin at
                 kaisipang makabayan.
             `,
-
-            theme:
-                "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
-
-            objective:
-                "Magbigay inspirasyon at gisingin ang damdaming makabayan.",
-
-            material:
-                "Audio-visual/Interactive Presentation",
-
-            materialType:
-                "video",
-
-            youtube:
-                "https://www.youtube.com/watch?v=FdZsEKgfN_c",
-
-            materialImage:
-                ""
+            theme: "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
+            objective: "Magbigay inspirasyon at gisingin ang damdaming makabayan.",
+            material: "Audio-visual/Interactive Presentation",
+            materialType: "video",
+            youtube: "https://www.youtube.com/watch?v=FdZsEKgfN_c",
+            materialImage: ""
         },
 
-
         2: {
-            title:
-                'Week 2: “Kahapon, Ngayon at Bukas” (Unang Tagpo)',
-
+            title: 'Week 2: “Kahapon, Ngayon at Bukas” (Unang Tagpo)',
             description: `
                 Ang <strong>“Kahapon, Ngayon at Bukas”</strong> ay isang
                 dulang nagpapakita ng kalagayan ng Pilipinas sa iba't
@@ -90,13 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 at ang patuloy na pakikibaka ng mga Pilipino para sa
                 kalayaan at pagbabago.
             `,
-
-            author:
-                "Aurelio V. Tolentino",
-
-            authorImage:
-                "images/authors/aurelio-tolentino.webp",
-
+            author: "Aurelio V. Tolentino",
+            authorImage: "images/authors/aurelio-tolentino.webp",
             biography: `
                 Si <strong>Aurelio V. Tolentino</strong> ay isang
                 Pilipinong manunulat, mandudula, at makabayang
@@ -110,230 +82,91 @@ document.addEventListener("DOMContentLoaded", function () {
                 <strong>“Kahapon, Ngayon at Bukas”</strong>, isang dulang
                 may malakas na mensaheng makabayan at panlipunan.
             `,
-
-            theme:
-                "Kolonyalismo • Pakikibaka • Kalayaan",
-
-            objective:
-                "Ipakita ang kasaysayan at aral ng pakikibaka ng Pilipino.",
-
-            material:
-                "Audio-Visual/Interactive Presentation",
-
-            materialType:
-                "video",
-
-            youtube:
-                "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
-
-            materialImage:
-                ""
+            theme: "Kolonyalismo • Pakikibaka • Kalayaan",
+            objective: "Ipakita ang kasaysayan at aral ng pakikibaka ng Pilipino.",
+            material: "Audio-Visual/Interactive Presentation",
+            materialType: "video",
+            youtube: "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
+            materialImage: ""
         },
 
+        3: {
+            title: 'Week 3: “Filipino Time”',
+            description: `
+                Ang <strong>“Filipino Time”</strong> ay isang akdang
+                tumatalakay sa karaniwang kaugalian ng pagiging huli
+                ng mga Pilipino. Ipinapakita nito ang negatibong epekto
+                ng ganitong gawain at hinihikayat ang pagbabago tungo
+                sa pagiging disiplinado at responsable sa oras.
+            `,
+            author: "Felipe Padilla de Leon",
+            authorImage: "images/authors/felipe-padilla-de-leon.webp",
+            biography: `
+                Si <strong>Felipe Padilla de Leon</strong> ay isang
+                kilalang Pilipinong kompositor, manunulat, at guro.
+                Naging mahalaga ang kaniyang ambag sa pagpapaunlad
+                at pagpapahalaga sa kulturang Pilipino.
 
-3: {
-    title:
-        'Week 3: “Filipino Time”',
+                <br><br>
 
-    description: `
-        Ang <strong>“Filipino Time”</strong> ay isang akdang
-        tumatalakay sa karaniwang kaugalian ng pagiging huli
-        ng mga Pilipino. Ipinapakita nito ang negatibong epekto
-        ng ganitong gawain at hinihikayat ang pagbabago tungo
-        sa pagiging disiplinado at responsable sa oras.
-    `,
+                Sa kaniyang mga akda at gawain, naipakita ang
+                kahalagahan ng pagkakakilanlan, kultura, at
+                disiplina sa lipunang Pilipino.
+            `,
+            theme: "Ugali • Disiplina • Pananagutan",
+            objective: "Himukin ang pagbabago at pagiging disiplinado sa oras.",
+            material: "Digital Poster",
+            materialType: "text",
+            youtube: "",
+            materialImage: "",
 
-    author:
-        "Felipe Padilla de Leon",
+            processingTitle: "Pagproseso ng Pag-unawa",
+            processingInstructions:
+                "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
 
-    authorImage:
-        "images/authors/felipe-padilla-de-leon.webp",
+            processingQuestions: [
+                {
+                    number: 1,
+                    question: "Ano ang tinutukoy na “Filipino Time”?"
+                },
+                {
+                    number: 2,
+                    question: "Ano ang mga dahilan kung bakit nagkakaroon ng kaugalian ng pagiging huli?"
+                },
+                {
+                    number: 3,
+                    question: "Ano ang mga negatibong epekto ng pagiging palaging huli?"
+                },
+                {
+                    number: 4,
+                    question: "Bakit mahalaga ang pagpapahalaga sa oras?"
+                },
+                {
+                    number: 5,
+                    question: "Paano mo maipapakita ang pagiging responsable sa oras?"
+                }
+            ],
 
-    biography: `
-        Si <strong>Felipe Padilla de Leon</strong> ay isang
-        kilalang Pilipinong kompositor, manunulat, at guro.
-        Naging mahalaga ang kaniyang ambag sa pagpapaunlad
-        at pagpapahalaga sa kulturang Pilipino.
+            processingAnswers: [
+                "Ang “Filipino Time” ay tumutukoy sa nakasanayang pagiging huli sa itinakdang oras o gawain.",
+                "Maaaring dulot ito ng kakulangan sa disiplina, maling pagpapahalaga sa oras, o kawalan ng maayos na pagpaplano.",
+                "Maaari itong magdulot ng pagkaantala sa mga gawain, abala sa ibang tao, at pagkawala ng tiwala.",
+                "Mahalaga ang oras dahil hindi na ito maibabalik at may epekto ito sa ating mga gawain at responsibilidad.",
+                "Maipapakita ito sa pamamagitan ng pagiging maagap, pagpaplano ng oras, at pagsunod sa itinakdang iskedyul."
+            ],
 
-        <br><br>
-
-        Sa kaniyang mga akda at gawain, naipakita ang
-        kahalagahan ng pagkakakilanlan, kultura, at
-        disiplina sa lipunang Pilipino.
-    `,
-
-    theme:
-        "Ugali • Disiplina • Pananagutan",
-
-    objective:
-        "Himukin ang pagbabago at pagiging disiplinado sa oras.",
-
-    material:
-        "Digital Poster",
-
-    materialType:
-        "text",
-
-    youtube:
-        "",
-
-    materialImage:
-        "",
-
-
-    /* =====================================================
-       SURING-SANAYSAY
-    ===================================================== */
-
-    analysisTitle:
-        "Suring-Sanaysay",
-
-    analysisInstructions:
-        "Basahin ang akdang “Filipino Time” ni Felipe Padilla de Leon. Tukuyin ng mga mag-aaral ang paksa, layon at ideya ng sanaysay. Punan ng sagot ang talahanayan.",
-
-    analysisTitleText:
-        "FILIPINO TIME",
-
-    analysisAuthor:
-        "ni Felipe Padilla de Leon",
-
-    analysisContent: `
-        <p style="text-align: justify;">
-            Isa sa napakapangit na kinagawian nating mga Pilipino
-            ay ang pagiging lagi nang huli sa takdang oras na
-            pinagkasunduan. Karaniwan nang ang isang palatuntunan
-            ay hindi nasisimulan sa oras na dapat ipangsimula dahil
-            sa wala pa ang panauhing pandangal o kaya'y ang punong
-            abala ng palatuntunan.
-        </p>
-
-        <p style="text-align: justify;">
-            Gayon din, kulang pa rin ang mga tauhang magsisiganap,
-            o kung hindi naman kaya'y wala pa rin ang madlang siyang
-            dapat sumaksi sa palatuntunan kung kaya't naaantala
-            tuloy ang lahat.
-        </p>
-
-        <p style="text-align: justify;">
-            Sa mga tanghalang pangmusika, tulad ng opera, konsiyerto,
-            resital at iba pang kauri ng mga ito, ay isang karaniwan
-            nang pangyayari ang pagiging lagi nang huli ng madlang
-            manonood.
-        </p>
-
-        <p style="text-align: justify;">
-            Gayon din sa papupulong ng iba't ibang samahan,
-            kapatiran o kapisanan, kahit na nga ang mga ito'y binubuo
-            pa ng mga taong may pinag-aralan, ay napangawitan na ng
-            marami sa atin ang dumating nang huli sa pinag-usapang oras.
-        </p>
-
-        <p style="text-align: justify;">
-            Ito ang sanhi kung bakit naging palasak na ang bukambibig
-            na <strong>“Filipino Time”</strong>, o Oras Filipino,
-            na ang ibig sabihin ay sira, walang katiyakan pagka't
-            lagi nang atrasado.
-        </p>
-
-        <p style="text-align: justify;">
-            Ipinakikita ng sanaysay na ang pagiging palaging huli
-            ay hindi lamang simpleng pagkakamali sa oras. Maaari
-            itong makaapekto sa ibang tao, sa mga gawain, at maging
-            sa pagtingin sa mga Pilipino bilang responsable at
-            mapagkakatiwalaang mamamayan.
-        </p>
-
-        <p style="text-align: justify;">
-            Sa ganitong pangyayari, mahalagang matutuhan ang
-            pagpapahalaga sa oras, pagiging maagap, disiplina,
-            at pananagutan sa mga napagkasunduang gawain.
-        </p>
-    `,
-
-    analysisGuide: {
-
-        topic:
-            "Ang kaugalian ng pagiging palaging huli ng ilang Pilipino at ang epekto nito sa mga gawain at lipunan.",
-
-        purpose:
-            "Ipakita ang negatibong epekto ng pagiging huli at hikayatin ang mga Pilipino na maging maagap, responsable, at marunong tumupad sa oras.",
-
-        idea:
-            "Ang pagiging palaging huli o “Filipino Time” ay isang kaugaliang maaaring magdulot ng pagkaantala, kawalan ng tiwala, at kakulangan sa disiplina."
-    },
-
-
-    /* =====================================================
-       PAGPROSESO NG PAG-UNAWA
-    ===================================================== */
-
-    processingTitle:
-        "Pagproseso ng Pag-unawa",
-
-    processingInstructions:
-        "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
-
-    processingQuestions: [
-
-        {
-            number: 1,
-            question:
-                "Ano ang tinutukoy na “Filipino Time”?"
+            keywords: [
+                "Filipino Time",
+                "Oras",
+                "Disiplina",
+                "Pananagutan",
+                "Pagiging Maagap",
+                "Responsibilidad"
+            ]
         },
-
-        {
-            number: 2,
-            question:
-                "Ano ang mga dahilan kung bakit nagkakaroon ng kaugalian ng pagiging huli?"
-        },
-
-        {
-            number: 3,
-            question:
-                "Ano ang mga negatibong epekto ng pagiging palaging huli?"
-        },
-
-        {
-            number: 4,
-            question:
-                "Bakit mahalaga ang pagpapahalaga sa oras?"
-        },
-
-        {
-            number: 5,
-            question:
-                "Paano mo maipapakita ang pagiging responsable sa oras?"
-        }
-
-    ],
-
-    processingAnswers: [
-        "Ang “Filipino Time” ay tumutukoy sa nakasanayang pagiging huli sa itinakdang oras o gawain.",
-        "Maaaring dulot ito ng kakulangan sa disiplina, maling pagpapahalaga sa oras, o kawalan ng maayos na pagpaplano.",
-        "Maaari itong magdulot ng pagkaantala sa mga gawain, abala sa ibang tao, at pagkawala ng tiwala.",
-        "Mahalaga ang oras dahil hindi na ito maibabalik at may epekto ito sa ating mga gawain at responsibilidad.",
-        "Maipapakita ito sa pamamagitan ng pagiging maagap, pagpaplano ng oras, at pagsunod sa itinakdang iskedyul."
-    ],
-
-
-    /* =====================================================
-       KEY WORDS
-    ===================================================== */
-
-    keywords: [
-        "Filipino Time",
-        "Oras",
-        "Disiplina",
-        "Pananagutan",
-        "Pagiging Maagap",
-        "Responsibilidad"
-    ]
-},
 
         4: {
-            title:
-                'Week 4: “Ang Tunay na Sampung Utos”',
-
+            title: 'Week 4: “Ang Tunay na Sampung Utos”',
             description: `
                 Ang <strong>“Ang Tunay na Sampung Utos”</strong> ay
                 naglalaman ng mga prinsipyo at gabay na dapat sundin
@@ -341,13 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 makatarungang lipunan. Binibigyang-diin nito ang
                 pagmamahal sa bayan at tamang asal.
             `,
-
-            author:
-                "Michael Charleston Chua (Ayon kay Apolinario Mabini)",
-
-            authorImage:
-                "images/authors/apolinario-mabini.jpg",
-
+            author: "Michael Charleston Chua (Ayon kay Apolinario Mabini)",
+            authorImage: "images/authors/apolinario-mabini.jpg",
             biography: `
                 Si <strong>Apolinario Mabini</strong> ay isang
                 Pilipinong rebolusyonaryo, manunulat, at
@@ -360,31 +188,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 ng mga kaisipan tungkol sa pamamahala, moralidad,
                 responsibilidad, at pagmamahal sa bayan.
             `,
-
-            theme:
-                "Gabay • Disiplina • Pagmamahal sa Bayan",
-
-            objective:
-                "Ipakita ang kahalagahan ng tamang asal at responsableng mamamayan.",
-
-            material:
-                "Digital Sequence Chart",
-
-            materialType:
-                "image",
-
-            youtube:
-                "",
-
-            materialImage:
-                "images/materials/week4-sequence-chart.jpg"
+            theme: "Gabay • Disiplina • Pagmamahal sa Bayan",
+            objective: "Ipakita ang kahalagahan ng tamang asal at responsableng mamamayan.",
+            material: "Digital Sequence Chart",
+            materialType: "image",
+            youtube: "",
+            materialImage: "images/materials/week4-sequence-chart.jpg"
         },
 
-
         5: {
-            title:
-                'Week 5: “Wikang Pambansa”',
-
+            title: 'Week 5: “Wikang Pambansa”',
             description: `
                 Ang <strong>“Wikang Pambansa”</strong> ay isang
                 talumpati ni <strong>Manuel L. Quezon</strong> na
@@ -400,13 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 mapalakas ang pagkakaisa at magkaroon ng tunay na
                 pambansang kamalayan.
             `,
-
-            author:
-                "Manuel L. Quezon",
-
-            authorImage:
-                "images/authors/manuel-quezon.png",
-
+            author: "Manuel L. Quezon",
+            authorImage: "images/authors/manuel-quezon.png",
             biography: `
                 Si <strong>Manuel L. Quezon</strong> ay ang unang
                 Pangulo ng Komonwelt ng Pilipinas. Malaki ang
@@ -421,87 +229,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 ng pambansang kamalayan at pagkakaisa ng mga
                 Pilipino.
             `,
-
-            theme:
-                "Wikang Pambansa • Pagkakaisa • Pambansang Kamalayan • Pagkakakilanlan",
-
+            theme: "Wikang Pambansa • Pagkakaisa • Pambansang Kamalayan • Pagkakakilanlan",
             objective:
                 "Maunawaan ang kahalagahan ng pagkakaroon ng wikang pambansa bilang instrumento ng pagkakaisa at pambansang kamalayan.",
+            material: "Audio-Visual/Interactive Presentation",
+            materialType: "video",
+            youtube: "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
+            materialImage: "",
 
-            material:
-                "Audio-Visual/Interactive Presentation",
-
-            materialType:
-                "video",
-
-            youtube:
-                "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
-
-            materialImage:
-                "",
-
-
-            /* =====================================================
-               PAGPROSESO NG PAG-UNAWA
-            ===================================================== */
-
-            processingTitle:
-                "Pagproseso ng Pag-unawa",
-
+            processingTitle: "Pagproseso ng Pag-unawa",
             processingInstructions:
                 "Basahin at unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
 
             processingQuestions: [
-
                 {
                     number: 1,
-                    question:
-                        "Bakit nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa ang Pilipinas?"
+                    question: "Bakit nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa ang Pilipinas?"
                 },
-
                 {
                     number: 2,
-                    question:
-                        "Ano ang kaugnayan ng wikang pambansa sa pagkakaroon ng pambansang kamalayan?"
+                    question: "Ano ang kaugnayan ng wikang pambansa sa pagkakaroon ng pambansang kamalayan?"
                 },
-
                 {
                     number: 3,
-                    question:
-                        "Bakit nahirapan si Quezon na makipag-usap sa kaniyang mga kababayan sa iba't ibang lalawigan?"
+                    question: "Bakit nahirapan si Quezon na makipag-usap sa kaniyang mga kababayan sa iba't ibang lalawigan?"
                 },
-
                 {
                     number: 4,
-                    question:
-                        "Ano ang ipinakita ni Quezon tungkol sa kaniyang pagiging bukas sa paggamit ng ibang katutubong wika?"
+                    question: "Ano ang ipinakita ni Quezon tungkol sa kaniyang pagiging bukas sa paggamit ng ibang katutubong wika?"
                 },
-
                 {
                     number: 5,
-                    question:
-                        "Paano nakatutulong ang isang wikang ginagamit ng lahat sa pagkakaisa ng mga Pilipino?"
+                    question: "Paano nakatutulong ang isang wikang ginagamit ng lahat sa pagkakaisa ng mga Pilipino?"
                 }
-
             ],
 
             processingAnswers: [
-
                 "Nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa upang magkaroon ng wikang maaaring gamitin ng mga Pilipino at upang mapalakas ang pambansang kamalayan.",
-
                 "Mahalaga ang wikang pambansa sa pambansang kamalayan dahil nagiging daan ito upang magkaroon ng pagkakaunawaan at pagkakaisa ang mga mamamayan.",
-
                 "Kinailangan ni Quezon ng tagapagsalin dahil iba-iba ang wikang ginagamit ng mga Pilipino sa iba't ibang lalawigan.",
-
                 "Ipinakita niya ang kaniyang pagiging bukas dahil handa siyang tangkilikin at pag-aralan ang ibang katutubong wika kung iyon ang makatutulong upang magkaroon ng wikang ginagamit ng lahat.",
-
                 "Nakatutulong ito sa pagkakaisa dahil nagkakaroon ang mga mamamayan ng isang wikang maaaring gamitin sa pakikipag-ugnayan at pagpapahayag ng kanilang pambansang pagkakakilanlan."
             ],
-
-
-            /* =====================================================
-               KEY WORDS
-            ===================================================== */
 
             keywords: [
                 "Wikang Pambansa",
@@ -519,9 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         6: {
-            title:
-                'Week 6: “Mga Ibong Mandaragit”',
-
+            title: 'Week 6: “Mga Ibong Mandaragit”',
             description: `
                 Ang <strong>“Mga Ibong Mandaragit”</strong> ay isang
                 nobela na tumatalakay sa katiwalian, kasakiman, at
@@ -529,13 +296,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 nito ang realidad ng buhay at ang kahalagahan ng
                 paninindigan para sa tama.
             `,
-
-            author:
-                "Amado V. Hernandez",
-
-            authorImage:
-                "images/authors/amado-hernandez.jpg",
-
+            author: "Amado V. Hernandez",
+            authorImage: "images/authors/amado-hernandez.jpg",
             biography: `
                 Si <strong>Amado V. Hernandez</strong> ay isang
                 makata, manunulat, mamamahayag, at aktibista.
@@ -550,85 +312,335 @@ document.addEventListener("DOMContentLoaded", function () {
                 mahalagang akdang panlipunan na tumatalakay sa
                 mga suliranin at realidad ng lipunang Pilipino.
             `,
-
-            theme:
-                "Katiwalian • Pakikibaka • Katarungan",
-
-            objective:
-                "Ipakita ang kahalagahan ng paninindigan at tamang asal sa lipunan.",
-
-            material:
-                "Infographics",
-
-            materialType:
-                "image",
-
-            youtube:
-                "",
-
-            materialImage:
-                "https://www.youtube.com/watch?v=JPG8naYuQ3Y"
+            theme: "Katiwalian • Pakikibaka • Katarungan",
+            objective: "Ipakita ang kahalagahan ng paninindigan at tamang asal sa lipunan.",
+            material: "Infographics",
+            materialType: "image",
+            youtube: "",
+            materialImage: ""
         }
-
     };
 
-
     /* =========================================================
-       CREATE MODAL
+       ADDITIONAL LEARNING MATERIALS
+       NOTE: ANSWER KEYS ARE NOT DISPLAYED.
     ========================================================= */
 
-    function createInfoModal() {
+    const additionalMaterials = {
+        1: {
+            title: "Tukuyin Mo!",
+            subtitle: "A. Pagkilala sa Katotohanan at Kasinungalingan",
+            type: "truefalse",
+            instructions: `
+                Tukuyin kung ang nakasaad ay
+                <strong>Katotohanan</strong>. Kung hindi, palitan
+                ang salita o mga salitang may salungguhit ng wastong sagot.
+            `,
+            questions: [
+                {
+                    number: 1,
+                    question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>."
+                },
+                {
+                    number: 2,
+                    question: "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel."
+                },
+                {
+                    number: 3,
+                    question: "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa."
+                },
+                {
+                    number: 4,
+                    question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>."
+                },
+                {
+                    number: 5,
+                    question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>."
+                },
+                {
+                    number: 6,
+                    question: "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo."
+                },
+                {
+                    number: 7,
+                    question: "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag."
+                },
+                {
+                    number: 8,
+                    question: "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan."
+                },
+                {
+                    number: 9,
+                    question: "Ang <u>palasyo</u> ay kulong ng malaking lambat."
+                },
+                {
+                    number: 10,
+                    question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal."
+                }
+            ]
+        },
 
-        if (document.getElementById("lessonInfoModal")) {
+        2: {
+            title: "Alam mo ba?",
+            subtitle: "Karagdagang Babasahin",
+            type: "reading",
+            content: `
+                <p style="text-align: justify;">
+                    Maituturing na rehiyonal na dula ang
+                    <strong>“Kahapon, Ngayon at Bukas”</strong>
+                    ni Aurelio V. Tolentino na may pamagat na
+                    <strong>“Napon, Ngeni at Bukas”</strong>
+                    sa Kapampangan.
+                </p>
+
+                <p style="text-align: justify;">
+                    Ang mga rehiyonal na dula na nasusulat sa mga
+                    rehiyonal na wika sa Pilipinas ay kapantay rin
+                    ng mga dulang nasusulat sa Tagalog.
+                </p>
+
+                <p style="text-align: justify;">
+                    <strong>“Elena”</strong> naman ang pamagat ng
+                    dulang Cebuano ni Vicente Sotto noong 1902.
+                </p>
+
+                <p style="text-align: justify;">
+                    <strong>“Ang Ayat Iti Ili ken Dadduma Pay a Drama”</strong>
+                    (Pag-ibig sa Bayan at Iba pang Drama) ni
+                    Jose Garvida Flores ay halimbawa ng dulang Ilocano.
+                </p>
+
+                <p style="text-align: justify;">
+                    Ang mga dulang rehiyonal sa iba't ibang lugar
+                    sa Pilipinas ay may ambag ding malaki sa
+                    pag-unlad ng dula o teatro sa bansa sa panahon
+                    ng pananakop ng mga Kastila at Amerikano
+                    hanggang sa kasalukuyan.
+                </p>
+            `,
+            keywords: [
+                "Rehiyonal na Dula",
+                "Kapampangan",
+                "Cebuano",
+                "Ilocano",
+                "Kahapon, Ngayon at Bukas",
+                "Napon, Ngeni at Bukas",
+                "Elena",
+                "Ang Ayat Iti Ili ken Dadduma Pay a Drama",
+                "Vicente Sotto",
+                "Jose Garvida Flores",
+                "Aurelio V. Tolentino",
+                "Kastila",
+                "Amerikano",
+                "Teatro"
+            ]
+        },
+
+        4: {
+            title: "Ang Tunay na Sampung Utos",
+            subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
+            type: "commandments",
+
+            introduction: `
+                Mayo ng 1898 nang sinulat ni
+                <strong>Apolinario Mabini</strong> ang
+                <strong>El Verdadero Decalogo</strong> —
+                o <strong>Ang Tunay na Sampung Utos</strong>.
+                Ito ang kanyang habilin sa ating bayan.
+            `,
+
+            commandments: [
+                {
+                    number: "Una",
+                    text: `
+                        Ibigin mo ang Diyos at ang iyong puri ng lalo
+                        sa lahat ng bagay. Ang paghahangad ng puri ang
+                        siya lamang makapipigil sa iyo sa pagbubulaan
+                        at makapipigil na huwag kang suminsay sa daan
+                        ng katuwiran at laging magtaglay ng kasipagan.
+                    `,
+                    keywords: ["Diyos", "Puri", "Katuwiran", "Kasipagan"]
+                },
+                {
+                    number: "Ikalawa",
+                    text: `
+                        Sambahin mo ang Dios sa kaparaang lalong
+                        minamarapat ng iyong bait at kalooban o
+                        konsyensya.
+                    `,
+                    keywords: ["Pagsamba sa Diyos", "Bait", "Kalooban", "Konsensya"]
+                },
+                {
+                    number: "Ikatlo",
+                    text: `
+                        Dagdagan mong pilit ang talos ng isip at
+                        katutubong alam na ipinagkaloob ng Diyos sa iyo
+                        sa pamamagitan ng pag-aaral, at magsumakit ka
+                        ng ubos lakas sa gawang kinahihiligan ng iyong
+                        loob upang matipon sa iyo ang lalong maraming
+                        kagalingan at sa ganitong paraan ay makatulong
+                        ka sa ikasusulong ng lahat.
+                    `,
+                    keywords: ["Pag-aaral", "Kaalaman", "Kagalingan", "Pagsisikap", "Pagtulong"]
+                },
+                {
+                    number: "Ikaapat",
+                    text: `
+                        Ibigin mo ang iyong Inang Bayan ikalawa sa
+                        Dios at sa iyong puri at higit sa iyong sarili,
+                        sapagkat siya ang nakaisa-isang Paraisong
+                        pinaglagyan sa iyo ng Diyos sa buhay na ito.
+                    `,
+                    keywords: ["Inang Bayan", "Pagmamahal sa Bayan", "Puri", "Diyos"]
+                },
+                {
+                    number: "Ikalima",
+                    text: `
+                        Pagpilitan mo ang kalayaan ng iyong bayan
+                        bago ang iyong sarili, sapagkat kung malaya
+                        siya at lalaya rin ikaw at ang iyong kamag-anakan.
+                    `,
+                    keywords: ["Kalayaan", "Bayan", "Sarili", "Kamag-anakan"]
+                },
+                {
+                    number: "Ikaanim",
+                    text: `
+                        Pagpilitan mo ang kasarinlan ng iyong bayan,
+                        sapagkat ikaw lamang ang tunay na makapagmamasakit
+                        sa kanyang ikasusulong at ikatatanghal.
+                    `,
+                    keywords: ["Kasarinlan", "Bayan", "Pagsulong", "Pagtatanghal"]
+                },
+                {
+                    number: "Ikapito",
+                    text: `
+                        Huwag mong kilalanin sa loob ng iyong bayan ang
+                        kapangyarihan ng sino mang tao na hindi inilagay
+                        ninyong magkakababayan. Ang taong ituro at ihalal
+                        ng mga konsyensya ng sangkabayanan ang siya lamang
+                        makapagtataglay ng tunay na kapangyarihan.
+                    `,
+                    keywords: ["Halalan", "Konsensya", "Mamamayan", "Tunay na Kapangyarihan"]
+                },
+                {
+                    number: "Ikawalo",
+                    text: `
+                        Ihanap mong pilit ang iyong bayan ng Republica,
+                        yaon baga ang lahat na namamahala ay palagay ng
+                        bayan, at huwag isipin kailan man ang Monarkiya,
+                        ang pagkakaroon baga ng hari.
+                    `,
+                    keywords: ["Republika", "Bayan", "Pamamahala", "Monarkiya"]
+                },
+                {
+                    number: "Ikasiyam",
+                    text: `
+                        Ibigin mo ang kapwa mo tao kaparis ng pag-ibig
+                        mo sa iyong sarili, sapagkat siya’y binigyan ng
+                        Diyos, at ikaw ay ganoon din naman, ng katungkulang
+                        tulungan ka at huwag niyang gawin sa iyo ang di
+                        niya ibig na gawin mo sa kaniya.
+                    `,
+                    keywords: ["Kapwa", "Pagmamahal", "Pagtutulungan", "Diyos"]
+                },
+                {
+                    number: "Ikasampu",
+                    text: `
+                        Palalaluin nang kaunti sa loob mo ang iyong
+                        kababayan sa iyong kapwa tao; aariin mong palagi
+                        siya na parang isang katoto, kapatid kaya o kasama
+                        man lamang, palibhasa’y iisa ang inyong kapalaran,
+                        iisa din ang inyong tuwa at kapighatian.
+                    `,
+                    keywords: ["Kababayan", "Pagkakaisa", "Kapatid", "Magkakasama", "Iisang Kapalaran"]
+                }
+            ]
+        },
+
+        6: {
+            title: "Pagtukoy: Mga Ibong Mandaragit",
+            subtitle: "Rebyu ng Nobela",
+            type: "identification",
+            instructions: `
+                Ang sumusunod ay mula sa Rebyu ng nobelang
+                <strong>“Mga Ibong Mandaragit.”</strong>
+                Isulat sa patlang ang tinutukoy sa bawat bilang.
+            `,
+            questions: [
+                {
+                    number: 1,
+                    question: "Ito ang taon nang maisulat ang nobelang Mga Ibong Mandaragit."
+                },
+                {
+                    number: 2,
+                    question: "Siya ang awtor ng English na bersyon ng nobela na lumabas noong 2022."
+                },
+                {
+                    number: 3,
+                    question: "Siya ang pangunahing tauhan sa nobela."
+                },
+                {
+                    number: 4,
+                    question: "Kung sa Noli Me Tangere ay may Pilosopo Tasyo, siya naman ang katumbas niya sa nobela."
+                },
+                {
+                    number: 5,
+                    question: "Ito ang pamagat ng tulang nasulat ni Amado V. Hernandez sa kulungan na nagpapakita ng kanyang kalagayan doon."
+                },
+                {
+                    number: 6,
+                    question: "Ano ang pamagat ng tula ni Amado V. Hernandez na binubuo ng 5,000 taludtod?"
+                },
+                {
+                    number: 7,
+                    question: "Sa nobela, ito ang taon nang pagsisimula ng naratibo."
+                },
+                {
+                    number: 8,
+                    question: "Ito ang kabuuang bilang ng kabanata ng nobela."
+                },
+                {
+                    number: 9,
+                    question: "Sa nobela, ito ang tawag sa patagong pinagbebentahan ng mga gamit sa panahon ng Hapon."
+                },
+                {
+                    number: 10,
+                    question: "Ito ang pamagat ng pahayagan."
+                }
+            ]
+        }
+    };
+
+    /* =========================================================
+       DYNAMIC MODAL STYLES
+    ========================================================= */
+
+    function injectStyles() {
+        if (document.getElementById("hibla-dynamic-styles")) {
             return;
         }
 
-        const modal = document.createElement("div");
-
-        modal.id = "lessonInfoModal";
-
-        modal.innerHTML = `
-            <div class="lesson-modal-overlay">
-
-                <div class="lesson-modal">
-
-                    <button
-                        type="button"
-                        class="lesson-modal-close"
-                        id="lessonModalClose"
-                        aria-label="Isara"
-                    >
-                        ×
-                    </button>
-
-                    <div id="lessonModalBody"></div>
-
-                </div>
-
-            </div>
-        `;
-
-        document.body.appendChild(modal);
-
-
-        /* =====================================================
-           MODAL CSS
-        ===================================================== */
-
         const style = document.createElement("style");
-
-        style.id = "lesson-modal-style";
+        style.id = "hibla-dynamic-styles";
 
         style.textContent = `
-
-            #lessonInfoModal {
+            #lessonInfoModal,
+            #additionalMaterialModal {
                 position: fixed;
                 inset: 0;
-                z-index: 99999;
                 display: none;
             }
 
-            #lessonInfoModal.show {
+            #lessonInfoModal {
+                z-index: 99999;
+            }
+
+            #additionalMaterialModal {
+                z-index: 99998;
+            }
+
+            #lessonInfoModal.show,
+            #additionalMaterialModal.show {
                 display: block;
             }
 
@@ -649,11 +661,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 width: min(850px, 100%);
                 max-height: 90vh;
                 overflow-y: auto;
-                background: #ffffff;
+                background: #fff;
                 border-radius: 22px;
                 padding: 40px;
-                box-shadow:
-                    0 25px 80px rgba(0,0,0,.35);
+                box-shadow: 0 25px 80px rgba(0,0,0,.35);
                 animation: lessonModalOpen .25s ease;
             }
 
@@ -662,7 +673,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     opacity: 0;
                     transform: translateY(20px) scale(.97);
                 }
-
                 to {
                     opacity: 1;
                     transform: translateY(0) scale(1);
@@ -678,7 +688,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 border: 0;
                 border-radius: 50%;
                 background: #7d0b12;
-                color: #ffffff;
+                color: #fff;
                 font-size: 28px;
                 line-height: 1;
                 cursor: pointer;
@@ -725,12 +735,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 aspect-ratio: 1 / 1;
                 border-radius: 18px;
                 overflow: hidden;
-                background:
-                    linear-gradient(
-                        135deg,
-                        #7d0b12,
-                        #c7353d
-                    );
+                background: linear-gradient(135deg, #7d0b12, #c7353d);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -742,12 +747,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                object-position: center;
             }
 
             .author-photo.no-image::after {
                 content: "Walang Larawan";
-                color: #ffffff;
+                color: #fff;
                 font-size: 16px;
                 font-weight: 800;
                 letter-spacing: 1px;
@@ -804,10 +808,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 margin-bottom: 8px;
             }
 
-            /* =================================================
-               YOUTUBE THUMBNAIL PREVIEW
-            ================================================= */
-
             .youtube-thumbnail-wrapper {
                 position: relative;
                 width: 100%;
@@ -826,9 +826,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 height: 100%;
                 display: block;
                 object-fit: cover;
-                transition:
-                    transform .35s ease,
-                    filter .35s ease;
+                transition: transform .35s ease, filter .35s ease;
             }
 
             .youtube-thumbnail-wrapper:hover img {
@@ -849,9 +847,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 8px 25px rgba(0,0,0,.35);
-                transition:
-                    transform .25s ease,
-                    background .25s ease;
+                transition: transform .25s ease, background .25s ease;
             }
 
             .youtube-play-button::after {
@@ -860,7 +856,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 height: 0;
                 border-top: 10px solid transparent;
                 border-bottom: 10px solid transparent;
-                border-left: 16px solid #ffffff;
+                border-left: 16px solid #fff;
                 margin-left: 4px;
             }
 
@@ -876,7 +872,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 padding: 7px 12px;
                 border-radius: 8px;
                 background: rgba(0,0,0,.75);
-                color: #ffffff;
+                color: #fff;
                 font-size: 13px;
                 font-weight: 700;
             }
@@ -887,7 +883,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 background: #f3eeee;
                 border: 2px dashed #b98a8e;
                 border-radius: 16px;
-                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -932,10 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             .clickable-lesson-card {
                 cursor: pointer;
-                transition:
-                    transform .2s ease,
-                    box-shadow .2s ease,
-                    border-color .2s ease;
+                transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
             }
 
             .clickable-lesson-card:hover {
@@ -949,8 +941,115 @@ document.addEventListener("DOMContentLoaded", function () {
                 outline-offset: 3px;
             }
 
-            @media (max-width: 650px) {
+            .additional-material-button {
+                width: 100%;
+                margin-top: 25px;
+                padding: 15px 20px;
+                border: 2px solid #7d0b12;
+                border-radius: 14px;
+                background: #fff;
+                color: #7d0b12;
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: all .25s ease;
+                text-align: center;
+            }
 
+            .additional-material-button:hover {
+                background: #7d0b12;
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(125,11,18,.18);
+            }
+
+            .additional-material-button:focus {
+                outline: 3px solid rgba(125,11,18,.2);
+                outline-offset: 3px;
+            }
+
+            .additional-material-list {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin-top: 20px;
+            }
+
+            .additional-question {
+                background: #faf7f7;
+                border-left: 4px solid #7d0b12;
+                padding: 18px;
+                border-radius: 12px;
+            }
+
+            .additional-question-number {
+                color: #7d0b12;
+                font-weight: 900;
+                margin-bottom: 7px;
+            }
+
+            .additional-question-text {
+                color: #333;
+                line-height: 1.7;
+            }
+
+            .material-reading {
+                color: #444;
+                line-height: 1.85;
+                font-size: 16px;
+            }
+
+            .material-reading p {
+                margin-bottom: 18px;
+            }
+
+            .keyword-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 20px;
+            }
+
+            .keyword-tag,
+            .commandment-keyword {
+                display: inline-block;
+                padding: 7px 12px;
+                border-radius: 20px;
+                background: #7d0b12;
+                color: #fff;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .commandment-card {
+                background: #faf7f7;
+                border: 1px solid rgba(125,11,18,.12);
+                border-radius: 15px;
+                padding: 20px;
+                margin-bottom: 16px;
+            }
+
+            .commandment-number {
+                color: #7d0b12;
+                font-size: 18px;
+                font-weight: 900;
+                margin-bottom: 10px;
+            }
+
+            .commandment-text {
+                color: #444;
+                line-height: 1.8;
+            }
+
+            .commandment-keywords {
+                margin-top: 14px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 7px;
+            }
+
+            @media (max-width: 650px) {
                 .lesson-modal {
                     padding: 28px 20px;
                     border-radius: 18px;
@@ -975,48 +1074,137 @@ document.addEventListener("DOMContentLoaded", function () {
                     bottom: 10px;
                     font-size: 11px;
                 }
-
             }
-
         `;
 
         document.head.appendChild(style);
-
-
-        /* =====================================================
-           CLOSE BUTTON
-        ===================================================== */
-
-        document
-            .getElementById("lessonModalClose")
-            .addEventListener("click", closeInfoModal);
-
-
-        /* CLICK OUTSIDE */
-
-        modal
-            .querySelector(".lesson-modal-overlay")
-            .addEventListener("click", function (event) {
-
-                if (
-                    event.target.classList.contains(
-                        "lesson-modal-overlay"
-                    )
-                ) {
-                    closeInfoModal();
-                }
-
-            });
-
     }
 
+    /* =========================================================
+       MODAL HELPERS
+    ========================================================= */
+
+    function createLessonInfoModal() {
+        if (document.getElementById("lessonInfoModal")) {
+            return;
+        }
+
+        const modal = document.createElement("div");
+        modal.id = "lessonInfoModal";
+
+        modal.innerHTML = `
+            <div class="lesson-modal-overlay">
+                <div class="lesson-modal">
+                    <button
+                        type="button"
+                        class="lesson-modal-close"
+                        id="lessonModalClose"
+                        aria-label="Isara"
+                    >×</button>
+
+                    <div id="lessonModalBody"></div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        const closeButton = document.getElementById("lessonModalClose");
+        if (closeButton) {
+            closeButton.addEventListener("click", closeInfoModal);
+        }
+
+        const overlay = modal.querySelector(".lesson-modal-overlay");
+        if (overlay) {
+            overlay.addEventListener("click", event => {
+                if (event.target === overlay) {
+                    closeInfoModal();
+                }
+            });
+        }
+    }
+
+    function createAdditionalMaterialModal() {
+        if (document.getElementById("additionalMaterialModal")) {
+            return;
+        }
+
+        const modal = document.createElement("div");
+        modal.id = "additionalMaterialModal";
+
+        modal.innerHTML = `
+            <div class="lesson-modal-overlay">
+                <div class="lesson-modal">
+                    <button
+                        type="button"
+                        class="lesson-modal-close"
+                        id="additionalMaterialClose"
+                        aria-label="Isara"
+                    >×</button>
+
+                    <div id="additionalMaterialBody"></div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        const closeButton = document.getElementById("additionalMaterialClose");
+        if (closeButton) {
+            closeButton.addEventListener("click", closeAdditionalMaterial);
+        }
+
+        const overlay = modal.querySelector(".lesson-modal-overlay");
+        if (overlay) {
+            overlay.addEventListener("click", event => {
+                if (event.target === overlay) {
+                    closeAdditionalMaterial();
+                }
+            });
+        }
+    }
+
+    function closeInfoModal() {
+        const modal = document.getElementById("lessonInfoModal");
+
+        if (modal) {
+            modal.classList.remove("show");
+        }
+
+        restoreBodyScrollIfNoModal();
+    }
+
+    function closeAdditionalMaterial() {
+        const modal = document.getElementById("additionalMaterialModal");
+
+        if (modal) {
+            modal.classList.remove("show");
+        }
+
+        restoreBodyScrollIfNoModal();
+    }
+
+    function restoreBodyScrollIfNoModal() {
+        const lessonModal = document.getElementById("lessonInfoModal");
+        const additionalModal = document.getElementById("additionalMaterialModal");
+        const zoomModal = document.getElementById("imageZoomModal");
+
+        const anyOpen =
+            lessonModal?.classList.contains("show") ||
+            additionalModal?.classList.contains("show") ||
+            zoomModal?.classList.contains("show") ||
+            contactModal?.classList.contains("show");
+
+        if (!anyOpen) {
+            document.body.style.overflow = "";
+        }
+    }
 
     /* =========================================================
-       GET YOUTUBE VIDEO ID
+       YOUTUBE
     ========================================================= */
 
     function getYouTubeVideoId(url) {
-
         if (!url) {
             return "";
         }
@@ -1024,1598 +1212,38 @@ document.addEventListener("DOMContentLoaded", function () {
         const value = String(url).trim();
 
         const patterns = [
-
             /youtube\.com\/watch\?v=([^&]+)/i,
-
             /youtube\.com\/embed\/([^?&]+)/i,
-
             /youtube\.com\/shorts\/([^?&]+)/i,
-
             /youtu\.be\/([^?&]+)/i
-
         ];
 
         for (const pattern of patterns) {
-
             const match = value.match(pattern);
 
-            if (match && match[1]) {
+            if (match?.[1]) {
                 return match[1];
             }
-
         }
 
         return "";
     }
-
-
-    /* =========================================================
-       OPEN MODAL
-    ========================================================= */
-
-    function openInfoModal(type, lesson) {
-
-        createInfoModal();
-
-        const modal =
-            document.getElementById("lessonInfoModal");
-
-        const body =
-            document.getElementById("lessonModalBody");
-
-        let html = "";
-
-
-        /* =====================================================
-           AUTHOR
-        ===================================================== */
-
-        if (type === "author") {
-
-            const authorImage =
-                typeof lesson.authorImage === "string"
-                    ? lesson.authorImage.trim()
-                    : "";
-
-            const hasAuthorImage =
-                authorImage.length > 0;
-
-            html = `
-
-                <span class="modal-eyebrow">
-                    MAY-AKDA
-                </span>
-
-                <h2>
-                    ${lesson.author}
-                </h2>
-
-                <div class="author-profile">
-
-                    <div
-                        class="author-photo ${hasAuthorImage ? "" : "no-image"}"
-                        id="authorPhotoContainer"
-                    >
-
-                        ${
-                            hasAuthorImage
-                            ? `
-                                <img
-                                    id="authorPhotoImage"
-                                    src="${authorImage}"
-                                    alt="${lesson.author}"
-                                >
-                            `
-                            : ""
-                        }
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Talambuhay
-                        </h3>
-
-                        <div class="modal-text">
-                            ${lesson.biography}
-                        </div>
-
-                    </div>
-
-                </div>
-
-            `;
-
-        }
-
-
-        /* =====================================================
-           THEME
-        ===================================================== */
-
-        else if (type === "theme") {
-
-            html = `
-
-                <span class="modal-eyebrow">
-                    TEMA
-                </span>
-
-                <h2>
-                    ${lesson.theme}
-                </h2>
-
-                <div class="detail-box">
-
-                    <p class="modal-text">
-                        Ang <strong>“Sa Dakong Silangan”</strong>ni José Corazón de Jesus 
-                        ay naglalayong pukawin ang damdaming makabayan ng 
-                        mga Pilipino sa pamamagitan ng paglalarawan sa 
-                        kalagayan ng bayan sa panahon ng pananakop. 
-                        Ipinahahayag sa akda ang pagmamahal sa bayan, 
-                        pagnanais ng kalayaan, at pag-asa para sa isang 
-                        malaya at maunlad na Pilipinas. Hinihikayat din nito ang mga 
-                        mambabasa na magkaroon ng kamalayan sa kanilang tungkulin 
-                        bilang mamamayan at pahalagahan ang sariling bayan, kultura, 
-                        at pagkakakilanlan.
-                    </p>
-
-                </div>
-
-            `;
-
-        }
-
-
-        /* =====================================================
-           OBJECTIVE
-        ===================================================== */
-
-else if (type === "objective") {
-    html = `
-        <h2>
-            Layunin ng Aralin
-        </h2>
-
-        <div class="detail-box">
-            <p class="modal-text" style="text-align: justify;">
-                ${lesson.objective}
-            </p>
-        </div>
-    `;
-}
-/* =====================================================
-   PAGPROSESO NG PAG-UNAWA
-===================================================== */
-
-else if (type === "processing") {
-
-    let questionsHTML = "";
-
-    if (
-        lesson.processingQuestions &&
-        lesson.processingQuestions.length > 0
-    ) {
-
-        lesson.processingQuestions.forEach(function (item) {
-
-            questionsHTML += `
-
-                <div class="detail-box">
-
-                    <strong>
-                        ${item.number}.
-                    </strong>
-
-                    <span class="modal-text">
-                        ${item.question}
-                    </span>
-
-                </div>
-
-            `;
-
-        });
-
-    }
-
-    html = `
-
-        <span class="modal-eyebrow">
-            PAGPROSESO NG PAG-UNAWA
-        </span>
-
-        <h2>
-            ${lesson.processingTitle}
-        </h2>
-
-        <p class="modal-text">
-            ${lesson.processingInstructions}
-        </p>
-
-        <div style="margin-top: 25px;">
-            ${questionsHTML}
-        </div>
-
-    `;
-
-}
-        /* =====================================================
-           MULTIMODAL MATERIAL
-        ===================================================== */
-
-        else if (type === "material") {
-
-            let preview = "";
-
-
-            /* =================================================
-               YOUTUBE / VIDEO THUMBNAIL
-            ================================================= */
-
-            if (lesson.materialType === "video") {
-
-                if (
-                    lesson.youtube &&
-                    lesson.youtube.trim() !== ""
-                ) {
-
-                    const videoId =
-                        getYouTubeVideoId(
-                            lesson.youtube
-                        );
-
-                    if (videoId) {
-
-                        const thumbnail =
-                            `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
-                        const youtubeUrl =
-                            `https://www.youtube.com/watch?v=${videoId}`;
-
-                        preview = `
-
-                            <a
-                                class="youtube-thumbnail-wrapper"
-                                href="${youtubeUrl}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Panoorin sa YouTube: ${lesson.material}"
-                            >
-
-                                <img
-                                    src="${thumbnail}"
-                                    alt="${lesson.material} YouTube preview"
-                                    loading="eager"
-                                >
-
-                                <span
-                                    class="youtube-play-button"
-                                    aria-hidden="true"
-                                ></span>
-
-                                <span class="youtube-label">
-                                    ▶ Panoorin sa YouTube
-                                </span>
-
-                            </a>
-
-                        `;
-
-                    }
-
-                    else {
-
-                        preview = `
-
-                            <div class="youtube-placeholder">
-
-                                <div class="youtube-content">
-
-                                    <strong>
-                                        Invalid YouTube Link
-                                    </strong>
-
-                                    <p>
-                                        Hindi makuha ang YouTube video ID.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        `;
-
-                    }
-
-                }
-
-                else {
-
-                    preview = `
-
-                        <div class="youtube-placeholder">
-
-                            <div class="youtube-content">
-
-                                <strong>
-                                    YouTube Preview
-                                </strong>
-
-                                <p>
-                                    Wala pang YouTube video para sa
-                                    materyal na ito.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    `;
-
-                }
-
-            }
-
-
-            /* =================================================
-               IMAGE MATERIAL
-            ================================================= */
-
-            else {
-
-                if (
-                    lesson.materialImage &&
-                    lesson.materialImage.trim() !== ""
-                ) {
-
-                    preview = `
-
-                        <div
-                            class="material-image-wrapper"
-                            data-zoom-image="${lesson.materialImage}"
-                        >
-
-                            <img
-                                src="${lesson.materialImage}"
-                                alt="${lesson.material}"
-                                onerror="
-                                    this.style.display='none';
-                                    this.parentElement.innerHTML =
-                                    '<div class=&quot;material-placeholder&quot;><strong>Image Placeholder</strong><span>Palitan ang materialImage sa script.js.</span></div>';
-                                "
-                            >
-
-                        </div>
-
-                    `;
-
-                }
-
-                else {
-
-                    preview = `
-
-                        <div class="material-placeholder">
-
-                            <strong>
-                                ${lesson.material}
-                            </strong>
-
-                            <span>
-                                Dito ilalagay ang larawan ng
-                                multimodal material.
-                            </span>
-
-                        </div>
-
-                    `;
-
-                }
-
-            }
-
-
-            html = `
-
-                <span class="modal-eyebrow">
-                    MULTIMODAL MATERIAL
-                </span>
-
-                <h2>
-                    ${lesson.material}
-                </h2>
-
-                <div class="material-preview">
-
-                    ${preview}
-
-                </div>
-
-            `;
-
-        }
-
-
-        body.innerHTML = html;
-
-        modal.classList.add("show");
-
-        document.body.style.overflow = "hidden";
-
-
-        /* =====================================================
-           AUTHOR IMAGE ERROR HANDLER
-        ===================================================== */
-
-        const authorPhoto =
-            body.querySelector("#authorPhotoImage");
-
-        const authorPhotoContainer =
-            body.querySelector("#authorPhotoContainer");
-
-        if (
-            authorPhoto &&
-            authorPhotoContainer
-        ) {
-
-            authorPhoto.addEventListener(
-                "error",
-                function () {
-
-                    console.error(
-                        "Hindi makita ang author image:",
-                        this.src
-                    );
-
-                    this.remove();
-
-                    authorPhotoContainer.classList.add(
-                        "no-image"
-                    );
-
-                }
-            );
-
-        }
-
-
-        /* =====================================================
-           YOUTUBE THUMBNAIL ERROR HANDLER
-        ===================================================== */
-
-        const youtubeThumbnail =
-            body.querySelector(
-                ".youtube-thumbnail-wrapper img"
-            );
-
-        if (youtubeThumbnail) {
-
-            youtubeThumbnail.addEventListener(
-                "error",
-                function () {
-
-                    const wrapper =
-                        this.closest(
-                            ".youtube-thumbnail-wrapper"
-                        );
-
-                    if (!wrapper) {
-                        return;
-                    }
-
-                    wrapper.innerHTML = `
-
-                        <div
-                            class="youtube-content"
-                            style="
-                                width:100%;
-                                height:100%;
-                                display:flex;
-                                flex-direction:column;
-                                align-items:center;
-                                justify-content:center;
-                                padding:30px;
-                                text-align:center;
-                            "
-                        >
-
-                            <strong>
-                                Hindi ma-load ang YouTube preview
-                            </strong>
-
-                            <p>
-                                I-click para buksan ang video sa YouTube.
-                            </p>
-
-                        </div>
-
-                    `;
-
-                }
-            );
-
-        }
-
-
-        /* =====================================================
-           ENABLE IMAGE ZOOM
-        ===================================================== */
-
-        const zoomImage =
-            body.querySelector(
-                "[data-zoom-image]"
-            );
-
-        if (zoomImage) {
-
-            zoomImage.addEventListener(
-                "click",
-                function () {
-
-                    openImageZoom(
-                        this.dataset.zoomImage
-                    );
-
-                }
-            );
-
-        }
-
-    }
-
-
-    /* =========================================================
-       GET WEEK NUMBER
-    ========================================================= */
-/* =========================================================
-   ADDITIONAL LEARNING MATERIALS
-========================================================= */
-
-const additionalMaterials = {
-
-    1: {
-        title: "Tukuyin Mo!",
-        subtitle: "A. Pagkilala sa Katotohanan at Kasinungalingan",
-
-        type: "truefalse",
-
-        instructions: `
-            Tukuyin kung ang nakasaad ay
-            <strong>Katotohanan</strong>. Kung hindi, palitan
-            ang salita o mga salitang may salungguhit ng wastong sagot.
-        `,
-
-        questions: [
-            {
-                number: 1,
-                question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>.",
-            },
-            {
-                number: 2,
-                question: "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel.",
-            },
-            {
-                number: 3,
-                question: "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa.",
-            },
-            {
-                number: 4,
-                question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>.",
-            },
-            {
-                number: 5,
-                question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>.",
-            },
-            {
-                number: 6,
-                question: "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
-            },
-            {
-                number: 7,
-                question: "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag.",
-            },
-            {
-                number: 8,
-                question: "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
-            },
-            {
-                number: 9,
-                question: "Ang <u>palasyo</u> ay kulong ng malaking lambat.",
-            },
-            {
-                number: 10,
-                question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
-            }
-        ]
-    },
-
-
-    2: {
-        title: "Alam mo ba?",
-        subtitle: "Karagdagang Babasahin",
-
-        type: "reading",
-
-        content: `
-            <p style="text-align: justify;">
-                Maituturing na rehiyonal na dula ang
-                <strong>“Kahapon, Ngayon at Bukas”</strong>
-                ni Aurelio V. Tolentino na may pamagat na
-                <strong>“Napon, Ngeni at Bukas”</strong>
-                sa Kapampangan.
-            </p>
-
-            <p style="text-align: justify;">
-                Ang mga rehiyonal na dula na nasusulat sa mga
-                rehiyonal na wika sa Pilipinas ay kapantay rin
-                ng mga dulang nasusulat sa Tagalog.
-            </p>
-
-            <p style="text-align: justify;">
-                <strong>“Elena”</strong> naman ang pamagat ng
-                dulang Cebuano ni Vicente Sotto noong 1902.
-            </p>
-
-            <p style="text-align: justify;">
-                <strong>“Ang Ayat Iti Ili ken Dadduma Pay a Drama”</strong>
-                (Pag-ibig sa Bayan at Iba pang Drama) ni
-                Jose Garvida Flores ay halimbawa ng dulang Ilocano.
-            </p>
-
-            <p style="text-align: justify;">
-                Ang mga dulang rehiyonal sa iba't ibang lugar
-                sa Pilipinas ay may ambag ding malaki sa
-                pag-unlad ng dula o teatro sa bansa sa panahon
-                ng pananakop ng mga Kastila at Amerikano
-                hanggang sa kasalukuyan.
-            </p>
-        `,
-
-        keywords: [
-            "Rehiyonal na Dula",
-            "Kapampangan",
-            "Cebuano",
-            "Ilocano",
-            "Kahapon, Ngayon at Bukas",
-            "Napon, Ngeni at Bukas",
-            "Elena",
-            "Ang Ayat Iti Ili ken Dadduma Pay a Drama",
-            "Vicente Sotto",
-            "Jose Garvida Flores",
-            "Aurelio V. Tolentino",
-            "Kastila",
-            "Amerikano",
-            "Teatro"
-        ]
-    },
-
-
-    4: {
-        title: "Ang Tunay na Sampung Utos",
-        subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
-
-        type: "commandments",
-
-        introduction: `
-            Mayo ng 1898 nang sinulat ni
-            <strong>Apolinario Mabini</strong> ang
-            <strong>El Verdadero Decalogo</strong> —
-            o <strong>Ang Tunay na Sampung Utos</strong>.
-            Ito ang kanyang habilin sa ating bayan.
-        `,
-
-        commandments: [
-            {
-                number: "Una",
-                text: `
-                    Ibigin mo ang Diyos at ang iyong puri ng lalo
-                    sa lahat ng bagay. Ang paghahangad ng puri ang
-                    siya lamang makapipigil sa iyo sa pagbubulaan
-                    at makapipigil na huwag kang suminsay sa daan
-                    ng katuwiran at laging magtaglay ng kasipagan.
-                `,
-                keywords: [
-                    "Diyos",
-                    "Puri",
-                    "Katuwiran",
-                    "Kasipagan"
-                ]
-            },
-
-            {
-                number: "Ikalawa",
-                text: `
-                    Sambahin mo ang Dios sa kaparaang lalong
-                    minamarapat ng iyong bait at kalooban o
-                    konsyensya.
-                `,
-                keywords: [
-                    "Pagsamba sa Diyos",
-                    "Bait",
-                    "Kalooban",
-                    "Konsensya"
-                ]
-            },
-
-            {
-                number: "Ikatlo",
-                text: `
-                    Dagdagan mong pilit ang talos ng isip at
-                    katutubong alam na ipinagkaloob ng Diyos sa iyo
-                    sa pamamagitan ng pag-aaral, at magsumakit ka
-                    ng ubos lakas sa gawang kinahihiligan ng iyong
-                    loob upang matipon sa iyo ang lalong maraming
-                    kagalingan at sa ganitong paraan ay makatulong
-                    ka sa ikasusulong ng lahat.
-                `,
-                keywords: [
-                    "Pag-aaral",
-                    "Kaalaman",
-                    "Kagalingan",
-                    "Pagsisikap",
-                    "Pagtulong"
-                ]
-            },
-
-            {
-                number: "Ikaapat",
-                text: `
-                    Ibigin mo ang iyong Inang Bayan ikalawa sa
-                    Dios at sa iyong puri at higit sa iyong sarili,
-                    sapagkat siya ang nakaisa-isang Paraisong
-                    pinaglagyan sa iyo ng Diyos sa buhay na ito.
-                `,
-                keywords: [
-                    "Inang Bayan",
-                    "Pagmamahal sa Bayan",
-                    "Puri",
-                    "Diyos"
-                ]
-            },
-
-            {
-                number: "Ikalima",
-                text: `
-                    Pagpilitan mo ang kalayaan ng iyong bayan
-                    bago ang iyong sarili, sapagkat kung malaya
-                    siya at lalaya rin ikaw at ang iyong kamag-anakan.
-                `,
-                keywords: [
-                    "Kalayaan",
-                    "Bayan",
-                    "Sarili",
-                    "Kamag-anakan"
-                ]
-            },
-
-            {
-                number: "Ikaanim",
-                text: `
-                    Pagpilitan mo ang kasarinlan ng iyong bayan,
-                    sapagkat ikaw lamang ang tunay na makapagmamasakit
-                    sa kanyang ikasusulong at ikatatanghal.
-                `,
-                keywords: [
-                    "Kasarinlan",
-                    "Bayan",
-                    "Pagsulong",
-                    "Pagtatanghal"
-                ]
-            },
-
-            {
-                number: "Ikapito",
-                text: `
-                    Huwag mong kilalanin sa loob ng iyong bayan ang
-                    kapangyarihan ng sino mang tao na hindi inilagay
-                    ninyong magkakababayan. Ang taong ituro at ihalal
-                    ng mga konsyensya ng sangkabayanan ang siya lamang
-                    makapagtataglay ng tunay na kapangyarihan.
-                `,
-                keywords: [
-                    "Halalan",
-                    "Konsensya",
-                    "Mamamayan",
-                    "Tunay na Kapangyarihan"
-                ]
-            },
-
-            {
-                number: "Ikawalo",
-                text: `
-                    Ihanap mong pilit ang iyong bayan ng Republica,
-                    yaon baga ang lahat na namamahala ay palagay ng
-                    bayan, at huwag isipin kailan man ang Monarkiya,
-                    ang pagkakaroon baga ng hari.
-                `,
-                keywords: [
-                    "Republika",
-                    "Bayan",
-                    "Pamamahala",
-                    "Monarkiya"
-                ]
-            },
-
-            {
-                number: "Ikasiyam",
-                text: `
-                    Ibigin mo ang kapwa mo tao kaparis ng pag-ibig
-                    mo sa iyong sarili, sapagkat siya’y binigyan ng
-                    Diyos, at ikaw ay ganoon din naman, ng katungkulang
-                    tulungan ka at huwag niyang gawin sa iyo ang di
-                    niya ibig na gawin mo sa kaniya.
-                `,
-                keywords: [
-                    "Kapwa",
-                    "Pagmamahal",
-                    "Pagtutulungan",
-                    "Diyos"
-                ]
-            },
-
-            {
-                number: "Ikasampu",
-                text: `
-                    Palalaluin nang kaunti sa loob mo ang iyong
-                    kababayan sa iyong kapwa tao; aariin mong palagi
-                    siya na parang isang katoto, kapatid kaya o kasama
-                    man lamang, palibhasa’y iisa ang inyong kapalaran,
-                    iisa din ang inyong tuwa at kapighatian.
-                `,
-                keywords: [
-                    "Kababayan",
-                    "Pagkakaisa",
-                    "Kapatid",
-                    "Magkakasama",
-                    "Iisang Kapalaran"
-                ]
-            }
-        ]
-    },
-
-
-    6: {
-        title: "Pagtukoy: Mga Ibong Mandaragit",
-        subtitle: "Rebyu ng Nobela",
-
-        type: "identification",
-
-        instructions: `
-            Ang sumusunod ay mula sa Rebyu ng nobelang
-            <strong>“Mga Ibong Mandaragit.”</strong>
-            Isulat sa patlang ang tinutukoy sa bawat bilang.
-        `,
-
-        questions: [
-            {
-                number: 1,
-                question: "Ito ang taon nang maisulat ang nobelang Mga Ibong Mandaragit.",
-                answer: "1969"
-            },
-            {
-                number: 2,
-                question: "Siya ang awtor ng English na bersyon ng nobela na lumabas noong 2022.",
-                answer: "Danton Remoto"
-            },
-            {
-                number: 3,
-                question: "Siya ang pangunahing tauhan sa nobela.",
-                answer: "Mando Plaridel"
-            },
-            {
-                number: 4,
-                question: "Kung sa Noli Me Tangere ay may Pilosopo Tasyo, siya naman ang katumbas niya sa nobela.",
-                answer: "Tata Matyas"
-            },
-            {
-                number: 5,
-                question: "Ito ang pamagat ng tulang nasulat ni Amado V. Hernandez sa kulungan na nagpapakita ng kanyang kalagayan doon.",
-                answer: "Isang Dipang Langit"
-            },
-            {
-                number: 6,
-                question: "Ano ang pamagat ng tula ni Amado V. Hernandez na binubuo ng 5,000 taludtod?",
-                answer: "Bayang Malaya"
-            },
-            {
-                number: 7,
-                question: "Sa nobela, ito ang taon nang pagsisimula ng naratibo.",
-                answer: "1944"
-            },
-            {
-                number: 8,
-                question: "Ito ang kabuuang bilang ng kabanata ng nobela.",
-                answer: "59"
-            },
-            {
-                number: 9,
-                question: "Sa nobela, ito ang tawag sa patagong pinagbebentahan ng mga gamit sa panahon ng Hapon.",
-                answer: "Black market"
-            },
-            {
-                number: 10,
-                question: "Ito ang pamagat ng pahayagan.",
-                answer: "Kampilan"
-            }
-        ]
-    }
-
-};
-
-
-/* =========================================================
-   ADDITIONAL MATERIAL MODAL CSS
-========================================================= */
-
-function createAdditionalMaterialStyles() {
-
-    if (document.getElementById("additional-material-style")) {
-        return;
-    }
-
-    const style = document.createElement("style");
-
-    style.id = "additional-material-style";
-
-    style.textContent = `
-
-        .additional-material-button {
-            width: 100%;
-            margin-top: 25px;
-            padding: 15px 20px;
-            border: 2px solid #7d0b12;
-            border-radius: 14px;
-            background: #fff;
-            color: #7d0b12;
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all .25s ease;
-            text-align: center;
-        }
-
-        .additional-material-button:hover {
-            background: #7d0b12;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(125,11,18,.18);
-        }
-
-        .additional-material-button:focus {
-            outline: 3px solid rgba(125,11,18,.2);
-            outline-offset: 3px;
-        }
-
-        .additional-material-list {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin-top: 20px;
-        }
-
-        .additional-question {
-            background: #faf7f7;
-            border-left: 4px solid #7d0b12;
-            padding: 18px;
-            border-radius: 12px;
-        }
-
-        .additional-question-number {
-            color: #7d0b12;
-            font-weight: 900;
-            margin-bottom: 7px;
-        }
-
-        .additional-question-text {
-            color: #333;
-            line-height: 1.7;
-        }
-
-        .material-reading {
-            color: #444;
-            line-height: 1.85;
-            font-size: 16px;
-        }
-
-        .material-reading p {
-            margin-bottom: 18px;
-        }
-
-        .keyword-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 20px;
-        }
-
-        .keyword-tag {
-            display: inline-block;
-            padding: 7px 12px;
-            border-radius: 20px;
-            background: #7d0b12;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .commandment-card {
-            background: #faf7f7;
-            border: 1px solid rgba(125,11,18,.12);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 16px;
-        }
-
-        .commandment-number {
-            color: #7d0b12;
-            font-size: 18px;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .commandment-text {
-            color: #444;
-            line-height: 1.8;
-        }
-
-        .commandment-keywords {
-            margin-top: 14px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-        }
-
-        .commandment-keyword {
-            padding: 6px 10px;
-            border-radius: 20px;
-            background: #7d0b12;
-            color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-        }
-
-        .answer-section {
-            margin-top: 28px;
-            padding: 20px;
-            background: #faf7f7;
-            border-left: 4px solid #7d0b12;
-            border-radius: 12px;
-        }
-
-        @media (max-width: 650px) {
-
-            .additional-material-button {
-                font-size: 14px;
-                padding: 13px 15px;
-            }
-
-            .additional-question {
-                padding: 15px;
-            }
-
-            .commandment-card {
-                padding: 16px;
-            }
-
-        }
-
-    `;
-
-    document.head.appendChild(style);
-}
-
-
-/* =========================================================
-   ADDITIONAL MATERIAL MODAL
-========================================================= */
-
-function createAdditionalMaterialModal() {
-
-    if (document.getElementById("additionalMaterialModal")) {
-        return;
-    }
-
-    const modal = document.createElement("div");
-
-    modal.id = "additionalMaterialModal";
-
-    modal.innerHTML = `
-        <div class="lesson-modal-overlay">
-
-            <div class="lesson-modal">
-
-                <button
-                    type="button"
-                    class="lesson-modal-close"
-                    id="additionalMaterialClose"
-                    aria-label="Isara"
-                >
-                    ×
-                </button>
-
-                <div id="additionalMaterialBody"></div>
-
-            </div>
-
-        </div>
-    `;
-
-    document.body.appendChild(modal);
-
-    const style = document.createElement("style");
-
-    style.textContent = `
-
-        #additionalMaterialModal {
-            position: fixed;
-            inset: 0;
-            z-index: 99998;
-            display: none;
-        }
-
-        #additionalMaterialModal.show {
-            display: block;
-        }
-
-    `;
-
-    document.head.appendChild(style);
-
-    document
-        .getElementById("additionalMaterialClose")
-        .addEventListener(
-            "click",
-            closeAdditionalMaterial
-        );
-
-    modal
-        .querySelector(".lesson-modal-overlay")
-        .addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target.classList.contains(
-                        "lesson-modal-overlay"
-                    )
-                ) {
-                    closeAdditionalMaterial();
-                }
-
-            }
-        );
-}
-
-
-/* =========================================================
-   OPEN ADDITIONAL MATERIAL
-========================================================= */
-
-function openAdditionalMaterial(weekNumber) {
-
-    const material =
-        additionalMaterials[weekNumber];
-
-    if (!material) {
-        return;
-    }
-
-    createAdditionalMaterialModal();
-
-    const modal =
-        document.getElementById(
-            "additionalMaterialModal"
-        );
-
-    const body =
-        document.getElementById(
-            "additionalMaterialBody"
-        );
-
-    let html = `
-
-        <span class="modal-eyebrow">
-            Maikling Pagsusulit
-        </span>
-
-        <h2>
-            ${material.title}
-        </h2>
-
-    `;
-
-
-    /* =====================================================
-       TRUE OR FALSE / IDENTIFICATION
-    ===================================================== */
-
-    if (
-        material.type === "truefalse" ||
-        material.type === "identification"
-    ) {
-
-        if (material.instructions) {
-
-            html += `
-                <div class="detail-box">
-                    <p class="modal-text">
-                        ${material.instructions}
-                    </p>
-                </div>
-            `;
-
-        }
-
-        html += `
-            <div class="additional-material-list">
-        `;
-
-        material.questions.forEach(function (item) {
-
-            html += `
-
-                <div class="additional-question">
-
-                    <div class="additional-question-number">
-                        ${item.number}.
-                    </div>
-
-                    <div class="additional-question-text">
-                        ${item.question}
-                    </div>
-
-                </div>
-
-            `;
-
-        });
-
-        html += `
-            </div>
-        `;
-
-        material.questions.forEach(function (item) {
-
-            html += `
-
-                <div>
-                    <strong>${item.number}.</strong>
-                    ${item.answer}
-                </div>
-
-            `;
-
-        });
-
-        html += `
-                </div>
-            </div>
-        `;
-
-
-        /* SECOND PART */
-
-        if (material.secondPart) {
-
-            html += `
-
-                <div class="answer-section">
-
-                    <h3>
-                        ${material.secondPart.title}
-                    </h3>
-
-                    <p class="modal-text">
-                        ${material.secondPart.content}
-                    </p>
-
-                </div>
-
-            `;
-
-        }
-
-    }
-
-
-    /* =====================================================
-       READING
-    ===================================================== */
-
-    else if (material.type === "reading") {
-
-        html += `
-
-            <div class="material-reading">
-
-                ${material.content}
-
-            </div>
-
-        `;
-
-
-        if (
-            material.keywords &&
-            material.keywords.length > 0
-        ) {
-
-            html += `
-
-                <div class="detail-box">
-
-                    <h3>
-                       Mga Mahahalagang Salita
-                    </h3>
-
-                    <div class="keyword-container">
-            `;
-
-            material.keywords.forEach(function (keyword) {
-
-                html += `
-                    <span class="keyword-tag">
-                        ${keyword}
-                    </span>
-                `;
-
-            });
-
-            html += `
-                    </div>
-
-                </div>
-            `;
-
-        }
-
-    }
-
-
-    /* =====================================================
-       COMMANDMENTS
-    ===================================================== */
-
-    else if (material.type === "commandments") {
-
-        html += `
-
-            <div class="detail-box">
-
-                <p class="modal-text">
-                    ${material.introduction}
-                </p>
-
-            </div>
-
-            <div style="margin-top:25px;">
-        `;
-
-
-        material.commandments.forEach(function (item) {
-
-            html += `
-
-                <div class="commandment-card">
-
-                    <div class="commandment-number">
-                        ${item.number}
-                    </div>
-
-                    <div class="commandment-text">
-                        ${item.text}
-                    </div>
-
-                    <div class="commandment-keywords">
-
-            `;
-
-            item.keywords.forEach(function (keyword) {
-
-                html += `
-                    <span class="commandment-keyword">
-                        ${keyword}
-                    </span>
-                `;
-
-            });
-
-            html += `
-
-                    </div>
-
-                </div>
-
-            `;
-
-        });
-
-
-        html += `
-            </div>
-        `;
-
-    }
-
-
-    body.innerHTML = html;
-
-    modal.classList.add("show");
-
-    document.body.style.overflow = "hidden";
-}
-
-
-/* =========================================================
-   CLOSE ADDITIONAL MATERIAL
-========================================================= */
-
-function closeAdditionalMaterial() {
-
-    const modal =
-        document.getElementById(
-            "additionalMaterialModal"
-        );
-
-    if (modal) {
-        modal.classList.remove("show");
-    }
-
-    document.body.style.overflow = "";
-}
-
-
-/* =========================================================
-   ADD BUTTON TO LESSON
-========================================================= */
-
-function addAdditionalMaterialButton(
-    weekNumber,
-    container
-) {
-
-    if (!container) {
-        return;
-    }
-
-    const material = additionalMaterials[weekNumber];
-    const lesson = lessons[weekNumber];
-
-    /* =====================================================
-       CHECK IF PROCESSING BUTTON SHOULD EXIST
-    ===================================================== */
-
-    const hasAdditionalMaterial =
-        !!material;
-
-    const hasProcessing =
-        lesson &&
-        lesson.processingQuestions &&
-        lesson.processingQuestions.length > 0;
-
-    if (
-        !hasAdditionalMaterial &&
-        !hasProcessing
-    ) {
-        return;
-    }
-
-
-    /* =====================================================
-       CREATE BUTTON
-    ===================================================== */
-
-    const button =
-        document.createElement("button");
-
-    button.type = "button";
-
-    button.className =
-        "additional-material-button";
-
-
-    /* =====================================================
-       BUTTON TITLE
-    ===================================================== */
-
-    if (hasProcessing) {
-
-        button.innerHTML =
-            "Pagproseso ng Pag-unawa";
-
-    } else {
-
-        button.innerHTML =
-            "" + material.title;
-
-    }
-
-
-    /* =====================================================
-       BUTTON CLICK
-    ===================================================== */
-
-    button.addEventListener(
-        "click",
-        function () {
-
-            /*
-               Week 3 and Week 5
-               use the existing processing
-               inside lessons.
-            */
-
-            if (hasProcessing) {
-
-                openInfoModal(
-                    "processing",
-                    lesson
-                );
-
-                return;
-            }
-
-
-            /*
-               Week 1, 2, 4, and 6
-               continue using their
-               existing additional materials.
-            */
-
-            openAdditionalMaterial(
-                weekNumber
-            );
-
-        }
-    );
-
-
-    container.appendChild(button);
-}
-
-    /* =========================================================
-       CLOSE MODAL
-    ========================================================= */
-
-    function closeInfoModal() {
-
-        const modal =
-            document.getElementById(
-                "lessonInfoModal"
-            );
-
-        if (modal) {
-            modal.classList.remove("show");
-        }
-
-        document.body.style.overflow = "";
-
-    }
-
 
     /* =========================================================
        IMAGE ZOOM
     ========================================================= */
 
     function openImageZoom(imageSrc) {
+        if (!imageSrc) {
+            return;
+        }
 
-        let zoom =
-            document.getElementById("imageZoomModal");
-
+        let zoom = document.getElementById("imageZoomModal");
 
         if (!zoom) {
-
-            zoom =
-                document.createElement("div");
-
-            zoom.id =
-                "imageZoomModal";
-
-            zoom.className =
-                "zoom-modal";
+            zoom = document.createElement("div");
+            zoom.id = "imageZoomModal";
+            zoom.className = "zoom-modal";
 
             zoom.innerHTML = `
                 <img
@@ -2627,654 +1255,887 @@ function addAdditionalMaterialButton(
 
             document.body.appendChild(zoom);
 
-
-            zoom.addEventListener(
-                "click",
-                function () {
-
-                    zoom.classList.remove("show");
-
-                }
-            );
-
+            zoom.addEventListener("click", () => {
+                zoom.classList.remove("show");
+                restoreBodyScrollIfNoModal();
+            });
         }
 
+        const image = document.getElementById("zoomedMaterialImage");
 
-        document
-            .getElementById("zoomedMaterialImage")
-            .src = imageSrc;
+        if (image) {
+            image.src = imageSrc;
+        }
 
         zoom.classList.add("show");
-
+        document.body.style.overflow = "hidden";
     }
 
-
     /* =========================================================
-       SHOW SECTION
+       OPEN LESSON INFO MODAL
     ========================================================= */
 
-    function showSection(sectionName) {
-
-        sections.forEach(function (section) {
-            section.classList.remove("active");
-        });
-
-
-        navButtons.forEach(function (button) {
-            button.classList.remove("active");
-        });
-
-
-        let target;
-
-
-        if (sectionName === "home") {
-
-            target =
-                document.getElementById(
-                    "homeContent"
-                );
-
+    function openInfoModal(type, lesson) {
+        if (!lesson) {
+            return;
         }
 
-        else if (sectionName === "lesson") {
+        createLessonInfoModal();
 
-            target =
-                document.getElementById(
-                    "lessonContent"
-                );
+        const modal = document.getElementById("lessonInfoModal");
+        const body = document.getElementById("lessonModalBody");
 
+        if (!modal || !body) {
+            return;
+        }
+
+        let html = "";
+
+        if (type === "author") {
+            const authorImage =
+                typeof lesson.authorImage === "string"
+                    ? lesson.authorImage.trim()
+                    : "";
+
+            const hasAuthorImage = authorImage.length > 0;
+
+            html = `
+                <span class="modal-eyebrow">MAY-AKDA</span>
+
+                <h2>${lesson.author}</h2>
+
+                <div class="author-profile">
+                    <div
+                        class="author-photo ${hasAuthorImage ? "" : "no-image"}"
+                        id="authorPhotoContainer"
+                    >
+                        ${
+                            hasAuthorImage
+                                ? `
+                                    <img
+                                        id="authorPhotoImage"
+                                        src="${authorImage}"
+                                        alt="${lesson.author}"
+                                    >
+                                `
+                                : ""
+                        }
+                    </div>
+
+                    <div>
+                        <h3>Talambuhay</h3>
+
+                        <div class="modal-text">
+                            ${lesson.biography || "Walang talambuhay na nailagay."}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        else if (type === "theme") {
+            const themeExplanation =
+                lesson.theme ||
+                "Walang tema na nailagay para sa araling ito.";
+
+            html = `
+                <span class="modal-eyebrow">TEMA</span>
+
+                <h2>${themeExplanation}</h2>
+
+                <div class="detail-box">
+                    <p class="modal-text" style="text-align: justify;">
+                        Ang tema ng akda ay nagpapakita ng mahahalagang
+                        kaisipan at pagpapahalagang nais ipabatid sa
+                        mga mambabasa. Sa pamamagitan nito, mas
+                        mauunawaan ang mensahe at pananaw na nakapaloob
+                        sa aralin.
+                    </p>
+                </div>
+            `;
+        }
+
+        else if (type === "objective") {
+            html = `
+                <span class="modal-eyebrow">LAYUNIN</span>
+
+                <h2>Layunin ng Aralin</h2>
+
+                <div class="detail-box">
+                    <p class="modal-text" style="text-align: justify;">
+                        ${lesson.objective || "Walang layunin na nailagay."}
+                    </p>
+                </div>
+            `;
+        }
+
+        else if (type === "processing") {
+            let questionsHTML = "";
+
+            if (
+                Array.isArray(lesson.processingQuestions) &&
+                lesson.processingQuestions.length
+            ) {
+                lesson.processingQuestions.forEach(item => {
+                    questionsHTML += `
+                        <div class="detail-box">
+                            <strong>${item.number}.</strong>
+                            <span class="modal-text">
+                                ${item.question}
+                            </span>
+                        </div>
+                    `;
+                });
+            }
+
+            html = `
+                <span class="modal-eyebrow">
+                    PAGPROSESO NG PAG-UNAWA
+                </span>
+
+                <h2>
+                    ${lesson.processingTitle || "Pagproseso ng Pag-unawa"}
+                </h2>
+
+                <p class="modal-text">
+                    ${lesson.processingInstructions || ""}
+                </p>
+
+                <div style="margin-top:25px;">
+                    ${questionsHTML}
+                </div>
+            `;
+        }
+
+        else if (type === "material") {
+            let preview = "";
+
+            if (lesson.materialType === "video") {
+                const videoId = getYouTubeVideoId(lesson.youtube);
+
+                if (videoId) {
+                    const thumbnail =
+                        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+                    const youtubeUrl =
+                        `https://www.youtube.com/watch?v=${videoId}`;
+
+                    preview = `
+                        <a
+                            class="youtube-thumbnail-wrapper"
+                            href="${youtubeUrl}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Panoorin sa YouTube: ${lesson.material}"
+                        >
+                            <img
+                                src="${thumbnail}"
+                                alt="${lesson.material} YouTube preview"
+                                loading="eager"
+                            >
+
+                            <span
+                                class="youtube-play-button"
+                                aria-hidden="true"
+                            ></span>
+
+                            <span class="youtube-label">
+                                ▶ Panoorin sa YouTube
+                            </span>
+                        </a>
+                    `;
+                }
+
+                else {
+                    preview = `
+                        <div class="youtube-placeholder">
+                            <div class="youtube-content">
+                                <strong>YouTube Preview</strong>
+                                <p>
+                                    Wala pang valid na YouTube video para
+                                    sa materyal na ito.
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            else if (
+                lesson.materialImage &&
+                String(lesson.materialImage).trim() !== ""
+            ) {
+                const imageSrc = String(lesson.materialImage).trim();
+
+                preview = `
+                    <div
+                        class="material-image-wrapper"
+                        data-zoom-image="${imageSrc}"
+                    >
+                        <img
+                            src="${imageSrc}"
+                            alt="${lesson.material || "Multimodal material"}"
+                        >
+                    </div>
+                `;
+            }
+
+            else {
+                preview = `
+                    <div class="material-placeholder">
+                        <strong>${lesson.material || "Multimodal Material"}</strong>
+                        <span>
+                            Dito ilalagay ang larawan o iba pang
+                            multimodal material.
+                        </span>
+                    </div>
+                `;
+            }
+
+            html = `
+                <span class="modal-eyebrow">
+                    MULTIMODAL MATERIAL
+                </span>
+
+                <h2>${lesson.material || "Multimodal Material"}</h2>
+
+                <div class="material-preview">
+                    ${preview}
+                </div>
+            `;
         }
 
         else {
-
-            target =
-                document.getElementById(
-                    "headerSection"
-                );
-
+            html = `
+                <h2>Impormasyon</h2>
+                <p class="modal-text">
+                    Walang available na impormasyon.
+                </p>
+            `;
         }
 
+        body.innerHTML = html;
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
 
-        if (target) {
+        const authorPhoto = body.querySelector("#authorPhotoImage");
+        const authorPhotoContainer =
+            body.querySelector("#authorPhotoContainer");
 
-            target.classList.add("active");
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+        if (authorPhoto && authorPhotoContainer) {
+            authorPhoto.addEventListener("error", function () {
+                console.error("Hindi makita ang author image:", this.src);
+                this.remove();
+                authorPhotoContainer.classList.add("no-image");
             });
-
         }
 
+        const youtubeThumbnail =
+            body.querySelector(".youtube-thumbnail-wrapper img");
 
-        document
-            .querySelectorAll(
-                `[data-section="${sectionName}"]`
-            )
-            .forEach(function (button) {
+        if (youtubeThumbnail) {
+            youtubeThumbnail.addEventListener("error", function () {
+                const wrapper =
+                    this.closest(".youtube-thumbnail-wrapper");
 
-                button.classList.add("active");
+                if (!wrapper) {
+                    return;
+                }
 
+                wrapper.outerHTML = `
+                    <div class="youtube-placeholder">
+                        <div class="youtube-content">
+                            <strong>Hindi ma-load ang YouTube preview</strong>
+                            <p>
+                                Gamitin ang link ng video upang panoorin ito sa YouTube.
+                            </p>
+                        </div>
+                    </div>
+                `;
             });
+        }
 
+        const zoomImage =
+            body.querySelector("[data-zoom-image]");
+
+        if (zoomImage) {
+            zoomImage.addEventListener("click", () => {
+                openImageZoom(zoomImage.dataset.zoomImage);
+            });
+        }
     }
 
+    /* =========================================================
+       OPEN ADDITIONAL MATERIAL
+    ========================================================= */
+
+    function openAdditionalMaterial(weekNumber) {
+        const material = additionalMaterials[weekNumber];
+
+        if (!material) {
+            return;
+        }
+
+        createAdditionalMaterialModal();
+
+        const modal = document.getElementById("additionalMaterialModal");
+        const body = document.getElementById("additionalMaterialBody");
+
+        if (!modal || !body) {
+            return;
+        }
+
+        let html = `
+            <span class="modal-eyebrow">
+                KARAGDAGANG MATERYAL
+            </span>
+
+            <h2>${material.title}</h2>
+        `;
+
+        if (material.subtitle) {
+            html += `
+                <p class="modal-text">
+                    <strong>${material.subtitle}</strong>
+                </p>
+            `;
+        }
+
+        if (
+            material.type === "truefalse" ||
+            material.type === "identification"
+        ) {
+            if (material.instructions) {
+                html += `
+                    <div class="detail-box">
+                        <p class="modal-text">
+                            ${material.instructions}
+                        </p>
+                    </div>
+                `;
+            }
+
+            html += `
+                <div class="additional-material-list">
+            `;
+
+            material.questions.forEach(item => {
+                html += `
+                    <div class="additional-question">
+                        <div class="additional-question-number">
+                            ${item.number}.
+                        </div>
+
+                        <div class="additional-question-text">
+                            ${item.question}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+        }
+
+        else if (material.type === "reading") {
+            html += `
+                <div class="material-reading">
+                    ${material.content}
+                </div>
+            `;
+
+            if (
+                Array.isArray(material.keywords) &&
+                material.keywords.length
+            ) {
+                html += `
+                    <div class="detail-box">
+                        <h3>Mga Mahahalagang Salita</h3>
+
+                        <div class="keyword-container">
+                            ${material.keywords
+                                .map(keyword => `
+                                    <span class="keyword-tag">
+                                        ${keyword}
+                                    </span>
+                                `)
+                                .join("")}
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        else if (material.type === "commandments") {
+            html += `
+                <div class="detail-box">
+                    <p class="modal-text">
+                        ${material.introduction}
+                    </p>
+                </div>
+
+                <div style="margin-top:25px;">
+            `;
+
+            material.commandments.forEach(item => {
+                html += `
+                    <div class="commandment-card">
+                        <div class="commandment-number">
+                            ${item.number}
+                        </div>
+
+                        <div class="commandment-text">
+                            ${item.text}
+                        </div>
+
+                        <div class="commandment-keywords">
+                            ${item.keywords
+                                .map(keyword => `
+                                    <span class="commandment-keyword">
+                                        ${keyword}
+                                    </span>
+                                `)
+                                .join("")}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+        }
+
+        body.innerHTML = html;
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+    }
+
+    /* =========================================================
+       ADDITIONAL MATERIAL BUTTON
+    ========================================================= */
+
+    function addAdditionalMaterialButton(weekNumber, container) {
+        if (!container) {
+            return;
+        }
+
+        const material = additionalMaterials[weekNumber];
+        const lesson = lessons[weekNumber];
+
+        const hasAdditionalMaterial = Boolean(material);
+
+        const hasProcessing =
+            Boolean(
+                lesson &&
+                Array.isArray(lesson.processingQuestions) &&
+                lesson.processingQuestions.length
+            );
+
+        if (!hasAdditionalMaterial && !hasProcessing) {
+            return;
+        }
+
+        const oldButton =
+            container.querySelector(".additional-material-button");
+
+        if (oldButton) {
+            oldButton.remove();
+        }
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "additional-material-button";
+
+        button.textContent =
+            hasProcessing
+                ? "Pagproseso ng Pag-unawa"
+                : material.title;
+
+        button.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (hasProcessing) {
+                openInfoModal("processing", lesson);
+            } else {
+                openAdditionalMaterial(weekNumber);
+            }
+        });
+
+        container.appendChild(button);
+    }
+
+    /* =========================================================
+       DISPLAY SECTION
+    ========================================================= */
+
+    function showSection(sectionName) {
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+
+        navButtons.forEach(button => {
+            button.classList.remove("active");
+        });
+
+        let target = null;
+
+        if (sectionName === "home") {
+            target = document.getElementById("homeContent");
+        }
+
+        else if (sectionName === "lesson") {
+            target = document.getElementById("lessonContent");
+        }
+
+        else {
+            target = document.getElementById("headerSection");
+        }
+
+        if (target) {
+            target.classList.add("active");
+        }
+
+        document
+            .querySelectorAll(`[data-section="${sectionName}"]`)
+            .forEach(button => {
+                button.classList.add("active");
+            });
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
     /* =========================================================
        DISPLAY LESSON
     ========================================================= */
 
-    function displayLesson(
-        weekNumber,
-        button
-    ) {
-
-        const lesson =
-            lessons[weekNumber];
-
+    function displayLesson(weekNumber, button = null) {
+        const lesson = lessons[weekNumber];
 
         if (!lesson || !weekContent) {
+            console.warn("Lesson not found:", weekNumber);
             return;
         }
 
-
-        weekButtons.forEach(function (item) {
+        weekButtons.forEach(item => {
             item.classList.remove("active");
         });
-
 
         if (button) {
             button.classList.add("active");
         }
 
-
         weekContent.style.opacity = "0";
+        weekContent.style.transform = "translateY(10px)";
 
-        weekContent.style.transform =
-            "translateY(10px)";
+        window.setTimeout(() => {
+            weekContent.innerHTML = `
+                <h3 class="week-title">
+                    ${lesson.title}
+                </h3>
 
+                <p class="week-description">
+                    ${lesson.description}
+                </p>
 
-        setTimeout(function () {
+                <div class="lesson-grid">
 
-weekContent.innerHTML = `
+                    <article
+                        class="feature-card clickable-lesson-card"
+                        data-info="author"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Tingnan ang may-akda"
+                    >
+                        <strong>May-akda</strong>
+                        <span class="card-detail">
+                            ${lesson.author}
+                        </span>
+                    </article>
 
-    <h3 class="week-title">
-        ${lesson.title}
-    </h3>
+                    <article
+                        class="feature-card clickable-lesson-card"
+                        data-info="theme"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Tingnan ang tema"
+                    >
+                        <strong>Tema</strong>
+                        <span class="card-detail">
+                            ${lesson.theme}
+                        </span>
+                    </article>
 
-    <p class="week-description">
-        ${lesson.description}
-    </p>
+                    <article
+                        class="feature-card clickable-lesson-card"
+                        data-info="objective"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Tingnan ang layunin"
+                    >
+                        <strong>Layunin</strong>
+                        <span class="card-detail">
+                            ${lesson.objective}
+                        </span>
+                    </article>
 
-    <div class="lesson-grid">
+                    <article
+                        class="feature-card clickable-lesson-card"
+                        data-info="material"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Tingnan ang multimodal material"
+                    >
+                        <strong>Multimodal Material</strong>
+                        <span class="card-detail">
+                            ${lesson.material}
+                        </span>
+                    </article>
 
-        <article
-            class="feature-card clickable-lesson-card"
-            data-info="author"
-            tabindex="0"
-            role="button"
-        >
+                </div>
+            `;
 
-            <strong>
-                May-akda
-            </strong>
-
-            <span class="card-detail">
-                ${lesson.author}
-            </span>
-
-        </article>
-
-
-        <article
-            class="feature-card clickable-lesson-card"
-            data-info="theme"
-            tabindex="0"
-            role="button"
-        >
-
-            <strong>
-                Tema
-            </strong>
-
-            <span class="card-detail">
-                ${lesson.theme}
-            </span>
-
-        </article>
-
-
-        <article
-            class="feature-card clickable-lesson-card"
-            data-info="objective"
-            tabindex="0"
-            role="button"
-        >
-
-            <strong>
-                Layunin
-            </strong>
-
-            <span class="card-detail">
-                ${lesson.objective}
-            </span>
-
-        </article>
-
-
-        <article
-            class="feature-card clickable-lesson-card"
-            data-info="material"
-            tabindex="0"
-            role="button"
-        >
-
-            <strong>
-                Multimodal Material
-            </strong>
-
-            <span class="card-detail">
-                ${lesson.material}
-            </span>
-
-        </article>
-        
-    </div>
-
-`;
-/* =================================================
-   ADDITIONAL LEARNING MATERIAL BUTTON
-================================================= */
-
-addAdditionalMaterialButton(
-    weekNumber,
-    weekContent
-);
-
-            /* =================================================
-               CLICKABLE CARDS
-            ================================================= */
+            addAdditionalMaterialButton(
+                weekNumber,
+                weekContent
+            );
 
             const cards =
                 weekContent.querySelectorAll(
                     ".clickable-lesson-card"
                 );
 
+            cards.forEach(card => {
+                card.addEventListener("click", event => {
+                    event.preventDefault();
 
-            cards.forEach(function (card) {
+                    const type = card.dataset.info;
+                    openInfoModal(type, lesson);
+                });
 
-                card.addEventListener(
-                    "click",
-                    function () {
+                card.addEventListener("keydown", event => {
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+                        event.preventDefault();
 
-                        const type =
-                            this.dataset.info;
-
-                        openInfoModal(
-                            type,
-                            lesson
-                        );
-
+                        const type = card.dataset.info;
+                        openInfoModal(type, lesson);
                     }
-                );
-
-
-                /* KEYBOARD SUPPORT */
-
-                card.addEventListener(
-                    "keydown",
-                    function (event) {
-
-                        if (
-                            event.key === "Enter" ||
-                            event.key === " "
-                        ) {
-
-                            event.preventDefault();
-
-                            const type =
-                                this.dataset.info;
-
-                            openInfoModal(
-                                type,
-                                lesson
-                            );
-
-                        }
-
-                    }
-                );
-
+                });
             });
 
-
             weekContent.style.opacity = "1";
-
-            weekContent.style.transform =
-                "translateY(0)";
-
-
+            weekContent.style.transform = "translateY(0)";
         }, 180);
-
     }
-
 
     /* =========================================================
        SECTION BUTTONS
     ========================================================= */
 
-    sectionButtons.forEach(function (button) {
+    sectionButtons.forEach(button => {
+        button.addEventListener("click", event => {
+            event.preventDefault();
 
-        button.addEventListener(
-            "click",
-            function () {
+            const section = button.dataset.section;
 
-                const section =
-                    button.dataset.section;
-
-
-                if (section) {
-                    showSection(section);
-                }
-
+            if (section) {
+                showSection(section);
             }
-        );
-
+        });
     });
-
 
     /* =========================================================
        WEEK BUTTONS
     ========================================================= */
 
-    weekButtons.forEach(function (button) {
+    weekButtons.forEach(button => {
+        button.addEventListener("click", event => {
+            event.preventDefault();
 
-        button.addEventListener(
-            "click",
-            function () {
+            const week = Number(button.dataset.week);
 
-                const week =
-                    Number(
-                        button.dataset.week
-                    );
-
-
-                displayLesson(
-                    week,
-                    button
-                );
-
+            if (!Number.isNaN(week)) {
+                displayLesson(week, button);
             }
-        );
-
+        });
     });
-
 
     /* =========================================================
        LOGO
     ========================================================= */
 
-    const logoToggle =
-        document.getElementById(
-            "logoToggle"
-        );
-
+    const logoToggle = document.getElementById("logoToggle");
 
     if (logoToggle) {
+        logoToggle.addEventListener("click", event => {
+            event.preventDefault();
 
-        logoToggle.addEventListener(
-            "click",
-            function () {
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
 
-                sections.forEach(
-                    function (section) {
-                        section.classList.remove(
-                            "active"
-                        );
-                    }
-                );
+            const headerSection =
+                document.getElementById("headerSection");
 
-
-                const headerSection =
-                    document.getElementById(
-                        "headerSection"
-                    );
-
-                if (headerSection) {
-                    headerSection.classList.add("active");
-                }
-
-
-                navButtons.forEach(
-                    function (button) {
-                        button.classList.remove(
-                            "active"
-                        );
-                    }
-                );
-
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
+            if (headerSection) {
+                headerSection.classList.add("active");
             }
-        );
 
+            navButtons.forEach(button => {
+                button.classList.remove("active");
+            });
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     }
-
 
     /* =========================================================
        RESEARCHERS
     ========================================================= */
 
     const researcherButton =
-        document.getElementById(
-            "researcherButton"
-        );
-
+        document.getElementById("researcherButton");
 
     const backResearchers =
-        document.getElementById(
-            "backResearchers"
-        );
-
+        document.getElementById("backResearchers");
 
     if (researcherButton) {
+        researcherButton.addEventListener("click", event => {
+            event.preventDefault();
 
-        researcherButton.addEventListener(
-            "click",
-            function () {
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
 
-                sections.forEach(
-                    function (section) {
-                        section.classList.remove(
-                            "active"
-                        );
-                    }
-                );
+            navButtons.forEach(button => {
+                button.classList.remove("active");
+            });
 
-
-                navButtons.forEach(
-                    function (button) {
-                        button.classList.remove(
-                            "active"
-                        );
-                    }
-                );
-
-
-                if (researchersPage) {
-
-                    researchersPage.classList.add(
-                        "active"
-                    );
-
-                }
-
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
+            if (researchersPage) {
+                researchersPage.classList.add("active");
             }
-        );
 
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     }
-
 
     if (backResearchers) {
+        backResearchers.addEventListener("click", event => {
+            event.preventDefault();
 
-        backResearchers.addEventListener(
-            "click",
-            function () {
-
-                if (researchersPage) {
-
-                    researchersPage.classList.remove(
-                        "active"
-                    );
-
-                }
-
-
-                const headerSection =
-                    document.getElementById(
-                        "headerSection"
-                    );
-
-
-                if (headerSection) {
-
-                    headerSection.classList.add(
-                        "active"
-                    );
-
-                }
-
-
-                const homeButton =
-                    document.querySelector(
-                        '.nav-btn[data-section="home"]'
-                    );
-
-
-                if (homeButton) {
-
-                    homeButton.classList.add(
-                        "active"
-                    );
-
-                }
-
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
+            if (researchersPage) {
+                researchersPage.classList.remove("active");
             }
-        );
 
+            const headerSection =
+                document.getElementById("headerSection");
+
+            if (headerSection) {
+                headerSection.classList.add("active");
+            }
+
+            const homeButton =
+                document.querySelector(
+                    '.nav-btn[data-section="home"]'
+                );
+
+            if (homeButton) {
+                homeButton.classList.add("active");
+            }
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     }
-
 
     /* =========================================================
        CONTACT
     ========================================================= */
 
     const contactButton =
-        document.getElementById(
-            "contactButton"
-        );
-
+        document.getElementById("contactButton");
 
     const closeContact =
-        document.getElementById(
-            "closeContact"
-        );
-
+        document.getElementById("closeContact");
 
     function closeContactModal() {
-
         if (contactModal) {
-
-            contactModal.classList.remove(
-                "show"
-            );
-
+            contactModal.classList.remove("show");
         }
 
-        document.body.style.overflow = "";
-
+        restoreBodyScrollIfNoModal();
     }
-
 
     if (contactButton) {
+        contactButton.addEventListener("click", event => {
+            event.preventDefault();
 
-        contactButton.addEventListener(
-            "click",
-            function () {
-
-                if (contactModal) {
-
-                    contactModal.classList.add(
-                        "show"
-                    );
-
-                    document.body.style.overflow =
-                        "hidden";
-
-                }
-
+            if (contactModal) {
+                contactModal.classList.add("show");
+                document.body.style.overflow = "hidden";
             }
-        );
-
+        });
     }
 
-
     if (closeContact) {
-
         closeContact.addEventListener(
             "click",
             closeContactModal
         );
-
     }
-
 
     if (contactModal) {
-
-        contactModal.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target ===
-                    contactModal
-                ) {
-
-                    closeContactModal();
-
-                }
-
+        contactModal.addEventListener("click", event => {
+            if (event.target === contactModal) {
+                closeContactModal();
             }
-        );
-
+        });
     }
-
 
     /* =========================================================
        ESCAPE KEY
     ========================================================= */
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key !== "Escape") {
-                return;
-            }
-
-
-            closeContactModal();
-
-            closeInfoModal();
-            
-            closeAdditionalMaterial();
-
-            const zoom =
-                document.getElementById(
-                    "imageZoomModal"
-                );
-
-
-            if (zoom) {
-                zoom.classList.remove(
-                    "show"
-                );
-            }
-
-
-            if (
-                researchersPage &&
-                researchersPage.classList.contains(
-                    "active"
-                )
-            ) {
-
-                if (backResearchers) {
-                    backResearchers.click();
-                }
-
-            }
-
+    document.addEventListener("keydown", event => {
+        if (event.key !== "Escape") {
+            return;
         }
-    );
 
+        closeContactModal();
+        closeInfoModal();
+        closeAdditionalMaterial();
+
+        const zoom =
+            document.getElementById("imageZoomModal");
+
+        if (zoom) {
+            zoom.classList.remove("show");
+        }
+
+        if (
+            researchersPage &&
+            researchersPage.classList.contains("active")
+        ) {
+            if (backResearchers) {
+                backResearchers.click();
+            }
+        }
+
+        restoreBodyScrollIfNoModal();
+    });
 
     /* =========================================================
        HIDE NAVBAR ON SCROLL
@@ -3282,373 +2143,242 @@ addAdditionalMaterialButton(
 
     let lastScroll = 0;
 
-
     if (navbar) {
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
 
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                const currentScroll =
-                    window.scrollY;
-
-
-                if (
-                    currentScroll > lastScroll &&
-                    currentScroll > 140
-                ) {
-
-                    navbar.classList.add(
-                        "hidden"
-                    );
-
-                }
-
-                else {
-
-                    navbar.classList.remove(
-                        "hidden"
-                    );
-
-                }
-
-
-                lastScroll =
-                    currentScroll;
-
+            if (
+                currentScroll > lastScroll &&
+                currentScroll > 140
+            ) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
             }
-        );
 
+            lastScroll = currentScroll;
+        }, { passive: true });
     }
-
 
     /* =========================================================
-       INITIALIZE
+       CHATBOT
     ========================================================= */
 
-createInfoModal();
+    const chatbot = document.getElementById("chatbot");
+    const chatbotToggle = document.getElementById("chatbotToggle");
+    const chatbotClose = document.getElementById("chatbotClose");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const chatbotSend = document.getElementById("chatbotSend");
+    const chatbotMessages =
+        document.getElementById("chatbotMessages");
 
-createAdditionalMaterialStyles();
+    const CHAT_API_URL =
+        "https://hibla-ai-server.onrender.com/api/chat";
 
-createAdditionalMaterialModal();
+    if (chatbotToggle && chatbot) {
+        chatbotToggle.addEventListener("click", event => {
+            event.preventDefault();
 
+            chatbot.classList.add("open");
 
-const firstWeekButton =
-    document.querySelector(
-        '.week-btn[data-week="1"]'
-    );
+            if (chatbotInput) {
+                window.setTimeout(() => {
+                    chatbotInput.focus();
+                }, 100);
+            }
+        });
+    }
 
+    if (chatbotClose && chatbot) {
+        chatbotClose.addEventListener("click", event => {
+            event.preventDefault();
+            chatbot.classList.remove("open");
+        });
+    }
 
-    displayLesson(
-        1,
-        firstWeekButton
-    );
-/* =========================================================
-   CHATBOT
-========================================================= */
-
-const chatbot = document.getElementById("chatbot");
-const toggle = document.getElementById("chatbotToggle");
-const close = document.getElementById("chatbotClose");
-const input = document.getElementById("chatbotInput");
-const send = document.getElementById("chatbotSend");
-const messages = document.getElementById("chatbotMessages");
-
-/*
-   ONLINE HIBLA AI SERVER
-   Render server
-*/
-const CHAT_API_URL =
-    "https://hibla-ai-server.onrender.com/api/chat";
-
-
-/* =========================================================
-   OPEN CHATBOT
-========================================================= */
-
-if (toggle && chatbot) {
-
-    toggle.addEventListener("click", function () {
-
-        chatbot.classList.add("open");
-
-        if (input) {
-            setTimeout(function () {
-                input.focus();
-            }, 100);
+    function addChatMessage(text, type) {
+        if (!chatbotMessages) {
+            return null;
         }
 
-    });
+        const message = document.createElement("div");
+        message.className = `chatbot-message ${type}`;
 
-}
+        if (type === "bot") {
+            message.innerHTML = text;
+        } else {
+            message.textContent = text;
+        }
 
+        chatbotMessages.appendChild(message);
+        chatbotMessages.scrollTop =
+            chatbotMessages.scrollHeight;
 
-/* =========================================================
-   CLOSE CHATBOT
-========================================================= */
-
-if (close && chatbot) {
-
-    close.addEventListener("click", function () {
-
-        chatbot.classList.remove("open");
-
-    });
-
-}
-
-
-/* =========================================================
-   ADD MESSAGE
-========================================================= */
-
-function addChatMessage(text, type) {
-
-    if (!messages) {
-        return null;
+        return message;
     }
 
-    const message =
-        document.createElement("div");
+    async function sendMessage() {
+        if (!chatbotInput || !chatbotMessages) {
+            return;
+        }
 
-    message.className =
-        "chatbot-message " + type;
+        const text = chatbotInput.value.trim();
 
-    if (type === "bot") {
+        if (!text || chatbotInput.disabled) {
+            return;
+        }
 
-        message.innerHTML = text;
+        addChatMessage(text, "user");
 
-    } else {
+        chatbotInput.value = "";
+        chatbotInput.disabled = true;
 
-        message.textContent = text;
+        if (chatbotSend) {
+            chatbotSend.disabled = true;
+        }
 
-    }
+        const botMessage =
+            addChatMessage("Nag-iisip...", "bot");
 
-    messages.appendChild(message);
-
-    messages.scrollTop =
-        messages.scrollHeight;
-
-    return message;
-}
-
-
-/* =========================================================
-   SEND MESSAGE
-========================================================= */
-
-async function sendMessage() {
-
-    if (!input || !messages) {
-        return;
-    }
-
-    const text =
-        input.value.trim();
-
-    if (text === "") {
-        return;
-    }
-
-
-    /* USER MESSAGE */
-
-    addChatMessage(
-        text,
-        "user"
-    );
-
-    input.value = "";
-
-    input.disabled = true;
-
-    if (send) {
-        send.disabled = true;
-    }
-
-
-    /* BOT MESSAGE */
-
-    const botMessage =
-        addChatMessage(
-            "Nag-iisip...",
-            "bot"
-        );
-
-
-    try {
-
-        const response =
-            await fetch(
+        try {
+            const response = await fetch(
                 CHAT_API_URL,
                 {
                     method: "POST",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify({
                         message: text
                     })
                 }
             );
 
+            if (!response.ok) {
+                let errorMessage =
+                    "Hindi available ang Hibla AI server.";
 
-        /* =================================================
-           SERVER ERROR
-        ================================================= */
+                try {
+                    const errorData =
+                        await response.json();
 
-        if (!response.ok) {
-
-            let errorMessage =
-                "Hindi available ang Hibla AI server.";
-
-            try {
-
-                const errorData =
-                    await response.json();
-
-                if (errorData.error) {
-                    errorMessage =
-                        errorData.error;
+                    if (errorData?.error) {
+                        errorMessage = errorData.error;
+                    }
+                } catch (error) {
+                    console.error(
+                        "Could not read server error:",
+                        error
+                    );
                 }
 
-            } catch (error) {
-
-                console.error(
-                    "Could not read server error:",
-                    error
+                throw new Error(
+                    `${errorMessage} (HTTP ${response.status})`
                 );
-
             }
 
-            throw new Error(
-                errorMessage +
-                " (HTTP " +
-                response.status +
-                ")"
+            const data = await response.json();
+
+            if (
+                !data ||
+                data.success !== true
+            ) {
+                throw new Error(
+                    data?.error ||
+                    "Walang valid na sagot mula sa Hibla AI server."
+                );
+            }
+
+            if (botMessage) {
+                botMessage.innerHTML =
+                    data.reply ||
+                    "Walang natanggap na sagot mula sa Hibla AI.";
+            }
+        }
+
+        catch (error) {
+            console.error(
+                "HIBLA AI CHATBOT ERROR:",
+                error
             );
 
+            if (botMessage) {
+                botMessage.innerHTML = `
+                    <strong>
+                        Hindi makakonekta sa Hibla AI. 😔
+                    </strong>
+                    <br><br>
+                    Pakisubukan muli pagkatapos ng ilang segundo.
+                `;
+            }
         }
 
+        finally {
+            chatbotInput.disabled = false;
 
-        /* =================================================
-           READ RESPONSE
-        ================================================= */
+            if (chatbotSend) {
+                chatbotSend.disabled = false;
+            }
 
-        const data =
-            await response.json();
+            chatbotInput.focus();
 
-
-        if (
-            !data ||
-            data.success !== true
-        ) {
-
-            throw new Error(
-                data?.error ||
-                "Walang valid na sagot mula sa Hibla AI server."
-            );
-
+            chatbotMessages.scrollTop =
+                chatbotMessages.scrollHeight;
         }
+    }
 
-
-        /* =================================================
-           DISPLAY BOT RESPONSE
-        ================================================= */
-
-        if (botMessage) {
-
-            botMessage.innerHTML =
-                data.reply ||
-                "Walang natanggap na sagot mula sa Hibla AI.";
-
-        }
-
-
-    } catch (error) {
-
-        console.error(
-            "HIBLA AI CHATBOT ERROR:",
-            error
+    if (chatbotSend) {
+        chatbotSend.addEventListener(
+            "click",
+            event => {
+                event.preventDefault();
+                sendMessage();
+            }
         );
-
-
-        /* =================================================
-           USER-FRIENDLY ERROR MESSAGE
-        ================================================= */
-
-        if (botMessage) {
-
-            botMessage.innerHTML = `
-                <strong>Hindi makakonekta sa Hibla AI. 😔</strong>
-                <br><br>
-                Pakisubukan muli pagkatapos ng ilang segundo.
-            `;
-
-        }
-
     }
 
-
-    /* =================================================
-       ENABLE INPUT AGAIN
-    ================================================= */
-
-    input.disabled = false;
-
-    if (send) {
-        send.disabled = false;
-    }
-
-    input.focus();
-
-    messages.scrollTop =
-        messages.scrollHeight;
-
-}
-
-
-/* =========================================================
-   SEND BUTTON
-========================================================= */
-
-if (send) {
-
-    send.addEventListener(
-        "click",
-        sendMessage
-    );
-
-}
-
-
-/* =========================================================
-   ENTER KEY
-========================================================= */
-
-if (input) {
-
-    input.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Enter") {
-
+    if (chatbotInput) {
+        chatbotInput.addEventListener("keydown", event => {
+            if (
+                event.key === "Enter" &&
+                !event.shiftKey
+            ) {
                 event.preventDefault();
 
-                if (!input.disabled) {
+                if (!chatbotInput.disabled) {
                     sendMessage();
                 }
-
             }
+        });
+    }
 
-        }
+    /* =========================================================
+       INITIALIZATION
+    ========================================================= */
+
+    injectStyles();
+    createLessonInfoModal();
+    createAdditionalMaterialModal();
+
+    const firstWeekButton =
+        document.querySelector(
+            '.week-btn[data-week="1"]'
+        );
+
+    displayLesson(
+        1,
+        firstWeekButton
     );
 
-}
-
+    console.log(
+        "Hibla-Panitikan script loaded successfully."
+    );
 });
-path = Path("/mnt/data/script_youtube_preview_fixed.js")
+'''
+
+path = Path("/mnt/data/script.js")
 path.write_text(js, encoding="utf-8")
+
+print(f"Created: {path}")
+print(f"Lines: {len(js.splitlines())}")
+print(f"Characters: {len(js)}")
