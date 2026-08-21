@@ -2372,7 +2372,3 @@ document.addEventListener("DOMContentLoaded", () => {
         "Hibla-Panitikan script loaded successfully."
     );
 });
-
-print(f"Created: {path}")
-print(f"Lines: {len(js.splitlines())}")
-print(f"Characters: {len(js)}")
