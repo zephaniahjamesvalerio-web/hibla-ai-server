@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 tungkulin bilang kabataan at mamamayan.
             `,
 
-            material: "AI-Generated Poster",
+            material: "AI-Generated Digital Poster",
             materialType: "image",
 
             youtube: "",
@@ -2137,13 +2137,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let html = `
             <span class="modal-eyebrow">
-                KARAGDAGANG MATERYAL
+                
             </span>
 
             <h2>
                 ${
                     material.title ||
-                    "Karagdagang Materyal"
+                    ""
                 }
             </h2>
         `;
