@@ -107,9 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 2: “Kahapon, Ngayon at Bukas” (Unang Tagpo)',
 
             description: `
+            <p style="text-align: justify; line-height: 1.7;">
                 Ang <strong>“Kahapon, Ngayon at Bukas”</strong> ay isang
                 dulang nagpapakita ng kalagayan ng Pilipinas sa iba't
-                ibang panahon.
+                ibang panahon. Inilalarawan nito ang mga karanasan ng
+                mga Pilipino sa ilalim ng pananakop at ang kanilang
+                patuloy na pakikibaka para sa kalayaan. Sa pamamagitan
+                ng mga tauhan at pangyayari, binibigyang-diin ng akda
+                ang pagmamahal sa bayan, paglaban sa pang-aapi, at
+                pagnanais na makamit ang isang malaya at maunlad na
+                kinabukasan. Ipinakikita rin nito ang kahalagahan ng
+                pagkakaisa at pagiging makabayan sa harap ng mga
+                pagsubok na kinakaharap ng bansa.
+            </p>
             `,
 
             author: "Aurelio V. Tolentino",
@@ -177,9 +187,18 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 3: “Filipino Time”',
 
             description: `
+            <p style="text-align: justify; line-height: 1.7;">
                 Ang <strong>“Filipino Time”</strong> ay isang akdang
                 tumatalakay sa kaugalian ng pagiging huli at sa
-                kahalagahan ng disiplina sa oras.
+                kahalagahan ng disiplina sa oras. Ipinakikita nito
+                kung paano nagiging bahagi ng pang-araw-araw na
+                pamumuhay ang hindi pagsunod sa itinakdang oras at                 
+                kung paano ito maaaring makaapekto sa sarili at sa
+                ibang tao. Binibigyang-diin ng akda ang pagpapahalaga
+                sa oras, pagiging responsable, at pagkakaroon ng
+                disiplina bilang mahalagang bahagi ng maayos na
+                pakikitungo sa kapwa at sa lipunan.
+            </p>
             `,
 
             author: "Felipe Padilla de Leon",
@@ -270,9 +289,19 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 4: “Ang Tunay na Sampung Utos”',
 
             description: `
+            <p style="text-align: justify; line-height: 1.7;">
                 Ang <strong>“Ang Tunay na Sampung Utos”</strong> ay
-                naglalaman ng mga prinsipyo at gabay para sa
-                maayos at makatarungang pamumuhay.
+                naglalaman ng mga prinsipyo at gabay para sa maayos
+                at makatarungang pamumuhay. Ipinakikita nito ang mga
+                pagpapahalaga at tungkuling dapat isabuhay ng bawat
+                tao upang magkaroon ng maayos na ugnayan sa kapwa at
+                sa lipunan. Binibigyang-diin ng akda ang pagiging
+                makatarungan, matapat, responsable, at makatao sa
+                pakikitungo sa iba. Sa pamamagitan ng mga kaisipang
+                nakapaloob dito, hinihikayat ang mambabasa na maging
+                mabuting mamamayan at gumawa ng mga pasyang
+                nakatutulong sa sarili, kapwa, at bayan.
+            </p>
             `,
 
             author:
@@ -337,9 +366,19 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 5: “Wikang Pambansa”',
 
             description: `
+            <p style="text-align: justify; line-height: 1.7;">
                 Ang <strong>“Wikang Pambansa”</strong> ay isang
                 talumpati ni <strong>Manuel L. Quezon</strong> tungkol
-                sa kahalagahan ng sariling wika.
+                sa kahalagahan ng sariling wika. Binibigyang-diin nito
+                ang papel ng wikang pambansa sa pagkakaisa, pagkakakilanlan,
+                at pagkakaroon ng matibay na ugnayan ng mga mamamayan.
+                Ipinakikita rin ng akda na ang pagkakaroon ng sariling
+                wika ay mahalaga sa pagpapaunlad ng kultura at
+                pagpapatatag ng damdaming makabayan. Sa pamamagitan
+                ng talumpati, hinihikayat ang mga Pilipino na pahalagahan,
+                gamitin, at pagyamanin ang wikang nagsisilbing bahagi
+                ng kanilang pagkakakilanlan bilang isang bansa.
+            </p>
             `,
 
             author: "Manuel L. Quezon",
@@ -437,9 +476,20 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 6: “Mga Ibong Mandaragit”',
 
             description: `
+            <p style="text-align: justify; line-height: 1.7;">
                 Ang <strong>“Mga Ibong Mandaragit”</strong> ay isang
                 nobelang tumatalakay sa katiwalian, pakikibaka,
-                katarungan, at mga suliraning panlipunan.
+                katarungan, at mga suliraning panlipunan. Inilalarawan
+                nito ang mga hamong kinakaharap ng lipunan at ang
+                patuloy na pakikibaka ng mga mamamayan laban sa
+                pang-aapi at kawalang-katarungan. Ipinakikita rin ng
+                akda ang epekto ng katiwalian at hindi pagkakapantay-
+                pantay sa buhay ng mga tao. Sa pamamagitan ng mga
+                tauhan at pangyayari, hinihikayat ang mambabasa na
+                suriin ang kalagayan ng lipunan at pag-isipan ang
+                kahalagahan ng pagkilos tungo sa katarungan, pagbabago,
+                at isang mas makatarungang lipunan.
+            </p>
             `,
 
             author: "Amado V. Hernandez",
