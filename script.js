@@ -29,9 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Week 1: “Sa Dakong Silangan” ni Jose Corazon de Jesus',
 
             description: `
+            <div style="text-align: justify;">
                 Ang <strong>“Sa Dakong Silangan”</strong> ay isang tulang
                 nagpapahayag ng pag-asa, kalayaan, at muling pagbangon
-                ng bayan.
+                ng bayan. Ang pagsikat ng araw sa Silangan ay nagsisilbing
+                simbolo ng bagong simula at pag-asa para sa mga Pilipino.
+                Ipinakikita rin ng akda ang pagmamahal sa bayan at
+                paniniwalang darating ang panahon ng kalayaan at
+                mas magandang kinabukasan. Sa pamamagitan ng mga
+                simbolismo at masining na paglalarawan, ipinahihiwatig
+                ng tula ang matibay na pananalig sa kakayahan ng bayan
+                na bumangon mula sa mga pagsubok at patuloy na mangarap
+                para sa isang malaya at maunlad na kinabukasan.
+            </div>
             `,
 
             author: "Jose Corazon de Jesus (Huseng Batute)",
