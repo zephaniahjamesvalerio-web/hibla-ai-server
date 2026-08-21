@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
 
             objective:
-                "Magbigay-inspirasyon at gisingin ang damdaming makabayan.",
+                "Magbigay inspirasyon at gisingin ang damdaming makabayan.",
 
             material:
                 "Audio-visual/Interactive Presentation",
@@ -1194,10 +1194,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="detail-box">
 
-                    <p class="modal-text">
-                        Sa pagtatapos ng aralin, inaasahang
-                        mailalapat ng mag-aaral ang natutuhan
-                        sa pagsusuri at pag-unawa sa akda.
+                   <p class="modal-text" style="text-align: justify;">
+                     Ito rin ay naglalayong pukawin ang damdaming makabayan ng mga Pilipino sa 
+                     pamamagitan ng paglalarawan sa kalagayan ng bayan sa 
+                     panahon ng pananakop. Ipinahahayag sa akda ang pagmamahal sa bayan, 
+                     pagnanais ng kalayaan, at pag-asa para sa isang malaya at maunlad na Pilipinas. 
+                     Hinihikayat din nito ang mga mambabasa na magkaroon ng kamalayan sa kanilang tungkulin 
+                     bilang mamamayan at pahalagahan ang sariling bayan, kultura, at pagkakakilanlan.
                     </p>
 
                 </div>
@@ -2248,7 +2251,7 @@ function openAdditionalMaterial(weekNumber) {
     let html = `
 
         <span class="modal-eyebrow">
-            KARAGDAGANG MATERYAL
+            Maikling Pagsusulit
         </span>
 
         <h2>
@@ -2305,20 +2308,6 @@ function openAdditionalMaterial(weekNumber) {
 
         html += `
             </div>
-        `;
-
-
-        /* ANSWER KEY */
-
-        html += `
-
-            <div class="answer-section">
-
-                <h3>
-                    Susi sa Katanungan
-                </h3>
-
-                <div class="additional-material-list">
         `;
 
         material.questions.forEach(function (item) {
@@ -2392,7 +2381,7 @@ function openAdditionalMaterial(weekNumber) {
                 <div class="detail-box">
 
                     <h3>
-                        Mahahalagang Keywords
+                       Mga Mahahalagang Salita
                     </h3>
 
                     <div class="keyword-container">
