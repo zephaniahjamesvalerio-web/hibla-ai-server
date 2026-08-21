@@ -1589,34 +1589,44 @@ const additionalMaterials = {
 
         questions: [
             {
-                number: 1 "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>.",
+                number: 1,
+                question: "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>.",
             },
             {
-                number: 2 "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel.",
+                number: 2,
+                question: "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel.",
             },
             {
-                number: 3 "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa.",
+                number: 3,
+                question: "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa.",
             },
             {
-                number: 4 "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>.",
+                number: 4,
+                question: "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>.",
             },
             {
-                number: 5 "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>.",
+                number: 5,
+                question: "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>.",
             },
             {
-                number: 6 "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
+                number: 6,
+                question: "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo.",
             },
             {
-                number: 7 "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag.",
+                number: 7,
+                question: "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag.",
             },
             {
-                number: 8 "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
+                number: 8,
+                question: "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan.",
             },
             {
-                number: 9 "Ang <u>palasyo</u> ay kulong ng malaking lambat.",
+                number: 9,
+                question: "Ang <u>palasyo</u> ay kulong ng malaking lambat.",
             },
             {
-                number: 10 "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
+                number: 10,
+                question: "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal.",
             }
         ]
     },
@@ -2002,15 +2012,6 @@ function createAdditionalMaterialStyles() {
         .additional-question-text {
             color: #333;
             line-height: 1.7;
-        }
-
-        .answer-box {
-            margin-top: 10px;
-            padding: 10px 14px;
-            border-radius: 8px;
-            background: #f1e6e7;
-            color: #7d0b12;
-            font-weight: 800;
         }
 
         .material-reading {
