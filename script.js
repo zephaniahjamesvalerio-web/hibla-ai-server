@@ -1603,7 +1603,7 @@ const additionalMaterials = {
         type: "truefalse",
 
         instructions: `
-            Isulat sa patlang kung ang nakasaad ay
+            Tukuyin kung ang nakasaad ay
             <strong>Katotohanan</strong>. Kung hindi, palitan
             ang salita o mga salitang may salungguhit ng wastong sagot.
         `,
