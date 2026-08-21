@@ -1585,7 +1585,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let html = `
             <span class="modal-eyebrow">
-                KARAGDAGANG MATERYAL
+                Maikling Pagsusulit
             </span>
 
             <h2>${material.title}</h2>
