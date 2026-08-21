@@ -1149,21 +1149,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="detail-box">
 
                     <p class="modal-text">
-                        Ang pangunahing tema ng akdang
-                        <strong>${lesson.title}</strong>
-                        ay nakatuon sa
-                        <strong>${lesson.theme}</strong>.
-                    </p>
-
-                </div>
-
-                <div class="detail-box">
-
-                    <p class="modal-text">
-                        Suriin kung paano ipinakita ng akda
-                        ang mga kaisipang ito sa pamamagitan
-                        ng mga tauhan, pangyayari, simbolismo,
-                        wika, at iba pang elementong pampanitikan.
+                        Ang <strong>“Sa Dakong Silangan”</strong>ni José Corazón de Jesus 
+                        ay naglalayong pukawin ang damdaming makabayan ng 
+                        mga Pilipino sa pamamagitan ng paglalarawan sa 
+                        kalagayan ng bayan sa panahon ng pananakop. 
+                        Ipinahahayag sa akda ang pagmamahal sa bayan, 
+                        pagnanais ng kalayaan, at pag-asa para sa isang 
+                        malaya at maunlad na Pilipinas. Hinihikayat din nito ang mga 
+                        mambabasa na magkaroon ng kamalayan sa kanilang tungkulin 
+                        bilang mamamayan at pahalagahan ang sariling bayan, kultura, 
+                        at pagkakakilanlan.
                     </p>
 
                 </div>
