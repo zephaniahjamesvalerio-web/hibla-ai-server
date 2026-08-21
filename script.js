@@ -1582,15 +1582,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!modal || !body) {
             return;
         }
-
-        let html = `
-            <span class="modal-eyebrow">
-                Maikling Pagsusulit
-            </span>
-
-            <h2>${material.title}</h2>
-        `;
-
+        
         if (material.subtitle) {
             html += `
                 <p class="modal-text">
