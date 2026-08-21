@@ -1172,43 +1172,19 @@ document.addEventListener("DOMContentLoaded", function () {
            OBJECTIVE
         ===================================================== */
 
-        else if (type === "objective") {
+else if (type === "objective") {
+    html = `
+        <h2>
+            Layunin ng Aralin
+        </h2>
 
-            html = `
-
-                <span class="modal-eyebrow">
-                    LAYUNIN
-                </span>
-
-                <h2>
-                    Layunin ng Aralin
-                </h2>
-
-                <div class="detail-box">
-
-                    <p class="modal-text">
-                        ${lesson.objective}
-                    </p>
-
-                </div>
-
-                <div class="detail-box">
-
-                   <p class="modal-text" style="text-align: justify;">
-                     Ito rin ay naglalayong pukawin ang damdaming makabayan ng mga Pilipino sa 
-                     pamamagitan ng paglalarawan sa kalagayan ng bayan sa 
-                     panahon ng pananakop. Ipinahahayag sa akda ang pagmamahal sa bayan, 
-                     pagnanais ng kalayaan, at pag-asa para sa isang malaya at maunlad na Pilipinas. 
-                     Hinihikayat din nito ang mga mambabasa na magkaroon ng kamalayan sa kanilang tungkulin 
-                     bilang mamamayan at pahalagahan ang sariling bayan, kultura, at pagkakakilanlan.
-                    </p>
-
-                </div>
-
-            `;
-
-        }
-
+        <div class="detail-box">
+            <p class="modal-text" style="text-align: justify;">
+                ${lesson.objective}
+            </p>
+        </div>
+    `;
+}
 /* =====================================================
    PAGPROSESO NG PAG-UNAWA
 ===================================================== */
