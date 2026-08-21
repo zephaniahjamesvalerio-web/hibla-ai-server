@@ -2426,7 +2426,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.textContent =
             hasProcessing
-                ? "Pagproseso ng Pag-unawa"
+                ? "Sagot-Suri!"
                 : material.title;
 
         container.appendChild(button);
