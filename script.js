@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
 
             objective: `
-                Mauunawaan ng mga mag-aaral ang mahahalagang 
-                kaisipan, simbolismo, at mensaheng makabayan
+                Mauunawaan ang mahahalagang 
+                kaisipan, simbolismo, at mensaheng makabayan.
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -89,12 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 dulang may malakas na mensaheng makabayan at panlipunan.
             `,
 
-            theme: "Kolonyalismo • Pakikibaka • Kalayaan",
+            theme: "Kolonyalismo, Pakikibaka, at Kalayaan",
 
             objective: `
-                Matutukoy at maipaliliwanag ang mahahalagang pangyayari,
-                tauhan, simbolismo, at mensahe sa unang tagpo
-                ng “Kahapon, Ngayon at Bukas.” 
+                Matutukoy at maipaliliwanag ang mahahalagang 
+                elemento sa akdang “Kahapon, Ngayon at Bukas”.
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -132,10 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 disiplina sa lipunang Pilipino.
             `,
 
-            theme: "Ugali • Disiplina • Pananagutan",
+            theme: "Ugali, Disiplina, at Pananagutan",
 
             objective: `
-               Mauunawaan ng ang konsepto ng “Filipino Time” 
+               Mauunawaan ang konsepto ng “Filipino Time” 
                at ang mga dahilan kung bakit nagkakaroon ng 
                ganitong kaugalian.
             `,
@@ -204,10 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 responsibilidad, at pagmamahal sa bayan.
             `,
 
-            theme: "Gabay • Disiplina • Pagmamahal sa Bayan",
+            theme: "Gabay, Disiplina, at Pagmamahal sa Bayan",
 
             objective: `
-                mauunawaan ng mga mag-aaral ang mga pangunahing prinsipyo na
+                Mauunawaan ang mga pangunahing prinsipyo na
                 nakapaloob sa “Ang Tunay na Sampung Utos” ni Apolinario
                 Mabini.
             `,
@@ -259,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `,
 
             theme:
-                "Wikang Pambansa, Pagkakaisa, Pambansang Kamalayan, at Pagkakakilanlan",
+                "Wikang Pambansa, Kamalayan, at Pagkakakilanlan",
 
             objective: `
                 Maipaliliwanag ang kahalagahan ng pagkakaroon ng
@@ -334,10 +333,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 mga suliranin at realidad ng lipunang Pilipino.
             `,
 
-            theme: "Katiwalian • Pakikibaka • Katarungan",
+            theme: "Katiwalian, Pakikibaka, at Katarungan",
 
             objective: `
-                Mauunawaan ang mahahalagang tema, tauhan, pangyayari,
+                Mauunawaan ang mahahalagang elemento
                 at suliraning panlipunan na inilalarawan sa “Mga Ibong
                 Mandaragit.”
             `,
@@ -357,7 +356,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const additionalMaterials = {
         1: {
             title: "Tukuyin Mo!",
-            subtitle: "A. Pagkilala sa Katotohanan at Kasinungalingan",
             type: "truefalse",
 
             instructions: `
@@ -479,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         4: {
-            title: "Ang Tunay na Sampung Utos",
+            title: "Tandaan mo!",
             subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
             type: "commandments",
 
@@ -652,8 +650,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         6: {
-            title: "Pagtukoy: Mga Ibong Mandaragit",
-            subtitle: "Rebyu ng Nobela",
+            title: "Sagutan natin!",
             type: "identification",
 
             instructions: `
