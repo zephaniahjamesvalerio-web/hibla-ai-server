@@ -49,15 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Pag-asa, Kalayaan, at Pagbangon ng Bayan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
-                mga mag-aaral ang mahahalagang kaisipan, simbolismo, at
-                mensaheng makabayan na nakapaloob sa “Sa Dakong Silangan.”
-                Matutukoy nila kung paano ginamit ang pagsikat ng araw
-                sa Silangan bilang simbolo ng pag-asa, kalayaan, at
-                muling pagbangon ng bayan. Higit sa lahat, mahihikayat
-                silang pahalagahan ang pagmamahal sa bayan, pag-asa sa
-                kabila ng mga pagsubok, at paninindigan para sa isang
-                mas malaya at maunlad na lipunan.
+                Mauunawaan ng mga mag-aaral ang mahahalagang 
+                kaisipan, simbolismo, at mensaheng makabayan
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -99,15 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Kolonyalismo • Pakikibaka • Kalayaan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang matutukoy at
-                maipaliliwanag ng mga mag-aaral ang mahahalagang
-                pangyayari, tauhan, simbolismo, at mensahe sa unang tagpo
-                ng “Kahapon, Ngayon at Bukas.” Mauunawaan nila kung paano
-                inilalarawan ng dula ang karanasan ng mga Pilipino sa
-                ilalim ng kolonyalismo at kung paano ipinakikita ang
-                pagnanais para sa kalayaan. Inaasahan ding maiuugnay nila
-                ang mga kaisipan ng akda sa kahalagahan ng pagmamahal sa
-                bayan, pagkakaisa, at paninindigan para sa kalayaan.
+                Matutukoy at maipaliliwanag ang mahahalagang pangyayari,
+                tauhan, simbolismo, at mensahe sa unang tagpo
+                ng “Kahapon, Ngayon at Bukas.” 
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -148,15 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Ugali • Disiplina • Pananagutan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
-                mga mag-aaral ang konsepto ng “Filipino Time” at ang mga
-                dahilan kung bakit nagkakaroon ng ganitong kaugalian.
-                Matutukoy nila ang mga epekto ng pagiging palaging huli
-                sa sarili, sa ibang tao, at sa mga gawain ng isang
-                komunidad. Hinihikayat din silang suriin ang kanilang
-                pagpapahalaga sa oras at makabuo ng mga praktikal na
-                paraan upang maging mas maagap, responsable, at
-                disiplinado sa pang-araw-araw na buhay.
+               Mauunawaan ng ang konsepto ng “Filipino Time” 
+               at ang mga dahilan kung bakit nagkakaroon ng 
+               ganitong kaugalian.
             `,
 
             material: "Digital Poster",
@@ -226,16 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Gabay • Disiplina • Pagmamahal sa Bayan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
-                mga mag-aaral ang mga pangunahing prinsipyo na
+                mauunawaan ng mga mag-aaral ang mga pangunahing prinsipyo na
                 nakapaloob sa “Ang Tunay na Sampung Utos” ni Apolinario
-                Mabini. Matutukoy at maipaliliwanag nila ang kahalagahan
-                ng pagmamahal sa Diyos, bayan, kapwa, kalayaan,
-                kasarinlan, mabuting pamamahala, at pananagutan bilang
-                mamamayan. Inaasahan ding maiuugnay nila ang mga
-                prinsipyong ito sa kanilang sariling pag-uugali at
-                responsibilidad bilang bahagi ng paaralan, pamilya, at
-                lipunan.
+                Mabini.
             `,
 
             material: "Digital Sequence Chart",
@@ -285,19 +259,12 @@ document.addEventListener("DOMContentLoaded", () => {
             `,
 
             theme:
-                "Wikang Pambansa • Pagkakaisa • Pambansang Kamalayan • Pagkakakilanlan",
+                "Wikang Pambansa, Pagkakaisa, Pambansang Kamalayan, at Pagkakakilanlan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang maipaliliwanag
-                ng mga mag-aaral ang kahalagahan ng pagkakaroon ng
+                Maipaliliwanag ang kahalagahan ng pagkakaroon ng
                 wikang pambansa sa pagbuo ng pambansang kamalayan,
-                pagkakaisa, at pagkakakilanlan. Mauunawaan nila ang
-                pananaw ni Manuel L. Quezon tungkol sa pangangailangan
-                ng isang wikang maaaring gamitin ng mga Pilipino sa
-                pakikipag-ugnayan. Inaasahan ding mapahahalagahan nila
-                ang sariling wika at ang iba't ibang katutubong wika
-                bilang mahahalagang bahagi ng kultura at pagkakakilanlan
-                ng bansa.
+                pagkakaisa, at pagkakakilanlan. 
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -370,15 +337,9 @@ document.addEventListener("DOMContentLoaded", () => {
             theme: "Katiwalian • Pakikibaka • Katarungan",
 
             objective: `
-                Sa pagtatapos ng araling ito, inaasahang mauunawaan ng
-                mga mag-aaral ang mahahalagang tema, tauhan, pangyayari,
+                Mauunawaan ang mahahalagang tema, tauhan, pangyayari,
                 at suliraning panlipunan na inilalarawan sa “Mga Ibong
-                Mandaragit.” Matutukoy nila kung paano inilalantad ng
-                nobela ang mga isyu ng katiwalian, kasakiman,
-                pagsasamantala, at kawalan ng katarungan. Inaasahan ding
-                masusuri nila ang kahalagahan ng paninindigan,
-                pananagutan, at pakikilahok ng mamamayan sa pagtataguyod
-                ng isang makatarungan at makabuluhang lipunan.
+                Mandaragit.”
             `,
 
             material: "Audio-Visual/Interactive Presentation",
@@ -1541,10 +1502,8 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (type === "objective") {
             html = `
                 <span class="modal-eyebrow">
-                    LAYUNIN
+                    Layunin ng Aralin
                 </span>
-
-                <h2>Layunin ng Aralin</h2>
 
                 <div class="detail-box">
                     <p
