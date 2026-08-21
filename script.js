@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             materialImage: "",
 
             processingTitle:
-                "Pagproseso ng Pag-unawa",
+                "Sagot-suri!",
 
             processingInstructions:
                 "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
             materialImage: "",
 
             processingTitle:
-                "Pagproseso ng Pag-unawa",
+                "Ilapat natin!",
 
             processingInstructions:
                 "Basahin at unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
