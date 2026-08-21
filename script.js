@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "",
 
             materialImage:
-                "images/materials/week6-infographics.jpg"
+                "https://www.youtube.com/watch?v=JPG8naYuQ3Y"
         }
 
     };
