@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
             materialType: "text",
 
             youtube: "",
-            materialImage: "",
+            materialImage: "images/materials/filipinotime.png",
 
             processingTitle:
                 "Sagot-suri!",
@@ -310,13 +310,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 tungkulin bilang kabataan at mamamayan.
             `,
 
-            material: "Digital Sequence Chart",
+            material: "AI-Generated Poster",
             materialType: "image",
 
             youtube: "",
 
             materialImage:
-                "images/materials/week4-sequence-chart.jpg"
+                "images/materials/angtunaynasampungutos.png"
         },
 
         /* =====================================================
