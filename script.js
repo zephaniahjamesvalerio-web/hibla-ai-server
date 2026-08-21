@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `,
 
             author:
-                "Michael Charleston Chua (Ayon kay Apolinario Mabini)",
+                "Apolinario Mabini",
 
             authorImage:
                 "images/authors/apolinario-mabini.jpg",
