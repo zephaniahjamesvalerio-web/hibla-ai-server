@@ -3020,50 +3020,28 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
    RESEARCHERS
 ========================================================= */
+/* =========================================================
+   RESEARCHERS
+========================================================= */
 
-function openResearchersPage() {
+const researchersPage =
+    document.getElementById("researchersPage");
 
-    getAllPageSections().forEach(section => {
-        section.classList.remove("active");
-    });
+/*
+    Researchers navigation is already handled
+    by the general [data-section] click handler.
 
-    document.querySelectorAll(".nav-btn, [data-section]").forEach(button => {
-        button.classList.remove("active");
-    });
+    HTML:
+    <button
+        class="nav-btn"
+        id="researcherButton"
+        data-section="researchersPage">
+        Mga Mananaliksik
+    </button>
 
-    if (researchersPage) {
-        researchersPage.classList.add("active");
-    }
-
-    const researcherButtons = document.querySelectorAll(
-        '#researcherButton, #researchersBtn, [data-section="researchersPage"]'
-    );
-
-    researcherButtons.forEach(button => {
-        button.classList.add("active");
-    });
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-const researcherButton =
-    document.getElementById("researcherButton") ||
-    document.getElementById("researchersBtn") ||
-    document.querySelector('[data-section="researchersPage"]');
-
-if (researcherButton) {
-
-    researcherButton.addEventListener("click", event => {
-
-        event.preventDefault();
-
-        openResearchersPage();
-
-    });
-}
+    This automatically calls:
+    showSection("researchersPage");
+*/
     /* =========================================================
        CONTACT
     ========================================================= */
