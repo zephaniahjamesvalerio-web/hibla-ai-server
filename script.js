@@ -3018,62 +3018,52 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 /* =========================================================
-       RESEARCHERS
-    ========================================================= */
+   RESEARCHERS
+========================================================= */
 
-    // Sinusuportahan na nito kahit ano mang ID o data-section ang gamitin mo sa HTML
-    const researcherButton =
-        document.getElementById("researcherButton") ||
-        document.getElementById("researchersBtn") ||
-        document.querySelector('[data-section="researchersPage"]');
+function openResearchersPage() {
 
-    const backResearchers =
-        document.getElementById(
-            "backResearchers"
-        );
+    getAllPageSections().forEach(section => {
+        section.classList.remove("active");
+    });
 
-    if (researcherButton) {
+    document.querySelectorAll(".nav-btn, [data-section]").forEach(button => {
+        button.classList.remove("active");
+    });
 
-        researcherButton.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                getAllPageSections()
-                    .forEach(section => {
-
-                        section.classList.remove(
-                            "active"
-                        );
-                    });
-
-                document
-                    .querySelectorAll(
-                        ".nav-btn"
-                    )
-                    .forEach(button => {
-
-                        button.classList.remove(
-                            "active"
-                        );
-                    });
-
-                if (researchersPage) {
-
-                    researchersPage.classList.add(
-                        "active"
-                    );
-                }
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-            }
-        );
+    if (researchersPage) {
+        researchersPage.classList.add("active");
     }
 
+    const researcherButtons = document.querySelectorAll(
+        '#researcherButton, #researchersBtn, [data-section="researchersPage"]'
+    );
+
+    researcherButtons.forEach(button => {
+        button.classList.add("active");
+    });
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+const researcherButton =
+    document.getElementById("researcherButton") ||
+    document.getElementById("researchersBtn") ||
+    document.querySelector('[data-section="researchersPage"]');
+
+if (researcherButton) {
+
+    researcherButton.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        openResearchersPage();
+
+    });
+}
     /* =========================================================
        CONTACT
     ========================================================= */
