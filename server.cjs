@@ -431,7 +431,66 @@ ${lesson.objective}
 💡 <b>Layunin:</b> ${lesson.objective}
     `.trim();
 }
+/* =========================
+   WEEK DESCRIPTION BOX
+========================= */
 
+.week-description-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 32px;
+    padding: 30px 32px;
+
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-small);
+
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.85;
+
+    text-align: left;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.week-description-box:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(125, 11, 18, 0.14);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* WEEK DESCRIPTION TEXT */
+
+.week-description-box p {
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .week-description-box {
+        padding: 24px 20px;
+
+        border-radius: 20px;
+
+        font-size: 0.92rem;
+        line-height: 1.8;
+    }
+
+}
 
 /* =========================================================
    API
@@ -502,3 +561,4 @@ app.listen(PORT, "0.0.0.0", () => {
     console.log("AI API : DISABLED");
     console.log("=================================");
 });
+
