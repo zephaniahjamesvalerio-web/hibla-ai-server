@@ -2369,23 +2369,19 @@ and (max-width: 1000px) {
 
 
 .week-description {
-    max-width:
-        850px;
+    background: #ffffff;
+    border: 1px solid rgba(125, 11, 18, 0.10);
+    border-radius: 20px;
+    padding: 28px 30px;
+    margin: 20px 0 30px;
+    box-shadow: 0 10px 30px rgba(62, 20, 20, 0.07);
+    line-height: 1.8;
+    color: var(--ink);
+}
 
-    margin:
-        0 auto 30px;
-
-    text-align:
-        center;
-
-    color:
-        var(--muted);
-
-    font-size:
-        1rem;
-
-    line-height:
-        1.9;
+.week-description p,
+.week-description div {
+    margin: 0;
 }
 
 
