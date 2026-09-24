@@ -3,7 +3,7 @@
     --maroon-dark: #52070b;
     --maroon-light: #a5222b;
 
-    --cream:#a5222b;;
+    --cream: #fff8f4;
     --white: #ffffff;
 
     --ink: #241b1b;
@@ -639,19 +639,26 @@ button:focus-visible {
 ========================= */
 
 .hero,
-.content-section,
+.content-section {
+    display: none;
+}
+
+.hero.active {
+    display: flex;
+}
+
+.content-section.active {
+    display: block !important;
+}
+
+/* Researchers Page */
 #researchersPage {
     display: none;
 }
 
-
-.hero.active,
-.content-section.active,
 #researchersPage.active {
-    display: block;
+    display: block !important;
 }
-
-
 /* =========================================================
    PREMIUM HOME / HERO SECTION
    ========================================================= */
@@ -4257,12 +4264,3 @@ and (max-width: 1000px) {
         scroll-behavior:
             auto !important;
     }
-
-}
-#researchersPage {
-    display: none;
-}
-
-#researchersPage.active {
-    display: block !important;
-}
