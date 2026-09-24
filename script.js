@@ -2637,14 +2637,14 @@ document.addEventListener("DOMContentLoaded", () => {
             weekContent.innerHTML = `
 
                 <h3 class="week-title">
-                    ${lesson.title}
-                </h3>
+    ${lesson.title}
+</h3>
 
-                <p class="week-description">
-                    ${lesson.description}
-                </p>
+<div class="week-description">
+    ${lesson.description}
+</div>
 
-                <div class="lesson-grid">
+<div class="lesson-grid">
 
                     <!-- AUTHOR -->
 
