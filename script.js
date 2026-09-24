@@ -2640,9 +2640,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ${lesson.title}
 </h3>
 
-<p class="week-description">
+<div class="week-description">
     ${lesson.description}
-</p>
+</div>
 
 <div class="lesson-grid">
 
