@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ===================================================== */
 
         1: {
-            title: 'Week 1: “Sa Dakong Silangan” ni Jose Corazon de Jesus',
+            title: 'Week 1: “Sa Dakong Silangan”',
 
             description: `
             <div style="text-align: justify;">
