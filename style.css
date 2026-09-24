@@ -4259,3 +4259,10 @@ and (max-width: 1000px) {
     }
 
 }
+#researchersPage {
+    display: none;
+}
+
+#researchersPage.active {
+    display: block !important;
+}
