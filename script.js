@@ -3020,13 +3020,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
    RESEARCHERS
 ========================================================= */
-/* =========================================================
-   RESEARCHERS
-========================================================= */
-
-const researchersPage =
-    document.getElementById("researchersPage");
-
 /*
     Researchers navigation is already handled
     by the general [data-section] click handler.
