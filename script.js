@@ -3017,14 +3017,15 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    /* =========================================================
+/* =========================================================
        RESEARCHERS
     ========================================================= */
 
+    // Sinusuportahan na nito kahit ano mang ID o data-section ang gamitin mo sa HTML
     const researcherButton =
-        document.getElementById(
-            "researcherButton"
-        );
+        document.getElementById("researcherButton") ||
+        document.getElementById("researchersBtn") ||
+        document.querySelector('[data-section="researchersPage"]');
 
     const backResearchers =
         document.getElementById(
@@ -3061,53 +3062,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (researchersPage) {
 
                     researchersPage.classList.add(
-                        "active"
-                    );
-                }
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-            }
-        );
-    }
-
-    if (backResearchers) {
-
-        backResearchers.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                if (researchersPage) {
-
-                    researchersPage.classList.remove(
-                        "active"
-                    );
-                }
-
-                const headerSection =
-                    document.getElementById(
-                        "headerSection"
-                    );
-
-                if (headerSection) {
-
-                    headerSection.classList.add(
-                        "active"
-                    );
-                }
-
-                const homeButton =
-                    document.querySelector(
-                        '.nav-btn[data-section="home"]'
-                    );
-
-                if (homeButton) {
-
-                    homeButton.classList.add(
                         "active"
                     );
                 }
