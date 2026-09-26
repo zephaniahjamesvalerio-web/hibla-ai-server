@@ -35,30 +35,56 @@
     <div class="ambient ambient-two"></div>
     <div class="grid-background"></div>
 
-    <!-- NAVIGATION -->
-    <nav id="navbar">
-        <button class="logo" id="logoToggle">
-            Hibla-Panitikan
+   <nav id="navbar">
+
+    <button class="logo" id="logoToggle">
+        Hibla-Panitikan
+    </button>
+
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        aria-label="Buksan ang menu"
+        aria-expanded="false"
+        type="button"
+    >
+        ☰
+    </button>
+
+    <div class="nav-links">
+
+        <button
+            class="nav-btn active"
+            data-section="home"
+        >
+            Home
         </button>
 
-        <div class="nav-links">
-            <button class="nav-btn active" data-section="home">
-                Home
-            </button>
+        <button
+            class="nav-btn"
+            data-section="lesson"
+        >
+            Aralin
+        </button>
 
-            <button class="nav-btn" data-section="lesson">
-                Aralin
-            </button>
+        <button
+            class="nav-btn"
+            id="researcherButton"
+            data-section="researchersPage"
+        >
+            Mga Mananaliksik
+        </button>
 
-            <button class="nav-btn" id="researcherButton" data-section="researchersPage">
-                Mga Mananaliksik
-            </button>
+        <button
+            class="nav-btn"
+            id="contactButton"
+        >
+            Contact
+        </button>
 
-            <button class="nav-btn" id="contactButton">
-                Contact
-            </button>
-        </div>
-    </nav>
+    </div>
+
+</nav>
 
     <!-- HERO -->
     <section class="hero active" id="headerSection" data-page="home">
