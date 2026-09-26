@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tl">
 <head>
@@ -7,311 +8,997 @@
 
     <title>Hibla-Panitikan | Panitikang Filipino</title>
 
-    <!-- Open Graph / Link Preview -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hibla-Panitikan | Panitikang Filipino">
-    <meta property="og:description" content="Isang interaktibong plataporma para sa pag-aaral ng Panitikang Filipino sa panahon ng Estados Unidos.">
-    <meta property="og:url" content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/">
-    <meta property="og:image" content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/images/reseachers/preview.png">
-    <meta property="og:site_name" content="Hibla-Panitikan">
+    <!-- SEO -->
+    <meta
+        name="description"
+        content="Isang interaktibong plataporma para sa pag-aaral ng Panitikang Filipino sa panahon ng Estados Unidos."
+    >
 
-    <!-- Twitter / X Preview -->
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta
+        property="og:title"
+        content="Hibla-Panitikan | Panitikang Filipino"
+    >
+    <meta
+        property="og:description"
+        content="Isang interaktibong plataporma para sa pag-aaral ng Panitikang Filipino sa panahon ng Estados Unidos."
+    >
+    <meta
+        property="og:url"
+        content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/"
+    >
+    <meta property="og:site_name" content="Hibla-Panitikan">
+    <meta
+        property="og:image"
+        content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/images/reseachers/preview.png"
+    >
+
+    <!-- TWITTER / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hibla-Panitikan | Panitikang Filipino">
-    <meta name="twitter:description" content="Isang interaktibong plataporma para sa pag-aaral ng Panitikang Filipino sa panahon ng Estados Unidos.">
-    <meta name="twitter:image" content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/images/reseachers/preview.png">
-    
+    <meta
+        name="twitter:title"
+        content="Hibla-Panitikan | Panitikang Filipino"
+    >
+    <meta
+        name="twitter:description"
+        content="Isang interaktibong plataporma para sa pag-aaral ng Panitikang Filipino sa panahon ng Estados Unidos."
+    >
+    <meta
+        name="twitter:image"
+        content="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/images/reseachers/preview.png"
+    >
+
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Background Effects -->
+    <!-- =========================================
+         BACKGROUND EFFECTS
+    ========================================== -->
+
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
     <div class="grid-background"></div>
 
-   <nav id="navbar">
 
-    <button class="logo" id="logoToggle">
-        Hibla-Panitikan
-    </button>
+    <!-- =========================================
+         SIDEBAR / MOBILE NAVIGATION
+    ========================================== -->
 
-    <button
-        class="mobile-menu-toggle"
-        id="mobileMenuToggle"
-        aria-label="Buksan ang menu"
-        aria-expanded="false"
-        type="button"
+    <aside
+        class="sidebar"
+        id="sidebar"
+        aria-label="Hibla-Panitikan navigation"
     >
-        ☰
-    </button>
 
-    <div class="nav-links">
+        <!-- BRAND -->
+        <div class="sidebar-brand">
 
-        <button
-            class="nav-btn active"
-            data-section="home"
-        >
-            Home
-        </button>
+            <h2>
+                Hibla-Panitikan
+            </h2>
 
-        <button
-            class="nav-btn"
-            data-section="lesson"
-        >
-            Aralin
-        </button>
+            <div class="brand-divider"></div>
 
-        <button
-            class="nav-btn"
-            id="researcherButton"
-            data-section="researchersPage"
-        >
-            Mga Mananaliksik
-        </button>
-
-        <button
-            class="nav-btn"
-            id="contactButton"
-        >
-            Contact
-        </button>
-
-    </div>
-
-</nav>
-
-    <!-- HERO -->
-    <section class="hero active" id="headerSection" data-page="home">
-        <div class="hero-content">
-            <span class="eyebrow">
-                MULTIMODAL E-LEARNING MATERIALS
-            </span>
-
-            <h1>
-                Hibla-<span>Panitikan</span>
-            </h1>
-
-            <p class="hero-description">
-                Isang interaktibong plataporma para sa pag-aaral ng
-                <strong>Panitikang Filipino</strong> sa panahon ng
-                <strong>Estados Unidos</strong>.
+            <p class="brand-subtitle">
+                Wika · Panitikan · Kultura
             </p>
 
-            <div class="hero-buttons">
-                <button class="primary-button" data-section="lesson">
-                    Simulan ang Aralin
-                </button>
-                <button class="secondary-button" data-section="home">
-                    Tungkol sa Hibla-Panitikan
-                </button>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat">
-                    <strong>06</strong>
-                    <span>Linggo ng Aralin</span>
-                </div>
-                <div class="stat">
-                    <strong>06</strong>
-                    <span>Piling Akda</span>
-                </div>
-                <div class="stat">
-                    <strong>06</strong>
-                    <span>Multimodal Materials</span>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <!-- HOME -->
-    <section class="content-section" id="homeContent" data-page="homeContent">
-        <div class="content-container">
-            <div class="section-heading">
-                <span class="eyebrow">
-                    TUNGKOL SA PLATAPORMA
+
+        <!-- MAIN NAVIGATION -->
+        <nav
+            class="sidebar-nav"
+            aria-label="Main navigation"
+        >
+
+            <!-- HOME -->
+            <button
+                class="side-link active"
+                type="button"
+                data-section="home"
+                aria-current="page"
+                aria-label="Home"
+                title="Home"
+            >
+
+                <span class="nav-icon" aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="m3 10 9-7 9 7"/>
+                        <path d="M5 9v12h14V9"/>
+                        <path d="M9 21v-7h6v7"/>
+                    </svg>
+
                 </span>
-                <h2>
-                    Maligayang pagdating sa Hibla-Panitikan
-                </h2>
-                <p>
-                    Isang makabuluhan at interaktibong espasyo para sa pag-aaral ng panitikang Filipino.
+
+                <span class="nav-label">
+                    Home
+                </span>
+
+            </button>
+
+
+            <!-- LESSONS -->
+            <button
+                class="side-link"
+                type="button"
+                data-section="lesson"
+                aria-label="Mga Aralin"
+                title="Mga Aralin"
+            >
+
+                <span class="nav-icon" aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+                        <path d="M8 7h8"/>
+                        <path d="M8 11h8"/>
+                    </svg>
+
+                </span>
+
+                <span class="nav-label">
+                    Mga Aralin
+                </span>
+
+            </button>
+
+
+            <!-- RESEARCHERS -->
+            <button
+                class="side-link"
+                type="button"
+                id="researcherButton"
+                data-section="researchersPage"
+                aria-label="Mga Mananaliksik"
+                title="Mga Mananaliksik"
+            >
+
+                <span class="nav-icon" aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+
+                </span>
+
+                <span class="nav-label">
+                    Mga Mananaliksik
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-note">
+
+                <span class="note-mark" aria-hidden="true">
+                    ✦
+                </span>
+
+                <span class="note-text">
+                    Paglalakbay sa wika at panitikan.
+                </span>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <button
+                class="side-link contact-link"
+                id="contactButton"
+                type="button"
+                aria-label="Contact"
+                title="Contact"
+            >
+
+                <span class="nav-icon" aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m3 7 9 6 9-6"/>
+                    </svg>
+
+                </span>
+
+                <span class="nav-label">
+                    Contact
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN WEBSITE CONTENT
+    ========================================== -->
+
+    <main id="mainContent">
+
+
+        <!-- =====================================
+             HERO / HOME HEADER
+        ====================================== -->
+
+        <section
+            class="hero active"
+            id="headerSection"
+            data-page="home"
+        >
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    MULTIMODAL E-LEARNING MATERIALS
+                </span>
+
+                <h1>
+                    Hibla-<span>Panitikan</span>
+                </h1>
+
+                <p class="hero-description">
+                    Isang interaktibong plataporma para sa pag-aaral ng
+                    <strong>Panitikang Filipino</strong> sa panahon ng
+                    <strong>Estados Unidos</strong>.
                 </p>
-            </div>
 
-            <div class="about-grid">
-                <article class="about-card large">
-                    <span class="card-number">01</span>
-                    <h3>Matuto nang Makabuluhan</h3>
-                    <p style="text-align: justify;">
-                        Ang Hibla-Panitikan ay nilikha upang gawing mas malinaw, kawili-wili, at makabuluhan ang pag-aaral ng panitikang Filipino. Pinagsasama nito ang teksto, biswal, audio, animation, at iba pang anyo ng multimodal learning materials. Sa tulong ng bagong pamamaraang ito, hindi lamang mapapadali ang pag-unawa sa mga konseptong pampanitikan kundi naiiwasan rin ang tradisyunal na kabagutan sa silid-aralan. Nagiging tulay ang platapormang ito upang mas mapalapit ang mga mag-aaral sa sariling wika at panitikan, habang nalilinang ang kanilang kritikal na pag-iisip at pag-unawa. Sa huli, naglilingkod ang Hibla-Panitikan bilang isang inklusibong kagamitang pampagtuturo na nagpapanatili at nagpapahayag sa pambansang pagkakakilanlan sa gitna ng mabilis na modernisasyon.
-                    </p>
-                </article>
 
-                <article class="about-card">
-                    <span class="card-number">02</span>
-                    <h3>Layunin</h3>
-                    <p style="text-align: justify;">
-                        Layunin nitong tulungan ang mga mag-aaral na maunawaan, masuri, at mapahalagahan ang mga piling akdang pampanitikan sa panahon ng Estados Unidos.
-                    </p>
-                </article>
+                <div class="hero-buttons">
 
-                <article class="about-card">
-                    <span class="card-number">03</span>
-                    <h3>Interaktibong Pag-aaral</h3>
-                    <p style="text-align: justify;">
-                        Tuklasin ang bawat aralin sa pamamagitan ng iba't ibang materyal na idinisenyo upang suportahan ang aktibo at makabuluhang pagkatuto.
-                    </p>
-                </article>
-            </div>
+                    <button
+                        class="primary-button"
+                        data-section="lesson"
+                        type="button"
+                    >
+                        Simulan ang Aralin
+                    </button>
 
-            <div class="welcome-note">
-                <p>Ang pag-aaral ng panitikan ay paglalakbay sa kasaysayan, kultura, at kamalayan ng bayan.</p>
-                <strong>— Mga Mananaliksik</strong>
-            </div>
-        </div>
-    </section>
+                    <button
+                        class="secondary-button"
+                        id="aboutButton"
+                        type="button"
+                    >
+                        Tungkol sa Hibla-Panitikan
+                    </button>
 
-    <!-- LESSONS -->
-    <section class="content-section" id="lessonContent" data-page="lesson">
-        <div class="lesson-container">
-            <div class="section-heading">
-                <span class="eyebrow">IKALAWANG MARKAHAN</span>
-                <h2>Mga Aralin</h2>
-                <p>Tuklasin ang anim na piling akdang pampanitikan sa panahon ng Estados Unidos.</p>
-            </div>
+                </div>
 
-            <!-- WEEK NAVIGATION -->
-            <div class="week-navigation">
-                <button class="week-btn active" data-week="1">Week 1</button>
-                <button class="week-btn" data-week="2">Week 2</button>
-                <button class="week-btn" data-week="3">Week 3</button>
-                <button class="week-btn" data-week="4">Week 4</button>
-                <button class="week-btn" data-week="5">Week 5</button>
-                <button class="week-btn" data-week="6">Week 6</button>
-            </div>
 
-            <!-- DYNAMIC LESSON -->
-            <div id="weekContent"></div>
-        </div>
-    </section>
+                <div class="hero-stats">
 
-    <!-- RESEARCHERS -->
-    <section class="content-section" id="researchersPage" data-page="researchersPage">
-        <div class="researchers-container">
-            <div class="section-heading">
-                <span class="eyebrow">RESEARCH TEAM</span>
-                <h2>Mga Mananaliksik</h2>
-                <p>Kilalanin ang pangkat na bumuo at nagsagawa ng pag-aaral para sa Hibla-Panitikan.</p>
-            </div>
-
-            <div class="researcher-grid">
-                <!-- RESEARCHER 1 -->
-                <article class="researcher-card">
-                    <div class="researcher-photo">
-                        <img src="images/researchers/zephaniah.png" alt="Zephaniah James R. Valerio" onerror="this.style.display='none'">
+                    <div class="stat">
+                        <strong>06</strong>
+                        <span>Linggo ng Aralin</span>
                     </div>
-                    <span class="researcher-role">MANANALIKSIK</span>
-                    <h3>Zephaniah James R. Valerio</h3>
-                    <p style="text-align: justify;">
-                        Bahagi ng pangkat na bumuo at nagsagawa ng pag-aaral para sa Hibla-Panitikan. Siya ang nagsilbing Lider at Website Developer, na responsable sa pagpaplano, pagdidisenyo, pagbuo, at pag-aayos ng website at mga teknikal na bahagi nito.
-                    </p>
-                </article>
 
-                <!-- RESEARCHER 2 -->
-                <article class="researcher-card">
-                    <div class="researcher-photo">
-                        <img src="images/researchers/ferchelle.png" alt="Ferchelle Jane M. Yap" onerror="this.style.display='none'">
+                    <div class="stat">
+                        <strong>06</strong>
+                        <span>Piling Akda</span>
                     </div>
-                    <span class="researcher-role">MANANALIKSIK</span>
-                    <h3>Ferchelle Jane M. Yap</h3>
-                    <p style="text-align: justify;">
-                        Bahagi ng pangkat na bumuo at nagsagawa ng pag-aaral para sa Hibla-Panitikan. Siya ang nagsilbing Secretary na namahala sa dokumentasyon, pagtatala ng mahahalagang usapin, at pag-aayos ng mga kinakailangang dokumento para sa pag-aaral.
-                    </p>
-                </article>
 
-                <!-- RESEARCHER 3 -->
-                <article class="researcher-card">
-                    <div class="researcher-photo">
-                        <img src="images/researchers/gian.png" alt="Gian T. Bacala" onerror="this.style.display='none'">
+                    <div class="stat">
+                        <strong>06</strong>
+                        <span>Multimodal Materials</span>
                     </div>
-                    <span class="researcher-role">MANANALIKSIK</span>
-                    <h3>Gian T. Bacala</h3>
-                    <p style="text-align: justify;">
-                        Bahagi ng pangkat na bumuo at nagsagawa ng pag-aaral para sa Hibla-Panitikan. Siya ang nagsilbing Tagapangasiwa sa mga Pangangailangan, na nangasiwa sa mga kagamitan at materyales na kinakailangan sa pag-aaral.
-                    </p>
-                </article>
+
+                </div>
+
             </div>
-        </div>
-    </section>
 
-    <!-- CONTACT MODAL -->
-    <div class="modal" id="contactModal">
+        </section>
+
+
+
+        <!-- =====================================
+             ABOUT / HOME CONTENT
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="homeContent"
+            data-page="homeContent"
+        >
+
+            <div class="content-container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        TUNGKOL SA PLATAPORMA
+                    </span>
+
+                    <h2>
+                        Maligayang pagdating sa Hibla-Panitikan
+                    </h2>
+
+                    <p>
+                        Isang makabuluhan at interaktibong espasyo
+                        para sa pag-aaral ng panitikang Filipino.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <!-- ABOUT CARD 1 -->
+                    <article class="about-card large">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Matuto nang Makabuluhan
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Ang Hibla-Panitikan ay nilikha upang gawing
+                            mas malinaw, kawili-wili, at makabuluhan
+                            ang pag-aaral ng panitikang Filipino.
+                            Pinagsasama nito ang teksto, biswal, audio,
+                            animation, at iba pang anyo ng multimodal
+                            learning materials. Sa tulong ng bagong
+                            pamamaraang ito, hindi lamang mapapadali
+                            ang pag-unawa sa mga konseptong pampanitikan
+                            kundi naiiwasan rin ang tradisyunal na
+                            kabagutan sa silid-aralan. Nagiging tulay
+                            ang platapormang ito upang mas mapalapit
+                            ang mga mag-aaral sa sariling wika at
+                            panitikan, habang nalilinang ang kanilang
+                            kritikal na pag-iisip at pag-unawa.
+                            Sa huli, naglilingkod ang Hibla-Panitikan
+                            bilang isang inklusibong kagamitang
+                            pampagtuturo na nagpapanatili at
+                            nagpapahayag sa pambansang pagkakakilanlan
+                            sa gitna ng mabilis na modernisasyon.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- ABOUT CARD 2 -->
+                    <article class="about-card">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Layunin
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Layunin nitong tulungan ang mga mag-aaral
+                            na maunawaan, masuri, at mapahalagahan
+                            ang mga piling akdang pampanitikan
+                            sa panahon ng Estados Unidos.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- ABOUT CARD 3 -->
+                    <article class="about-card">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Interaktibong Pag-aaral
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Tuklasin ang bawat aralin sa pamamagitan
+                            ng iba't ibang materyal na idinisenyo
+                            upang suportahan ang aktibo at
+                            makabuluhang pagkatuto.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- WELCOME NOTE -->
+                <div class="welcome-note">
+
+                    <p>
+                        Ang pag-aaral ng panitikan ay paglalakbay
+                        sa kasaysayan, kultura, at kamalayan ng bayan.
+                    </p>
+
+                    <strong>
+                        — Mga Mananaliksik
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LESSONS
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="lessonContent"
+            data-page="lesson"
+        >
+
+            <div class="lesson-container">
+
+
+                <!-- SECTION HEADING -->
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        IKALAWANG MARKAHAN
+                    </span>
+
+                    <h2>
+                        Mga Aralin
+                    </h2>
+
+                    <p>
+                        Tuklasin ang anim na piling akdang
+                        pampanitikan sa panahon ng Estados Unidos.
+                    </p>
+
+                </div>
+
+
+
+                <!-- WEEK NAVIGATION -->
+                <div
+                    class="week-navigation"
+                    aria-label="Pumili ng linggo ng aralin"
+                >
+
+                    <button
+                        class="week-btn active"
+                        data-week="1"
+                        type="button"
+                        aria-pressed="true"
+                    >
+                        Week 1
+                    </button>
+
+                    <button
+                        class="week-btn"
+                        data-week="2"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Week 2
+                    </button>
+
+                    <button
+                        class="week-btn"
+                        data-week="3"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Week 3
+                    </button>
+
+                    <button
+                        class="week-btn"
+                        data-week="4"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Week 4
+                    </button>
+
+                    <button
+                        class="week-btn"
+                        data-week="5"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Week 5
+                    </button>
+
+                    <button
+                        class="week-btn"
+                        data-week="6"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Week 6
+                    </button>
+
+                </div>
+
+
+
+                <!-- DYNAMIC LESSON CONTENT -->
+                <div
+                    id="weekContent"
+                    aria-live="polite"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RESEARCHERS
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="researchersPage"
+            data-page="researchersPage"
+        >
+
+            <div class="researchers-container">
+
+
+                <!-- SECTION HEADING -->
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        RESEARCH TEAM
+                    </span>
+
+                    <h2>
+                        Mga Mananaliksik
+                    </h2>
+
+                    <p>
+                        Kilalanin ang pangkat na bumuo at nagsagawa
+                        ng pag-aaral para sa Hibla-Panitikan.
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESEARCHER GRID -->
+                <div class="researcher-grid">
+
+
+                    <!-- RESEARCHER 1 -->
+                    <article class="researcher-card">
+
+                        <div class="researcher-photo">
+
+                            <img
+                                src="images/researchers/zephaniah.png"
+                                alt="Zephaniah James R. Valerio"
+                                loading="lazy"
+                                onerror="this.style.display='none'"
+                            >
+
+                        </div>
+
+                        <span class="researcher-role">
+                            MANANALIKSIK
+                        </span>
+
+                        <h3>
+                            Zephaniah James R. Valerio
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Bahagi ng pangkat na bumuo at nagsagawa
+                            ng pag-aaral para sa Hibla-Panitikan.
+                            Siya ang nagsilbing Lider at Website
+                            Developer, na responsable sa pagpaplano,
+                            pagdidisenyo, pagbuo, at pag-aayos ng
+                            website at mga teknikal na bahagi nito.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESEARCHER 2 -->
+                    <article class="researcher-card">
+
+                        <div class="researcher-photo">
+
+                            <img
+                                src="images/researchers/ferchelle.png"
+                                alt="Ferchelle Jane M. Yap"
+                                loading="lazy"
+                                onerror="this.style.display='none'"
+                            >
+
+                        </div>
+
+                        <span class="researcher-role">
+                            MANANALIKSIK
+                        </span>
+
+                        <h3>
+                            Ferchelle Jane M. Yap
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Bahagi ng pangkat na bumuo at nagsagawa
+                            ng pag-aaral para sa Hibla-Panitikan.
+                            Siya ang nagsilbing Secretary na namahala
+                            sa dokumentasyon, pagtatala ng
+                            mahahalagang usapin, at pag-aayos
+                            ng mga kinakailangang dokumento
+                            para sa pag-aaral.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESEARCHER 3 -->
+                    <article class="researcher-card">
+
+                        <div class="researcher-photo">
+
+                            <img
+                                src="images/researchers/gian.png"
+                                alt="Gian T. Bacala"
+                                loading="lazy"
+                                onerror="this.style.display='none'"
+                            >
+
+                        </div>
+
+                        <span class="researcher-role">
+                            MANANALIKSIK
+                        </span>
+
+                        <h3>
+                            Gian T. Bacala
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            Bahagi ng pangkat na bumuo at nagsagawa
+                            ng pag-aaral para sa Hibla-Panitikan.
+                            Siya ang nagsilbing Tagapangasiwa
+                            sa mga Pangangailangan, na nangasiwa
+                            sa mga kagamitan at materyales
+                            na kinakailangan sa pag-aaral.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         CONTACT MODAL
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="contactModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contactTitle"
+        aria-hidden="true"
+    >
+
         <div class="modal-card">
-            <button class="modal-close" id="closeContact" aria-label="Isara">×</button>
-            <h2>MAKIPAG-UGNAYAN</h2>
+
+
+            <!-- CLOSE BUTTON -->
+            <button
+                class="modal-close"
+                id="closeContact"
+                type="button"
+                aria-label="Isara"
+            >
+                ×
+            </button>
+
+
+
+            <h2 id="contactTitle">
+                MAKIPAG-UGNAYAN
+            </h2>
+
+
+
+            <!-- CONTACT INFORMATION -->
             <div class="contact-information">
-                <p><strong>Email</strong> hibla.panitikan@gmail.com</p>
-                <p><strong>Telepono</strong> +63 963 100 6360</p>
-                <p><strong>Website</strong> https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/</p>
-                <p><strong>Address</strong> Kolehiyo ng Edukasyon, Mindanao State University–General Santos</p>
+
+                <p>
+                    <strong>Email</strong>
+
+                    <a href="mailto:hibla.panitikan@gmail.com">
+                        hibla.panitikan@gmail.com
+                    </a>
+                </p>
+
+
+                <p>
+                    <strong>Telepono</strong>
+
+                    <a href="tel:+639631006360">
+                        +63 963 100 6360
+                    </a>
+                </p>
+
+
+                <p>
+                    <strong>Website</strong>
+
+                    <a
+                        href="https://zephaniahjamesvalerio-web.github.io/hibla-ai-server/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Hibla-Panitikan Website
+                    </a>
+                </p>
+
+
+                <p>
+                    <strong>Address</strong>
+
+                    Kolehiyo ng Edukasyon,
+                    Mindanao State University–General Santos
+                </p>
+
+
             </div>
+
+
         </div>
+
     </div>
 
-    <!-- HIBLA AI CHATBOT -->
+
+
+    <!-- =========================================
+         HIBLA AI CHATBOT
+    ========================================== -->
+
     <div class="chatbot" id="chatbot">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Buksan ang Hibla AI">
-            <span>✦</span>
+
+
+        <!-- CHATBOT TOGGLE -->
+        <button
+            class="chatbot-toggle"
+            id="chatbotToggle"
+            type="button"
+            aria-label="Buksan ang Hibla AI"
+            aria-expanded="false"
+            aria-controls="chatbotWindow"
+        >
+            <span aria-hidden="true">
+                ✦
+            </span>
         </button>
 
-        <div class="chatbot-window" id="chatbotWindow">
+
+
+        <!-- CHATBOT WINDOW -->
+        <div
+            class="chatbot-window"
+            id="chatbotWindow"
+            aria-label="Hibla AI Chat"
+        >
+
+
+            <!-- CHATBOT HEADER -->
             <div class="chatbot-header">
+
                 <div>
-                    <strong>Hibla AI</strong>
-                    <small>Local Learning Assistant</small>
+
+                    <strong>
+                        Hibla AI
+                    </strong>
+
+                    <small>
+                        Local Learning Assistant
+                    </small>
+
                 </div>
-                <button id="chatbotClose" aria-label="Isara">×</button>
+
+
+                <button
+                    id="chatbotClose"
+                    type="button"
+                    aria-label="Isara ang Hibla AI"
+                >
+                    ×
+                </button>
+
+
             </div>
 
-            <div class="chatbot-messages" id="chatbotMessages">
+
+
+            <!-- CHATBOT MESSAGES -->
+            <div
+                class="chatbot-messages"
+                id="chatbotMessages"
+                aria-live="polite"
+            >
+
                 <div class="chatbot-message bot">
-                    Kumusta!👋<br><br>
-                    Ako ang <strong>Hibla AI</strong>.<br><br>
-                    Maaari mo akong tanungin tungkol sa mga aralin at panitikan sa website na ito.
+
+                    Kumusta! 👋
+
+                    <br><br>
+
+                    Ako ang <strong>Hibla AI</strong>.
+
+                    <br><br>
+
+                    Maaari mo akong tanungin tungkol
+                    sa mga aralin at panitikan
+                    sa website na ito.
+
                 </div>
+
             </div>
 
+
+
+            <!-- CHATBOT INPUT -->
             <div class="chatbot-input-area">
-                <input type="text" id="chatbotInput" placeholder="Magtanong tungkol sa aralin..." autocomplete="off">
-                <button id="chatbotSend">➤</button>
+
+                <input
+                    type="text"
+                    id="chatbotInput"
+                    placeholder="Magtanong tungkol sa aralin..."
+                    autocomplete="off"
+                    aria-label="I-type ang iyong tanong"
+                >
+
+
+                <button
+                    id="chatbotSend"
+                    type="button"
+                    aria-label="Ipadala ang mensahe"
+                >
+                    ➤
+                </button>
+
+
             </div>
+
+
         </div>
+
     </div>
+
+
+
+    <!-- =========================================
+         CHATBOT TOGGLE
+    ========================================== -->
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
+
         const chatbot = document.getElementById("chatbot");
         const toggle = document.getElementById("chatbotToggle");
         const close = document.getElementById("chatbotClose");
 
-        if(toggle && chatbot && close) {
-            toggle.onclick = function () {
-                chatbot.classList.toggle("open");
-            };
-
-            close.onclick = function () {
-                chatbot.classList.remove("open");
-            };
+        if (!chatbot || !toggle || !close) {
+            return;
         }
+
+
+        toggle.addEventListener("click", function () {
+
+            const isOpen = chatbot.classList.toggle("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Isara ang Hibla AI"
+                    : "Buksan ang Hibla AI"
+            );
+
+        });
+
+
+
+        close.addEventListener("click", function () {
+
+            chatbot.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                "Buksan ang Hibla AI"
+            );
+
+            toggle.focus();
+
+        });
+
+
     });
     </script>
 
+
+
+    <!-- MAIN JAVASCRIPT -->
     <script src="script.js"></script>
+
+
 </body>
 </html>
