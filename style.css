@@ -4316,3 +4316,479 @@ and (max-width: 1000px) {
             auto !important;
     }
     
+/* =========================================================
+   HIBLA-PANITIKAN
+   MOBILE NAVBAR + CHATBOT FIX
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   MOBILE NAVBAR
+   --------------------------------------------------------- */
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    #navbar {
+        top: 10px;
+        left: 50%;
+        width: calc(100% - 20px);
+
+        min-height: 58px;
+        padding: 8px 10px 8px 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+
+        border-radius: 18px;
+
+        overflow: visible;
+    }
+
+    /* LOGO */
+
+    #navbar .logo {
+        flex: 1;
+        min-width: 0;
+
+        font-size: 1rem;
+        padding: 6px 2px;
+
+        text-align: left;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* HAMBURGER BUTTON */
+
+    .mobile-menu-toggle {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+        border-radius: 12px;
+
+        background: rgba(125, 11, 18, 0.08);
+        color: var(--maroon);
+
+        cursor: pointer;
+
+        font-size: 22px;
+        line-height: 1;
+
+        transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+        background: rgba(125, 11, 18, 0.14);
+    }
+
+    .mobile-menu-toggle:active {
+        transform: scale(0.94);
+    }
+
+
+    /* NAVIGATION DROPDOWN */
+
+    #navbar .nav-links {
+        position: absolute;
+
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 9px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.98),
+                rgba(255, 255, 255, 0.94)
+            );
+
+        border: 1px solid rgba(255, 255, 255, 0.95);
+        border-radius: 17px;
+
+        box-shadow:
+            0 18px 45px rgba(62, 20, 20, 0.14);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform:
+            translateY(-8px)
+            scale(0.98);
+
+        transform-origin: top center;
+
+        pointer-events: none;
+
+        transition:
+            opacity 0.22s ease,
+            visibility 0.22s ease,
+            transform 0.22s ease;
+
+        z-index: 1001;
+
+        overflow: hidden;
+    }
+
+
+    /* OPEN MENU */
+
+    #navbar.mobile-open .nav-links {
+        opacity: 1;
+        visibility: visible;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        pointer-events: auto;
+    }
+
+
+    /* MOBILE NAV BUTTON */
+
+    #navbar .nav-btn {
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 10px 13px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-radius: 11px;
+
+        font-size: 0.82rem;
+        font-weight: 600;
+
+        text-align: left;
+
+        transform: none;
+    }
+
+    #navbar .nav-btn:hover {
+        transform: none;
+    }
+
+    #navbar .nav-btn.active {
+        transform: none;
+    }
+
+
+    /* REMOVE DESKTOP UNDERLINE ON MOBILE */
+
+    #navbar .nav-btn::before {
+        display: none;
+    }
+
+    #navbar .nav-btn.active::after {
+        display: none;
+    }
+
+
+    /* EXTRA SPACE BELOW NAVBAR */
+
+    body {
+        --mobile-navbar-space: 78px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+    #navbar {
+        width: calc(100% - 16px);
+        padding-left: 11px;
+        padding-right: 8px;
+    }
+
+    #navbar .logo {
+        font-size: 0.92rem;
+    }
+
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   HIBLA AI CHATBOT — MOBILE FRIENDLY
+   ========================================================= */
+
+.chatbot {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 9999;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* CHATBOT BUTTON */
+
+.chatbot-toggle {
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--maroon);
+    color: white;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(125, 11, 18, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 16px 35px rgba(125, 11, 18, 0.38);
+}
+
+
+/* CHATBOT WINDOW */
+
+.chatbot-window {
+    position: absolute;
+
+    right: 0;
+    bottom: 76px;
+
+    width: 360px;
+    max-width: calc(100vw - 32px);
+
+    height: 500px;
+    max-height: calc(100vh - 105px);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE CHATBOT
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .chatbot {
+        right: 14px;
+
+        /*
+         * Safe distance from the bottom edge
+         * of a mobile screen.
+         */
+        bottom:
+            calc(14px + env(safe-area-inset-bottom));
+    }
+
+
+    .chatbot-toggle {
+        width: 56px;
+        height: 56px;
+
+        font-size: 24px;
+    }
+
+
+    .chatbot-window {
+        position: fixed;
+
+        left: 10px;
+        right: 10px;
+
+        bottom:
+            calc(
+                78px +
+                env(safe-area-inset-bottom)
+            );
+
+        width: auto;
+        max-width: none;
+
+        height:
+            min(
+                520px,
+                calc(100vh - 100px)
+            );
+
+        max-height:
+            calc(
+                100vh - 100px
+            );
+
+        border-radius: 20px;
+
+        transform-origin:
+            bottom right;
+    }
+
+
+    .chatbot-header {
+        min-height: 62px;
+
+        padding:
+            12px 14px;
+    }
+
+
+    .chatbot-header strong {
+        font-size: 14px;
+    }
+
+
+    .chatbot-header small {
+        font-size: 10px;
+    }
+
+
+    .chatbot-messages {
+        padding: 14px;
+    }
+
+
+    .chatbot-message {
+        max-width: 88%;
+
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+
+    .chatbot-input-area {
+        padding:
+            9px;
+
+        gap: 6px;
+    }
+
+
+    .chatbot-input-area input {
+        min-width: 0;
+
+        padding:
+            10px 11px;
+
+        font-size: 12px;
+    }
+
+
+    .chatbot-input-area button {
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   EXTRA SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+    .chatbot {
+        right: 10px;
+    }
+
+    .chatbot-toggle {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+    .chatbot-window {
+        left: 7px;
+        right: 7px;
+
+        bottom: 70px;
+
+        height:
+            calc(100vh - 90px);
+
+        max-height:
+            calc(100vh - 90px);
+
+        border-radius: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT MOBILE CONTENT FROM HIDING UNDER NAVBAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding-top: 105px;
+    }
+
+    .content-section {
+        padding-top: 100px;
+    }
+
+    #researchersPage {
+        padding-top: 100px;
+    }
+}
