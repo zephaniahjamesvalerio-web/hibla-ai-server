@@ -2922,6 +2922,137 @@ if (navbar) {
         );
     }
 }
+/* =========================================================
+   MOBILE NAVBAR MENU
+========================================================= */
+
+const mobileMenuToggle =
+    document.getElementById("mobileMenuToggle");
+
+if (
+    navbar &&
+    mobileMenuToggle
+) {
+
+    mobileMenuToggle.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const isOpen =
+                navbar.classList.toggle(
+                    "mobile-open"
+                );
+
+            mobileMenuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            mobileMenuToggle.textContent =
+                isOpen
+                    ? "✕"
+                    : "☰";
+
+            mobileMenuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Isara ang menu"
+                    : "Buksan ang menu"
+            );
+        }
+    );
+
+
+    /* CLOSE AFTER CLICKING A NAV BUTTON */
+
+    document
+        .querySelectorAll(
+            "#navbar .nav-btn"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    navbar.classList.remove(
+                        "mobile-open"
+                    );
+
+                    mobileMenuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    mobileMenuToggle.textContent =
+                        "☰";
+
+                    mobileMenuToggle.setAttribute(
+                        "aria-label",
+                        "Buksan ang menu"
+                    );
+                }
+            );
+        });
+
+
+    /* CLOSE WHEN CLICKING OUTSIDE */
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            if (
+                navbar.classList.contains(
+                    "mobile-open"
+                ) &&
+                !navbar.contains(event.target)
+            ) {
+
+                navbar.classList.remove(
+                    "mobile-open"
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenuToggle.textContent =
+                    "☰";
+            }
+        }
+    );
+
+
+    /* CLOSE WITH ESC */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                navbar.classList.remove(
+                    "mobile-open"
+                );
+
+                mobileMenuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenuToggle.textContent =
+                    "☰";
+            }
+        }
+    );
+}
     /* =========================================================
        CHATBOT
     ========================================================= */
