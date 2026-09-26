@@ -548,7 +548,7 @@ button:focus-visible {
    MOBILE NAVIGATION
    ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     #navbar {
         top:
@@ -4320,9 +4320,8 @@ and (max-width: 1000px) {
    ========================================================= */
 
 .mobile-menu-toggle {
-    display: none;
+    display: none !important;
 }
-
 
 /* =========================================================
    MOBILE NAVBAR
