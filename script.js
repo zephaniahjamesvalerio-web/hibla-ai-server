@@ -555,169 +555,368 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================================================
        ADDITIONAL MATERIALS
     ========================================================= */
-const additionalMaterials = {
-    1: {
-        title: "Alam Mo Ba?",
-        subtitle: "Sa Dakong Silangan",
-        type: "trivia",
-        introduction: "Tuklasin ang ilang mahahalagang kaalaman tungkol sa panitikan, simbolismo, at mensahe ng akda.",
-        facts: [
-            {
-                title: "Panitikan at pagkamakabayan",
-                text: "Maraming akdang Pilipino ang gumamit ng panitikan upang ipahayag ang pagmamahal sa bayan at ang hangarin para sa kalayaan."
-            },
-            {
-                title: "Ang Silangan bilang simbolo",
-                text: "Sa maraming akda, ang pagsikat ng araw ay maaaring sumagisag sa bagong simula, pag-asa, at pagbabago."
-            },
-            {
-                title: "Kapangyarihan ng simbolismo",
-                text: "Ang simbolismo ay paggamit ng isang bagay, tao, o pangyayari upang kumatawan sa mas malalim na ideya."
-            },
-            {
-                title: "Tula bilang pagpapahayag",
-                text: "Maaaring gamitin ang tula upang ipahayag ang damdamin, paniniwala, karanasan, at pananaw tungkol sa lipunan."
-            }
-        ]
-    },
+    /* =========================================================
+       ADDITIONAL MATERIALS
+    ========================================================= */
 
-    2: {
-        title: "Alam Mo Ba?",
-        subtitle: "Kahapon, Ngayon at Bukas",
-        type: "trivia",
-        introduction: "Kilalanin ang ilang kaalaman tungkol sa dulang Pilipino at panitikang rehiyonal.",
-        facts: [
-            {
-                title: "Isang dulang makabayan",
-                text: "Isinulat ni Aurelio V. Tolentino ang Kahapon, Ngayon at Bukas, isang dulang tumatalakay sa kalagayan at pakikibaka ng bayan."
-            },
-            {
-                title: "May bersiyong Kapampangan",
-                text: "Ang Napon, Ngeni at Bukas ay pamagat na Kapampangan na kaugnay ng Kahapon, Ngayon at Bukas."
-            },
-            {
-                title: "Dulang Cebuano",
-                text: "Si Vicente Sotto ay kilala sa kaniyang ambag sa panitikang Cebuano. Kabilang sa kaniyang mga dula ang Elena."
-            },
-            {
-                title: "Panitikang rehiyonal",
-                text: "Ang mga dulang nakasulat sa iba't ibang wikang Pilipino ay bahagi ng mayamang kasaysayan ng teatro at panitikan sa bansa."
-            }
-        ]
-    },
+    const additionalMaterials = {
 
-    3: {
-        title: "Alam Mo Ba?",
-        subtitle: "Filipino Time",
-        type: "trivia",
-        introduction: "Narito ang ilang kaalaman tungkol sa oras, disiplina, at pananagutan sa pang-araw-araw na buhay.",
-        facts: [
-            {
-                title: "Ang oras ay may halaga",
-                text: "Ang pagiging maagap ay nagpapakita ng paggalang sa oras ng sarili at ng ibang tao."
-            },
-            {
-                title: "Disiplina sa araw-araw",
-                text: "Ang simpleng pagpaplano ng gawain at paghahanda nang maaga ay makatutulong upang maging mas organisado."
-            },
-            {
-                title: "May epekto sa kapwa",
-                text: "Kapag hindi nasusunod ang napagkasunduang oras, maaaring maantala ang gawain at paghihintay ng ibang tao."
-            },
-            {
-                title: "Responsibilidad ang pagiging maagap",
-                text: "Ang pagpapahalaga sa oras ay isang paraan ng pagpapakita ng pagiging responsable sa paaralan, tahanan, at komunidad."
-            }
-        ]
-    },
+        1: {
+            title: "Tukuyin Mo!",
+            type: "truefalse",
 
-    4: {
-        title: "Alam Mo Ba?",
-        subtitle: "Ang Tunay na Sampung Utos",
-        type: "trivia",
-        introduction: "Kilalanin ang ilang mahahalagang ideya mula sa El Verdadero Decalogo ni Apolinario Mabini.",
-        facts: [
-            {
-                title: "Isinulat noong 1898",
-                text: "Isinulat ni Apolinario Mabini ang El Verdadero Decalogo noong 1898. Naglalaman ito ng mga prinsipyong gumagabay sa asal at pananagutan."
-            },
-            {
-                title: "Pag-aaral at kaalaman",
-                text: "Binibigyang-halaga ng akda ang paglinang ng isip at kakayahan sa pamamagitan ng pag-aaral at pagsisikap."
-            },
-            {
-                title: "Pagmamahal sa bayan",
-                text: "Isa sa mga pangunahing kaisipan ng akda ang pagpapahalaga sa Inang Bayan at ang hangaring makamit ang kalayaan nito."
-            },
-            {
-                title: "Kalayaan at kasarinlan",
-                text: "Tinatalakay ng mga utos ang kalayaan at kasarinlan bilang mahahalagang bagay para sa bayan at sa mga mamamayan."
-            },
-            {
-                title: "Kapangyarihan ng mamamayan",
-                text: "May mga kaisipan sa akda tungkol sa pamamahala at sa kahalagahan ng kapangyarihang nagmumula sa mamamayan."
-            },
-            {
-                title: "Paggalang sa kapwa",
-                text: "Hinihikayat ng akda ang pagmamahal sa kapwa at ang pagtrato sa iba nang may paggalang at malasakit."
-            }
-        ]
-    },
+            instructions: `
+                Tukuyin kung ang nakasaad ay
+                <strong>Katotohanan</strong>. Kung hindi, palitan
+                ang salita o mga salitang may salungguhit ng wastong sagot.
+            `,
 
-    5: {
-        title: "Alam Mo Ba?",
-        subtitle: "Wikang Pambansa",
-        type: "trivia",
-        introduction: "Alamin ang ilang kaalaman tungkol sa wikang pambansa at ang papel nito sa pagkakakilanlan ng mga Pilipino.",
-        facts: [
-            {
-                title: "Wika at pagkakakilanlan",
-                text: "Ang wika ay mahalagang bahagi ng kultura at pagkakakilanlan ng isang pangkat o bansa."
-            },
-            {
-                title: "Wika bilang tulay",
-                text: "Nakakatulong ang wikang nauunawaan ng mga tao upang maibahagi nila ang mga ideya at mas madaling magkaunawaan."
-            },
-            {
-                title: "Maraming wika sa Pilipinas",
-                text: "Mayaman ang Pilipinas sa mga wika. Ang mga wikang ito ay bahagi ng pamana at kultura ng iba't ibang pamayanan."
-            },
-            {
-                title: "Pagpapayaman ng wika",
-                text: "Patuloy na umuunlad ang wika sa pamamagitan ng paggamit, panitikan, edukasyon, at pakikipag-ugnayan sa iba."
-            }
-        ]
-    },
+            questions: [
+                {
+                    number: 1,
+                    question:
+                        "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>."
+                },
+                {
+                    number: 2,
+                    question:
+                        "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel."
+                },
+                {
+                    number: 3,
+                    question:
+                        "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa."
+                },
+                {
+                    number: 4,
+                    question:
+                        "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>."
+                },
+                {
+                    number: 5,
+                    question:
+                        "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>."
+                },
+                {
+                    number: 6,
+                    question:
+                        "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo."
+                },
+                {
+                    number: 7,
+                    question:
+                        "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag."
+                },
+                {
+                    number: 8,
+                    question:
+                        "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan."
+                },
+                {
+                    number: 9,
+                    question:
+                        "Ang <u>palasyo</u> ay kulong ng malaking lambat."
+                },
+                {
+                    number: 10,
+                    question:
+                        "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal."
+                }
+            ]
+        },
 
-    6: {
-        title: "Alam Mo Ba?",
-        subtitle: "Mga Ibong Mandaragit",
-        type: "trivia",
-        introduction: "Tuklasin ang ilang kaalaman tungkol sa nobela, sa may-akda nito, at sa mga paksang panlipunang tinatalakay.",
-        facts: [
-            {
-                title: "Isang nobelang panlipunan",
-                text: "Ang Mga Ibong Mandaragit ni Amado V. Hernandez ay tumatalakay sa mga suliraning panlipunan at sa paghahangad ng katarungan."
-            },
-            {
-                title: "Si Amado V. Hernandez",
-                text: "Si Hernandez ay makata, manunulat, mamamahayag, at aktibista na kilala sa mga akdang tumatalakay sa buhay at kalagayan ng mga Pilipino."
-            },
-            {
-                title: "Katiwalian at kapangyarihan",
-                text: "Kabilang sa mga paksang sinusuri sa nobela ang katiwalian at ang epekto ng maling paggamit ng kapangyarihan."
-            },
-            {
-                title: "Panitikan at lipunan",
-                text: "Maaaring magsilbing paraan ang nobela upang suriin ang mga suliranin ng lipunan at pag-isipan ang mga posibleng pagbabago."
-            },
-            {
-                title: "Katarungan at pananagutan",
-                text: "Hinihikayat ng mga paksang panlipunan ang mambabasa na pag-isipan ang kahalagahan ng pananagutan at makatarungang pakikitungo."
-            }
-        ]
-    }
-};
+        2: {
+            title: "Alamin Natin!",
+            type: "reading",
+
+            content: `
+                <p style="text-align: justify;">
+                    Maituturing na rehiyonal na dula ang
+                    <strong>“Kahapon, Ngayon at Bukas”</strong>
+                    ni Aurelio V. Tolentino na may pamagat na
+                    <strong>“Napon, Ngeni at Bukas”</strong>
+                    sa Kapampangan.
+                </p>
+
+                <p style="text-align: justify;">
+                    Ang mga rehiyonal na dula na nasusulat sa mga
+                    rehiyonal na wika sa Pilipinas ay kapantay rin
+                    ng mga dulang nasusulat sa Tagalog.
+                </p>
+
+                <p style="text-align: justify;">
+                    <strong>“Elena”</strong> naman ang pamagat ng
+                    dulang Cebuano ni Vicente Sotto noong 1902.
+                </p>
+
+                <p style="text-align: justify;">
+                    <strong>“Ang Ayat Iti Ili ken Dadduma Pay a Drama”</strong>
+                    (Pag-ibig sa Bayan at Iba pang Drama) ni
+                    Jose Garvida Flores ay halimbawa ng dulang Ilocano.
+                </p>
+
+                <p style="text-align: justify;">
+                    Ang mga dulang rehiyonal sa iba't ibang lugar
+                    sa Pilipinas ay may ambag ding malaki sa
+                    pag-unlad ng dula o teatro sa bansa.
+                </p>
+            `,
+
+            keywords: [
+                "Rehiyonal na Dula",
+                "Kapampangan",
+                "Cebuano",
+                "Ilocano",
+                "Kahapon, Ngayon at Bukas",
+                "Napon, Ngeni at Bukas",
+                "Elena",
+                "Ang Ayat Iti Ili ken Dadduma Pay a Drama",
+                "Vicente Sotto",
+                "Jose Garvida Flores",
+                "Aurelio V. Tolentino",
+                "Kastila",
+                "Amerikano",
+                "Teatro"
+            ]
+        },
+
+        4: {
+            title: "Tandaan Mo!",
+            subtitle: "El Verdadero Decalogo ni Apolinario Mabini",
+            type: "commandments",
+
+            introduction: `
+                Mayo ng 1898 nang sinulat ni
+                <strong>Apolinario Mabini</strong> ang
+                <strong>El Verdadero Decalogo</strong> —
+                o <strong>Ang Tunay na Sampung Utos</strong>.
+                Ito ang kanyang habilin sa ating bayan.
+            `,
+
+            commandments: [
+                {
+                    number: "Una",
+                    text: `
+                        Ibigin mo ang Diyos at ang iyong puri ng lalo
+                        sa lahat ng bagay. Ang paghahangad ng puri ang
+                        siya lamang makapipigil sa iyo sa pagbubulaan
+                        at makapipigil na huwag kang suminsay sa daan
+                        ng katuwiran at laging magtaglay ng kasipagan.
+                    `,
+                    keywords: [
+                        "Diyos",
+                        "Puri",
+                        "Katuwiran",
+                        "Kasipagan"
+                    ]
+                },
+                {
+                    number: "Ikalawa",
+                    text: `
+                        Sambahin mo ang Dios sa kaparaang lalong
+                        minamarapat ng iyong bait at kalooban o
+                        konsyensya.
+                    `,
+                    keywords: [
+                        "Pagsamba sa Diyos",
+                        "Bait",
+                        "Kalooban",
+                        "Konsensya"
+                    ]
+                },
+                {
+                    number: "Ikatlo",
+                    text: `
+                        Dagdagan mong pilit ang talos ng isip at
+                        katutubong alam na ipinagkaloob ng Diyos sa iyo
+                        sa pamamagitan ng pag-aaral, at magsumakit ka
+                        ng ubos lakas sa gawang kinahihiligan ng iyong
+                        loob upang matipon sa iyo ang lalong maraming
+                        kagalingan at sa ganitong paraan ay makatulong
+                        ka sa ikasusulong ng lahat.
+                    `,
+                    keywords: [
+                        "Pag-aaral",
+                        "Kaalaman",
+                        "Kagalingan",
+                        "Pagsisikap",
+                        "Pagtulong"
+                    ]
+                },
+                {
+                    number: "Ikaapat",
+                    text: `
+                        Ibigin mo ang iyong Inang Bayan ikalawa sa
+                        Dios at sa iyong puri at higit sa iyong sarili,
+                        sapagkat siya ang nakaisa-isang Paraisong
+                        pinaglagyan sa iyo ng Diyos sa buhay na ito.
+                    `,
+                    keywords: [
+                        "Inang Bayan",
+                        "Pagmamahal sa Bayan",
+                        "Puri",
+                        "Diyos"
+                    ]
+                },
+                {
+                    number: "Ikalima",
+                    text: `
+                        Pagpilitan mo ang kalayaan ng iyong bayan
+                        bago ang iyong sarili, sapagkat kung malaya
+                        siya at lalaya rin ikaw at ang iyong kamag-anakan.
+                    `,
+                    keywords: [
+                        "Kalayaan",
+                        "Bayan",
+                        "Sarili",
+                        "Kamag-anakan"
+                    ]
+                },
+                {
+                    number: "Ikaanim",
+                    text: `
+                        Pagpilitan mo ang kasarinlan ng iyong bayan,
+                        sapagkat ikaw lamang ang tunay na makapagmamasakit
+                        sa kanyang ikasusulong at ikatatanghal.
+                    `,
+                    keywords: [
+                        "Kasarinlan",
+                        "Bayan",
+                        "Pagsulong",
+                        "Pagtatanghal"
+                    ]
+                },
+                {
+                    number: "Ikapito",
+                    text: `
+                        Huwag mong kilalanin sa loob ng iyong bayan ang
+                        kapangyarihan ng sino mang tao na hindi inilagay
+                        ninyong magkakababayan. Ang taong ituro at ihalal
+                        ng mga konsyensya ng sangkabayanan ang siya lamang
+                        makapagtataglay ng tunay na kapangyarihan.
+                    `,
+                    keywords: [
+                        "Halalan",
+                        "Konsensya",
+                        "Mamamayan",
+                        "Tunay na Kapangyarihan"
+                    ]
+                },
+                {
+                    number: "Ikawalo",
+                    text: `
+                        Ihanap mong pilit ang iyong bayan ng Republica,
+                        yaon baga ang lahat na namamahala ay palagay ng
+                        bayan, at huwag isipin kailan man ang Monarkiya,
+                        ang pagkakaroon baga ng hari.
+                    `,
+                    keywords: [
+                        "Republika",
+                        "Bayan",
+                        "Pamamahala",
+                        "Monarkiya"
+                    ]
+                },
+                {
+                    number: "Ikasiyam",
+                    text: `
+                        Ibigin mo ang kapwa mo tao kaparis ng pag-ibig
+                        mo sa iyong sarili, sapagkat siya’y binigyan ng
+                        Diyos, at ikaw ay ganoon din naman, ng katungkulang
+                        tulungan ka at huwag niyang gawin sa iyo ang di
+                        niya ibig na gawin mo sa kaniya.
+                    `,
+                    keywords: [
+                        "Kapwa",
+                        "Pagmamahal",
+                        "Pagtutulungan",
+                        "Diyos"
+                    ]
+                },
+                {
+                    number: "Ikasampu",
+                    text: `
+                        Palalaluin nang kaunti sa loob mo ang iyong
+                        kababayan sa iyong kapwa tao; aariin mong palagi
+                        siya na parang isang katoto, kapatid kaya o kasama
+                        man lamang, palibhasa’y iisa ang inyong kapalaran,
+                        iisa din ang inyong tuwa at kapighatian.
+                    `,
+                    keywords: [
+                        "Kababayan",
+                        "Pagkakaisa",
+                        "Kapatid",
+                        "Magkakasama",
+                        "Iisang Kapalaran"
+                    ]
+                }
+            ]
+        },
+
+        6: {
+            title: "Sagutan Natin!",
+            type: "identification",
+
+            instructions: `
+                Ang sumusunod ay mula sa Rebyu ng nobelang
+                <strong>“Mga Ibong Mandaragit.”</strong>
+                Isulat sa patlang ang tinutukoy sa bawat bilang.
+            `,
+
+            questions: [
+                {
+                    number: 1,
+                    question:
+                        "Ito ang taon nang maisulat ang nobelang Mga Ibong Mandaragit."
+                },
+                {
+                    number: 2,
+                    question:
+                        "Siya ang awtor ng English na bersyon ng nobela na lumabas noong 2022."
+                },
+                {
+                    number: 3,
+                    question:
+                        "Siya ang pangunahing tauhan sa nobela."
+                },
+                {
+                    number: 4,
+                    question:
+                        "Kung sa Noli Me Tangere ay may Pilosopo Tasyo, siya naman ang katumbas niya sa nobela."
+                },
+                {
+                    number: 5,
+                    question:
+                        "Ito ang pamagat ng tulang nasulat ni Amado V. Hernandez sa kulungan na nagpapakita ng kanyang kalagayan doon."
+                },
+                {
+                    number: 6,
+                    question:
+                        "Ano ang pamagat ng tula ni Amado V. Hernandez na binubuo ng 5,000 taludtod?"
+                },
+                {
+                    number: 7,
+                    question:
+                        "Sa nobela, ito ang taon nang pagsisimula ng naratibo."
+                },
+                {
+                    number: 8,
+                    question:
+                        "Ito ang kabuuang bilang ng kabanata ng nobela."
+                },
+                {
+                    number: 9,
+                    question:
+                        "Sa nobela, ito ang tawag sa patagong pinagbebentahan ng mga gamit sa panahon ng Hapon."
+                },
+                {
+                    number: 10,
+                    question:
+                        "Ito ang pamagat ng pahayagan."
+                }
+            ]
+        }
+    };
     /* =========================================================
        DYNAMIC CSS
     ========================================================= */
@@ -1057,118 +1256,92 @@ const additionalMaterials = {
                 object-fit: contain;
                 border-radius: 8px;
             }
+/* =================================================
+               ADDITIONAL MATERIAL
+ ================================================= */
 
-      /* =================================================
-   ALAM MO BA? TRIVIA
-================================================= */
+            .additional-material-button {
+                width: 100%;
+                margin-top: 25px;
+                padding: 15px 20px;
+                border: 2px solid #7d0b12;
+                border-radius: 14px;
+                background: #ffffff;
+                color: #7d0b12;
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
 
-.additional-material-button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 15px 20px;
-    border: 2px solid #7d0b12;
-    border-radius: 14px;
-    background: #ffffff;
-    color: #7d0b12;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
+            .additional-material-button:hover {
+                background: #7d0b12;
+                color: #ffffff;
+                transform: translateY(-2px);
+            }
 
-.additional-material-button:hover {
-    background: #7d0b12;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
+            .additional-material-list {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin-top: 20px;
+            }
 
-.trivia-introduction {
-    margin: 18px 0 24px;
-    padding: 18px 20px;
-    background: #fff8f0;
-    border: 1px solid rgba(199, 155, 82, 0.35);
-    border-left: 4px solid #c79b52;
-    border-radius: 12px;
-    color: #444444;
-    font-size: 15px;
-    line-height: 1.8;
-}
+            .additional-question {
+                background: #faf7f7;
+                border-left: 4px solid #7d0b12;
+                padding: 18px;
+                border-radius: 12px;
+            }
 
-.trivia-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
+            .additional-question-number {
+                color: #7d0b12;
+                font-weight: 900;
+                margin-bottom: 7px;
+            }
 
-.trivia-card {
-    display: grid;
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
-    align-items: start;
-    padding: 19px;
-    background: #faf7f7;
-    border: 1px solid rgba(125, 11, 18, 0.10);
-    border-radius: 14px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+            .additional-question-text {
+                color: #333333;
+                line-height: 1.7;
+            }
 
-.trivia-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(125, 11, 18, 0.08);
-}
+            .material-reading {
+                color: #444444;
+                line-height: 1.85;
+                font-size: 16px;
+            }
 
-.trivia-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    background: #7d0b12;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 900;
-}
+            .material-reading p {
+                margin-bottom: 18px;
+            }
 
-.trivia-title {
-    margin: 0 0 7px;
-    color: #7d0b12;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 1.4;
-}
+            .keyword-container,
+            .commandment-keywords {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 20px;
+            }
 
-.trivia-text {
-    margin: 0;
-    color: #444444;
-    font-size: 14px;
-    line-height: 1.8;
-}
+            .keyword-tag,
+            .commandment-keyword {
+                display: inline-block;
+                padding: 7px 12px;
+                border-radius: 20px;
+                background: #7d0b12;
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
+            }
 
-@media (max-width: 650px) {
-    .trivia-card {
-        grid-template-columns: 34px 1fr;
-        gap: 11px;
-        padding: 15px;
-    }
-
-    .trivia-number {
-        width: 32px;
-        height: 32px;
-        border-radius: 10px;
-        font-size: 12px;
-    }
-
-    .trivia-title {
-        font-size: 15px;
-    }
-
-    .trivia-text {
-        font-size: 13px;
-    }
-}
+            .commandment-card {
+                background: #faf7f7;
+                border: 1px solid rgba(125, 11, 18, 0.12);
+                border-radius: 15px;
+                padding: 20px;
+                margin-bottom: 16px;
+            }
             /* =================================================
                MOBILE
             ================================================= */
@@ -1980,24 +2153,17 @@ const additionalMaterials = {
     ========================================================= */
 
     function openAdditionalMaterial(weekNumber) {
-    const material = additionalMaterials[weekNumber];
+ const material =
+            additionalMaterials[weekNumber];
 
+        if (!material) {
+
+            console.warn(
+                "Additional material not found:",
+                weekNumber
+            );
     if (!material) {
         console.warn("Trivia not found:", weekNumber);
-        return;
-    }
-
-    createAdditionalMaterialModal();
-
-    const modal = document.getElementById(
-        "additionalMaterialModal"
-    );
-
-    const body = document.getElementById(
-        "additionalMaterialBody"
-    );
-
-    if (!modal || !body) {
         return;
     }
 
@@ -2599,26 +2765,9 @@ const additionalMaterials = {
    ALAM MO BA? TRIVIA
 ----------------------------------------------- */
 
-const additionalButton = event.target.closest(
-    ".additional-material-button"
-);
-
-if (additionalButton) {
-    event.preventDefault();
-
-    const week = Number(
-        additionalButton.dataset.week
-    );
-
-    if (
-        Number.isInteger(week) &&
-        additionalMaterials[week]
-    ) {
-        openAdditionalMaterial(week);
-    }
-
-    return;
-}
+document.addEventListener(
+        "click",
+        event => {
 
             /* -----------------------------------------------
                SECTION BUTTONS
