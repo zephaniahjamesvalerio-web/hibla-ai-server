@@ -12,11 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =========================================================
        LESSON DATA
-       IMPORTANT:
-       - theme = SHORT PREVIEW
-       - themeDescription = LONG DESCRIPTION
-       - objective = SHORT PREVIEW
-       - objectiveDescription = LONG DESCRIPTION
     ========================================================= */
 
     const lessons = {
@@ -249,36 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
             materialType: "text",
 
             youtube: "",
-            materialImage: "images/materials/filipinotime.png",
-
-            processingTitle:
-                "Sagot-suri!",
-
-            processingInstructions:
-                "Sagutin ang mga sumusunod na tanong batay sa iyong pag-unawa sa akdang “Filipino Time”.",
-
-            processingQuestions: [
-                {
-                    number: 1,
-                    question: "Ano ang tinutukoy na “Filipino Time”?"
-                },
-                {
-                    number: 2,
-                    question: "Ano ang mga dahilan kung bakit nagkakaroon ng kaugalian ng pagiging huli?"
-                },
-                {
-                    number: 3,
-                    question: "Ano ang mga negatibong epekto ng pagiging palaging huli?"
-                },
-                {
-                    number: 4,
-                    question: "Bakit mahalaga ang pagpapahalaga sa oras?"
-                },
-                {
-                    number: 5,
-                    question: "Paano mo maipapakita ang pagiging responsable sa oras?"
-                }
-            ]
+            materialImage: "images/materials/filipinotime.png"
         },
 
         /* =====================================================
@@ -436,36 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
             youtube:
                 "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
 
-            materialImage: "",
-
-            processingTitle:
-                "Ilapat natin!",
-
-            processingInstructions:
-                "Unawain ang talumpati ni Manuel L. Quezon tungkol sa Wikang Pambansa. Sagutin ang mga sumusunod na tanong batay sa akda.",
-
-            processingQuestions: [
-                {
-                    number: 1,
-                    question: "Bakit nais ni Manuel L. Quezon na magkaroon ng sariling wikang pambansa ang Pilipinas?"
-                },
-                {
-                    number: 2,
-                    question: "Ano ang kaugnayan ng wikang pambansa sa pagkakaroon ng pambansang kamalayan?"
-                },
-                {
-                    number: 3,
-                    question: "Bakit nahirapan si Quezon na makipag-usap sa kaniyang mga kababayan sa iba't ibang lalawigan?"
-                },
-                {
-                    number: 4,
-                    question: "Ano ang ipinakita ni Quezon tungkol sa kaniyang pagiging bukas sa paggamit ng ibang katutubong wika?"
-                },
-                {
-                    number: 5,
-                    question: "Paano nakatutulong ang isang wikang ginagamit ng lahat sa pagkakaisa ng mga Pilipino?"
-                }
-            ]
+            materialImage: ""
         },
 
         /* =====================================================
@@ -553,75 +490,37 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     /* =========================================================
-       ADDITIONAL MATERIALS
-    ========================================================= */
-    /* =========================================================
-       ADDITIONAL MATERIALS
+       ADDITIONAL MATERIALS (TRIVIA & READING MATERIALS ONLY)
     ========================================================= */
 
     const additionalMaterials = {
 
         1: {
-            title: "Tukuyin Mo!",
-            type: "truefalse",
+            title: "Alam Mo Ba? (Trivia)",
+            type: "reading",
 
-            instructions: `
-                Tukuyin kung ang nakasaad ay
-                <strong>Katotohanan</strong>. Kung hindi, palitan
-                ang salita o mga salitang may salungguhit ng wastong sagot.
+            content: `
+                <p style="text-align: justify;">
+                    Ang <strong>“Sa Dakong Silangan”</strong> ay isang tulang pangkasaysayan na isinulat ni Jose Corazon de Jesus noong <strong>1928</strong>. Ginamitan ito ng alegolya upang ilarawan ang kasaysayan ng Pilipinas sa ilalim ng pananakop ng Espanya at Amerika.
+                </p>
+
+                <p style="text-align: justify;">
+                    Sa tulang ito, ang karakter ni <strong>Haring Samuel</strong> ay simbolo ng Pamahalaang Amerikano, habang si <strong>Prinsipe Dolar</strong> naman ay kumakatawan sa impluwensya ng salapi at kapitalismo ng dayuhan.
+                </p>
+
+                <p style="text-align: justify;">
+                    Si <strong>Jose Corazon de Jesus</strong> (Huseng Batute) ay binansagang "Hari ng Balagtasan." Nagsulat siya ng libo-libong tula sa kaniyang kolum na <em>Buhay Maynila</em> sa pahayagang Taliba.
+                </p>
             `,
 
-            questions: [
-                {
-                    number: 1,
-                    question:
-                        "Ang simbolismong kinakatawan ni Haring Samuel ay ang <u>Espanya</u>."
-                },
-                {
-                    number: 2,
-                    question:
-                        "Si <u>Prinsipe Dolar</u> ang mabuting anak ni Haring Samuel."
-                },
-                {
-                    number: 3,
-                    question:
-                        "Si <u>Dakila</u> ay kasintahan ni Prinsesa Mandawa."
-                },
-                {
-                    number: 4,
-                    question:
-                        "Ang akdang “Sa Dakong Silangan” ay naisulat noong <u>1928</u>."
-                },
-                {
-                    number: 5,
-                    question:
-                        "Ang bandilang tinutukoy na may araw at tala ay ang bandila ng <u>Amerika</u>."
-                },
-                {
-                    number: 6,
-                    question:
-                        "Si <u>Duke Demorito</u> ay naghahangad ng paglaya ng Kaharian ni Haring Pilipo."
-                },
-                {
-                    number: 7,
-                    question:
-                        "Sa akda, binanggit na ang <u>ginto</u> na bilog ay nakabubulag."
-                },
-                {
-                    number: 8,
-                    question:
-                        "Ang matulis na <u>kuko</u> ng gintong dayuha’y tumarak sa dibdib ng lupang Silangan."
-                },
-                {
-                    number: 9,
-                    question:
-                        "Ang <u>palasyo</u> ay kulong ng malaking lambat."
-                },
-                {
-                    number: 10,
-                    question:
-                        "Ang <u>dayuhang utak</u> ay simbolismo ng kaisipang kolonyal."
-                }
+            keywords: [
+                "Jose Corazon de Jesus",
+                "Huseng Batute",
+                "1928",
+                "Alegorya",
+                "Haring Samuel",
+                "Prinsipe Dolar",
+                "Hari ng Balagtasan"
             ]
         },
 
@@ -674,9 +573,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Vicente Sotto",
                 "Jose Garvida Flores",
                 "Aurelio V. Tolentino",
-                "Kastila",
-                "Amerikano",
                 "Teatro"
+            ]
+        },
+
+        3: {
+            title: "Karagdagang Babasahin: Ang Oras sa Kulturang Pilipino",
+            type: "reading",
+
+            content: `
+                <p style="text-align: justify;">
+                    Ang konseptong <strong>“Filipino Time”</strong> ay nagsimula noong panahon ng pananakop ng mga Kastila. Dito, ang mga matataas na opisyal at mga prayle ay sadyang huling dumarating sa mga pagtitipon bilang simbolo ng kanilang kapangyarihan at mataas na antas sa lipunan.
+                </p>
+
+                <p style="text-align: justify;">
+                    Sa paglipas ng panahon, ang ganitong kaugalian ay pilit na binabago sa makabagong lipunang Pilipino sa pamamagitan ng kampanyang <strong>“Juan Time”</strong> na isinusulong ng DOST upang hikayatin ang bawat Pilipino na maging maagap at igalang ang oras ng iba.
+                </p>
+            `,
+
+            keywords: [
+                "Filipino Time",
+                "Disiplina",
+                "Kulturang Pilipino",
+                "Juan Time",
+                "DOST",
+                "Pagpapahalaga sa Oras"
             ]
         },
 
@@ -853,70 +774,58 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
 
-        6: {
-            title: "Sagutan Natin!",
-            type: "identification",
+        5: {
+            title: "Trivia: Ang Ama ng Wikang Pambansa",
+            type: "reading",
 
-            instructions: `
-                Ang sumusunod ay mula sa Rebyu ng nobelang
-                <strong>“Mga Ibong Mandaragit.”</strong>
-                Isulat sa patlang ang tinutukoy sa bawat bilang.
+            content: `
+                <p style="text-align: justify;">
+                    Nang ihayag ni Pangulong <strong>Manuel L. Quezon</strong> ang Kautusang Tagapagpaganap Blg. 134 noong Disyembre 30, 1937, pormal na itinaguyod ang Wikang Batay sa Tagalog bilang batayan ng Wikang Pambansa.
+                </p>
+
+                <p style="text-align: justify;">
+                    Mismong si Quezon ay nagmula sa Baler na nagsasalita ng Tagalog, ngunit nakita niya ang matinding pangangailangan na magkaroon ng iisang wika na magbubuklod sa mga isla ng Pilipinas upang magkaroon ng tunay na pambansang pagkakakilanlan.
+                </p>
             `,
 
-            questions: [
-                {
-                    number: 1,
-                    question:
-                        "Ito ang taon nang maisulat ang nobelang Mga Ibong Mandaragit."
-                },
-                {
-                    number: 2,
-                    question:
-                        "Siya ang awtor ng English na bersyon ng nobela na lumabas noong 2022."
-                },
-                {
-                    number: 3,
-                    question:
-                        "Siya ang pangunahing tauhan sa nobela."
-                },
-                {
-                    number: 4,
-                    question:
-                        "Kung sa Noli Me Tangere ay may Pilosopo Tasyo, siya naman ang katumbas niya sa nobela."
-                },
-                {
-                    number: 5,
-                    question:
-                        "Ito ang pamagat ng tulang nasulat ni Amado V. Hernandez sa kulungan na nagpapakita ng kanyang kalagayan doon."
-                },
-                {
-                    number: 6,
-                    question:
-                        "Ano ang pamagat ng tula ni Amado V. Hernandez na binubuo ng 5,000 taludtod?"
-                },
-                {
-                    number: 7,
-                    question:
-                        "Sa nobela, ito ang taon nang pagsisimula ng naratibo."
-                },
-                {
-                    number: 8,
-                    question:
-                        "Ito ang kabuuang bilang ng kabanata ng nobela."
-                },
-                {
-                    number: 9,
-                    question:
-                        "Sa nobela, ito ang tawag sa patagong pinagbebentahan ng mga gamit sa panahon ng Hapon."
-                },
-                {
-                    number: 10,
-                    question:
-                        "Ito ang pamagat ng pahayagan."
-                }
+            keywords: [
+                "Manuel L. Quezon",
+                "Wikang Pambansa",
+                "Disyembre 30, 1937",
+                "Kautusang Tagapagpaganap Blg. 134",
+                "Pagkakaisa"
+            ]
+        },
+
+        6: {
+            title: "Dagdag na Kaalaman: Ang Nobelang “Mga Ibong Mandaragit”",
+            type: "reading",
+
+            content: `
+                <p style="text-align: justify;">
+                    Isinulat ni <strong>Amado V. Hernandez</strong> ang malaking bahagi ng nobelang <em>Mga Ibong Mandaragit</em> habang siya ay nakakulong dahil sa kaniyang mga gawaing pampolitika at pakikipaglaban sa karapatan ng mga manggagawa.
+                </p>
+
+                <p style="text-align: justify;">
+                    Ang nobelang ito ay itinuturing na kasunod o rehiyon ng mga kaisipan mula sa <em>Noli Me Tangere</em> at <em>El Filibusterismo</em> ni Jose Rizal. Ang pangunahing tauhan na si <strong>Mando Plaridel</strong> ay sumisimbolo sa bagong henerasyon ng Pilipinong naghahangad ng tunay na pagbabago sa lipunan.
+                </p>
+
+                <p style="text-align: justify;">
+                    Pinarangalan si Amado V. Hernandez bilang <strong>Pambansang Alagad ng Sining sa Panitikan</strong> noong 1973 dahil sa kaniyang walang katulad na ambag sa panitikang nakikibaka.
+                </p>
+            `,
+
+            keywords: [
+                "Amado V. Hernandez",
+                "Mga Ibong Mandaragit",
+                "Mando Plaridel",
+                "Pambansang Alagad ng Sining",
+                "Jose Rizal",
+                "Katarungang Panlipunan"
             ]
         }
     };
+
     /* =========================================================
        DYNAMIC CSS
     ========================================================= */
@@ -1061,11 +970,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 outline: 3px solid rgba(125, 11, 18, 0.25);
                 outline-offset: 3px;
             }
-
-            /*
-             * IMPORTANT:
-             * Maikli lang ang card detail.
-             */
 
             .clickable-lesson-card .card-detail {
                 display: block;
@@ -1256,9 +1160,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 object-fit: contain;
                 border-radius: 8px;
             }
-/* =================================================
+
+            /* =================================================
                ADDITIONAL MATERIAL
- ================================================= */
+            ================================================= */
 
             .additional-material-button {
                 width: 100%;
@@ -1279,31 +1184,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 background: #7d0b12;
                 color: #ffffff;
                 transform: translateY(-2px);
-            }
-
-            .additional-material-list {
-                display: flex;
-                flex-direction: column;
-                gap: 18px;
-                margin-top: 20px;
-            }
-
-            .additional-question {
-                background: #faf7f7;
-                border-left: 4px solid #7d0b12;
-                padding: 18px;
-                border-radius: 12px;
-            }
-
-            .additional-question-number {
-                color: #7d0b12;
-                font-weight: 900;
-                margin-bottom: 7px;
-            }
-
-            .additional-question-text {
-                color: #333333;
-                line-height: 1.7;
             }
 
             .material-reading {
@@ -1342,6 +1222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 padding: 20px;
                 margin-bottom: 16px;
             }
+
             /* =================================================
                MOBILE
             ================================================= */
@@ -1709,10 +1590,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let html = "";
 
-        /* -----------------------------------------------------
-           AUTHOR
-        ----------------------------------------------------- */
-
         if (type === "author") {
 
             const image =
@@ -1765,11 +1642,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
 
-        /* -----------------------------------------------------
-           THEME
-           DITO LALABAS ANG MAHABANG THEME DESCRIPTION
-        ----------------------------------------------------- */
-
         else if (type === "theme") {
 
             html = `
@@ -1796,11 +1668,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
         }
-
-        /* -----------------------------------------------------
-           OBJECTIVE
-           DITO LALABAS ANG MAHABANG OBJECTIVE
-        ----------------------------------------------------- */
 
         else if (type === "objective") {
 
@@ -1829,69 +1696,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
         }
-
-        /* -----------------------------------------------------
-           PROCESSING
-        ----------------------------------------------------- */
-
-        else if (type === "processing") {
-
-            let questionsHTML = "";
-
-            if (
-                Array.isArray(
-                    lesson.processingQuestions
-                )
-            ) {
-
-                lesson.processingQuestions.forEach(
-                    item => {
-
-                        questionsHTML += `
-                            <div class="detail-box">
-
-                                <strong>
-                                    ${item.number}.
-                                </strong>
-
-                                <span class="modal-text">
-                                    ${item.question}
-                                </span>
-
-                            </div>
-                        `;
-                    }
-                );
-            }
-
-            html = `
-                <span class="modal-eyebrow">
-                    
-                </span>
-
-                <h2>
-                    ${
-                        lesson.processingTitle ||
-                        ""
-                    }
-                </h2>
-
-                <p class="modal-text">
-                    ${
-                        lesson.processingInstructions ||
-                        ""
-                    }
-                </p>
-
-                <div style="margin-top: 25px;">
-                    ${questionsHTML}
-                </div>
-            `;
-        }
-
-        /* -----------------------------------------------------
-           MATERIAL
-        ----------------------------------------------------- */
 
         else if (type === "material") {
 
@@ -2029,10 +1833,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
 
-        /* -----------------------------------------------------
-           FALLBACK
-        ----------------------------------------------------- */
-
         else {
 
             html = `
@@ -2049,10 +1849,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add("show");
 
         document.body.style.overflow = "hidden";
-
-        /* -----------------------------------------------------
-           AUTHOR IMAGE ERROR
-        ----------------------------------------------------- */
 
         const authorImage =
             body.querySelector(
@@ -2081,10 +1877,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
         }
-
-        /* -----------------------------------------------------
-           YOUTUBE IMAGE ERROR
-        ----------------------------------------------------- */
 
         const thumbnail =
             body.querySelector(
@@ -2124,10 +1916,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         }
 
-        /* -----------------------------------------------------
-           IMAGE ZOOM
-        ----------------------------------------------------- */
-
         const zoomImage =
             body.querySelector(
                 "[data-zoom-image]"
@@ -2149,204 +1937,62 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       ADDITIONAL MATERIAL
+       ADDITIONAL MATERIAL MODAL
     ========================================================= */
 
     function openAdditionalMaterial(weekNumber) {
- const material =
-            additionalMaterials[weekNumber];
+
+        const material = additionalMaterials[weekNumber];
 
         if (!material) {
+            console.warn("Material not found for week:", weekNumber);
+            return;
+        }
 
-            console.warn(
-                "Additional material not found:",
-                weekNumber
-            );
-    if (!material) {
-        console.warn("Trivia not found:", weekNumber);
-        return;
-    }
+        createAdditionalMaterialModal();
 
-    let html = `
-        <span class="modal-eyebrow">
-            HIBLA-PANITIKAN • TRIVIA
-        </span>
+        const modal = document.getElementById("additionalMaterialModal");
+        const body = document.getElementById("additionalMaterialBody");
 
-        <h2>${material.title || "Alam Mo Ba?"}</h2>
-    `;
+        if (!modal || !body) return;
 
-    if (material.subtitle) {
-        html += `
-            <p class="modal-text">
-                <strong>${material.subtitle}</strong>
-            </p>
+        let html = `
+            <span class="modal-eyebrow">
+                KARAGDAGANG MATERIAL / TRIVIA
+            </span>
+
+            <h2>${material.title || "Dagdag Kaalaman"}</h2>
         `;
-    }
 
-    html += `
-        <div class="trivia-introduction">
-            ${material.introduction || "Tuklasin ang mga kaalaman tungkol sa aralin."}
-        </div>
-
-        <div class="trivia-list">
-    `;
-
-    if (
-        material.type === "trivia" &&
-        Array.isArray(material.facts) &&
-        material.facts.length > 0
-    ) {
-        material.facts.forEach((fact, index) => {
+        if (material.subtitle) {
             html += `
-                <article class="trivia-card">
-                    <div class="trivia-number">
-                        ${index + 1}
-                    </div>
-
-                    <div>
-                        <h3 class="trivia-title">
-                            ${fact.title || "Trivia"}
-                        </h3>
-
-                        <p class="trivia-text">
-                            ${fact.text || ""}
-                        </p>
-                    </div>
-                </article>
-            `;
-        });
-    } else {
-        html += `
-            <div class="detail-box">
                 <p class="modal-text">
-                    Wala pang trivia na nailagay para sa araling ito.
+                    <strong>${material.subtitle}</strong>
                 </p>
-            </div>
-        `;
-    }
-
-    html += `
-        </div>
-    `;
-
-    body.innerHTML = html;
-
-    modal.classList.add("show");
-    document.body.style.overflow = "hidden";
-}
-
-        /* -----------------------------------------------------
-           QUESTIONS
-        ----------------------------------------------------- */
-
-        if (
-            material.type === "truefalse" ||
-            material.type === "identification"
-        ) {
-
-            if (material.instructions) {
-
-                html += `
-                    <div class="detail-box">
-
-                        <p class="modal-text">
-                            ${material.instructions}
-                        </p>
-
-                    </div>
-                `;
-            }
-
-            html += `
-                <div class="additional-material-list">
-            `;
-
-            if (
-                Array.isArray(
-                    material.questions
-                ) &&
-                material.questions.length > 0
-            ) {
-
-                material.questions.forEach(
-                    item => {
-
-                        html += `
-                            <div class="additional-question">
-
-                                <div class="additional-question-number">
-                                    ${item.number}.
-                                </div>
-
-                                <div class="additional-question-text">
-                                    ${item.question}
-                                </div>
-
-                            </div>
-                        `;
-                    }
-                );
-
-            } else {
-
-                html += `
-                    <div class="detail-box">
-
-                        <p class="modal-text">
-                            Walang available na tanong.
-                        </p>
-
-                    </div>
-                `;
-            }
-
-            html += `
-                </div>
             `;
         }
 
         /* -----------------------------------------------------
-           READING
+           READING / TRIVIA
         ----------------------------------------------------- */
 
-        else if (
-            material.type === "reading"
-        ) {
+        if (material.type === "reading") {
 
             html += `
-                <div class="material-reading">
+                <div class="material-reading" style="margin-top: 20px;">
                     ${material.content || ""}
                 </div>
             `;
 
-            if (
-                Array.isArray(
-                    material.keywords
-                ) &&
-                material.keywords.length > 0
-            ) {
-
+            if (Array.isArray(material.keywords) && material.keywords.length > 0) {
                 html += `
                     <div class="detail-box">
-
-                        <h3>
-                            Mga Mahahalagang Salita
-                        </h3>
-
+                        <h3>Mga Mahahalagang Salita</h3>
                         <div class="keyword-container">
-
                             ${material.keywords
-                                .map(
-                                    keyword => `
-                                        <span class="keyword-tag">
-                                            ${keyword}
-                                        </span>
-                                    `
-                                )
+                                .map(keyword => `<span class="keyword-tag">${keyword}</span>`)
                                 .join("")}
-
                         </div>
-
                     </div>
                 `;
             }
@@ -2356,89 +2002,53 @@ document.addEventListener("DOMContentLoaded", () => {
            COMMANDMENTS
         ----------------------------------------------------- */
 
-        else if (
-            material.type === "commandments"
-        ) {
+        else if (material.type === "commandments") {
 
             html += `
                 <div class="detail-box">
-
                     <p class="modal-text">
-                        ${
-                            material.introduction ||
-                            ""
-                        }
+                        ${material.introduction || ""}
                     </p>
-
                 </div>
 
                 <div style="margin-top: 25px;">
             `;
 
-            if (
-                Array.isArray(
-                    material.commandments
-                ) &&
-                material.commandments.length > 0
-            ) {
-
-                material.commandments.forEach(
-                    item => {
-
-                        html += `
-                            <div class="commandment-card">
-
-                                <div class="commandment-number">
-                                    ${item.number}
-                                </div>
-
-                                <div class="commandment-text">
-                                    ${item.text}
-                                </div>
-
-                                <div class="commandment-keywords">
-
-                                    ${(item.keywords || [])
-                                        .map(
-                                            keyword => `
-                                                <span class="commandment-keyword">
-                                                    ${keyword}
-                                                </span>
-                                            `
-                                        )
-                                        .join("")}
-
-                                </div>
-
+            if (Array.isArray(material.commandments) && material.commandments.length > 0) {
+                material.commandments.forEach(item => {
+                    html += `
+                        <div class="commandment-card">
+                            <div class="commandment-number">
+                                <strong>${item.number}</strong>
                             </div>
-                        `;
-                    }
-                );
+                            <div class="commandment-text">
+                                ${item.text}
+                            </div>
+                            <div class="commandment-keywords">
+                                ${(item.keywords || [])
+                                    .map(keyword => `<span class="commandment-keyword">${keyword}</span>`)
+                                    .join("")}
+                            </div>
+                        </div>
+                    `;
+                });
             }
 
-            html += `
-                </div>
-            `;
+            html += `</div>`;
         }
 
         else {
-
             html += `
                 <div class="detail-box">
-
                     <p class="modal-text">
-                        Walang available na content
-                        para sa materyal na ito.
+                        Walang available na content para sa materyal na ito.
                     </p>
-
                 </div>
             `;
         }
 
         body.innerHTML = html;
-
         modal.classList.add("show");
-
         document.body.style.overflow = "hidden";
     }
 
@@ -2446,64 +2056,24 @@ document.addEventListener("DOMContentLoaded", () => {
        ADDITIONAL MATERIAL BUTTON
     ========================================================= */
 
-    function addAdditionalMaterialButton(
-        weekNumber,
-        container
-    ) {
+    function addAdditionalMaterialButton(weekNumber, container) {
 
-        if (!container) {
-            return;
-        }
+        if (!container) return;
 
-        const material =
-            additionalMaterials[weekNumber];
+        const material = additionalMaterials[weekNumber];
 
-        const lesson =
-            lessons[weekNumber];
+        if (!material) return;
 
-        const hasAdditionalMaterial =
-            Boolean(material);
-
-        const hasProcessing =
-            Boolean(
-                lesson &&
-                Array.isArray(
-                    lesson.processingQuestions
-                ) &&
-                lesson.processingQuestions.length > 0
-            );
-
-        if (
-            !hasAdditionalMaterial &&
-            !hasProcessing
-        ) {
-            return;
-        }
-
-        const oldButton =
-            container.querySelector(
-                ".additional-material-button"
-            );
-
+        const oldButton = container.querySelector(".additional-material-button");
         if (oldButton) {
             oldButton.remove();
         }
 
-        const button =
-            document.createElement("button");
-
+        const button = document.createElement("button");
         button.type = "button";
-
-        button.className =
-            "additional-material-button";
-
-        button.dataset.week =
-            String(weekNumber);
-
-        button.textContent =
-            hasProcessing
-                ? "Sagot-Suri!"
-                : material.title;
+        button.className = "additional-material-button";
+        button.dataset.week = String(weekNumber);
+        button.textContent = material.title || "Dagdag Kaalaman / Trivia";
 
         container.appendChild(button);
     }
@@ -2605,8 +2175,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =========================================================
        DISPLAY LESSON
-       IMPORTANT:
-       THEME + OBJECTIVE CARDS ARE SHORT
     ========================================================= */
 
     function displayLesson(
@@ -2761,11 +2329,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 180);
     }
 
-   /* -----------------------------------------------
-   ALAM MO BA? TRIVIA
------------------------------------------------ */
+    /* =========================================================
+       CLICK EVENT LISTENERS
+    ========================================================= */
 
-document.addEventListener(
+    document.addEventListener(
         "click",
         event => {
 
@@ -2875,7 +2443,7 @@ document.addEventListener(
             }
 
             /* -----------------------------------------------
-               ADDITIONAL MATERIAL
+               ADDITIONAL MATERIAL BUTTON
             ----------------------------------------------- */
 
             const additionalButton =
@@ -2892,31 +2460,8 @@ document.addEventListener(
                         additionalButton.dataset.week
                     );
 
-                const lesson =
-                    lessons[week];
-
-                if (!lesson) {
-                    return;
-                }
-
-                const hasProcessing =
-                    Array.isArray(
-                        lesson.processingQuestions
-                    ) &&
-                    lesson.processingQuestions.length > 0;
-
-                if (hasProcessing) {
-
-                    openInfoModal(
-                        "processing",
-                        lesson
-                    );
-
-                } else {
-
-                    openAdditionalMaterial(
-                        week
-                    );
+                if (week) {
+                    openAdditionalMaterial(week);
                 }
 
                 return;
@@ -3033,24 +2578,6 @@ document.addEventListener(
         );
     }
 
-/* =========================================================
-   RESEARCHERS
-========================================================= */
-/*
-    Researchers navigation is already handled
-    by the general [data-section] click handler.
-
-    HTML:
-    <button
-        class="nav-btn"
-        id="researcherButton"
-        data-section="researchersPage">
-        Mga Mananaliksik
-    </button>
-
-    This automatically calls:
-    showSection("researchersPage");
-*/
     /* =========================================================
        CONTACT
     ========================================================= */
