@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const weekContent = document.getElementById("weekContent");
     const researchersPage = document.getElementById("researchersPage");
     const contactModal = document.getElementById("contactModal");
+    const aboutButton = document.getElementById("aboutButton");
+
+aboutButton?.addEventListener("click", () => {
+    const aboutSection = document.getElementById("homeContent");
+
+    if (aboutSection) {
+        aboutSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+});
 
     /* =========================================================
        LESSON DATA
@@ -41,8 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             author: "Jose Corazon de Jesus (Huseng Batute)",
 
-            authorImage:
-                "images/authors/jose-corazon-de-jesus.jpeg",
+            authorImage: "images/authors/jose-corazon-de-jesus.jpeg",
 
             biography: `
                 Si <strong>Jose Corazon de Jesus</strong>, na higit na
@@ -59,8 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 kaisipang makabayan.
             `,
 
-            theme:
-                "Pag-asa, kalayaan, at pagbangon.",
+            theme: "Pag-asa, kalayaan, at pagbangon.",
 
             themeDescription: `
                 Ang tema ng “Sa Dakong Silangan” ay nakatuon sa pag-asa,
@@ -71,8 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 pananakop at magkaroon ng mas magandang kinabukasan.
             `,
 
-            objective:
-                "Maunawaan ang pangunahing mensahe at simbolismo ng akda.",
+            objective: "Maunawaan ang pangunahing mensahe at simbolismo ng akda.",
 
             objectiveDescription: `
                 Layunin ng aralin na matulungan ang mga mag-aaral na
@@ -88,8 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             material: "Audio-Visual/Interactive Presentation",
             materialType: "video",
 
-            youtube:
-                "https://www.youtube.com/watch?v=FdZsEKgfN_c",
+            youtube: "https://www.youtube.com/watch?v=FdZsEKgfN_c",
 
             materialImage: ""
         },
@@ -119,8 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             author: "Aurelio V. Tolentino",
 
-            authorImage:
-                "images/authors/aurelio-tolentino.webp",
+            authorImage: "images/authors/aurelio-tolentino.webp",
 
             biography: `
                 Si <strong>Aurelio V. Tolentino</strong> ay isang
@@ -136,8 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 dulang may malakas na mensaheng makabayan at panlipunan.
             `,
 
-            theme:
-                "Kolonyalismo, pakikibaka, at kalayaan.",
+            theme: "Kolonyalismo, pakikibaka, at kalayaan.",
 
             themeDescription: `
                 Ang tema ng “Kahapon, Ngayon at Bukas” ay nakatuon sa
@@ -149,8 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 sariling pagpapasya.
             `,
 
-            objective:
-                "Maunawaan ang mahahalagang elemento at kaisipan ng akda.",
+            objective: "Maunawaan ang mahahalagang elemento at kaisipan ng akda.",
 
             objectiveDescription: `
                 Layunin ng aralin na matukoy at maipaliwanag ng mga
@@ -168,8 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
             material: "Audio-Visual/Interactive Presentation",
             materialType: "video",
 
-            youtube:
-                "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
+            youtube: "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
 
             materialImage: ""
         },
@@ -198,8 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             author: "Felipe Padilla de Leon",
 
-            authorImage:
-                "images/authors/felipe-padilla-de-leon.webp",
+            authorImage: "images/authors/felipe-padilla-de-leon.webp",
 
             biography: `
                 Si <strong>Felipe Padilla de Leon</strong> ay isang
@@ -214,8 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 disiplina sa lipunang Pilipino.
             `,
 
-            theme:
-                "Ugali, disiplina, at pananagutan.",
+            theme: "Ugali, disiplina, at pananagutan.",
 
             themeDescription: `
                 Tinutukoy ng tema ng “Filipino Time” ang kaugnayan ng
@@ -226,8 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gawain tungo sa pagiging mas responsable.
             `,
 
-            objective:
-                "Maunawaan ang konsepto ng “Filipino Time” at ang epekto nito.",
+            objective: "Maunawaan ang konsepto ng “Filipino Time” at ang epekto nito.",
 
             objectiveDescription: `
                 Layunin ng aralin na maunawaan ng mga mag-aaral ang
@@ -270,11 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
             `,
 
-            author:
-                "Apolinario Mabini",
+            author: "Apolinario Mabini",
 
-            authorImage:
-                "images/authors/apolinario-mabini.jpg",
+            authorImage: "images/authors/apolinario-mabini.jpg",
 
             biography: `
                 Si <strong>Apolinario Mabini</strong> ay isang
@@ -289,8 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 responsibilidad, at pagmamahal sa bayan.
             `,
 
-            theme:
-                "Gabay, disiplina, at pagmamahal sa bayan.",
+            theme: "Gabay, disiplina, at pagmamahal sa bayan.",
 
             themeDescription: `
                 Ang tema ng “Ang Tunay na Sampung Utos” ay nakatuon
@@ -301,8 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 sa pagpapaunlad ng bayan.
             `,
 
-            objective:
-                "Maunawaan ang mga prinsipyong nakapaloob sa akda.",
+            objective: "Maunawaan ang mga prinsipyong nakapaloob sa akda.",
 
             objectiveDescription: `
                 Layunin ng aralin na maunawaan ng mga mag-aaral ang
@@ -320,8 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             youtube: "",
 
-            materialImage:
-                "images/materials/angtunaynasampungutos.png"
+            materialImage: "images/materials/angtunaynasampungutos.png"
         },
 
         /* =====================================================
@@ -349,8 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             author: "Manuel L. Quezon",
 
-            authorImage:
-                "images/authors/manuel-quezon.png",
+            authorImage: "images/authors/manuel-quezon.png",
 
             biography: `
                 Si <strong>Manuel L. Quezon</strong> ay ang unang
@@ -367,8 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Pilipino.
             `,
 
-            theme:
-                "Wikang pambansa, kamalayan, at pagkakakilanlan.",
+            theme: "Wikang pambansa, kamalayan, at pagkakakilanlan.",
 
             themeDescription: `
                 Ang tema ng “Wikang Pambansa” ay nakasentro sa
@@ -379,8 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 at magkaroon ng mas matibay na pagkakaisa ang bansa.
             `,
 
-            objective:
-                "Maunawaan ang kahalagahan ng wikang pambansa.",
+            objective: "Maunawaan ang kahalagahan ng wikang pambansa.",
 
             objectiveDescription: `
                 Layunin ng aralin na maipaliliwanag ng mga mag-aaral
@@ -394,13 +387,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 pagkakakilanlan, at pakikipagkapwa.
             `,
 
-            material:
-                "Audio-Visual/Interactive Presentation",
+            material: "Audio-Visual/Interactive Presentation",
 
             materialType: "video",
 
-            youtube:
-                "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
+            youtube: "https://www.youtube.com/watch?v=Wgq6voqo1Kw",
 
             materialImage: ""
         },
@@ -431,8 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             author: "Amado V. Hernandez",
 
-            authorImage:
-                "images/authors/amado-hernandez.jpg",
+            authorImage: "images/authors/amado-hernandez.jpg",
 
             biography: `
                 Si <strong>Amado V. Hernandez</strong> ay isang
@@ -449,8 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 mga suliranin at realidad ng lipunang Pilipino.
             `,
 
-            theme:
-                "Katiwalian, pakikibaka, at katarungan.",
+            theme: "Katiwalian, pakikibaka, at katarungan.",
 
             themeDescription: `
                 Ang tema ng “Mga Ibong Mandaragit” ay nakatuon sa
@@ -462,8 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 makatarungan at maayos na lipunan.
             `,
 
-            objective:
-                "Maunawaan ang mga suliraning panlipunan sa nobela.",
+            objective: "Maunawaan ang mga suliraning panlipunan sa nobela.",
 
             objectiveDescription: `
                 Layunin ng aralin na maunawaan ng mga mag-aaral ang
@@ -477,13 +465,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 bilang bahagi ng lipunan.
             `,
 
-            material:
-                "Audio-Visual/Interactive Presentation",
+            material: "Audio-Visual/Interactive Presentation",
 
             materialType: "video",
 
-            youtube:
-                "https://www.youtube.com/watch?v=JPG8naYuQ3Y",
+            youtube: "https://www.youtube.com/watch?v=JPG8naYuQ3Y",
 
             materialImage: ""
         }
@@ -624,12 +610,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         at makapipigil na huwag kang suminsay sa daan
                         ng katuwiran at laging magtaglay ng kasipagan.
                     `,
-                    keywords: [
-                        "Diyos",
-                        "Puri",
-                        "Katuwiran",
-                        "Kasipagan"
-                    ]
+                    keywords: ["Diyos", "Puri", "Katuwiran", "Kasipagan"]
                 },
                 {
                     number: "Ikalawa",
@@ -638,12 +619,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         minamarapat ng iyong bait at kalooban o
                         konsyensya.
                     `,
-                    keywords: [
-                        "Pagsamba sa Diyos",
-                        "Bait",
-                        "Kalooban",
-                        "Konsensya"
-                    ]
+                    keywords: ["Pagsamba sa Diyos", "Bait", "Kalooban", "Konsensya"]
                 },
                 {
                     number: "Ikatlo",
@@ -656,13 +632,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         kagalingan at sa ganitong paraan ay makatulong
                         ka sa ikasusulong ng lahat.
                     `,
-                    keywords: [
-                        "Pag-aaral",
-                        "Kaalaman",
-                        "Kagalingan",
-                        "Pagsisikap",
-                        "Pagtulong"
-                    ]
+                    keywords: ["Pag-aaral", "Kaalaman", "Kagalingan", "Pagsisikap", "Pagtulong"]
                 },
                 {
                     number: "Ikaapat",
@@ -672,12 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         sapagkat siya ang nakaisa-isang Paraisong
                         pinaglagyan sa iyo ng Diyos sa buhay na ito.
                     `,
-                    keywords: [
-                        "Inang Bayan",
-                        "Pagmamahal sa Bayan",
-                        "Puri",
-                        "Diyos"
-                    ]
+                    keywords: ["Inang Bayan", "Pagmamahal sa Bayan", "Puri", "Diyos"]
                 },
                 {
                     number: "Ikalima",
@@ -686,12 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         bago ang iyong sarili, sapagkat kung malaya
                         siya at lalaya rin ikaw at ang iyong kamag-anakan.
                     `,
-                    keywords: [
-                        "Kalayaan",
-                        "Bayan",
-                        "Sarili",
-                        "Kamag-anakan"
-                    ]
+                    keywords: ["Kalayaan", "Bayan", "Sarili", "Kamag-anakan"]
                 },
                 {
                     number: "Ikaanim",
@@ -700,12 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         sapagkat ikaw lamang ang tunay na makapagmamasakit
                         sa kanyang ikasusulong at ikatatanghal.
                     `,
-                    keywords: [
-                        "Kasarinlan",
-                        "Bayan",
-                        "Pagsulong",
-                        "Pagtatanghal"
-                    ]
+                    keywords: ["Kasarinlan", "Bayan", "Pagsulong", "Pagtatanghal"]
                 },
                 {
                     number: "Ikapito",
@@ -716,12 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         ng mga konsyensya ng sangkabayanan ang siya lamang
                         makapagtataglay ng tunay na kapangyarihan.
                     `,
-                    keywords: [
-                        "Halalan",
-                        "Konsensya",
-                        "Mamamayan",
-                        "Tunay na Kapangyarihan"
-                    ]
+                    keywords: ["Halalan", "Konsensya", "Mamamayan", "Tunay na Kapangyarihan"]
                 },
                 {
                     number: "Ikawalo",
@@ -731,12 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         bayan, at huwag isipin kailan man ang Monarkiya,
                         ang pagkakaroon baga ng hari.
                     `,
-                    keywords: [
-                        "Republika",
-                        "Bayan",
-                        "Pamamahala",
-                        "Monarkiya"
-                    ]
+                    keywords: ["Republika", "Bayan", "Pamamahala", "Monarkiya"]
                 },
                 {
                     number: "Ikasiyam",
@@ -747,12 +692,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         tulungan ka at huwag niyang gawin sa iyo ang di
                         niya ibig na gawin mo sa kaniya.
                     `,
-                    keywords: [
-                        "Kapwa",
-                        "Pagmamahal",
-                        "Pagtutulungan",
-                        "Diyos"
-                    ]
+                    keywords: ["Kapwa", "Pagmamahal", "Pagtutulungan", "Diyos"]
                 },
                 {
                     number: "Ikasampu",
@@ -763,13 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         man lamang, palibhasa’y iisa ang inyong kapalaran,
                         iisa din ang inyong tuwa at kapighatian.
                     `,
-                    keywords: [
-                        "Kababayan",
-                        "Pagkakaisa",
-                        "Kapatid",
-                        "Magkakasama",
-                        "Iisang Kapalaran"
-                    ]
+                    keywords: ["Kababayan", "Pagkakaisa", "Kapatid", "Magkakasama", "Iisang Kapalaran"]
                 }
             ]
         },
@@ -831,15 +765,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function injectStyles() {
-
-        if (document.getElementById("hibla-dynamic-styles")) {
-            return;
-        }
+        if (document.getElementById("hibla-dynamic-styles")) return;
 
         const style = document.createElement("style");
-
         style.id = "hibla-dynamic-styles";
-
         style.textContent = `
 
             /* =================================================
@@ -895,7 +824,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     opacity: 0;
                     transform: translateY(20px) scale(0.97);
                 }
-
                 to {
                     opacity: 1;
                     transform: translateY(0) scale(1);
@@ -953,16 +881,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             .clickable-lesson-card {
                 cursor: pointer;
-                transition:
-                    transform 0.2s ease,
-                    box-shadow 0.2s ease,
-                    border-color 0.2s ease;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
             }
 
             .clickable-lesson-card:hover {
                 transform: translateY(-5px);
-                box-shadow:
-                    0 15px 35px rgba(125, 11, 18, 0.15);
+                box-shadow: 0 15px 35px rgba(125, 11, 18, 0.15);
                 border-color: #7d0b12;
             }
 
@@ -993,11 +917,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 aspect-ratio: 1 / 1;
                 border-radius: 18px;
                 overflow: hidden;
-                background: linear-gradient(
-                    135deg,
-                    #7d0b12,
-                    #c7353d
-                );
+                background: linear-gradient(135deg, #7d0b12, #c7353d);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1228,7 +1148,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ================================================= */
 
             @media (max-width: 650px) {
-
                 .lesson-modal {
                     padding: 28px 20px;
                     border-radius: 18px;
@@ -1264,128 +1183,54 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function createLessonInfoModal() {
-
-        if (document.getElementById("lessonInfoModal")) {
-            return;
-        }
+        if (document.getElementById("lessonInfoModal")) return;
 
         const modal = document.createElement("div");
-
         modal.id = "lessonInfoModal";
-
         modal.innerHTML = `
             <div class="lesson-modal-overlay">
-
                 <div class="lesson-modal">
-
-                    <button
-                        type="button"
-                        class="lesson-modal-close"
-                        id="lessonModalClose"
-                        aria-label="Isara"
-                    >
-                        ×
-                    </button>
-
+                    <button type="button" class="lesson-modal-close" id="lessonModalClose" aria-label="Isara">×</button>
                     <div id="lessonModalBody"></div>
-
                 </div>
-
             </div>
         `;
-
         document.body.appendChild(modal);
 
-        const closeButton =
-            modal.querySelector("#lessonModalClose");
+        const closeButton = modal.querySelector("#lessonModalClose");
+        const overlay = modal.querySelector(".lesson-modal-overlay");
 
-        const overlay =
-            modal.querySelector(".lesson-modal-overlay");
-
-        if (closeButton) {
-            closeButton.addEventListener(
-                "click",
-                closeInfoModal
-            );
-        }
-
+        if (closeButton) closeButton.addEventListener("click", closeInfoModal);
         if (overlay) {
-            overlay.addEventListener(
-                "click",
-                event => {
-
-                    if (event.target === overlay) {
-                        closeInfoModal();
-                    }
-
-                }
-            );
+            overlay.addEventListener("click", event => {
+                if (event.target === overlay) closeInfoModal();
+            });
         }
     }
 
     function createAdditionalMaterialModal() {
-
-        if (
-            document.getElementById(
-                "additionalMaterialModal"
-            )
-        ) {
-            return;
-        }
+        if (document.getElementById("additionalMaterialModal")) return;
 
         const modal = document.createElement("div");
-
         modal.id = "additionalMaterialModal";
-
         modal.innerHTML = `
             <div class="lesson-modal-overlay">
-
                 <div class="lesson-modal">
-
-                    <button
-                        type="button"
-                        class="lesson-modal-close"
-                        id="additionalMaterialClose"
-                        aria-label="Isara"
-                    >
-                        ×
-                    </button>
-
+                    <button type="button" class="lesson-modal-close" id="additionalMaterialClose" aria-label="Isara">×</button>
                     <div id="additionalMaterialBody"></div>
-
                 </div>
-
             </div>
         `;
-
         document.body.appendChild(modal);
 
-        const closeButton =
-            modal.querySelector(
-                "#additionalMaterialClose"
-            );
+        const closeButton = modal.querySelector("#additionalMaterialClose");
+        const overlay = modal.querySelector(".lesson-modal-overlay");
 
-        const overlay =
-            modal.querySelector(".lesson-modal-overlay");
-
-        if (closeButton) {
-            closeButton.addEventListener(
-                "click",
-                closeAdditionalMaterial
-            );
-        }
-
+        if (closeButton) closeButton.addEventListener("click", closeAdditionalMaterial);
         if (overlay) {
-            overlay.addEventListener(
-                "click",
-                event => {
-
-                    if (event.target === overlay) {
-                        closeAdditionalMaterial();
-                    }
-
-                }
-            );
+            overlay.addEventListener("click", event => {
+                if (event.target === overlay) closeAdditionalMaterial();
+            });
         }
     }
 
@@ -1394,102 +1239,45 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function closeInfoModal() {
-
-        const modal =
-            document.getElementById(
-                "lessonInfoModal"
-            );
-
-        if (modal) {
-            modal.classList.remove("show");
-        }
-
+        const modal = document.getElementById("lessonInfoModal");
+        if (modal) modal.classList.remove("show");
         restoreBodyScroll();
     }
 
     function closeAdditionalMaterial() {
-
-        const modal =
-            document.getElementById(
-                "additionalMaterialModal"
-            );
-
-        if (modal) {
-            modal.classList.remove("show");
-        }
-
+        const modal = document.getElementById("additionalMaterialModal");
+        if (modal) modal.classList.remove("show");
         restoreBodyScroll();
     }
 
     function closeImageZoom() {
-
-        const zoom =
-            document.getElementById(
-                "imageZoomModal"
-            );
-
-        if (zoom) {
-            zoom.classList.remove("show");
-        }
-
+        const zoom = document.getElementById("imageZoomModal");
+        if (zoom) zoom.classList.remove("show");
         restoreBodyScroll();
     }
 
     function restoreBodyScroll() {
+        const lessonModal = document.getElementById("lessonInfoModal");
+        const additionalModal = document.getElementById("additionalMaterialModal");
+        const zoomModal = document.getElementById("imageZoomModal");
 
-        const lessonModal =
-            document.getElementById(
-                "lessonInfoModal"
-            );
+        const lessonOpen = lessonModal && lessonModal.classList.contains("show");
+        const additionalOpen = additionalModal && additionalModal.classList.contains("show");
+        const zoomOpen = zoomModal && zoomModal.classList.contains("show");
+        const contactOpen = contactModal && contactModal.classList.contains("show");
 
-        const additionalModal =
-            document.getElementById(
-                "additionalMaterialModal"
-            );
-
-        const zoomModal =
-            document.getElementById(
-                "imageZoomModal"
-            );
-
-        const lessonOpen =
-            lessonModal &&
-            lessonModal.classList.contains("show");
-
-        const additionalOpen =
-            additionalModal &&
-            additionalModal.classList.contains("show");
-
-        const zoomOpen =
-            zoomModal &&
-            zoomModal.classList.contains("show");
-
-        const contactOpen =
-            contactModal &&
-            contactModal.classList.contains("show");
-
-        if (
-            !lessonOpen &&
-            !additionalOpen &&
-            !zoomOpen &&
-            !contactOpen
-        ) {
+        if (!lessonOpen && !additionalOpen && !zoomOpen && !contactOpen) {
             document.body.style.overflow = "";
         }
     }
 
     /* =========================================================
-       YOUTUBE
+       YOUTUBE HELPERS
     ========================================================= */
 
     function getYouTubeVideoId(url) {
-
-        if (!url) {
-            return "";
-        }
-
+        if (!url) return "";
         const value = String(url).trim();
-
         const patterns = [
             /youtube\.com\/watch\?v=([^&]+)/i,
             /youtube\.com\/embed\/([^?&]+)/i,
@@ -1498,14 +1286,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
 
         for (const pattern of patterns) {
-
             const match = value.match(pattern);
-
-            if (match && match[1]) {
-                return match[1];
-            }
+            if (match && match[1]) return match[1];
         }
-
         return "";
     }
 
@@ -1514,51 +1297,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function openImageZoom(imageSrc) {
+        if (!imageSrc) return;
 
-        if (!imageSrc) {
-            return;
-        }
-
-        let zoom =
-            document.getElementById(
-                "imageZoomModal"
-            );
+        let zoom = document.getElementById("imageZoomModal");
 
         if (!zoom) {
-
             zoom = document.createElement("div");
-
             zoom.id = "imageZoomModal";
-
             zoom.className = "zoom-modal";
-
-            zoom.innerHTML = `
-                <img
-                    id="zoomedMaterialImage"
-                    src=""
-                    alt="Zoomed material"
-                >
-            `;
-
+            zoom.innerHTML = `<img id="zoomedMaterialImage" src="" alt="Zoomed material">`;
             document.body.appendChild(zoom);
-
-            zoom.addEventListener(
-                "click",
-                closeImageZoom
-            );
+            zoom.addEventListener("click", closeImageZoom);
         }
 
-        const image =
-            document.getElementById(
-                "zoomedMaterialImage"
-            );
-
-        if (image) {
-            image.src = imageSrc;
-        }
+        const image = document.getElementById("zoomedMaterialImage");
+        if (image) image.src = imageSrc;
 
         zoom.classList.add("show");
-
         document.body.style.overflow = "hidden";
     }
 
@@ -1567,372 +1322,139 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function openInfoModal(type, lesson) {
-
-        if (!lesson) {
-            return;
-        }
+        if (!lesson) return;
 
         createLessonInfoModal();
 
-        const modal =
-            document.getElementById(
-                "lessonInfoModal"
-            );
+        const modal = document.getElementById("lessonInfoModal");
+        const body = document.getElementById("lessonModalBody");
 
-        const body =
-            document.getElementById(
-                "lessonModalBody"
-            );
-
-        if (!modal || !body) {
-            return;
-        }
+        if (!modal || !body) return;
 
         let html = "";
 
         if (type === "author") {
-
-            const image =
-                typeof lesson.authorImage === "string"
-                    ? lesson.authorImage.trim()
-                    : "";
-
+            const image = typeof lesson.authorImage === "string" ? lesson.authorImage.trim() : "";
             html = `
-                <span class="modal-eyebrow">
-                    MAY-AKDA
-                </span>
-
+                <span class="modal-eyebrow">MAY-AKDA</span>
                 <h2>${lesson.author}</h2>
-
                 <div class="author-profile">
-
-                    <div
-                        class="author-photo ${
-                            image ? "" : "no-image"
-                        }"
-                        id="authorPhotoContainer"
-                    >
-                        ${
-                            image
-                                ? `
-                                    <img
-                                        id="authorPhotoImage"
-                                        src="${image}"
-                                        alt="${lesson.author}"
-                                    >
-                                `
-                                : ""
-                        }
+                    <div class="author-photo ${image ? "" : "no-image"}" id="authorPhotoContainer">
+                        ${image ? `<img id="authorPhotoImage" src="${image}" alt="${lesson.author}">` : ""}
                     </div>
-
                     <div>
-
                         <h3>Talambuhay</h3>
-
                         <div class="modal-text">
-                            ${
-                                lesson.biography ||
-                                "Walang talambuhay na nailagay."
-                            }
+                            ${lesson.biography || "Walang talambuhay na nailagay."}
                         </div>
-
                     </div>
-
                 </div>
             `;
-        }
-
-        else if (type === "theme") {
-
+        } else if (type === "theme") {
             html = `
-                <span class="modal-eyebrow">
-                    TEMA
-                </span>
-
-                <h2>
-                    ${lesson.theme}
-                </h2>
-
+                <span class="modal-eyebrow">TEMA</span>
+                <h2>${lesson.theme}</h2>
                 <div class="detail-box">
-
-                    <p
-                        class="modal-text"
-                        style="text-align: justify;"
-                    >
-                        ${
-                            lesson.themeDescription ||
-                            "Walang detalyadong tema na nailagay."
-                        }
+                    <p class="modal-text" style="text-align: justify;">
+                        ${lesson.themeDescription || "Walang detalyadong tema na nailagay."}
                     </p>
-
                 </div>
             `;
-        }
-
-        else if (type === "objective") {
-
+        } else if (type === "objective") {
             html = `
-                <span class="modal-eyebrow">
-                    LAYUNIN NG ARALIN
-                </span>
-
-                <h2>
-                    Layunin ng Aralin
-                </h2>
-
+                <span class="modal-eyebrow">LAYUNIN NG ARALIN</span>
+                <h2>Layunin ng Aralin</h2>
                 <div class="detail-box">
-
-                    <p
-                        class="modal-text"
-                        style="text-align: justify;"
-                    >
-                        ${
-                            lesson.objectiveDescription ||
-                            lesson.objective ||
-                            "Walang layunin na nailagay."
-                        }
+                    <p class="modal-text" style="text-align: justify;">
+                        ${lesson.objectiveDescription || lesson.objective || "Walang layunin na nailagay."}
                     </p>
-
                 </div>
             `;
-        }
-
-        else if (type === "material") {
-
+        } else if (type === "material") {
             let preview = "";
 
-            if (
-                lesson.materialType === "video"
-            ) {
-
-                const videoId =
-                    getYouTubeVideoId(
-                        lesson.youtube
-                    );
-
+            if (lesson.materialType === "video") {
+                const videoId = getYouTubeVideoId(lesson.youtube);
                 if (videoId) {
-
-                    const thumbnail =
-                        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
-                    const youtubeUrl =
-                        `https://www.youtube.com/watch?v=${videoId}`;
-
+                    const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                    const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
                     preview = `
-                        <a
-                            class="youtube-thumbnail-wrapper"
-                            href="${youtubeUrl}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Panoorin sa YouTube"
-                        >
-
-                            <img
-                                src="${thumbnail}"
-                                alt="${lesson.material} YouTube preview"
-                            >
-
-                            <span
-                                class="youtube-play-button"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span class="youtube-label">
-                                ▶ Panoorin sa YouTube
-                            </span>
-
+                        <a class="youtube-thumbnail-wrapper" href="${youtubeUrl}" target="_blank" rel="noopener noreferrer" aria-label="Panoorin sa YouTube">
+                            <img src="${thumbnail}" alt="${lesson.material} YouTube preview">
+                            <span class="youtube-play-button" aria-hidden="true"></span>
+                            <span class="youtube-label">▶ Panoorin sa YouTube</span>
                         </a>
                     `;
-
                 } else {
-
                     preview = `
                         <div class="youtube-placeholder">
-
-                            <strong>
-                                YouTube Preview
-                            </strong>
-
-                            <p>
-                                Wala pang valid na YouTube
-                                video para sa materyal na ito.
-                            </p>
-
+                            <strong>YouTube Preview</strong>
+                            <p>Wala pang valid na YouTube video para sa materyal na ito.</p>
                         </div>
                     `;
                 }
-            }
-
-            else if (
-                lesson.materialImage &&
-                String(
-                    lesson.materialImage
-                ).trim() !== ""
-            ) {
-
-                const imageSrc =
-                    String(
-                        lesson.materialImage
-                    ).trim();
-
+            } else if (lesson.materialImage && String(lesson.materialImage).trim() !== "") {
+                const imageSrc = String(lesson.materialImage).trim();
                 preview = `
-                    <div
-                        class="material-image-wrapper"
-                        data-zoom-image="${imageSrc}"
-                    >
-
-                        <img
-                            src="${imageSrc}"
-                            alt="${
-                                lesson.material ||
-                                "Multimodal material"
-                            }"
-                        >
-
+                    <div class="material-image-wrapper" data-zoom-image="${imageSrc}">
+                        <img src="${imageSrc}" alt="${lesson.material || "Multimodal material"}">
                     </div>
                 `;
-
-            }
-
-            else {
-
+            } else {
                 preview = `
                     <div class="material-placeholder">
-
-                        <strong>
-                            ${
-                                lesson.material ||
-                                "Multimodal Material"
-                            }
-                        </strong>
-
-                        <span>
-                            Dito ilalagay ang larawan o
-                            iba pang multimodal material.
-                        </span>
-
+                        <strong>${lesson.material || "Multimodal Material"}</strong>
+                        <span>Dito ilalagay ang larawan o iba pang multimodal material.</span>
                     </div>
                 `;
             }
 
             html = `
-                <span class="modal-eyebrow">
-                    MULTIMODAL MATERIAL
-                </span>
-
-                <h2>
-                    ${
-                        lesson.material ||
-                        "Multimodal Material"
-                    }
-                </h2>
-
-                <div class="material-preview">
-                    ${preview}
-                </div>
+                <span class="modal-eyebrow">MULTIMODAL MATERIAL</span>
+                <h2>${lesson.material || "Multimodal Material"}</h2>
+                <div class="material-preview">${preview}</div>
             `;
-        }
-
-        else {
-
+        } else {
             html = `
                 <h2>Impormasyon</h2>
-
-                <p class="modal-text">
-                    Walang available na impormasyon.
-                </p>
+                <p class="modal-text">Walang available na impormasyon.</p>
             `;
         }
 
         body.innerHTML = html;
-
         modal.classList.add("show");
-
         document.body.style.overflow = "hidden";
 
-        const authorImage =
-            body.querySelector(
-                "#authorPhotoImage"
-            );
+        const authorImage = body.querySelector("#authorPhotoImage");
+        const authorContainer = body.querySelector("#authorPhotoContainer");
 
-        const authorContainer =
-            body.querySelector(
-                "#authorPhotoContainer"
-            );
-
-        if (
-            authorImage &&
-            authorContainer
-        ) {
-
-            authorImage.addEventListener(
-                "error",
-                function () {
-
-                    this.remove();
-
-                    authorContainer.classList.add(
-                        "no-image"
-                    );
-                }
-            );
+        if (authorImage && authorContainer) {
+            authorImage.addEventListener("error", function () {
+                this.remove();
+                authorContainer.classList.add("no-image");
+            });
         }
 
-        const thumbnail =
-            body.querySelector(
-                ".youtube-thumbnail-wrapper img"
-            );
-
+        const thumbnail = body.querySelector(".youtube-thumbnail-wrapper img");
         if (thumbnail) {
-
-            thumbnail.addEventListener(
-                "error",
-                function () {
-
-                    const wrapper =
-                        this.closest(
-                            ".youtube-thumbnail-wrapper"
-                        );
-
-                    if (wrapper) {
-
-                        wrapper.outerHTML = `
-                            <div class="youtube-placeholder">
-
-                                <strong>
-                                    Hindi ma-load ang
-                                    YouTube preview
-                                </strong>
-
-                                <p>
-                                    Gamitin ang link ng video
-                                    upang panoorin ito sa YouTube.
-                                </p>
-
-                            </div>
-                        `;
-                    }
+            thumbnail.addEventListener("error", function () {
+                const wrapper = this.closest(".youtube-thumbnail-wrapper");
+                if (wrapper) {
+                    wrapper.outerHTML = `
+                        <div class="youtube-placeholder">
+                            <strong>Hindi ma-load ang YouTube preview</strong>
+                            <p>Gamitin ang link ng video upang panoorin ito sa YouTube.</p>
+                        </div>
+                    `;
                 }
-            );
+            });
         }
 
-        const zoomImage =
-            body.querySelector(
-                "[data-zoom-image]"
-            );
-
+        const zoomImage = body.querySelector("[data-zoom-image]");
         if (zoomImage) {
-
-            zoomImage.addEventListener(
-                "click",
-                () => {
-
-                    openImageZoom(
-                        zoomImage.dataset.zoomImage
-                    );
-
-                }
-            );
+            zoomImage.addEventListener("click", () => {
+                openImageZoom(zoomImage.dataset.zoomImage);
+            });
         }
     }
 
@@ -1941,13 +1463,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================================= */
 
     function openAdditionalMaterial(weekNumber) {
-
         const material = additionalMaterials[weekNumber];
-
-        if (!material) {
-            console.warn("Material not found for week:", weekNumber);
-            return;
-        }
+        if (!material) return;
 
         createAdditionalMaterialModal();
 
@@ -1957,27 +1474,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!modal || !body) return;
 
         let html = `
-            <span class="modal-eyebrow">
-                KARAGDAGANG MATERIAL / TRIVIA
-            </span>
-
+            <span class="modal-eyebrow">KARAGDAGANG MATERIAL / TRIVIA</span>
             <h2>${material.title || "Dagdag Kaalaman"}</h2>
         `;
 
         if (material.subtitle) {
-            html += `
-                <p class="modal-text">
-                    <strong>${material.subtitle}</strong>
-                </p>
-            `;
+            html += `<p class="modal-text"><strong>${material.subtitle}</strong></p>`;
         }
 
-        /* -----------------------------------------------------
-           READING / TRIVIA
-        ----------------------------------------------------- */
-
         if (material.type === "reading") {
-
             html += `
                 <div class="material-reading" style="margin-top: 20px;">
                     ${material.content || ""}
@@ -1989,28 +1494,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="detail-box">
                         <h3>Mga Mahahalagang Salita</h3>
                         <div class="keyword-container">
-                            ${material.keywords
-                                .map(keyword => `<span class="keyword-tag">${keyword}</span>`)
-                                .join("")}
+                            ${material.keywords.map(keyword => `<span class="keyword-tag">${keyword}</span>`).join("")}
                         </div>
                     </div>
                 `;
             }
-        }
-
-        /* -----------------------------------------------------
-           COMMANDMENTS
-        ----------------------------------------------------- */
-
-        else if (material.type === "commandments") {
-
+        } else if (material.type === "commandments") {
             html += `
                 <div class="detail-box">
-                    <p class="modal-text">
-                        ${material.introduction || ""}
-                    </p>
+                    <p class="modal-text">${material.introduction || ""}</p>
                 </div>
-
                 <div style="margin-top: 25px;">
             `;
 
@@ -2018,16 +1511,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 material.commandments.forEach(item => {
                     html += `
                         <div class="commandment-card">
-                            <div class="commandment-number">
-                                <strong>${item.number}</strong>
-                            </div>
-                            <div class="commandment-text">
-                                ${item.text}
-                            </div>
+                            <div class="commandment-number"><strong>${item.number}</strong></div>
+                            <div class="commandment-text">${item.text}</div>
                             <div class="commandment-keywords">
-                                ${(item.keywords || [])
-                                    .map(keyword => `<span class="commandment-keyword">${keyword}</span>`)
-                                    .join("")}
+                                ${(item.keywords || []).map(keyword => `<span class="commandment-keyword">${keyword}</span>`).join("")}
                             </div>
                         </div>
                     `;
@@ -2035,14 +1522,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             html += `</div>`;
-        }
-
-        else {
+        } else {
             html += `
                 <div class="detail-box">
-                    <p class="modal-text">
-                        Walang available na content para sa materyal na ito.
-                    </p>
+                    <p class="modal-text">Walang available na content para sa materyal na ito.</p>
                 </div>
             `;
         }
@@ -2052,22 +1535,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "hidden";
     }
 
-    /* =========================================================
-       ADDITIONAL MATERIAL BUTTON
-    ========================================================= */
-
     function addAdditionalMaterialButton(weekNumber, container) {
-
         if (!container) return;
 
         const material = additionalMaterials[weekNumber];
-
         if (!material) return;
 
         const oldButton = container.querySelector(".additional-material-button");
-        if (oldButton) {
-            oldButton.remove();
-        }
+        if (oldButton) oldButton.remove();
 
         const button = document.createElement("button");
         button.type = "button";
@@ -2079,253 +1554,106 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       SECTION HANDLING
-    ========================================================= */
+   SECTION HANDLING — SIDEBAR + MOBILE NAVIGATION
+========================================================= */
 
-    function getAllPageSections() {
+function getAllPageSections() {
+    return document.querySelectorAll(
+        ".hero, .content-section, #researchersPage, " +
+        "#headerSection, #homeContent, #lessonContent"
+    );
+}
 
-        return document.querySelectorAll(
-            ".hero, " +
-            ".content-section, " +
-            "#researchersPage, " +
-            "#headerSection, " +
-            "#homeContent, " +
-            "#lessonContent"
-        );
-    }
+function showSection(sectionName) {
+    if (!sectionName) return;
 
-    function showSection(sectionName) {
+    const sections = {
+        home: ["headerSection", "homeContent"],
+        lesson: ["lessonContent"],
+        researchersPage: ["researchersPage"]
+    };
 
-        if (!sectionName) {
-            return;
+    const targetIds = sections[sectionName];
+
+    if (!targetIds) return;
+
+    // Hide all main sections first
+    getAllPageSections().forEach(section => {
+        section.classList.remove("active");
+    });
+
+    // Show the requested section(s)
+    targetIds.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) section.classList.add("active");
+    });
+
+    // Update active sidebar and mobile navigation buttons
+    document.querySelectorAll(
+        ".side-link[data-section], [data-section]"
+    ).forEach(button => {
+        const isActive = button.dataset.section === sectionName;
+
+        button.classList.toggle("active", isActive);
+
+        if (isActive) {
+            button.setAttribute("aria-current", "page");
+        } else {
+            button.removeAttribute("aria-current");
         }
+    });
 
-        getAllPageSections().forEach(
-            section => {
-
-                section.classList.remove(
-                    "active"
-                );
-            }
-        );
-
-        document
-            .querySelectorAll(
-                ".nav-btn, [data-section]"
-            )
-            .forEach(button => {
-
-                button.classList.remove(
-                    "active"
-                );
-            });
-
-        let target = null;
-
-        if (sectionName === "home") {
-
-            target =
-                document.getElementById(
-                    "homeContent"
-                ) ||
-                document.getElementById(
-                    "headerSection"
-                ) ||
-                document.querySelector(
-                    ".hero"
-                );
-        }
-
-        else if (
-            sectionName === "lesson"
-        ) {
-
-            target =
-                document.getElementById(
-                    "lessonContent"
-                );
-        }
-
-        else {
-
-            target =
-                document.getElementById(
-                    sectionName
-                );
-        }
-
-        if (target) {
-            target.classList.add("active");
-        }
-
-        document
-            .querySelectorAll(
-                `[data-section="${sectionName}"]`
-            )
-            .forEach(button => {
-
-                button.classList.add("active");
-            });
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-
-    /* =========================================================
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+   /* =========================================================
        DISPLAY LESSON
     ========================================================= */
 
-    function displayLesson(
-        weekNumber,
-        button = null
-    ) {
+    function displayLesson(weekNumber, button = null) {
+        const lesson = lessons[weekNumber];
 
-        const lesson =
-            lessons[weekNumber];
+        if (!lesson || !weekContent) return;
 
-        if (!lesson || !weekContent) {
-
-            console.warn(
-                "Lesson not found:",
-                weekNumber
-            );
-
-            return;
-        }
-
-        document
-            .querySelectorAll(".week-btn")
-            .forEach(item => {
-
-                item.classList.remove(
-                    "active"
-                );
-            });
-
-        if (button) {
-
-            button.classList.add(
-                "active"
-            );
-        }
+        document.querySelectorAll(".week-btn").forEach(item => item.classList.remove("active"));
+        if (button) button.classList.add("active");
 
         weekContent.style.opacity = "0";
-
-        weekContent.style.transform =
-            "translateY(10px)";
+        weekContent.style.transform = "translateY(10px)";
 
         window.setTimeout(() => {
-
             weekContent.innerHTML = `
-
-              <h3 class="week-title">
-    ${lesson.title}
-</h3>
-
-<div class="week-description">
-    ${lesson.description}
-</div>
-
-<div class="lesson-grid">
-
-                    <!-- AUTHOR -->
-
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="author"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang may-akda"
-                    >
-
-                        <strong>
-                            May-akda
-                        </strong>
-
-                        <span class="card-detail">
-                            ${lesson.author}
-                        </span>
-
+                <h3 class="week-title">${lesson.title}</h3>
+                <div class="week-description">${lesson.description}</div>
+                <div class="lesson-grid">
+                    <article class="feature-card clickable-lesson-card" data-info="author" tabindex="0" role="button" aria-label="Tingnan ang may-akda">
+                        <strong>May-akda</strong>
+                        <span class="card-detail">${lesson.author}</span>
                     </article>
 
-
-                    <!-- THEME -->
-
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="theme"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang buong tema"
-                    >
-
-                        <strong>
-                            Tema
-                        </strong>
-
-                        <span class="card-detail">
-                            ${lesson.theme}
-                        </span>
-
+                    <article class="feature-card clickable-lesson-card" data-info="theme" tabindex="0" role="button" aria-label="Tingnan ang buong tema">
+                        <strong>Tema</strong>
+                        <span class="card-detail">${lesson.theme}</span>
                     </article>
 
-
-                    <!-- OBJECTIVE -->
-
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="objective"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang buong layunin"
-                    >
-
-                        <strong>
-                            Layunin
-                        </strong>
-
-                        <span class="card-detail">
-                            ${lesson.objective}
-                        </span>
-
+                    <article class="feature-card clickable-lesson-card" data-info="objective" tabindex="0" role="button" aria-label="Tingnan ang buong layunin">
+                        <strong>Layunin</strong>
+                        <span class="card-detail">${lesson.objective}</span>
                     </article>
 
-
-                    <!-- MATERIAL -->
-
-                    <article
-                        class="feature-card clickable-lesson-card"
-                        data-info="material"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Tingnan ang multimodal material"
-                    >
-
-                        <strong>
-                            Multimodal Material
-                        </strong>
-
-                        <span class="card-detail">
-                            ${lesson.material}
-                        </span>
-
+                    <article class="feature-card clickable-lesson-card" data-info="material" tabindex="0" role="button" aria-label="Tingnan ang multimodal material">
+                        <strong>Multimodal Material</strong>
+                        <span class="card-detail">${lesson.material}</span>
                     </article>
-
                 </div>
             `;
 
-            addAdditionalMaterialButton(
-                weekNumber,
-                weekContent
-            );
+            addAdditionalMaterialButton(weekNumber, weekContent);
 
             weekContent.style.opacity = "1";
-
-            weekContent.style.transform =
-                "translateY(0)";
-
+            weekContent.style.transform = "translateY(0)";
         }, 180);
     }
 
@@ -2333,1057 +1661,287 @@ document.addEventListener("DOMContentLoaded", () => {
        CLICK EVENT LISTENERS
     ========================================================= */
 
-    document.addEventListener(
-        "click",
-        event => {
-
-            /* -----------------------------------------------
-               SECTION BUTTONS
-            ----------------------------------------------- */
-
-            const sectionButton =
-                event.target.closest(
-                    "[data-section]"
-                );
-
-            if (sectionButton) {
-
-                event.preventDefault();
-
-                const section =
-                    sectionButton.dataset.section;
-
-                if (section) {
-                    showSection(section);
-                }
-
-                return;
-            }
-
-            /* -----------------------------------------------
-               WEEK BUTTONS
-            ----------------------------------------------- */
-
-            const weekButton =
-                event.target.closest(
-                    ".week-btn"
-                );
-
-            if (weekButton) {
-
-                event.preventDefault();
-
-                const week =
-                    Number(
-                        weekButton.dataset.week
-                    );
-
-                if (
-                    Number.isInteger(week) &&
-                    lessons[week]
-                ) {
-
-                    displayLesson(
-                        week,
-                        weekButton
-                    );
-
-                    showSection("lesson");
-
-                } else {
-
-                    console.warn(
-                        "Invalid data-week:",
-                        weekButton.dataset.week
-                    );
-                }
-
-                return;
-            }
-
-            /* -----------------------------------------------
-               LESSON CARDS
-            ----------------------------------------------- */
-
-            const lessonCard =
-                event.target.closest(
-                    ".clickable-lesson-card"
-                );
-
-            if (lessonCard) {
-
-                event.preventDefault();
-
-                const type =
-                    lessonCard.dataset.info;
-
-                const activeWeek =
-                    document.querySelector(
-                        ".week-btn.active"
-                    );
-
-                const week =
-                    Number(
-                        activeWeek?.dataset.week
-                    );
-
-                if (
-                    type &&
-                    Number.isInteger(week) &&
-                    lessons[week]
-                ) {
-
-                    openInfoModal(
-                        type,
-                        lessons[week]
-                    );
-                }
-
-                return;
-            }
-
-            /* -----------------------------------------------
-               ADDITIONAL MATERIAL BUTTON
-            ----------------------------------------------- */
-
-            const additionalButton =
-                event.target.closest(
-                    ".additional-material-button"
-                );
-
-            if (additionalButton) {
-
-                event.preventDefault();
-
-                const week =
-                    Number(
-                        additionalButton.dataset.week
-                    );
-
-                if (week) {
-                    openAdditionalMaterial(week);
-                }
-
-                return;
-            }
-        }
-    );
-
-    /* =========================================================
-       KEYBOARD ACCESS
-    ========================================================= */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key !== "Enter" &&
-                event.key !== " "
-            ) {
-                return;
-            }
-
-            const card =
-                event.target.closest(
-                    ".clickable-lesson-card"
-                );
-
-            if (!card) {
-                return;
-            }
-
+    document.addEventListener("click", event => {
+        const sectionButton = event.target.closest("[data-section]");
+        if (sectionButton) {
             event.preventDefault();
-
-            const type =
-                card.dataset.info;
-
-            const activeWeek =
-                document.querySelector(
-                    ".week-btn.active"
-                );
-
-            const week =
-                Number(
-                    activeWeek?.dataset.week
-                );
-
-            if (
-                type &&
-                Number.isInteger(week) &&
-                lessons[week]
-            ) {
-
-                openInfoModal(
-                    type,
-                    lessons[week]
-                );
-            }
+            const section = sectionButton.dataset.section;
+            if (section) showSection(section);
+            return;
         }
-    );
 
-    /* =========================================================
-       LOGO
-    ========================================================= */
-
-    const logoToggle =
-        document.getElementById(
-            "logoToggle"
-        );
-
-    if (logoToggle) {
-
-        logoToggle.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                getAllPageSections()
-                    .forEach(section => {
-
-                        section.classList.remove(
-                            "active"
-                        );
-                    });
-
-                const headerSection =
-                    document.getElementById(
-                        "headerSection"
-                    );
-
-                if (headerSection) {
-
-                    headerSection.classList.add(
-                        "active"
-                    );
-                }
-
-                document
-                    .querySelectorAll(
-                        ".nav-btn"
-                    )
-                    .forEach(button => {
-
-                        button.classList.remove(
-                            "active"
-                        );
-                    });
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+        const weekButton = event.target.closest(".week-btn");
+        if (weekButton) {
+            event.preventDefault();
+            const week = Number(weekButton.dataset.week);
+            if (Number.isInteger(week) && lessons[week]) {
+                displayLesson(week, weekButton);
+                showSection("lesson");
             }
-        );
-    }
+            return;
+        }
 
+        const lessonCard = event.target.closest(".clickable-lesson-card");
+        if (lessonCard) {
+            event.preventDefault();
+            const type = lessonCard.dataset.info;
+            const activeWeek = document.querySelector(".week-btn.active");
+            const week = Number(activeWeek?.dataset.week);
+
+            if (type && Number.isInteger(week) && lessons[week]) {
+                openInfoModal(type, lessons[week]);
+            }
+            return;
+        }
+
+        const additionalButton = event.target.closest(".additional-material-button");
+        if (additionalButton) {
+            event.preventDefault();
+            const week = Number(additionalButton.dataset.week);
+            if (week) openAdditionalMaterial(week);
+            return;
+        }
+    });
+/* =========================================================
+   KEYBOARD ACCESS
+========================================================= */
+
+document.addEventListener("keydown", event => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+
+    const card = event.target.closest(".clickable-lesson-card");
+
+    if (!card) return;
+
+    event.preventDefault();
+
+    const type = card.dataset.info;
+    const activeWeek = document.querySelector(".week-btn.active");
+    const week = Number(activeWeek?.dataset.week);
+
+    if (type && Number.isInteger(week) && lessons[week]) {
+        openInfoModal(type, lessons[week]);
+    }
+});
+/* =========================================================
+   LOGO — RETURN TO HOME
+========================================================= */
+
+const logoToggle = document.getElementById("logoToggle");
+
+if (logoToggle) {
+    logoToggle.addEventListener("click", event => {
+        event.preventDefault();
+        showSection("home");
+    });
+}
     /* =========================================================
-       CONTACT
+       CONTACT MODAL
     ========================================================= */
 
-    const contactButton =
-        document.getElementById(
-            "contactButton"
-        );
-
-    const closeContact =
-        document.getElementById(
-            "closeContact"
-        );
+    const contactButton = document.getElementById("contactButton");
+    const closeContact = document.getElementById("closeContact");
 
     function closeContactModal() {
-
-        if (contactModal) {
-
-            contactModal.classList.remove(
-                "show"
-            );
-        }
-
+        if (contactModal) contactModal.classList.remove("show");
         restoreBodyScroll();
     }
 
     if (contactButton) {
-
-        contactButton.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                if (contactModal) {
-
-                    contactModal.classList.add(
-                        "show"
-                    );
-
-                    document.body.style.overflow =
-                        "hidden";
-                }
+        contactButton.addEventListener("click", event => {
+            event.preventDefault();
+            if (contactModal) {
+                contactModal.classList.add("show");
+                document.body.style.overflow = "hidden";
             }
-        );
+        });
     }
 
     if (closeContact) {
-
-        closeContact.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                closeContactModal();
-            }
-        );
+        closeContact.addEventListener("click", event => {
+            event.preventDefault();
+            closeContactModal();
+        });
     }
 
     if (contactModal) {
-
-        contactModal.addEventListener(
-            "click",
-            event => {
-
-                if (
-                    event.target ===
-                    contactModal
-                ) {
-
-                    closeContactModal();
-                }
-            }
-        );
+        contactModal.addEventListener("click", event => {
+            if (event.target === contactModal) closeContactModal();
+        });
     }
 
     /* =========================================================
        ESCAPE KEY
     ========================================================= */
 
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (event.key !== "Escape") {
-                return;
-            }
-
-            closeContactModal();
-            closeInfoModal();
-            closeAdditionalMaterial();
-            closeImageZoom();
-        }
-    );
+    document.addEventListener("keydown", event => {
+        if (event.key !== "Escape") return;
+        closeContactModal();
+        closeInfoModal();
+        closeAdditionalMaterial();
+        closeImageZoom();
+    });
 
     /* =========================================================
        NAVBAR SCROLL
     ========================================================= */
 
     let lastScroll = 0;
-
     if (navbar) {
-
-        window.addEventListener(
-            "scroll",
-            () => {
-
-                const currentScroll =
-                    window.scrollY;
-
-                if (
-                    currentScroll > lastScroll &&
-                    currentScroll > 140
-                ) {
-
-                    navbar.classList.add(
-                        "hidden"
-                    );
-
-                } else {
-
-                    navbar.classList.remove(
-                        "hidden"
-                    );
-                }
-
-                lastScroll =
-                    currentScroll;
-
-            },
-            {
-                passive: true
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll && currentScroll > 140) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
             }
-        );
+            lastScroll = currentScroll;
+        }, { passive: true });
     }
-/* =========================================================
-   MOBILE NAVBAR MENU
-   ========================================================= */
 
-if (navbar) {
-
-    /*
-     * Create hamburger button automatically.
-     * No HTML modification is required.
-     */
-
-    const mobileMenuButton =
-        document.createElement("button");
-
-    mobileMenuButton.type = "button";
-
-    mobileMenuButton.className =
-        "mobile-menu-toggle";
-
-    mobileMenuButton.setAttribute(
-        "aria-label",
-        "Buksan ang navigation menu"
-    );
-
-    mobileMenuButton.setAttribute(
-        "aria-expanded",
-        "false"
-    );
-
-    mobileMenuButton.innerHTML = "☰";
-
-
-    /*
-     * Insert hamburger button
-     * after the navigation links.
-     */
-
-    const navLinks =
-        navbar.querySelector(".nav-links");
-
-    if (navLinks) {
-
-        navbar.appendChild(
-            mobileMenuButton
-        );
-
-
-        /* -----------------------------------------
-           OPEN / CLOSE MENU
-        ----------------------------------------- */
-
-        mobileMenuButton.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                const isOpen =
-                    navbar.classList.toggle(
-                        "mobile-open"
-                    );
-
-                mobileMenuButton.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
-                mobileMenuButton.innerHTML =
-                    isOpen
-                        ? "✕"
-                        : "☰";
-
-                mobileMenuButton.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "Isara ang navigation menu"
-                        : "Buksan ang navigation menu"
-                );
-            }
-        );
-
-
-        /* -----------------------------------------
-           CLOSE MENU AFTER CLICKING NAVIGATION
-        ----------------------------------------- */
-
-        navLinks
-            .querySelectorAll(".nav-btn")
-            .forEach(button => {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-                        navbar.classList.remove(
-                            "mobile-open"
-                        );
-
-                        mobileMenuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        mobileMenuButton.innerHTML =
-                            "☰";
-
-                        mobileMenuButton.setAttribute(
-                            "aria-label",
-                            "Buksan ang navigation menu"
-                        );
-                    }
-                );
-            });
-
-
-        /* -----------------------------------------
-           CLOSE WHEN CLICKING OUTSIDE
-        ----------------------------------------- */
-
-        document.addEventListener(
-            "click",
-            event => {
-
-                if (
-                    !navbar.contains(event.target)
-                ) {
-
-                    navbar.classList.remove(
-                        "mobile-open"
-                    );
-
-                    mobileMenuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    mobileMenuButton.innerHTML =
-                        "☰";
-
-                    mobileMenuButton.setAttribute(
-                        "aria-label",
-                        "Buksan ang navigation menu"
-                    );
-                }
-            }
-        );
-
-
-        /* -----------------------------------------
-           CLOSE MENU WITH ESCAPE
-        ----------------------------------------- */
-
-        document.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key === "Escape" &&
-                    navbar.classList.contains(
-                        "mobile-open"
-                    )
-                ) {
-
-                    navbar.classList.remove(
-                        "mobile-open"
-                    );
-
-                    mobileMenuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    mobileMenuButton.innerHTML =
-                        "☰";
-                }
-            }
-        );
-
-
-        /* -----------------------------------------
-           RESET MOBILE MENU WHEN RESIZING
-        ----------------------------------------- */
-
-        window.addEventListener(
-            "resize",
-            () => {
-
-                if (
-                    window.innerWidth > 700
-                ) {
-
-                    navbar.classList.remove(
-                        "mobile-open"
-                    );
-
-                    mobileMenuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    mobileMenuButton.innerHTML =
-                        "☰";
-                }
-            }
-        );
-    }
-}
-/* =========================================================
-   MOBILE NAVBAR MENU
-========================================================= */
-
-const mobileMenuToggle =
-    document.getElementById("mobileMenuToggle");
-
-if (
-    navbar &&
-    mobileMenuToggle
-) {
-
-    mobileMenuToggle.addEventListener(
-        "click",
-        event => {
-
-            event.preventDefault();
-            event.stopPropagation();
-
-            const isOpen =
-                navbar.classList.toggle(
-                    "mobile-open"
-                );
-
-            mobileMenuToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
-
-            mobileMenuToggle.textContent =
-                isOpen
-                    ? "✕"
-                    : "☰";
-
-            mobileMenuToggle.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Isara ang menu"
-                    : "Buksan ang menu"
-            );
-        }
-    );
-
-
-    /* CLOSE AFTER CLICKING A NAV BUTTON */
-
-    document
-        .querySelectorAll(
-            "#navbar .nav-btn"
-        )
-        .forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    navbar.classList.remove(
-                        "mobile-open"
-                    );
-
-                    mobileMenuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    mobileMenuToggle.textContent =
-                        "☰";
-
-                    mobileMenuToggle.setAttribute(
-                        "aria-label",
-                        "Buksan ang menu"
-                    );
-                }
-            );
-        });
-
-
-    /* CLOSE WHEN CLICKING OUTSIDE */
-
-    document.addEventListener(
-        "click",
-        event => {
-
-            if (
-                navbar.classList.contains(
-                    "mobile-open"
-                ) &&
-                !navbar.contains(event.target)
-            ) {
-
-                navbar.classList.remove(
-                    "mobile-open"
-                );
-
-                mobileMenuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                mobileMenuToggle.textContent =
-                    "☰";
-            }
-        }
-    );
-
-
-    /* CLOSE WITH ESC */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                navbar.classList.remove(
-                    "mobile-open"
-                );
-
-                mobileMenuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                mobileMenuToggle.textContent =
-                    "☰";
-            }
-        }
-    );
-}
     /* =========================================================
-       CHATBOT
+       HIBLA AI CHATBOT
     ========================================================= */
 
-    const chatbot =
-        document.getElementById(
-            "chatbot"
-        );
+    const chatbot = document.getElementById("chatbot");
+    const chatbotToggle = document.getElementById("chatbotToggle");
+    const chatbotClose = document.getElementById("chatbotClose");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const chatbotSend = document.getElementById("chatbotSend");
+    const chatbotMessages = document.getElementById("chatbotMessages");
 
-    const chatbotToggle =
-        document.getElementById(
-            "chatbotToggle"
-        );
+    const CHAT_API_URL = "https://hibla-ai-server.onrender.com/api/chat";
 
-    const chatbotClose =
-        document.getElementById(
-            "chatbotClose"
-        );
-
-    const chatbotInput =
-        document.getElementById(
-            "chatbotInput"
-        );
-
-    const chatbotSend =
-        document.getElementById(
-            "chatbotSend"
-        );
-
-    const chatbotMessages =
-        document.getElementById(
-            "chatbotMessages"
-        );
-
-    const CHAT_API_URL =
-        "https://hibla-ai-server.onrender.com/api/chat";
-
-    if (
-        chatbotToggle &&
-        chatbot
-    ) {
-
-        chatbotToggle.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                chatbot.classList.add(
-                    "open"
-                );
-
-                window.setTimeout(
-                    () => {
-
-                        if (chatbotInput) {
-                            chatbotInput.focus();
-                        }
-
-                    },
-                    100
-                );
-            }
-        );
+    if (chatbotToggle && chatbot) {
+        chatbotToggle.addEventListener("click", event => {
+            event.preventDefault();
+            chatbot.classList.add("open");
+            window.setTimeout(() => {
+                if (chatbotInput) chatbotInput.focus();
+            }, 100);
+        });
     }
 
-    if (
-        chatbotClose &&
-        chatbot
-    ) {
-
-        chatbotClose.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                chatbot.classList.remove(
-                    "open"
-                );
-            }
-        );
+    if (chatbotClose && chatbot) {
+        chatbotClose.addEventListener("click", event => {
+            event.preventDefault();
+            chatbot.classList.remove("open");
+        });
     }
 
-    function addChatMessage(
-        text,
-        type
-    ) {
+    function addChatMessage(text, type) {
+        if (!chatbotMessages) return null;
 
-        if (!chatbotMessages) {
-            return null;
-        }
-
-        const message =
-            document.createElement(
-                "div"
-            );
-
-        message.className =
-            `chatbot-message ${type}`;
+        const message = document.createElement("div");
+        message.className = `chatbot-message ${type}`;
 
         if (type === "bot") {
-
-            message.innerHTML =
-                text;
-
+            message.innerHTML = text;
         } else {
-
-            message.textContent =
-                text;
+            message.textContent = text;
         }
 
-        chatbotMessages.appendChild(
-            message
-        );
-
-        chatbotMessages.scrollTop =
-            chatbotMessages.scrollHeight;
-
+        chatbotMessages.appendChild(message);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         return message;
     }
 
     async function sendMessage() {
+        if (!chatbotInput || !chatbotMessages) return;
 
-        if (
-            !chatbotInput ||
-            !chatbotMessages
-        ) {
-            return;
-        }
+        const text = chatbotInput.value.trim();
+        if (!text || chatbotInput.disabled) return;
 
-        const text =
-            chatbotInput.value.trim();
-
-        if (
-            !text ||
-            chatbotInput.disabled
-        ) {
-            return;
-        }
-
-        addChatMessage(
-            text,
-            "user"
-        );
-
+        addChatMessage(text, "user");
         chatbotInput.value = "";
+        chatbotInput.disabled = true;
 
-        chatbotInput.disabled =
-            true;
+        if (chatbotSend) chatbotSend.disabled = true;
 
-        if (chatbotSend) {
-            chatbotSend.disabled =
-                true;
-        }
-
-        const botMessage =
-            addChatMessage(
-                "Nag-iisip...",
-                "bot"
-            );
+        const botMessage = addChatMessage("Nag-iisip...", "bot");
 
         try {
-
-            const response =
-                await fetch(
-                    CHAT_API_URL,
-                    {
-                        method: "POST",
-
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
-
-                        body: JSON.stringify({
-                            message: text
-                        })
-                    }
-                );
+            const response = await fetch(CHAT_API_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: text })
+            });
 
             if (!response.ok) {
-
-                let errorMessage =
-                    "Hindi available ang Hibla AI server.";
-
+                let errorMessage = "Hindi available ang Hibla AI server.";
                 try {
-
-                    const errorData =
-                        await response.json();
-
-                    if (
-                        errorData &&
-                        errorData.error
-                    ) {
-
-                        errorMessage =
-                            errorData.error;
-                    }
-
-                } catch (error) {
-
-                    console.error(
-                        "Server error response:",
-                        error
-                    );
+                    const errorData = await response.json();
+                    if (errorData && errorData.error) errorMessage = errorData.error;
+                } catch (e) {
+                    console.error("Server error parsing:", e);
                 }
-
-                throw new Error(
-                    `${errorMessage} (HTTP ${response.status})`
-                );
+                throw new Error(`${errorMessage} (HTTP ${response.status})`);
             }
 
-            const data =
-                await response.json();
+            const data = await response.json();
 
-            if (
-                !data ||
-                data.success !== true
-            ) {
-
-                throw new Error(
-                    data?.error ||
-                    "Walang valid na sagot mula sa Hibla AI server."
-                );
+            if (!data || data.success !== true) {
+                throw new Error(data?.error || "Walang valid na sagot mula sa Hibla AI server.");
             }
 
             if (botMessage) {
-
-                botMessage.innerHTML =
-                    data.reply ||
-                    "Walang natanggap na sagot mula sa Hibla AI.";
+                botMessage.innerHTML = data.reply || "Walang natanggap na sagot mula sa Hibla AI.";
             }
-
         } catch (error) {
-
-            console.error(
-                "HIBLA AI CHATBOT ERROR:",
-                error
-            );
-
+            console.error("HIBLA AI CHATBOT ERROR:", error);
             if (botMessage) {
-
                 botMessage.innerHTML = `
-                    <strong>
-                        Hindi makakonekta sa Hibla AI. 😔
-                    </strong>
-
-                    <br><br>
-
-                    Pakisubukan muli pagkatapos
-                    ng ilang segundo.
+                    <strong>Hindi makakonekta sa Hibla AI. 😔</strong><br><br>
+                    Pakisubukan muli pagkatapos ng ilang segundo.
                 `;
             }
-
         } finally {
-
-            chatbotInput.disabled =
-                false;
-
-            if (chatbotSend) {
-
-                chatbotSend.disabled =
-                    false;
-            }
-
+            chatbotInput.disabled = false;
+            if (chatbotSend) chatbotSend.disabled = false;
             chatbotInput.focus();
-
-            chatbotMessages.scrollTop =
-                chatbotMessages.scrollHeight;
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
     }
 
     if (chatbotSend) {
-
-        chatbotSend.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                sendMessage();
-            }
-        );
+        chatbotSend.addEventListener("click", event => {
+            event.preventDefault();
+            sendMessage();
+        });
     }
 
     if (chatbotInput) {
-
-        chatbotInput.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key === "Enter" &&
-                    !event.shiftKey
-                ) {
-
-                    event.preventDefault();
-
-                    if (
-                        !chatbotInput.disabled
-                    ) {
-
-                        sendMessage();
-                    }
-                }
+        chatbotInput.addEventListener("keydown", event => {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                if (!chatbotInput.disabled) sendMessage();
             }
-        );
+        });
     }
 
-    /* =========================================================
-       INITIALIZATION
-    ========================================================= */
+/* =========================================================
+   INITIALIZATION
+========================================================= */
 
-    injectStyles();
+injectStyles();
+createLessonInfoModal();
+createAdditionalMaterialModal();
 
-    createLessonInfoModal();
+// Load first lesson
+const firstWeekButton = document.querySelector(
+    '.week-btn[data-week="1"]'
+);
 
-    createAdditionalMaterialModal();
+displayLesson(1, firstWeekButton);
 
-    const firstWeekButton =
-        document.querySelector(
-            '.week-btn[data-week="1"]'
-        );
+// Start on Home
+showSection("home");
 
-    displayLesson(
-        1,
-        firstWeekButton
-    );
-
-    console.log(
-        "Hibla-Panitikan script loaded successfully."
-    );
+console.log("Hibla-Panitikan script loaded successfully.");
+}); 
+document.getElementById("aboutButton")?.addEventListener("click", () => {
+    document.getElementById("aboutSection")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 });
