@@ -135,7 +135,7 @@ body::before{
 #weekContent{min-width:0;transition:opacity .18s ease,transform .18s ease}.week-title{margin:2px 0 10px;color:var(--navy);font-size:28px;line-height:1.15;letter-spacing:-1px}.week-description{padding:16px 18px;border-radius:16px;background:#f7f7fb;color:var(--muted);font-size:11px;line-height:1.8;border:1px solid var(--line)}.lesson-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}.feature-card{padding:12px 13px;border-radius:14px;background:#fff;border:1px solid var(--line);min-height:78px;display:flex;flex-direction:column;justify-content:center;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.feature-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(40,35,95,.08);border-color:#d7d8e5}.feature-card strong{display:block;font-size:8px;color:var(--coral);text-transform:uppercase;letter-spacing:.7px;margin-bottom:5px}.feature-card .card-detail{font-size:10px;color:var(--ink);font-weight:700;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.additional-material-button{margin-top:12px!important;background:var(--navy)!important;color:#fff!important;border:0!important;border-radius:12px!important;box-shadow:0 8px 18px rgba(40,35,95,.14);font-size:10px!important}
 
 /* ---------- Researchers ---------- */
-.researchers-container{padding:30px}.researcher-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.researcher-card{padding:18px;background:#fff;border:1px solid var(--line);border-radius:20px;transition:.22s ease}.researcher-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}.researcher-photo{height:220px;border-radius:15px;overflow:hidden;background:linear-gradient(135deg,#e9eafa,#fbe3e6);display:grid;place-items:center;margin-bottom:14px}.researcher-photo img{width:100%;height:100%;object-fit:cover}.researcher-role{display:inline-block;padding:5px 8px;border-radius:999px;background:#f0f1f8;color:var(--navy);font-size:8px;font-weight:800;letter-spacing:.7px}.researcher-card h3{font-size:15px;line-height:1.3;margin:10px 0 7px;color:var(--navy)}.researcher-card p{margin:0;color:var(--muted);font-size:10px;line-height:1.7}
+.researchers-container{padding:30px}.researcher-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.researcher-card{padding:18px;background:#fff;border:1px solid var(--line);border-radius:20px;transition:.22s ease}.researcher-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}.researcher-photo{height:220px;border-radius:15px;overflow:hidden;background:linear-gradient(135deg,#e9eafa,#fbe3e6);display:grid;place-items:center;margin-bottom:14px}.researcher-photo img{width:100%;height:100%;object-fit:contain;object-position:center center}.researcher-role{display:inline-block;padding:5px 8px;border-radius:999px;background:#f0f1f8;color:var(--navy);font-size:8px;font-weight:800;letter-spacing:.7px}.researcher-card h3{font-size:15px;line-height:1.3;margin:10px 0 7px;color:var(--navy)}.researcher-card p{margin:0;color:var(--muted);font-size:10px;line-height:1.7}
 
 /* ---------- Contact modal ---------- */
 .modal{position:fixed;inset:0;z-index:5000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(23,25,54,.54);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.22s ease}.modal.show{opacity:1;pointer-events:auto}.modal-card{position:relative;width:min(520px,100%);background:#fff;border-radius:24px;padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.22);transform:translateY(12px) scale(.98);transition:.22s ease}.modal.show .modal-card{transform:none}.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:11px;background:#f2f3f8;color:var(--navy);font-size:22px;cursor:pointer}.modal-card h2{margin:0 0 20px;color:var(--navy);font-size:24px}.contact-information{display:grid;gap:10px}.contact-information p{margin:0;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#fafaff;font-size:11px;line-height:1.6}.contact-information strong{display:block;color:var(--navy);font-size:9px;text-transform:uppercase;letter-spacing:.7px}.contact-information a{color:var(--coral);text-decoration:none;font-weight:700}
@@ -217,45 +217,147 @@ body::before{
   .modal-content-panel{padding:17px 18px}
 }
 
-/* Researcher portraits: show the complete portrait instead of cropping faces. */
-.researcher-photo{
-  position:relative;
-  height:240px;
-  padding:12px 18px 0;
-  border-radius:18px;
-  overflow:hidden;
-  background:linear-gradient(145deg,#f1f0fb 0%,#ffffff 58%,#fbe7ea 100%);
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  margin-bottom:14px;
-  border:1px solid var(--line);
-}
-.researcher-photo::after{
-  content:"";
-  position:absolute;
-  left:12%;
-  right:12%;
-  bottom:0;
-  height:1px;
-  background:rgba(40,35,95,.08);
-}
-.researcher-photo img{
-  position:relative;
-  z-index:1;
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center bottom;
-  margin:0 auto;
-  transition:transform .25s ease;
-}
-.researcher-card:hover .researcher-photo img{transform:scale(1.015)}
 
-@media (max-width:900px){
-  .researcher-photo{height:250px;padding-left:20px;padding-right:20px}
+/* ---------- Modal title alignment: icon + main title only ---------- */
+.lesson-modal-heading{display:flex;align-items:center;gap:16px;padding-right:54px;margin-bottom:25px}
+.lesson-modal-heading .modal-title-block{min-width:0;display:flex;align-items:center}
+.lesson-modal-heading .modal-type-icon{flex:0 0 50px;width:50px;height:50px}
+.lesson-modal-heading .modal-title-block h2{margin:0;color:var(--navy);font-size:clamp(24px,3.2vw,36px);line-height:1.14;letter-spacing:-1.2px}
+.lesson-modal-heading .modal-eyebrow{display:none}
+@media(max-width:680px){
+  .lesson-modal-heading{align-items:center;gap:11px;padding-right:40px;margin-bottom:18px}
+  .lesson-modal-heading .modal-type-icon{width:42px;height:42px;flex-basis:42px;border-radius:12px}
+  .lesson-modal-heading .modal-title-block h2{font-size:24px}
 }
-@media (max-width:560px){
-  .researcher-photo{height:270px;padding-left:26px;padding-right:26px}
+
+/* ---------- Mobile-first finishing pass ---------- */
+img,svg{max-width:100%;}
+
+@media (max-width: 760px){
+  /* Keep every page section inside the viewport. */
+  #mainContent{width:100%;max-width:100%;overflow-x:hidden;}
+  .content-section,.hero{width:100%;max-width:100%;}
+
+  /* Stack the hero instead of squeezing its two desktop columns. */
+  .hero{
+    grid-template-columns:minmax(0,1fr);
+    gap:14px;
+    padding:14px;
+  }
+  .hero-content{min-width:0;padding:14px 8px 8px;}
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(36px,11vw,48px);
+    line-height:1;
+    letter-spacing:-2px;
+    overflow-wrap:anywhere;
+  }
+  .hero-description{max-width:100%;font-size:11px;line-height:1.7;}
+  .hero-buttons{margin:18px 0 22px;}
+  .hero-buttons button{width:100%;}
+  .hero-stats{max-width:none;}
+
+  .hero-dashboard-card{width:100%;padding:14px;border-radius:18px;}
+  .hero-feature{min-height:175px;margin:10px 0;padding:17px;}
+  .hero-feature strong{font-size:19px;max-width:100%;}
+  .hero-feature p{max-width:100%;}
+
+  /* Prevent lesson content from creating horizontal overflow. */
+  .lesson-container{grid-template-columns:1fr;gap:14px;}
+  .lesson-container>.section-heading{grid-column:auto;}
+  .week-navigation{width:100%;}
+  #weekContent{width:100%;min-width:0;}
+  .lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+  /* Researcher portraits: show the complete source image rather than cropping faces. */
+  .researcher-photo{
+    height:clamp(190px,58vw,270px);
+    background:#f7f7fb;
+  }
+  .researcher-photo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center center;
+  }
+
+  .researcher-card{min-width:0;}
+  .researcher-card h3,.researcher-card p{overflow-wrap:anywhere;}
+
+  /* Keep dialogs usable on narrow phones. */
+  .modal{padding:10px;}
+  .modal-card{padding:22px 16px;border-radius:20px;max-height:90vh;overflow:auto;}
+  .lesson-modal-overlay{padding:10px;}
+  .lesson-modal{width:100%;padding:22px 16px;border-radius:20px;}
+  .author-photo{width:100%;max-width:240px;min-height:220px;margin:0 auto;}
+  .author-photo img{object-fit:contain;}
+}
+
+@media (max-width: 430px){
+  #mainContent{padding-left:10px;padding-right:10px;}
+  .hero{padding:12px;border-radius:20px;}
+  .hero-content{padding:12px 6px 6px;}
+  .hero h1{font-size:clamp(34px,10.5vw,42px);}
+  .eyebrow{font-size:8px;letter-spacing:.9px;}
+  .hero-feature{min-height:165px;}
+  .hero-mini-grid{grid-template-columns:1fr 1fr;}
+  .lesson-grid{grid-template-columns:1fr;}
+  .week-navigation{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .week-btn{min-width:0;}
+  .content-container,.lesson-container,.researchers-container{padding:14px;border-radius:20px;}
+  .section-heading{margin-bottom:18px;}
+  .section-heading h2{font-size:28px;letter-spacing:-1px;}
+  .section-heading p{font-size:11px;}
+  .researcher-photo{height:240px;}
+  .researcher-card{padding:14px;}
+}
+
+/* ---------- Phone navigation: icons only ---------- */
+@media (max-width: 760px){
+  .sidebar .nav-label,
+  .sidebar .chatbot-toggle-label{
+    display:none;
+  }
+
+  /* Put all four regular navigation buttons in one even row.
+     The AI button stays as the fixed fifth item on the far right. */
+  .sidebar .sidebar-nav{
+    display:contents;
+  }
+
+  .sidebar .sidebar-bottom{
+    display:contents;
+  }
+
+  .sidebar .side-link{
+    width:auto;
+    min-width:0;
+    height:58px;
+    min-height:58px;
+    padding:0;
+    gap:0;
+    flex:1 1 0;
+  }
+
+  .sidebar .nav-icon{
+    width:34px;
+    height:34px;
+  }
+
+  .sidebar .chatbot{
+    width:58px;
+    min-width:58px;
+    margin:0 0 0 4px;
+    flex:0 0 58px;
+  }
+
+  .sidebar .chatbot-toggle{
+    width:58px;
+    min-width:58px;
+    height:58px;
+    min-height:58px;
+    padding:0;
+    gap:0;
+    justify-content:center;
+  }
 }
