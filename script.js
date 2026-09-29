@@ -33,7 +33,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         1: {
-            title: 'Week 1: “Sa Dakong Silangan”',
+            title: 'Linggo 1: “Sa Dakong Silangan”',
 
             description: `
             <div style="text-align: justify;">
@@ -94,7 +94,7 @@ aboutButton?.addEventListener("click", () => {
                 mas magandang kinabukasan.
             `,
 
-            material: "Audio-Visual/Interactive Presentation",
+            material: "Audio-Biswal/Interaktibong Presentasyon",
             materialType: "video",
 
             youtube: "https://www.youtube.com/watch?v=FdZsEKgfN_c",
@@ -107,7 +107,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         2: {
-            title: 'Week 2: “Kahapon, Ngayon at Bukas” (Unang Tagpo)',
+            title: 'Linggo 2: “Kahapon, Ngayon at Bukas” (Unang Tagpo)',
 
             description: `
             <p style="text-align: justify; line-height: 1.7;">
@@ -170,7 +170,7 @@ aboutButton?.addEventListener("click", () => {
                 lipunan.
             `,
 
-            material: "Audio-Visual/Interactive Presentation",
+            material: "Audio-Biswal/Interaktibong Presentasyon",
             materialType: "video",
 
             youtube: "https://www.youtube.com/watch?v=Z0ol8rwhMzg",
@@ -183,7 +183,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         3: {
-            title: 'Week 3: “Filipino Time”',
+            title: 'Linggo 3: “Filipino Time”',
 
             description: `
             <p style="text-align: justify; line-height: 1.7;">
@@ -241,7 +241,7 @@ aboutButton?.addEventListener("click", () => {
                 sariling karanasan at pang-araw-araw na gawain.
             `,
 
-            material: "Digital Poster",
+            material: "Digital na Poster",
             materialType: "text",
 
             youtube: "",
@@ -253,7 +253,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         4: {
-            title: 'Week 4: “Ang Tunay na Sampung Utos”',
+            title: 'Linggo 4: “Ang Tunay na Sampung Utos”',
 
             description: `
             <p style="text-align: justify; line-height: 1.7;">
@@ -312,7 +312,7 @@ aboutButton?.addEventListener("click", () => {
                 tungkulin bilang kabataan at mamamayan.
             `,
 
-            material: "AI-Generated Digital Poster",
+            material: "Digital na Poster na Binuo ng AI",
             materialType: "image",
 
             youtube: "",
@@ -325,7 +325,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         5: {
-            title: 'Week 5: “Wikang Pambansa”',
+            title: 'Linggo 5: “Wikang Pambansa”',
 
             description: `
             <p style="text-align: justify; line-height: 1.7;">
@@ -387,7 +387,7 @@ aboutButton?.addEventListener("click", () => {
                 pagkakakilanlan, at pakikipagkapwa.
             `,
 
-            material: "Audio-Visual/Interactive Presentation",
+            material: "Audio-Biswal/Interaktibong Presentasyon",
 
             materialType: "video",
 
@@ -401,7 +401,7 @@ aboutButton?.addEventListener("click", () => {
         ===================================================== */
 
         6: {
-            title: 'Week 6: “Mga Ibong Mandaragit”',
+            title: 'Linggo 6: “Mga Ibong Mandaragit”',
 
             description: `
             <p style="text-align: justify; line-height: 1.7;">
@@ -465,7 +465,7 @@ aboutButton?.addEventListener("click", () => {
                 bilang bahagi ng lipunan.
             `,
 
-            material: "Audio-Visual/Interactive Presentation",
+            material: "Audio-Biswal/Interaktibong Presentasyon",
 
             materialType: "video",
 
@@ -1173,6 +1173,219 @@ aboutButton?.addEventListener("click", () => {
                     font-size: 11px;
                 }
             }
+
+            /* =================================================
+               ORGANIZED MODAL DESIGN SYSTEM
+               Uses the site's indigo / coral / amber / cyan palette.
+            ================================================= */
+
+            .lesson-modal-overlay {
+                background: rgba(23, 25, 54, 0.68);
+                backdrop-filter: blur(10px);
+                padding: 24px;
+            }
+
+            .lesson-modal {
+                width: min(920px, 100%);
+                max-height: min(88vh, 780px);
+                padding: 30px;
+                border: 1px solid var(--line, #e6e7f0);
+                border-radius: 24px;
+                box-shadow: 0 30px 90px rgba(40, 35, 95, 0.22);
+                background: var(--surface, #fff);
+            }
+
+            .lesson-modal-close {
+                top: 18px;
+                right: 18px;
+                width: 40px;
+                height: 40px;
+                border-radius: 12px;
+                background: var(--surface-soft, #f7f7fb);
+                color: var(--navy, #28235f);
+                font-size: 22px;
+                box-shadow: none;
+                border: 1px solid var(--line, #e6e7f0);
+            }
+
+            .lesson-modal-close:hover {
+                background: var(--coral, #f25f69);
+                color: #fff;
+                transform: rotate(4deg) scale(1.04);
+            }
+
+            .lesson-modal-heading {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                padding-right: 48px;
+                margin-bottom: 22px;
+            }
+
+            .modal-type-icon {
+                flex: 0 0 46px;
+                width: 46px;
+                height: 46px;
+                border-radius: 14px;
+                display: grid;
+                place-items: center;
+                box-shadow: 0 8px 18px rgba(40, 35, 95, 0.12);
+            }
+
+            .modal-type-icon svg { width: 22px; height: 22px; }
+            .author-icon { background: var(--navy, #28235f); color: #fff; }
+            .theme-icon { background: var(--coral, #f25f69); color: #fff; }
+            .objective-icon { background: var(--amber, #f4a51c); color: #fff; }
+            .material-icon { background: var(--cyan, #5fcddd); color: #173b44; }
+
+            .modal-eyebrow {
+                display: inline-block;
+                margin: 2px 0 5px;
+                color: var(--coral, #f25f69);
+                font-size: 9px;
+                font-weight: 800;
+                letter-spacing: 1.15px;
+                text-transform: uppercase;
+            }
+
+            .lesson-modal h2 {
+                margin: 0;
+                color: var(--navy, #28235f);
+                font-size: clamp(24px, 3.2vw, 34px);
+                line-height: 1.15;
+                letter-spacing: -0.8px;
+            }
+
+            .modal-content-panel {
+                position: relative;
+                padding: 20px 21px;
+                background: var(--surface-soft, #f7f7fb);
+                border: 1px solid var(--line, #e6e7f0);
+                border-radius: 18px;
+                overflow: hidden;
+            }
+
+            .modal-content-panel::before {
+                content: '';
+                position: absolute;
+                inset: 0 auto 0 0;
+                width: 4px;
+                background: var(--navy, #28235f);
+            }
+
+            .modal-content-panel.accent-theme::before { background: var(--coral, #f25f69); }
+            .modal-content-panel.accent-objective::before { background: var(--amber, #f4a51c); }
+
+            .modal-section-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 10px;
+                color: var(--navy, #28235f);
+                font-size: 10px;
+                font-weight: 800;
+                letter-spacing: .2px;
+            }
+
+            .modal-section-label::before {
+                content: '';
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: currentColor;
+                opacity: .5;
+            }
+
+            .modal-text {
+                margin: 0;
+                color: var(--muted, #73758b);
+                font-size: 12px;
+                line-height: 1.85;
+            }
+
+            .author-profile {
+                display: grid;
+                grid-template-columns: 210px minmax(0, 1fr);
+                gap: 24px;
+                align-items: stretch;
+            }
+
+            .author-photo {
+                position: relative;
+                width: 100%;
+                min-height: 250px;
+                aspect-ratio: auto;
+                border-radius: 18px;
+                overflow: hidden;
+                background: linear-gradient(145deg, var(--navy, #28235f), var(--navy-2, #38317c));
+                box-shadow: 0 10px 24px rgba(40, 35, 95, 0.12);
+            }
+
+            .author-photo.no-image::after {
+                content: 'Walang Larawan';
+                color: rgba(255,255,255,.95);
+                font-size: 13px;
+                font-weight: 800;
+            }
+
+            .photo-caption {
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                padding: 8px 10px;
+                border-radius: 10px;
+                background: rgba(23, 25, 54, .72);
+                color: #fff;
+                font-size: 8px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .material-preview {
+                margin-top: 2px;
+                padding: 0;
+            }
+
+            .material-image-wrapper,
+            .material-placeholder,
+            .youtube-placeholder {
+                min-height: 280px;
+                border-radius: 18px;
+                border: 1px solid var(--line, #e6e7f0);
+                background: var(--surface-soft, #f7f7fb);
+            }
+
+            .material-placeholder,
+            .youtube-placeholder {
+                border-style: dashed;
+                color: var(--navy, #28235f);
+            }
+
+            .youtube-play-button { background: var(--coral, #f25f69); }
+            .youtube-label { background: rgba(40,35,95,.86); }
+
+            .keyword-tag, .commandment-keyword {
+                background: var(--navy, #28235f);
+            }
+
+            @media (max-width: 680px) {
+                .lesson-modal {
+                    padding: 24px 18px 20px;
+                    border-radius: 20px;
+                }
+                .lesson-modal-heading {
+                    gap: 11px;
+                    padding-right: 38px;
+                    margin-bottom: 17px;
+                }
+                .modal-type-icon { width: 42px; height: 42px; flex-basis: 42px; border-radius: 12px; }
+                .modal-type-icon svg { width: 20px; height: 20px; }
+                .lesson-modal h2 { font-size: 23px; }
+                .author-profile { grid-template-columns: 1fr; gap: 14px; }
+                .author-photo { min-height: 210px; max-width: none; }
+                .modal-content-panel { padding: 17px 18px; }
+            }
         `;
 
         document.head.appendChild(style);
@@ -1336,14 +1549,21 @@ aboutButton?.addEventListener("click", () => {
         if (type === "author") {
             const image = typeof lesson.authorImage === "string" ? lesson.authorImage.trim() : "";
             html = `
-                <span class="modal-eyebrow">MAY-AKDA</span>
-                <h2>${lesson.author}</h2>
-                <div class="author-profile">
+                <div class="lesson-modal-heading">
+                    <div class="modal-type-icon author-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="modal-title-block">
+                        <h2>${lesson.author}</h2>
+                    </div>
+                </div>
+                <div class="author-profile author-profile-modern">
                     <div class="author-photo ${image ? "" : "no-image"}" id="authorPhotoContainer">
                         ${image ? `<img id="authorPhotoImage" src="${image}" alt="${lesson.author}">` : ""}
+                        <span class="photo-caption">May-akda ng piling akda</span>
                     </div>
-                    <div>
-                        <h3>Talambuhay</h3>
+                    <div class="modal-content-panel">
+                        <div class="modal-section-label">Talambuhay</div>
                         <div class="modal-text">
                             ${lesson.biography || "Walang talambuhay na nailagay."}
                         </div>
@@ -1352,20 +1572,34 @@ aboutButton?.addEventListener("click", () => {
             `;
         } else if (type === "theme") {
             html = `
-                <span class="modal-eyebrow">TEMA</span>
-                <h2>${lesson.theme}</h2>
-                <div class="detail-box">
-                    <p class="modal-text" style="text-align: justify;">
+                <div class="lesson-modal-heading">
+                    <div class="modal-type-icon theme-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 14.7 9.3 21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7L12 3Z"/><path d="m19 4 .5 1.5L21 6l-1.5.5L19 8l-.5-1.5L17 6l1.5-.5L19 4Z"/></svg>
+                    </div>
+                    <div class="modal-title-block">
+                        <h2>${lesson.theme}</h2>
+                    </div>
+                </div>
+                <div class="modal-content-panel accent-theme">
+                    <div class="modal-section-label">Pangunahing Kaisipan</div>
+                    <p class="modal-text">
                         ${lesson.themeDescription || "Walang detalyadong tema na nailagay."}
                     </p>
                 </div>
             `;
         } else if (type === "objective") {
             html = `
-                <span class="modal-eyebrow">LAYUNIN NG ARALIN</span>
-                <h2>Layunin ng Aralin</h2>
-                <div class="detail-box">
-                    <p class="modal-text" style="text-align: justify;">
+                <div class="lesson-modal-heading">
+                    <div class="modal-type-icon objective-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m15 9 4-4"/><path d="M17 5h2v2"/></svg>
+                    </div>
+                    <div class="modal-title-block">
+                        <h2>Layunin ng Aralin</h2>
+                    </div>
+                </div>
+                <div class="modal-content-panel accent-objective">
+                    <div class="modal-section-label">Sa pagtatapos ng aralin</div>
+                    <p class="modal-text">
                         ${lesson.objectiveDescription || lesson.objective || "Walang layunin na nailagay."}
                     </p>
                 </div>
@@ -1388,7 +1622,7 @@ aboutButton?.addEventListener("click", () => {
                 } else {
                     preview = `
                         <div class="youtube-placeholder">
-                            <strong>YouTube Preview</strong>
+                            <strong>Paunang Silip sa YouTube</strong>
                             <p>Wala pang valid na YouTube video para sa materyal na ito.</p>
                         </div>
                     `;
@@ -1403,16 +1637,22 @@ aboutButton?.addEventListener("click", () => {
             } else {
                 preview = `
                     <div class="material-placeholder">
-                        <strong>${lesson.material || "Multimodal Material"}</strong>
+                        <strong>${lesson.material || "Multimodal na Materyal"}</strong>
                         <span>Dito ilalagay ang larawan o iba pang multimodal material.</span>
                     </div>
                 `;
             }
 
             html = `
-                <span class="modal-eyebrow">MULTIMODAL MATERIAL</span>
-                <h2>${lesson.material || "Multimodal Material"}</h2>
-                <div class="material-preview">${preview}</div>
+                <div class="lesson-modal-heading">
+                    <div class="modal-type-icon material-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 15 3-3 3 3 2-2 3 3"/><circle cx="8.5" cy="9" r="1.5"/></svg>
+                    </div>
+                    <div class="modal-title-block">
+                        <h2>${lesson.material || "Multimodal na Materyal"}</h2>
+                    </div>
+                </div>
+                <div class="material-preview material-preview-modern">${preview}</div>
             `;
         } else {
             html = `
@@ -1474,7 +1714,7 @@ aboutButton?.addEventListener("click", () => {
         if (!modal || !body) return;
 
         let html = `
-            <span class="modal-eyebrow">KARAGDAGANG MATERIAL / TRIVIA</span>
+            <span class="modal-eyebrow">KARAGDAGANG MATERYAL / TRIVIA</span>
             <h2>${material.title || "Dagdag Kaalaman"}</h2>
         `;
 
@@ -1548,7 +1788,7 @@ aboutButton?.addEventListener("click", () => {
         button.type = "button";
         button.className = "additional-material-button";
         button.dataset.week = String(weekNumber);
-        button.textContent = material.title || "Dagdag Kaalaman / Trivia";
+        button.textContent = material.title || "Dagdag na Kaalaman / Trivia";
 
         container.appendChild(button);
     }
@@ -1643,8 +1883,8 @@ function showSection(sectionName) {
                         <span class="card-detail">${lesson.objective}</span>
                     </article>
 
-                    <article class="feature-card clickable-lesson-card" data-info="material" tabindex="0" role="button" aria-label="Tingnan ang multimodal material">
-                        <strong>Multimodal Material</strong>
+                    <article class="feature-card clickable-lesson-card" data-info="material" tabindex="0" role="button" aria-label="Tingnan ang multimodal na materyal">
+                        <strong>Multimodal na Materyal</strong>
                         <span class="card-detail">${lesson.material}</span>
                     </article>
                 </div>
