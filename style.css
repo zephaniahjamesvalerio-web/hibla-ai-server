@@ -217,15 +217,45 @@ body::before{
   .modal-content-panel{padding:17px 18px}
 }
 
+/* Researcher portraits: show the complete portrait instead of cropping faces. */
+.researcher-photo{
+  position:relative;
+  height:240px;
+  padding:12px 18px 0;
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#f1f0fb 0%,#ffffff 58%,#fbe7ea 100%);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  margin-bottom:14px;
+  border:1px solid var(--line);
+}
+.researcher-photo::after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:12%;
+  bottom:0;
+  height:1px;
+  background:rgba(40,35,95,.08);
+}
+.researcher-photo img{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  margin:0 auto;
+  transition:transform .25s ease;
+}
+.researcher-card:hover .researcher-photo img{transform:scale(1.015)}
 
-/* ---------- Modal title alignment: icon + main title only ---------- */
-.lesson-modal-heading{display:flex;align-items:center;gap:16px;padding-right:54px;margin-bottom:25px}
-.lesson-modal-heading .modal-title-block{min-width:0;display:flex;align-items:center}
-.lesson-modal-heading .modal-type-icon{flex:0 0 50px;width:50px;height:50px}
-.lesson-modal-heading .modal-title-block h2{margin:0;color:var(--navy);font-size:clamp(24px,3.2vw,36px);line-height:1.14;letter-spacing:-1.2px}
-.lesson-modal-heading .modal-eyebrow{display:none}
-@media(max-width:680px){
-  .lesson-modal-heading{align-items:center;gap:11px;padding-right:40px;margin-bottom:18px}
-  .lesson-modal-heading .modal-type-icon{width:42px;height:42px;flex-basis:42px;border-radius:12px}
-  .lesson-modal-heading .modal-title-block h2{font-size:24px}
+@media (max-width:900px){
+  .researcher-photo{height:250px;padding-left:20px;padding-right:20px}
+}
+@media (max-width:560px){
+  .researcher-photo{height:270px;padding-left:26px;padding-right:26px}
 }
