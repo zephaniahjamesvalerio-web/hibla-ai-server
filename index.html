@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="tl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#7d0b12">
+    <meta name="theme-color" content="#28235f">
 
     <title>Hibla-Panitikan | Panitikang Filipino</title>
 
@@ -64,200 +63,149 @@
 
 <body>
 
-    <!-- =========================================
-         BACKGROUND EFFECTS
-    ========================================== -->
-
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-    <div class="grid-background"></div>
-
-
-    <!-- =========================================
-         SIDEBAR / MOBILE NAVIGATION
-    ========================================== -->
-
-    <aside
-        class="sidebar"
-        id="sidebar"
-        aria-label="Hibla-Panitikan navigation"
-    >
-
-        <!-- BRAND -->
-        <div class="sidebar-brand">
-
-            <h2>
-                Hibla-Panitikan
-            </h2>
-
-            <div class="brand-divider"></div>
-
-            <p class="brand-subtitle">
-                Wika · Panitikan · Kultura
-            </p>
-
+    <aside class="sidebar" id="sidebar" aria-label="Pangunahing nabigasyon ng Hibla-Panitikan">
+        <div class="sidebar-logo">
+            <span class="logo-badge">H</span>
+            <small>Hibla</small>
         </div>
+        <nav class="sidebar-nav" aria-label="Pangunahing menu">
+            <button class="side-link active" type="button" data-section="home" aria-current="page" title="Home">
+                <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.8 12 3l9 7.8"/><path d="M5.5 9.5V21h13V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span><span class="nav-label">Tahanan</span>
+            </button>
+            <button class="side-link" type="button" data-section="lesson" title="Mga Aralin">
+                <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 7.5h8M8 11.5h8M8 15.5h5"/></svg></span><span class="nav-label">Aralin</span>
+            </button>
+            <button class="side-link" type="button" data-section="researchersPage" title="Mga Mananaliksik">
+                <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5c.7-3.2 2.5-5 5.5-5s4.8 1.8 5.5 5"/><path d="M15.5 5.5a3 3 0 0 1 0 5.8M16 14.8c2.2.3 3.7 1.8 4.5 4.7"/></svg></span><span class="nav-label">Pangkat</span>
+            </button>
+        </nav>
+        <div class="sidebar-bottom">
+            <div class="sidebar-quote">
+                <span>✦</span>
+                <small>Paglalakbay sa wika at panitikan.</small>
+            </div>
+            <button class="side-link contact-link" id="contactButton" type="button" title="Makipag-ugnayan">
+                <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></span><span class="nav-label">Makipag-ugnayan</span>
+            </button>
+        </div>
+        <!-- Hibla AI lives inside the sidebar so its launcher never floats over page content. -->
+    <!-- =========================================
+         HIBLA AI CHATBOT
+    ========================================== -->
+
+        <div class="chatbot" id="chatbot">
 
 
-        <!-- MAIN NAVIGATION -->
-        <nav
-            class="sidebar-nav"
-            aria-label="Main navigation"
+        <!-- CHATBOT TOGGLE -->
+        <button
+            class="chatbot-toggle"
+            id="chatbotToggle"
+            type="button"
+            aria-label="Buksan ang Hibla AI"
+            aria-expanded="false"
+            aria-controls="chatbotWindow"
+        >
+            <span class="chatbot-toggle-icon" aria-hidden="true">✦</span>
+            <span class="chatbot-toggle-label">Hibla AI</span>
+        </button>
+
+
+
+        <!-- CHATBOT WINDOW -->
+        <div
+            class="chatbot-window"
+            id="chatbotWindow"
+            aria-label="Hibla AI na Chat"
         >
 
-            <!-- HOME -->
-            <button
-                class="side-link active"
-                type="button"
-                data-section="home"
-                aria-current="page"
-                aria-label="Home"
-                title="Home"
+
+            <!-- CHATBOT HEADER -->
+            <div class="chatbot-header">
+
+                <div>
+
+                    <strong>
+                        Hibla AI
+                    </strong>
+
+                    <small>
+                        Local Learning Assistant
+                    </small>
+
+                    </div>
+
+
+                <button
+                    id="chatbotClose"
+                    type="button"
+                    aria-label="Isara ang Hibla AI"
+                >
+                    ×
+                </button>
+
+
+                </div>
+
+
+
+            <!-- CHATBOT MESSAGES -->
+            <div
+                class="chatbot-messages"
+                id="chatbotMessages"
+                aria-live="polite"
             >
 
-                <span class="nav-icon" aria-hidden="true">
+                <div class="chatbot-message bot">
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="m3 10 9-7 9 7"/>
-                        <path d="M5 9v12h14V9"/>
-                        <path d="M9 21v-7h6v7"/>
-                    </svg>
+                    Kumusta! 👋
 
-                </span>
+                    <br><br>
 
-                <span class="nav-label">
-                    Home
-                </span>
+                    Ako ang <strong>Hibla AI</strong>.
 
-            </button>
+                    <br><br>
+
+                    Maaari mo akong tanungin tungkol
+                    sa mga aralin at panitikan
+                    sa website na ito.
+
+                    </div>
+
+                </div>
 
 
-            <!-- LESSONS -->
-            <button
-                class="side-link"
-                type="button"
-                data-section="lesson"
-                aria-label="Mga Aralin"
-                title="Mga Aralin"
-            >
 
-                <span class="nav-icon" aria-hidden="true">
+            <!-- CHATBOT INPUT -->
+            <div class="chatbot-input-area">
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
-                        <path d="M8 7h8"/>
-                        <path d="M8 11h8"/>
-                    </svg>
-
-                </span>
-
-                <span class="nav-label">
-                    Mga Aralin
-                </span>
-
-            </button>
+                <input
+                    type="text"
+                    id="chatbotInput"
+                    placeholder="Magtanong tungkol sa aralin..."
+                    autocomplete="off"
+                    aria-label="I-type ang iyong tanong"
+                >
 
 
-            <!-- RESEARCHERS -->
-            <button
-                class="side-link"
-                type="button"
-                id="researcherButton"
-                data-section="researchersPage"
-                aria-label="Mga Mananaliksik"
-                title="Mga Mananaliksik"
-            >
-
-                <span class="nav-icon" aria-hidden="true">
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-
-                </span>
-
-                <span class="nav-label">
-                    Mga Mananaliksik
-                </span>
-
-            </button>
-
-        </nav>
+                <button
+                    id="chatbotSend"
+                    type="button"
+                    aria-label="Ipadala ang mensahe"
+                >
+                    ➤
+                </button>
 
 
-        <!-- SIDEBAR BOTTOM -->
-        <div class="sidebar-bottom">
+                </div>
 
-            <div class="sidebar-note">
-
-                <span class="note-mark" aria-hidden="true">
-                    ✦
-                </span>
-
-                <span class="note-text">
-                    Paglalakbay sa wika at panitikan.
-                </span>
 
             </div>
 
-
-            <!-- CONTACT -->
-            <button
-                class="side-link contact-link"
-                id="contactButton"
-                type="button"
-                aria-label="Contact"
-                title="Contact"
-            >
-
-                <span class="nav-icon" aria-hidden="true">
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <rect x="3" y="5" width="18" height="14" rx="2"/>
-                        <path d="m3 7 9 6 9-6"/>
-                    </svg>
-
-                </span>
-
-                <span class="nav-label">
-                    Contact
-                </span>
-
-            </button>
-
-        </div>
-
+    </div>
     </aside>
 
 
-
-    <!-- =========================================
-         MAIN WEBSITE CONTENT
-    ========================================== -->
-
-    <main id="mainContent">
-
-
+<main id="mainContent">
         <!-- =====================================
              HERO / HOME HEADER
         ====================================== -->
@@ -271,7 +219,7 @@
             <div class="hero-content">
 
                 <span class="eyebrow">
-                    MULTIMODAL E-LEARNING MATERIALS
+                    MULTIMODAL NA MATERYALES SA PAGKATUTO
                 </span>
 
                 <h1>
@@ -320,12 +268,30 @@
 
                     <div class="stat">
                         <strong>06</strong>
-                        <span>Multimodal Materials</span>
+                        <span>Multimodal na Materyales</span>
                     </div>
 
                 </div>
 
             </div>
+
+            <aside class="hero-dashboard-card" aria-label="Mabilis na buod">
+                <div class="mini-card-head">
+                    <span>Buod ng Hibla</span>
+                    <span class="status-dot"><span></span> Aktibo</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="hero-feature-label">POKUS NG PAGKATUTO</span>
+                    <strong>Panitikang Filipino sa Panahon ng Estados Unidos</strong>
+                    <p>Mga piling akda, may-akda, tema, at multimodal na materyales sa isang lugar.</p>
+                </div>
+                <div class="hero-mini-grid">
+                    <div><strong>06</strong><span>Aralin</span></div>
+                    <div><strong>06</strong><span>Akda</span></div>
+                    <div><strong>01</strong><span>AI na Katulong</span></div>
+                    <div><strong>03</strong><span>Mananaliksik</span></div>
+                </div>
+            </aside>
 
         </section>
 
@@ -358,6 +324,22 @@
                         para sa pag-aaral ng panitikang Filipino.
                     </p>
 
+                </div>
+
+
+                <div class="quick-access-grid" aria-label="Mabilis na access">
+                    <button class="quick-access-card featured" type="button" data-section="lesson">
+                        <span class="quick-icon">↗</span>
+                        <span><small>SIMULAN</small><strong>Mga Aralin</strong></span>
+                    </button>
+                    <button class="quick-access-card" type="button" data-section="researchersPage">
+                        <span class="quick-icon">◎</span>
+                        <span><small>TUKLASIN</small><strong>Mga Mananaliksik</strong></span>
+                    </button>
+                    <button class="quick-access-card" type="button" id="aboutQuickButton">
+                        <span class="quick-icon">✦</span>
+                        <span><small>ALAMIN</small><strong>Tungkol sa Hibla</strong></span>
+                    </button>
                 </div>
 
 
@@ -596,7 +578,7 @@
                 <div class="section-heading">
 
                     <span class="eyebrow">
-                        RESEARCH TEAM
+                        PANGKAT NG MANANALIKSIK
                     </span>
 
                     <h2>
@@ -820,123 +802,6 @@
 
 
     <!-- =========================================
-         HIBLA AI CHATBOT
-    ========================================== -->
-
-    <div class="chatbot" id="chatbot">
-
-
-        <!-- CHATBOT TOGGLE -->
-        <button
-            class="chatbot-toggle"
-            id="chatbotToggle"
-            type="button"
-            aria-label="Buksan ang Hibla AI"
-            aria-expanded="false"
-            aria-controls="chatbotWindow"
-        >
-            <span aria-hidden="true">
-                ✦
-            </span>
-        </button>
-
-
-
-        <!-- CHATBOT WINDOW -->
-        <div
-            class="chatbot-window"
-            id="chatbotWindow"
-            aria-label="Hibla AI Chat"
-        >
-
-
-            <!-- CHATBOT HEADER -->
-            <div class="chatbot-header">
-
-                <div>
-
-                    <strong>
-                        Hibla AI
-                    </strong>
-
-                    <small>
-                        Local Learning Assistant
-                    </small>
-
-                </div>
-
-
-                <button
-                    id="chatbotClose"
-                    type="button"
-                    aria-label="Isara ang Hibla AI"
-                >
-                    ×
-                </button>
-
-
-            </div>
-
-
-
-            <!-- CHATBOT MESSAGES -->
-            <div
-                class="chatbot-messages"
-                id="chatbotMessages"
-                aria-live="polite"
-            >
-
-                <div class="chatbot-message bot">
-
-                    Kumusta! 👋
-
-                    <br><br>
-
-                    Ako ang <strong>Hibla AI</strong>.
-
-                    <br><br>
-
-                    Maaari mo akong tanungin tungkol
-                    sa mga aralin at panitikan
-                    sa website na ito.
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CHATBOT INPUT -->
-            <div class="chatbot-input-area">
-
-                <input
-                    type="text"
-                    id="chatbotInput"
-                    placeholder="Magtanong tungkol sa aralin..."
-                    autocomplete="off"
-                    aria-label="I-type ang iyong tanong"
-                >
-
-
-                <button
-                    id="chatbotSend"
-                    type="button"
-                    aria-label="Ipadala ang mensahe"
-                >
-                    ➤
-                </button>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================================
          CHATBOT TOGGLE
     ========================================== -->
 
@@ -995,6 +860,36 @@
     </script>
 
 
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenu = document.getElementById("mobileMenuButton");
+        const mobileNav = document.getElementById("mobileQuickNav");
+        const topContact = document.getElementById("topContactButton");
+        const mobileContact = document.getElementById("mobileContactButton");
+        const contact = document.getElementById("contactButton");
+        const aboutQuick = document.getElementById("aboutQuickButton");
+        const about = document.getElementById("aboutButton");
+
+        function openContact() { if (contact) contact.click(); }
+        topContact?.addEventListener("click", openContact);
+        mobileContact?.addEventListener("click", openContact);
+        aboutQuick?.addEventListener("click", () => about?.click());
+
+        mobileMenu?.addEventListener("click", () => {
+            const open = mobileNav?.classList.toggle("open");
+            mobileMenu.setAttribute("aria-expanded", String(!!open));
+        });
+
+        mobileNav?.addEventListener("click", (event) => {
+            if (event.target.closest("button[data-section]")) {
+                mobileNav.classList.remove("open");
+                mobileMenu?.setAttribute("aria-expanded", "false");
+            }
+        });
+    });
+    </script>
 
     <!-- MAIN JAVASCRIPT -->
     <script src="script.js"></script>
