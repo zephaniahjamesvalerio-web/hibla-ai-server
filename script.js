@@ -2159,10 +2159,36 @@ if (logoToggle) {
         });
     }
 
+
+/* Pre-dashboard lamp welcome screen */
+function initLiteraryLampWelcome() {
+    const welcome = document.getElementById("lampWelcome");
+    const lamp = document.getElementById("literaryLamp");
+    const instruction = document.getElementById("lampInstruction");
+    if (!welcome || !lamp) return;
+    document.body.classList.add("lamp-intro-active");
+    let entering = false;
+    const enterDashboard = () => {
+        if (entering) return;
+        entering = true;
+        welcome.classList.add("is-lit");
+        if (instruction) instruction.innerHTML = '<span aria-hidden="true"></span> Nagliliwanag ang daan…';
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.setTimeout(() => {
+            welcome.classList.add("is-leaving");
+            document.body.classList.remove("lamp-intro-active");
+            window.setTimeout(() => welcome.remove(), reducedMotion ? 0 : 800);
+        }, reducedMotion ? 0 : 1100);
+    };
+    lamp.addEventListener("click", enterDashboard);
+}
+
+
 /* =========================================================
    INITIALIZATION
 ========================================================= */
 
+initLiteraryLampWelcome();
 injectStyles();
 createLessonInfoModal();
 createAdditionalMaterialModal();
